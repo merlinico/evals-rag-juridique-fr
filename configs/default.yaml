@@ -73,9 +73,18 @@ generation:
 metrics:
   recall_k: 5
   overlap_threshold: 0.25
-  # Seuils CI vs baseline (échec si en dessous)
-  min_recall_at_k: 0.55
-  min_faithfulness: 0.50
+  # Bootstrap CIs + gate de significance (pas de seuil fixe)
+  bootstrap_n: 1000
+  bootstrap_seed: 42
+  significance_alpha: 0.05
+  significance_test: paired_bootstrap  # one-sided H1: mean(current - baseline) < 0
+  gated_metrics:
+    - recall_at_k
+    - faithfulness
+  # NLI claim-level FR/multilingue — off en CI (fallback overlap)
+  nli_enabled: false
+  nli_model: MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7
+  nli_entailment_threshold: 0.5
 
 report:
   output_path: reports/regression.md

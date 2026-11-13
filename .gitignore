@@ -18,4 +18,5 @@ tmp/
 .env
 .python-version
 data/fixtures/last_metrics.json
+data/fixtures/last_metric_report.json
 data/fixtures/embeddings/

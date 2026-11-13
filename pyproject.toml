@@ -20,6 +20,8 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "ruff>=0.6"]
+# Optional claim-level faithfulness (local FR/multilingual NLI). Not used in CI.
+nli = ["transformers>=4.40", "torch>=2.2"]
 
 [project.scripts]
 rag-eval = "rag_juridique.eval.cli:main"
