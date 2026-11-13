@@ -1,5 +1,16 @@
-corpus_path: data/corpus/articles.json
+# CI / harness MVP: gold-aligned subset (stable recall baseline).
+# Full three-code snapshot: data/corpus/articles.json.gz (see SOURCE.md).
+corpus_path: data/corpus/eval_subset.json.gz
 gold_path: data/gold/questions.json
+
+corpus:
+  full_articles_path: data/corpus/articles.json.gz
+  versions_path: data/corpus/versions.json.gz
+  crossrefs_path: data/corpus/crossrefs.json.gz
+  codes:
+    - civil
+    - consommation
+    - travail
 
 retrieval:
   embedding_model: intfloat/multilingual-e5-small

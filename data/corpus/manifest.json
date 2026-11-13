@@ -1,0 +1,34 @@
+{
+  "snapshot_id": "codes-v0.2-2025-07-13",
+  "files": {
+    "articles": "articles.json.gz",
+    "versions": "versions.json.gz",
+    "crossrefs": "crossrefs.json.gz",
+    "eval_subset": "eval_subset.json.gz",
+    "mvp_seed": "mvp_seed.json.gz"
+  },
+  "n_articles": 16455,
+  "n_versions": 29226,
+  "n_crossrefs": 16976,
+  "articles_by_code": {
+    "civil": 2883,
+    "consommation": 2139,
+    "travail": 11433
+  },
+  "versions_by_code": {
+    "civil": 3891,
+    "travail": 21638,
+    "consommation": 3697
+  },
+  "crossrefs_by_code": {
+    "civil": 1083,
+    "consommation": 2606,
+    "travail": 13287
+  },
+  "limits": {
+    "max_versions_per_article": 8,
+    "min_history_date": "2000-01-01",
+    "section_field": "stored in Article.contexte (frozen schema has livre/titre/chapitre only)",
+    "ci_corpus_path": "data/corpus/eval_subset.json.gz"
+  }
+}
