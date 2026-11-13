@@ -1,359 +1,3072 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "corpus_snapshot": "cdc-v0.1-2025-07-13",
   "language": "fr",
   "validated": false,
-  "notes": "Jeu d'or généré pour le MVP. Toutes les questions sont marquées validated=false en attendant revue humaine.",
+  "notes": "Gold set phase 2 (150–200). Généré par pipeline scripté (generate → auto-filter). validated=false jusqu'à revue humaine. Étendable : cross_refs.json / versions LEGI de l'agent corpus (a).",
   "questions": [
     {
       "id": "q01",
       "question": "Quelles informations essentielles le professionnel doit-il communiquer au consommateur avant la conclusion d'un contrat à titre onéreux ?",
-      "expected_article_ids": ["LEGIARTI000044142438"],
-      "expected_article_nums": ["L. 111-1"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044142438"
+      ],
+      "expected_article_nums": [
+        "L. 111-1"
+      ],
       "reference_answer": "Avant d'être lié, le consommateur doit recevoir de manière lisible et compréhensible notamment les caractéristiques essentielles du bien ou service, le prix, la date ou le délai de délivrance, et les autres informations prévues à l'article L. 111-1.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "information précontractuelle"
+      "topic": "information précontractuelle",
+      "notes": null
     },
     {
       "id": "q02",
       "question": "Comment le vendeur doit-il informer le consommateur sur les prix ?",
-      "expected_article_ids": ["LEGIARTI000032227331"],
-      "expected_article_nums": ["L. 112-1"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032227331"
+      ],
+      "expected_article_nums": [
+        "L. 112-1"
+      ],
       "reference_answer": "Tout vendeur ou prestataire informe le consommateur sur les prix et conditions particulières par marquage, étiquetage, affichage ou tout autre procédé approprié, selon des modalités fixées par arrêté.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "affichage des prix"
+      "topic": "affichage des prix",
+      "notes": null
     },
     {
       "id": "q03",
       "question": "Quand une pratique commerciale est-elle considérée comme déloyale ?",
-      "expected_article_ids": ["LEGIARTI000032227301"],
-      "expected_article_nums": ["L. 121-1"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032227301"
+      ],
+      "expected_article_nums": [
+        "L. 121-1"
+      ],
       "reference_answer": "Une pratique est déloyale si elle est contraire à la diligence professionnelle et altère ou est susceptible d'altérer de manière substantielle le comportement économique du consommateur normalement informé et raisonnablement attentif.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "pratiques déloyales"
+      "topic": "pratiques déloyales",
+      "notes": null
     },
     {
       "id": "q04",
       "question": "Dans quels cas une pratique commerciale est-elle trompeuse ?",
-      "expected_article_ids": ["LEGIARTI000044563114"],
-      "expected_article_nums": ["L. 121-2"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044563114"
+      ],
+      "expected_article_nums": [
+        "L. 121-2"
+      ],
       "reference_answer": "Elle est trompeuse notamment si elle crée une confusion avec un concurrent ou repose sur des allégations fausses ou trompeuses portant sur l'existence, les caractéristiques essentielles, le prix ou d'autres éléments du bien ou service.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "pratiques trompeuses"
+      "topic": "pratiques trompeuses",
+      "notes": null
     },
     {
       "id": "q05",
       "question": "Qu'est-ce qu'une clause abusive dans un contrat conclu entre un professionnel et un consommateur ?",
-      "expected_article_ids": ["LEGIARTI000032890812"],
-      "expected_article_nums": ["L. 212-1"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032890812"
+      ],
+      "expected_article_nums": [
+        "L. 212-1"
+      ],
       "reference_answer": "Sont abusives les clauses qui créent, au détriment du consommateur, un déséquilibre significatif entre les droits et obligations des parties. L'appréciation ne porte ni sur l'objet principal du contrat ni sur l'adéquation du prix.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "clauses abusives"
+      "topic": "clauses abusives",
+      "notes": null
     },
     {
       "id": "q06",
       "question": "Quel est le délai maximal de délivrance d'un bien lorsqu'aucune date n'a été convenue ?",
-      "expected_article_ids": ["LEGIARTI000044142498"],
-      "expected_article_nums": ["L. 216-1"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044142498"
+      ],
+      "expected_article_nums": [
+        "L. 216-1"
+      ],
       "reference_answer": "À défaut d'indication ou d'accord, le professionnel délivre le bien sans retard injustifié et au plus tard trente jours après la conclusion du contrat.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "délivrance"
+      "topic": "délivrance",
+      "notes": null
     },
     {
       "id": "q07",
       "question": "À quel moment le risque de perte ou d'endommagement du bien est-il transféré au consommateur ?",
-      "expected_article_ids": ["LEGIARTI000044142491"],
-      "expected_article_nums": ["L. 216-2"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044142491"
+      ],
+      "expected_article_nums": [
+        "L. 216-2"
+      ],
       "reference_answer": "Le risque est transféré au consommateur lorsqu'il prend physiquement possession du bien, ou lorsqu'un tiers qu'il a désigné le fait.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "transfert des risques"
+      "topic": "transfert des risques",
+      "notes": null
     },
     {
       "id": "q08",
       "question": "Quelle est la durée de la garantie légale de conformité pour un bien neuf ?",
-      "expected_article_ids": ["LEGIARTI000044142579"],
-      "expected_article_nums": ["L. 217-3"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044142579"
+      ],
+      "expected_article_nums": [
+        "L. 217-3"
+      ],
       "reference_answer": "Le vendeur répond des défauts de conformité qui apparaissent dans un délai de deux ans à compter de la délivrance du bien.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "garantie de conformité"
+      "topic": "garantie de conformité",
+      "notes": null
     },
     {
       "id": "q09",
       "question": "Quand un bien est-il considéré comme conforme au contrat ?",
-      "expected_article_ids": ["LEGIARTI000044142575"],
-      "expected_article_nums": ["L. 217-4"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044142575"
+      ],
+      "expected_article_nums": [
+        "L. 217-4"
+      ],
       "reference_answer": "Il est conforme s'il correspond notamment à la description, au type, à la quantité et à la qualité prévues au contrat, convient à l'usage spécial accepté par le vendeur, et est délivré avec les accessoires et instructions prévus.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "conformité"
+      "topic": "conformité",
+      "notes": null
     },
     {
       "id": "q10",
       "question": "Quels critères objectifs de conformité s'ajoutent à ceux du contrat ?",
-      "expected_article_ids": ["LEGIARTI000044142571"],
-      "expected_article_nums": ["L. 217-5"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044142571"
+      ],
+      "expected_article_nums": [
+        "L. 217-5"
+      ],
       "reference_answer": "Le bien doit notamment être propre à l'usage habituellement attendu d'un bien de même type et, le cas échéant, posséder les qualités d'un échantillon ou modèle présenté.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "conformité objective"
+      "topic": "conformité objective",
+      "notes": null
     },
     {
       "id": "q11",
       "question": "Pendant combien de temps un défaut de conformité est-il présumé exister dès la délivrance pour un bien neuf ?",
-      "expected_article_ids": ["LEGIARTI000044152587"],
-      "expected_article_nums": ["L. 217-7"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044152587"
+      ],
+      "expected_article_nums": [
+        "L. 217-7"
+      ],
       "reference_answer": "Les défauts apparaissant dans les vingt-quatre mois suivant la délivrance sont présumés exister au moment de la délivrance, sauf preuve contraire. Pour les biens d'occasion, ce délai est de douze mois.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "présomption de non-conformité"
+      "topic": "présomption de non-conformité",
+      "notes": null
     },
     {
       "id": "q12",
       "question": "Quelles options le consommateur peut-il choisir pour la mise en conformité d'un bien ?",
-      "expected_article_ids": ["LEGIARTI000044152553"],
-      "expected_article_nums": ["L. 217-9"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044152553"
+      ],
+      "expected_article_nums": [
+        "L. 217-9"
+      ],
       "reference_answer": "Le consommateur peut exiger la mise en conformité en choisissant entre la réparation et le remplacement, et met le bien à la disposition du vendeur.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "réparation ou remplacement"
+      "topic": "réparation ou remplacement",
+      "notes": null
     },
     {
       "id": "q13",
       "question": "Le vendeur peut-il refuser le choix de réparation ou de remplacement du consommateur ?",
-      "expected_article_ids": ["LEGIARTI000044152610"],
-      "expected_article_nums": ["L. 217-12"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044152610"
+      ],
+      "expected_article_nums": [
+        "L. 217-12"
+      ],
       "reference_answer": "Oui, si la mise en conformité choisie est impossible ou entraîne des coûts disproportionnés au regard de la valeur du bien, de l'importance du défaut et de la possibilité d'opter pour l'autre choix.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "refus de mise en conformité"
+      "topic": "refus de mise en conformité",
+      "notes": null
     },
     {
       "id": "q14",
       "question": "Quel est le délai de rétractation pour un contrat conclu à distance ?",
-      "expected_article_ids": ["LEGIARTI000032226842"],
-      "expected_article_nums": ["L. 221-18"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032226842"
+      ],
+      "expected_article_nums": [
+        "L. 221-18"
+      ],
       "reference_answer": "Le consommateur dispose de quatorze jours pour se rétracter, sans motiver sa décision, sous réserve des coûts prévus aux articles L. 221-23 à L. 221-25.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "rétractation"
+      "topic": "rétractation",
+      "notes": null
     },
     {
       "id": "q15",
       "question": "À partir de quand court le délai de rétractation pour un contrat de vente de biens à distance ?",
-      "expected_article_ids": ["LEGIARTI000032226842"],
-      "expected_article_nums": ["L. 221-18"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032226842"
+      ],
+      "expected_article_nums": [
+        "L. 221-18"
+      ],
       "reference_answer": "Pour les contrats de vente de biens, le délai court à compter de la réception du bien par le consommateur ou par un tiers qu'il a désigné, autre que le transporteur.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "point de départ rétractation"
+      "topic": "point de départ rétractation",
+      "notes": null
     },
     {
       "id": "q16",
       "question": "Qu'est-ce qu'un contrat à distance au sens du Code de la consommation ?",
-      "expected_article_ids": ["LEGIARTI000044563164"],
-      "expected_article_nums": ["L. 221-1"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044563164"
+      ],
+      "expected_article_nums": [
+        "L. 221-1"
+      ],
       "reference_answer": "C'est un contrat conclu entre un professionnel et un consommateur dans le cadre d'un système organisé de vente ou de prestation à distance, sans présence physique simultanée, par techniques de communication à distance.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "définition contrat à distance"
+      "topic": "définition contrat à distance",
+      "notes": null
     },
     {
       "id": "q17",
       "question": "Quelles informations précontractuelles spécifiques s'appliquent avant un contrat à distance ou hors établissement ?",
-      "expected_article_ids": ["LEGIARTI000044563141"],
-      "expected_article_nums": ["L. 221-5"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044563141"
+      ],
+      "expected_article_nums": [
+        "L. 221-5"
+      ],
       "reference_answer": "Avant conclusion, le professionnel fournit de manière lisible et compréhensible les informations prévues par l'article L. 221-5, notamment relatives aux caractéristiques, au professionnel, au prix et au droit de rétractation.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "info précontractuelle distance"
+      "topic": "info précontractuelle distance",
+      "notes": null
     },
     {
       "id": "q18",
       "question": "Quels contrats sont exclus du droit de rétractation ?",
-      "expected_article_ids": ["LEGIARTI000044563170"],
-      "expected_article_nums": ["L. 221-28"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044563170"
+      ],
+      "expected_article_nums": [
+        "L. 221-28"
+      ],
       "reference_answer": "L'article L. 221-28 exclut notamment les services pleinement exécutés avec accord exprès, les biens confectionnés selon les spécifications du consommateur, les biens périssables, et d'autres cas limitativement énumérés.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "exclusions rétractation"
+      "topic": "exclusions rétractation",
+      "notes": null
     },
     {
       "id": "q19",
       "question": "Quelle est la conséquence d'une clause abusive sur le contrat ?",
-      "expected_article_ids": ["LEGIARTI000032226417"],
-      "expected_article_nums": ["L. 241-1"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032226417"
+      ],
+      "expected_article_nums": [
+        "L. 241-1"
+      ],
       "reference_answer": "Les clauses abusives sont réputées non écrites. Le contrat reste applicable dans toutes ses dispositions autres que celles jugées abusives, s'il peut subsister sans elles. Ces dispositions sont d'ordre public.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "sanction clause abusive"
+      "topic": "sanction clause abusive",
+      "notes": null
     },
     {
       "id": "q20",
       "question": "À quels montants s'applique le chapitre relatif au crédit à la consommation (L. 312-1) ?",
-      "expected_article_ids": ["LEGIARTI000034072779"],
-      "expected_article_nums": ["L. 312-1"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000034072779"
+      ],
+      "expected_article_nums": [
+        "L. 312-1"
+      ],
       "reference_answer": "Le chapitre s'applique aux opérations de crédit mentionnées au 6° de l'article L. 311-1, onéreuses ou gratuites, dont le montant total est égal ou supérieur à 200 euros et inférieur ou égal à 75 000 euros.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "crédit consommation"
+      "topic": "crédit consommation",
+      "notes": null
     },
     {
       "id": "q21",
       "question": "Combien de temps le prêteur doit-il maintenir les conditions d'une offre de crédit à la consommation ?",
-      "expected_article_ids": ["LEGIARTI000035731428"],
-      "expected_article_nums": ["L. 312-18"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000035731428"
+      ],
+      "expected_article_nums": [
+        "L. 312-18"
+      ],
       "reference_answer": "La remise ou l'envoi de l'offre oblige le prêteur à en maintenir les conditions pendant une durée minimale de quinze jours.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "durée de validité offre de crédit"
+      "topic": "durée de validité offre de crédit",
+      "notes": null
     },
     {
       "id": "q22",
       "question": "Sous quelle forme doit être établi le contrat de crédit à la consommation ?",
-      "expected_article_ids": ["LEGIARTI000035731424"],
-      "expected_article_nums": ["L. 312-28"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000035731424"
+      ],
+      "expected_article_nums": [
+        "L. 312-28"
+      ],
       "reference_answer": "Le contrat est établi sur support papier ou autre support durable, distinct de la publicité et de la fiche d'information ; un encadré en début de contrat informe des caractéristiques essentielles.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "forme du contrat de crédit"
+      "topic": "forme du contrat de crédit",
+      "notes": null
     },
     {
       "id": "q23",
       "question": "Le consommateur a-t-il droit à un médiateur de la consommation ?",
-      "expected_article_ids": ["LEGIARTI000032224805"],
-      "expected_article_nums": ["L. 612-1"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032224805"
+      ],
+      "expected_article_nums": [
+        "L. 612-1"
+      ],
       "reference_answer": "Oui. Tout consommateur a le droit de recourir gratuitement à un médiateur de la consommation ; le professionnel garantit un recours effectif à un dispositif de médiation.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "médiation"
+      "topic": "médiation",
+      "notes": null
     },
     {
       "id": "q24",
       "question": "Quand le professionnel doit-il communiquer les coordonnées du médiateur au consommateur ?",
-      "expected_article_ids": ["LEGIARTI000032224762"],
-      "expected_article_nums": ["L. 616-1"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032224762"
+      ],
+      "expected_article_nums": [
+        "L. 616-1"
+      ],
       "reference_answer": "Le professionnel communique les coordonnées du ou des médiateurs compétents, et les fournit aussi lorsqu'un litige n'a pas pu être réglé après réclamation préalable auprès de ses services.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "information médiateur"
+      "topic": "information médiateur",
+      "notes": null
     },
     {
       "id": "q25",
       "question": "Que deviennent les sommes versées d'avance par le consommateur, sauf stipulation contraire ?",
-      "expected_article_ids": ["LEGIARTI000032226990"],
-      "expected_article_nums": ["L. 214-1"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032226990"
+      ],
+      "expected_article_nums": [
+        "L. 214-1"
+      ],
       "reference_answer": "Sauf stipulation contraire, les sommes versées d'avance sont des arrhes : le consommateur qui se désiste les perd, le professionnel qui se désiste les restitue au double.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "arrhes"
-    },
-    {
-      "id": "q26",
-      "question": "Les pratiques commerciales trompeuses sont-elles interdites même si elles n'ont produit leurs effets qu'en France ?",
-      "expected_article_ids": ["LEGIARTI000032227122", "LEGIARTI000044563114"],
-      "expected_article_nums": ["L. 132-1", "L. 121-2"],
-      "reference_answer": "Oui. Le délit de pratique commerciale trompeuse est constitué dès lors que la pratique est mise en œuvre ou produit ses effets en France (L. 132-1), les pratiques trompeuses étant définies notamment aux articles L. 121-2 et suivants.",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "territorialité pratiques trompeuses"
+      "topic": "arrhes",
+      "notes": null
     },
     {
       "id": "q27",
       "question": "Le professionnel doit-il fournir des informations complémentaires avant un contrat de services ?",
-      "expected_article_ids": ["LEGIARTI000032227350"],
-      "expected_article_nums": ["L. 111-2"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032227350"
+      ],
+      "expected_article_nums": [
+        "L. 111-2"
+      ],
       "reference_answer": "Oui. Outre L. 111-1, le professionnel communique avant conclusion (ou avant exécution s'il n'y a pas de contrat écrit) des informations complémentaires sur ses coordonnées, son activité et les conditions contractuelles, listées par décret.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "info services"
+      "topic": "info services",
+      "notes": null
     },
     {
       "id": "q28",
       "question": "Le prêteur doit-il expliquer à l'emprunteur si le crédit est adapté à sa situation ?",
-      "expected_article_ids": ["LEGIARTI000032226174"],
-      "expected_article_nums": ["L. 312-14"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032226174"
+      ],
+      "expected_article_nums": [
+        "L. 312-14"
+      ],
       "reference_answer": "Oui. Le prêteur ou l'intermédiaire fournit des explications permettant de déterminer si le crédit est adapté aux besoins et à la situation financière de l'emprunteur, et attire son attention sur les caractéristiques et conséquences du crédit.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "devoir d'explication crédit"
+      "topic": "devoir d'explication crédit",
+      "notes": null
     },
     {
       "id": "q29",
       "question": "Que signifie la délivrance d'un bien au sens du Code de la consommation ?",
-      "expected_article_ids": ["LEGIARTI000044142498"],
-      "expected_article_nums": ["L. 216-1"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044142498"
+      ],
+      "expected_article_nums": [
+        "L. 216-1"
+      ],
       "reference_answer": "La délivrance s'entend du transfert au consommateur de la possession physique ou du contrôle du bien ; pour un bien comportant des éléments numériques, elle inclut aussi la fourniture de ces éléments.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "définition délivrance"
+      "topic": "définition délivrance",
+      "notes": null
     },
     {
       "id": "q30",
       "question": "Quelle est la durée de présomption de non-conformité pour un bien d'occasion ?",
-      "expected_article_ids": ["LEGIARTI000044152587"],
-      "expected_article_nums": ["L. 217-7"],
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044152587"
+      ],
+      "expected_article_nums": [
+        "L. 217-7"
+      ],
       "reference_answer": "Pour les biens d'occasion, le délai de présomption est fixé à douze mois à compter de la délivrance.",
+      "as_of": null,
       "unanswerable": false,
       "validated": false,
-      "topic": "bien d'occasion"
+      "topic": "bien d'occasion",
+      "notes": null
+    },
+    {
+      "id": "d31",
+      "question": "Que doit indiquer le professionnel lorsqu'une publicité mentionne une réduction de prix ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044549592"
+      ],
+      "expected_article_nums": [
+        "L. 112-1-1"
+      ],
+      "reference_answer": "Il indique le prix antérieur pratiqué avant la réduction, selon les modalités prévues par le texte.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "direct",
+      "notes": null
+    },
+    {
+      "id": "d33",
+      "question": "Qu'est-ce qu'un contrat hors établissement ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044563164"
+      ],
+      "expected_article_nums": [
+        "L. 221-1"
+      ],
+      "reference_answer": "Un contrat conclu entre un professionnel et un consommateur dans simultanément présents physiquement dans un lieu qui n'est pas l'établissement commercial du professionnel, notamment.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "direct",
+      "notes": null
+    },
+    {
+      "id": "d34",
+      "question": "Le professionnel doit-il rembourser le consommateur après rétractation ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044563193"
+      ],
+      "expected_article_nums": [
+        "L. 221-21"
+      ],
+      "reference_answer": "Le consommateur exerce son droit de rétractation en informant le professionnel de sa décision de se rétracter par l'envoi, avant l'expiration du délai prévu à l'article L.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "direct",
+      "notes": null
+    },
+    {
+      "id": "d35",
+      "question": "Quelles sont les conditions de conformité d'un bien aux critères subjectifs du contrat ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044142575"
+      ],
+      "expected_article_nums": [
+        "L. 217-4"
+      ],
+      "reference_answer": "Le bien doit notamment correspondre à la description, au type, à la quantité et à la qualité prévues au contrat, et être délivré avec les accessoires et instructions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "direct",
+      "notes": null
+    },
+    {
+      "id": "d36",
+      "question": "Qui a la charge de la preuve du défaut de conformité ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044142560"
+      ],
+      "expected_article_nums": [
+        "L. 217-8"
+      ],
+      "reference_answer": "Il appartient au vendeur de prouver que le défaut de conformité n'existait pas au moment de la délivrance, sous les conditions du texte.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "direct",
+      "notes": null
+    },
+    {
+      "id": "d37",
+      "question": "Dans quel délai la mise en conformité doit-elle intervenir ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044142554"
+      ],
+      "expected_article_nums": [
+        "L. 217-10"
+      ],
+      "reference_answer": "Elle a lieu dans un délai raisonnable suivant la demande du consommateur, sans frais et sans inconvénient majeur pour celui-ci.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "direct",
+      "notes": null
+    },
+    {
+      "id": "d38",
+      "question": "Le consommateur peut-il obtenir une réduction du prix ou la résolution en cas de non-conformité ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044142545"
+      ],
+      "expected_article_nums": [
+        "L. 217-13"
+      ],
+      "reference_answer": "Tout bien réparé dans le cadre de la garantie légale de conformité bénéficie d'une extension de cette garantie de six mois.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "direct",
+      "notes": null
+    },
+    {
+      "id": "d39",
+      "question": "Quelle est la durée de la garantie commerciale lorsqu'elle est consentie ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044139957"
+      ],
+      "expected_article_nums": [
+        "L. 217-28"
+      ],
+      "reference_answer": "Lorsque le consommateur demande au garant, pendant le cours de la garantie légale ou de la garantie commerciale qui lui a été consentie lors de l'acquisition ou de la réparation d'un bien, une remise en état couverte par cette garantie, toute période d'immobilisation suspend la garantie qui restait à courir jusqu'à la ",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "direct",
+      "notes": null
+    },
+    {
+      "id": "d41",
+      "question": "L'emprunteur dispose-t-il d'un délai de rétractation pour un crédit à la consommation ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000034072770"
+      ],
+      "expected_article_nums": [
+        "L. 312-19"
+      ],
+      "reference_answer": "Oui ; le texte organise le droit de rétractation de l'emprunteur après acceptation de l'offre.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "direct",
+      "notes": null
+    },
+    {
+      "id": "d42",
+      "question": "Quelles sanctions sont prévues en cas de clause abusive ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032226417"
+      ],
+      "expected_article_nums": [
+        "L. 241-1"
+      ],
+      "reference_answer": "Les clauses abusives sont réputées non écrites ; le contrat reste applicable pour le reste s'il peut subsister.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "direct",
+      "notes": null
+    },
+    {
+      "id": "d45",
+      "question": "Quelles informations le professionnel doit-il fournir sur les garanties légales avant la conclusion du contrat ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044142438"
+      ],
+      "expected_article_nums": [
+        "L. 111-1"
+      ],
+      "reference_answer": "Il informe notamment sur l'existence et les modalités de mise en œuvre des garanties légales de conformité et des vices cachés, et des garanties commerciales éventuelles.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "direct",
+      "notes": null
+    },
+    {
+      "id": "d100",
+      "question": "Quelles obligations l'article L. 111-1 met-il à la charge du professionnel à l'égard du consommateur ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044142438"
+      ],
+      "expected_article_nums": [
+        "L. 111-1"
+      ],
+      "reference_answer": "Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractéristiques essentielles du bien ou du service, ainsi que celles du service numérique ou du contenu numérique, compte tenu de leur nature et du support de communicati",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "obligation",
+      "notes": "template obligation"
+    },
+    {
+      "id": "d101",
+      "question": "Quelles obligations l'article L. 111-2 met-il à la charge du professionnel à l'égard du consommateur ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032227350"
+      ],
+      "expected_article_nums": [
+        "L. 111-2"
+      ],
+      "reference_answer": "Outre les mentions prévues à l'article L.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "obligation",
+      "notes": "template obligation"
+    },
+    {
+      "id": "d102",
+      "question": "Quelles obligations l'article L. 121-1 met-il à la charge du professionnel à l'égard du consommateur ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032227301"
+      ],
+      "expected_article_nums": [
+        "L. 121-1"
+      ],
+      "reference_answer": "Les pratiques commerciales déloyales sont interdites.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "obligation",
+      "notes": "template obligation"
+    },
+    {
+      "id": "d103",
+      "question": "Quelles obligations l'article L. 121-2 met-il à la charge du professionnel à l'égard du consommateur ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044563114"
+      ],
+      "expected_article_nums": [
+        "L. 121-2"
+      ],
+      "reference_answer": "Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un autre signe distinctif d'un concurrent ; 2° Lorsqu'elle repose sur des allégations, indications ou présentations fausses ou de nature à induire en erreur et po",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "obligation",
+      "notes": "template obligation"
+    },
+    {
+      "id": "d104",
+      "question": "Quelles obligations l'article L. 121-3 met-il à la charge du professionnel à l'égard du consommateur ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044563111"
+      ],
+      "expected_article_nums": [
+        "L. 121-3"
+      ],
+      "reference_answer": "Une pratique commerciale est également trompeuse si, compte tenu des limites propres au moyen de communication utilisé et des circonstances qui l'entourent, elle omet, dissimule ou fournit de façon inintelligible, ambiguë ou à contretemps une information substantielle ou lorsqu'elle n'indique pas sa véritable intention commerciale dès lors que celle-ci ne re",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "obligation",
+      "notes": "template obligation"
+    },
+    {
+      "id": "d105",
+      "question": "Quelles obligations l'article L. 121-4 met-il à la charge du professionnel à l'égard du consommateur ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044563107"
+      ],
+      "expected_article_nums": [
+        "L. 121-4"
+      ],
+      "reference_answer": "Sont réputées trompeuses, au sens des articles L.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "obligation",
+      "notes": "template obligation"
+    },
+    {
+      "id": "d106",
+      "question": "Quelles obligations l'article L. 221-1 met-il à la charge du professionnel à l'égard du consommateur ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044563164"
+      ],
+      "expected_article_nums": [
+        "L. 221-1"
+      ],
+      "reference_answer": "I.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "obligation",
+      "notes": "template obligation"
+    },
+    {
+      "id": "d107",
+      "question": "Quelles obligations l'article L. 221-3 met-il à la charge du professionnel à l'égard du consommateur ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000032226882"
+      ],
+      "expected_article_nums": [
+        "L. 221-3"
+      ],
+      "reference_answer": "Les dispositions des sections 2, 3, 6 du présent chapitre applicables aux relations entre consommateurs et professionnels, sont étendues aux contrats conclus hors établissement entre deux professionnels dès lors que l'objet de ces contrats n'entre pas dans le champ de l'activité principale du professionnel sollicité et que le nombre de salariés employés par ",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "obligation",
+      "notes": "template obligation"
+    },
+    {
+      "id": "d108",
+      "question": "Quelles obligations l'article L. 221-5 met-il à la charge du professionnel à l'égard du consommateur ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044563141"
+      ],
+      "expected_article_nums": [
+        "L. 221-5"
+      ],
+      "reference_answer": "I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractéristiques essentielles du bien, du service, du service numérique ou du contenu numérique ; 2° L",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "obligation",
+      "notes": "template obligation"
+    },
+    {
+      "id": "d109",
+      "question": "Quelles obligations l'article L. 221-21 met-il à la charge du professionnel à l'égard du consommateur ?",
+      "type": "direct",
+      "expected_article_ids": [
+        "LEGIARTI000044563193"
+      ],
+      "expected_article_nums": [
+        "L. 221-21"
+      ],
+      "reference_answer": "Le consommateur exerce son droit de rétractation en informant le professionnel de sa décision de se rétracter par l'envoi, avant l'expiration du délai prévu à l'article L.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "obligation",
+      "notes": "template obligation"
+    },
+    {
+      "id": "q26",
+      "question": "Les pratiques commerciales trompeuses sont-elles interdites même si elles n'ont produit leurs effets qu'en France ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227122",
+        "LEGIARTI000044563114"
+      ],
+      "expected_article_nums": [
+        "L. 132-1",
+        "L. 121-2"
+      ],
+      "reference_answer": "Oui. Le délit de pratique commerciale trompeuse est constitué dès lors que la pratique est mise en œuvre ou produit ses effets en France (L. 132-1), les pratiques trompeuses étant définies notamment aux articles L. 121-2 et suivants.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "territorialité pratiques trompeuses",
+      "notes": null
+    },
+    {
+      "id": "mh01",
+      "question": "Quelles informations sur les prix l'obligation générale d'information précontractuelle (L. 111-1) renvoie-t-elle aux articles sur l'affichage des prix, et que dit L. 112-1 ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044142438",
+        "LEGIARTI000032227331"
+      ],
+      "expected_article_nums": [
+        "L. 111-1",
+        "L. 112-1"
+      ],
+      "reference_answer": "L. 111-1 renvoie aux articles L. 112-1 à L. 112-4-1 pour le prix ; L. 112-1 impose d'informer le consommateur sur les prix par marquage, étiquetage, affichage ou procédé approprié.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "info prix via renvoi",
+      "notes": "multi_hop via renvoi / articulation d'articles"
+    },
+    {
+      "id": "mh02",
+      "question": "Comment L. 111-2 s'articule-t-il avec L. 111-1 pour un contrat de services ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227350",
+        "LEGIARTI000044142438"
+      ],
+      "expected_article_nums": [
+        "L. 111-2",
+        "L. 111-1"
+      ],
+      "reference_answer": "Outre les mentions de L. 111-1, le professionnel doit communiquer avant conclusion (ou avant exécution sans contrat écrit) des informations complémentaires sur ses coordonnées, son activité et les conditions contractuelles.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "info services",
+      "notes": "multi_hop via renvoi / articulation d'articles"
+    },
+    {
+      "id": "mh03",
+      "question": "Une pratique contraire à L. 121-2 à L. 121-4 est-elle déloyale au sens de L. 121-1, et que prévoit L. 121-5 ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227301",
+        "LEGIARTI000034072564"
+      ],
+      "expected_article_nums": [
+        "L. 121-1",
+        "L. 121-5"
+      ],
+      "reference_answer": "Oui : L. 121-1 interdit les pratiques déloyales et renvoie notamment aux pratiques trompeuses et agressives ; L. 121-5 précise qu'une pratique conforme à L. 121-2 à L. 121-4 est déloyale.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "pratiques déloyales",
+      "notes": "multi_hop via renvoi / articulation d'articles"
+    },
+    {
+      "id": "mh04",
+      "question": "Quels délais et points de départ du droit de rétractation résultent de L. 221-18, et quels coûts L. 221-25 peut-il encore imposer ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032226842",
+        "LEGIARTI000044563179"
+      ],
+      "expected_article_nums": [
+        "L. 221-18",
+        "L. 221-25"
+      ],
+      "reference_answer": "L. 221-18 ouvre un délai de quatorze jours sans motiver la décision, sous réserve des coûts prévus aux articles L. 221-23 à L. 221-25 ; L. 221-25 traite notamment de la responsabilité des frais de renvoi lorsque le professionnel en a informé le consommateur.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "rétractation coûts",
+      "notes": "multi_hop via renvoi / articulation d'articles"
+    },
+    {
+      "id": "mh05",
+      "question": "Le vendeur répond-il des défauts de conformité au regard de L. 217-3 et des critères objectifs de L. 217-5 ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044142579",
+        "LEGIARTI000044142571"
+      ],
+      "expected_article_nums": [
+        "L. 217-3",
+        "L. 217-5"
+      ],
+      "reference_answer": "Oui : L. 217-3 impose de délivrer un bien conforme au contrat et aux critères de L. 217-5, et d'assurer la garantie pendant deux ans à compter de la délivrance.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "garantie conformité",
+      "notes": "multi_hop via renvoi / articulation d'articles"
+    },
+    {
+      "id": "mh06",
+      "question": "Comment la notion de délivrance (L. 216-1) intervient-elle dans le point de départ de la garantie de conformité (L. 217-3) ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044142498",
+        "LEGIARTI000044142579"
+      ],
+      "expected_article_nums": [
+        "L. 216-1",
+        "L. 217-3"
+      ],
+      "reference_answer": "L. 217-3 fait courir le délai de deux ans à compter de la délivrance au sens de L. 216-1 (transfert de la possession physique ou du contrôle du bien).",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "délivrance et garantie",
+      "notes": "multi_hop via renvoi / articulation d'articles"
+    },
+    {
+      "id": "mh07",
+      "question": "Quelle est la différence de régime entre la définition des clauses abusives (L. 212-1) et leur sanction (L. 241-1) ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032890812",
+        "LEGIARTI000032226417"
+      ],
+      "expected_article_nums": [
+        "L. 212-1",
+        "L. 241-1"
+      ],
+      "reference_answer": "L. 212-1 définit comme abusives les clauses créant un déséquilibre significatif au détriment du consommateur ; L. 241-1 les répute non écrites tout en maintenant le reste du contrat s'il peut subsister.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "clauses abusives",
+      "notes": "multi_hop via renvoi / articulation d'articles"
+    },
+    {
+      "id": "mh08",
+      "question": "L. 216-6 renvoie à quel manquement à L. 216-1 et quelles options ouvre-t-il au consommateur ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044142472",
+        "LEGIARTI000044142498"
+      ],
+      "expected_article_nums": [
+        "L. 216-6",
+        "L. 216-1"
+      ],
+      "reference_answer": "En cas de manquement à l'obligation de délivrance de L. 216-1, L. 216-6 permet au consommateur d'enjoindre au professionnel d'exécuter, puis le cas échéant de résoudre le contrat.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "inexécution délivrance",
+      "notes": "multi_hop via renvoi / articulation d'articles"
+    },
+    {
+      "id": "mh09",
+      "question": "Comment L. 132-1 et L. 121-2 s'articulent-ils pour le délit de pratique commerciale trompeuse ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227122",
+        "LEGIARTI000044563114"
+      ],
+      "expected_article_nums": [
+        "L. 132-1",
+        "L. 121-2"
+      ],
+      "reference_answer": "L. 121-2 définit les pratiques trompeuses ; L. 132-1 précise que le délit est constitué dès lors que la pratique est mise en œuvre ou produit ses effets en France.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "pratiques trompeuses",
+      "notes": "multi_hop via renvoi / articulation d'articles"
+    },
+    {
+      "id": "mh10",
+      "question": "Que doit contenir l'offre de crédit (L. 312-18) et sous quelle forme le contrat est-il ensuite établi (L. 312-28) ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000035731428",
+        "LEGIARTI000035731424"
+      ],
+      "expected_article_nums": [
+        "L. 312-18",
+        "L. 312-28"
+      ],
+      "reference_answer": "L. 312-18 impose une offre sur support durable maintenue au moins quinze jours ; L. 312-28 exige un contrat sur support papier ou durable, distinct de la publicité, avec un encadré des caractéristiques essentielles.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crédit forme",
+      "notes": "multi_hop via renvoi / articulation d'articles"
+    },
+    {
+      "id": "mh11",
+      "question": "Quelles informations L. 221-5 exige-t-il avant un contrat à distance, et quel délai de rétractation L. 221-18 ouvre-t-il ensuite ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563141",
+        "LEGIARTI000032226842"
+      ],
+      "expected_article_nums": [
+        "L. 221-5",
+        "L. 221-18"
+      ],
+      "reference_answer": "L. 221-5 impose des informations précontractuelles spécifiques lisibles et compréhensibles ; L. 221-18 ouvre ensuite un délai de quatorze jours pour se rétracter.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "distance info+retractation",
+      "notes": "multi_hop via renvoi / articulation d'articles"
+    },
+    {
+      "id": "mh12",
+      "question": "L. 212-2 renvoie-t-il à L. 212-1 pour l'appréciation des clauses des contrats de vente de biens et de fourniture de services numériques ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227000",
+        "LEGIARTI000032890812"
+      ],
+      "expected_article_nums": [
+        "L. 212-2",
+        "L. 212-1"
+      ],
+      "reference_answer": "Oui : L. 212-2 prévoit que pour ces contrats, le caractère abusif s'apprécie notamment au regard de L. 212-1.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "clauses abusives numériques",
+      "notes": "multi_hop via renvoi / articulation d'articles"
+    },
+    {
+      "id": "mh50",
+      "question": "L'article L. 111-1 renvoie à l'article L. 112-1 : que dispose L. 111-1, et que précise L. 112-1 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044142438",
+        "LEGIARTI000032227331"
+      ],
+      "expected_article_nums": [
+        "L. 111-1",
+        "L. 112-1"
+      ],
+      "reference_answer": "L. 111-1 : Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractérist L. 112-1 : Tout vendeur de produit ou tout prestataire de services informe le consommateur, par voie de marquage, d'étiquetage, d'affichage ou par tout autre procédé approprié, sur les prix et les conditions par",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:renvoi"
+    },
+    {
+      "id": "mh51",
+      "question": "L'article L. 111-1 renvoie à l'article L. 112-4-1 : que dispose L. 111-1, et que précise L. 112-4-1 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044142438",
+        "LEGIARTI000044129074"
+      ],
+      "expected_article_nums": [
+        "L. 111-1",
+        "L. 112-4-1"
+      ],
+      "reference_answer": "L. 111-1 : Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractérist L. 112-4-1 : Lorsque le contrat de vente de biens ou le contrat de fourniture de contenus numériques ou de services numériques ne prévoit pas le paiement d'un prix, le professionnel précise la nature de l'avantage",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:renvoi"
+    },
+    {
+      "id": "mh52",
+      "question": "L'article L. 111-2 renvoie à l'article L. 111-1 : que dispose L. 111-2, et que précise L. 111-1 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227350",
+        "LEGIARTI000044142438"
+      ],
+      "expected_article_nums": [
+        "L. 111-2",
+        "L. 111-1"
+      ],
+      "reference_answer": "L. 111-2 : Outre les mentions prévues à l'article L. L. 111-1 : Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractérist",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "mh53",
+      "question": "L'article L. 121-1 renvoie à l'article L. 121-2 : que dispose L. 121-1, et que précise L. 121-2 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227301",
+        "LEGIARTI000044563114"
+      ],
+      "expected_article_nums": [
+        "L. 121-1",
+        "L. 121-2"
+      ],
+      "reference_answer": "L. 121-1 : Les pratiques commerciales déloyales sont interdites. L. 121-2 : Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:renvoi"
+    },
+    {
+      "id": "mh54",
+      "question": "L'article L. 121-1 renvoie à l'article L. 121-3 : que dispose L. 121-1, et que précise L. 121-3 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227301",
+        "LEGIARTI000044563111"
+      ],
+      "expected_article_nums": [
+        "L. 121-1",
+        "L. 121-3"
+      ],
+      "reference_answer": "L. 121-1 : Les pratiques commerciales déloyales sont interdites. L. 121-3 : Une pratique commerciale est également trompeuse si, compte tenu des limites propres au moyen de communication utilisé et des circonstances qui l'entourent, elle omet, dissimule ou fournit de façon in",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:renvoi"
+    },
+    {
+      "id": "mh55",
+      "question": "L'article L. 121-1 renvoie à l'article L. 121-4 : que dispose L. 121-1, et que précise L. 121-4 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227301",
+        "LEGIARTI000044563107"
+      ],
+      "expected_article_nums": [
+        "L. 121-1",
+        "L. 121-4"
+      ],
+      "reference_answer": "L. 121-1 : Les pratiques commerciales déloyales sont interdites. L. 121-4 : Sont réputées trompeuses, au sens des articles L.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:renvoi"
+    },
+    {
+      "id": "mh56",
+      "question": "L'article L. 121-2 renvoie à l'article L. 112-1-1 : que dispose L. 121-2, et que précise L. 112-1-1 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563114",
+        "LEGIARTI000044549592"
+      ],
+      "expected_article_nums": [
+        "L. 121-2",
+        "L. 112-1-1"
+      ],
+      "reference_answer": "L. 121-2 : Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un L. 112-1-1 : I.-Toute annonce d'une réduction de prix indique le prix antérieur pratiqué par le professionnel avant l'application de la réduction de prix.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "mh57",
+      "question": "L'article L. 121-4 renvoie à l'article L. 121-2 : que dispose L. 121-4, et que précise L. 121-2 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563107",
+        "LEGIARTI000044563114"
+      ],
+      "expected_article_nums": [
+        "L. 121-4",
+        "L. 121-2"
+      ],
+      "reference_answer": "L. 121-4 : Sont réputées trompeuses, au sens des articles L. L. 121-2 : Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "mh58",
+      "question": "L'article L. 121-4 renvoie à l'article L. 121-3 : que dispose L. 121-4, et que précise L. 121-3 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563107",
+        "LEGIARTI000044563111"
+      ],
+      "expected_article_nums": [
+        "L. 121-4",
+        "L. 121-3"
+      ],
+      "reference_answer": "L. 121-4 : Sont réputées trompeuses, au sens des articles L. L. 121-3 : Une pratique commerciale est également trompeuse si, compte tenu des limites propres au moyen de communication utilisé et des circonstances qui l'entourent, elle omet, dissimule ou fournit de façon in",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "mh59",
+      "question": "L'article L. 121-5 renvoie à l'article L. 121-2 : que dispose L. 121-5, et que précise L. 121-2 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000034072564",
+        "LEGIARTI000044563114"
+      ],
+      "expected_article_nums": [
+        "L. 121-5",
+        "L. 121-2"
+      ],
+      "reference_answer": "L. 121-5 : Les dispositions des articles L. L. 121-2 : Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:renvoi"
+    },
+    {
+      "id": "mh60",
+      "question": "L'article L. 121-5 renvoie à l'article L. 121-3 : que dispose L. 121-5, et que précise L. 121-3 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000034072564",
+        "LEGIARTI000044563111"
+      ],
+      "expected_article_nums": [
+        "L. 121-5",
+        "L. 121-3"
+      ],
+      "reference_answer": "L. 121-5 : Les dispositions des articles L. L. 121-3 : Une pratique commerciale est également trompeuse si, compte tenu des limites propres au moyen de communication utilisé et des circonstances qui l'entourent, elle omet, dissimule ou fournit de façon in",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:renvoi"
+    },
+    {
+      "id": "mh61",
+      "question": "L'article L. 121-5 renvoie à l'article L. 121-4 : que dispose L. 121-5, et que précise L. 121-4 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000034072564",
+        "LEGIARTI000044563107"
+      ],
+      "expected_article_nums": [
+        "L. 121-5",
+        "L. 121-4"
+      ],
+      "reference_answer": "L. 121-5 : Les dispositions des articles L. L. 121-4 : Sont réputées trompeuses, au sens des articles L.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:renvoi"
+    },
+    {
+      "id": "mh62",
+      "question": "L'article L. 221-5 renvoie à l'article L. 112-1 : que dispose L. 221-5, et que précise L. 112-1 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563141",
+        "LEGIARTI000032227331"
+      ],
+      "expected_article_nums": [
+        "L. 221-5",
+        "L. 112-1"
+      ],
+      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 112-1 : Tout vendeur de produit ou tout prestataire de services informe le consommateur, par voie de marquage, d'étiquetage, d'affichage ou par tout autre procédé approprié, sur les prix et les conditions par",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:renvoi"
+    },
+    {
+      "id": "mh63",
+      "question": "L'article L. 221-5 renvoie à l'article L. 112-2 : que dispose L. 221-5, et que précise L. 112-2 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563141",
+        "LEGIARTI000034072548"
+      ],
+      "expected_article_nums": [
+        "L. 221-5",
+        "L. 112-2"
+      ],
+      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 112-2 : Les dispositions de l'article L.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:renvoi"
+    },
+    {
+      "id": "mh64",
+      "question": "L'article L. 221-5 renvoie à l'article L. 112-3 : que dispose L. 221-5, et que précise L. 112-3 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563141",
+        "LEGIARTI000032227327"
+      ],
+      "expected_article_nums": [
+        "L. 221-5",
+        "L. 112-3"
+      ],
+      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 112-3 : Lorsque le prix ne peut être raisonnablement calculé à l'avance du fait de la nature du bien ou du service, le professionnel fournit le mode de calcul du prix et, s'il y a lieu, tous les frais supplém",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:renvoi"
+    },
+    {
+      "id": "mh65",
+      "question": "L'article L. 221-5 renvoie à l'article L. 112-4 : que dispose L. 221-5, et que précise L. 112-4 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563141",
+        "LEGIARTI000032227325"
+      ],
+      "expected_article_nums": [
+        "L. 221-5",
+        "L. 112-4"
+      ],
+      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 112-4 : Dans le cas d'un contrat à durée indéterminée ou d'un contrat assorti d'un abonnement, le prix total inclut le total des frais exposés pour chaque période de facturation.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:renvoi"
+    },
+    {
+      "id": "mh66",
+      "question": "L'article L. 221-5 renvoie à l'article L. 221-25 : que dispose L. 221-5, et que précise L. 221-25 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563141",
+        "LEGIARTI000044563179"
+      ],
+      "expected_article_nums": [
+        "L. 221-5",
+        "L. 221-25"
+      ],
+      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 221-25 : Si le consommateur souhaite que l'exécution d'une prestation de services ou d'un contrat mentionné au premier alinéa de l'article L.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "mh67",
+      "question": "L'article L. 221-5 renvoie à l'article L. 221-28 : que dispose L. 221-5, et que précise L. 221-28 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563141",
+        "LEGIARTI000044563170"
+      ],
+      "expected_article_nums": [
+        "L. 221-5",
+        "L. 221-28"
+      ],
+      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 221-28 : Le droit de rétractation ne peut être exercé pour les contrats : 1° De fourniture de services pleinement exécutés avant la fin du délai de rétractation et, si le contrat soumet le consommateur à une o",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "mh68",
+      "question": "L'article L. 221-5 renvoie à l'article L. 111-2 : que dispose L. 221-5, et que précise L. 111-2 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563141",
+        "LEGIARTI000032227350"
+      ],
+      "expected_article_nums": [
+        "L. 221-5",
+        "L. 111-2"
+      ],
+      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 111-2 : Outre les mentions prévues à l'article L.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "mh69",
+      "question": "L'article L. 221-18 renvoie à l'article L. 221-25 : que dispose L. 221-18, et que précise L. 221-25 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032226842",
+        "LEGIARTI000044563179"
+      ],
+      "expected_article_nums": [
+        "L. 221-18",
+        "L. 221-25"
+      ],
+      "reference_answer": "L. 221-18 : Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à  L. 221-25 : Si le consommateur souhaite que l'exécution d'une prestation de services ou d'un contrat mentionné au premier alinéa de l'article L.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:renvoi"
+    },
+    {
+      "id": "mh70",
+      "question": "L'article L. 221-18 renvoie à l'article L. 221-4 : que dispose L. 221-18, et que précise L. 221-4 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032226842",
+        "LEGIARTI000044563153"
+      ],
+      "expected_article_nums": [
+        "L. 221-18",
+        "L. 221-4"
+      ],
+      "reference_answer": "L. 221-18 : Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à  L. 221-4 : Les dispositions du présent chapitre s'appliquent aux contrats portant sur la fourniture d'eau, de gaz ou d'électricité lorsqu'ils ne sont pas conditionnés dans un volume délimité ou en quantité déter",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "mh71",
+      "question": "L'article L. 221-19 renvoie à l'article L. 221-18 : que dispose L. 221-19, et que précise L. 221-18 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032226840",
+        "LEGIARTI000032226842"
+      ],
+      "expected_article_nums": [
+        "L. 221-19",
+        "L. 221-18"
+      ],
+      "reference_answer": "L. 221-19 : Conformément au règlement n° 1182/71/ CEE du Conseil du 3 juin 1971 portant détermination des règles applicables aux délais, aux dates et aux termes : 1° Le jour où le contrat est conclu ou le jour de L. 221-18 : Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à ",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "mh72",
+      "question": "L'article L. 221-20 renvoie à l'article L. 221-5 : que dispose L. 221-20, et que précise L. 221-5 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563199",
+        "LEGIARTI000044563141"
+      ],
+      "expected_article_nums": [
+        "L. 221-20",
+        "L. 221-5"
+      ],
+      "reference_answer": "L. 221-20 : Lorsque les informations relatives au droit de rétractation n'ont pas été fournies au consommateur dans les conditions prévues au 7° de l'article L. L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "mh73",
+      "question": "L'article L. 221-20 renvoie à l'article L. 221-18 : que dispose L. 221-20, et que précise L. 221-18 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563199",
+        "LEGIARTI000032226842"
+      ],
+      "expected_article_nums": [
+        "L. 221-20",
+        "L. 221-18"
+      ],
+      "reference_answer": "L. 221-20 : Lorsque les informations relatives au droit de rétractation n'ont pas été fournies au consommateur dans les conditions prévues au 7° de l'article L. L. 221-18 : Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à ",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "mh74",
+      "question": "L'article L. 221-21 renvoie à l'article L. 221-18 : que dispose L. 221-21, et que précise L. 221-18 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563193",
+        "LEGIARTI000032226842"
+      ],
+      "expected_article_nums": [
+        "L. 221-21",
+        "L. 221-18"
+      ],
+      "reference_answer": "L. 221-21 : Le consommateur exerce son droit de rétractation en informant le professionnel de sa décision de se rétracter par l'envoi, avant l'expiration du délai prévu à l'article L. L. 221-18 : Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à ",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "mh75",
+      "question": "L'article L. 221-21 renvoie à l'article L. 221-5 : que dispose L. 221-21, et que précise L. 221-5 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563193",
+        "LEGIARTI000044563141"
+      ],
+      "expected_article_nums": [
+        "L. 221-21",
+        "L. 221-5"
+      ],
+      "reference_answer": "L. 221-21 : Le consommateur exerce son droit de rétractation en informant le professionnel de sa décision de se rétracter par l'envoi, avant l'expiration du délai prévu à l'article L. L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "mh76",
+      "question": "L'article L. 221-25 renvoie à l'article L. 221-4 : que dispose L. 221-25, et que précise L. 221-4 sur ce point ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044563179",
+        "LEGIARTI000044563153"
+      ],
+      "expected_article_nums": [
+        "L. 221-25",
+        "L. 221-4"
+      ],
+      "reference_answer": "L. 221-25 : Si le consommateur souhaite que l'exécution d'une prestation de services ou d'un contrat mentionné au premier alinéa de l'article L. L. 221-4 : Les dispositions du présent chapitre s'appliquent aux contrats portant sur la fourniture d'eau, de gaz ou d'électricité lorsqu'ils ne sont pas conditionnés dans un volume délimité ou en quantité déter",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "renvoi",
+      "notes": "edge:text_extract:explicit_citation"
+    },
+    {
+      "id": "t01",
+      "question": "Au 1er janvier 2023, quelle durée de garantie légale de conformité s'appliquait pour un bien neuf au sens de L. 217-3 ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044142579"
+      ],
+      "expected_article_nums": [
+        "L. 217-3"
+      ],
+      "reference_answer": "Deux ans à compter de la délivrance du bien.",
+      "as_of": "2023-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "La rédaction gelée du snapshot répond déjà ; lorsque les versions LEGI seront chargées, résoudre la version en vigueur à as_of."
+    },
+    {
+      "id": "t02",
+      "question": "En vigueur au 15 juin 2022, quel était le délai de rétractation pour un contrat conclu à distance ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000032226842"
+      ],
+      "expected_article_nums": [
+        "L. 221-18"
+      ],
+      "reference_answer": "Quatorze jours.",
+      "as_of": "2022-06-15",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t03",
+      "question": "À la date du 1er mars 2024, pendant combien de temps un défaut de conformité sur un bien neuf était-il présumé exister dès la délivrance ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044152587"
+      ],
+      "expected_article_nums": [
+        "L. 217-7"
+      ],
+      "reference_answer": "Vingt-quatre mois (douze mois pour les biens d'occasion).",
+      "as_of": "2024-03-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t04",
+      "question": "Selon le droit applicable au 1er septembre 2021, quel délai maximal de délivrance s'imposait à défaut d'accord sur la date ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044142498"
+      ],
+      "expected_article_nums": [
+        "L. 216-1"
+      ],
+      "reference_answer": "Sans retard injustifié et au plus tard trente jours après la conclusion du contrat.",
+      "as_of": "2021-09-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t05",
+      "question": "Au 1er janvier 2020, combien de temps le prêteur devait-il maintenir les conditions d'une offre de crédit à la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000035731428"
+      ],
+      "expected_article_nums": [
+        "L. 312-18"
+      ],
+      "reference_answer": "Une durée minimale de quinze jours à compter de la remise ou de l'envoi.",
+      "as_of": "2020-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t06",
+      "question": "En vigueur le 10 octobre 2019, une clause créant un déséquilibre significatif au détriment du consommateur était-elle abusive ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000032890812"
+      ],
+      "expected_article_nums": [
+        "L. 212-1"
+      ],
+      "reference_answer": "Oui, dans les contrats conclus entre professionnels et consommateurs.",
+      "as_of": "2019-10-10",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t07",
+      "question": "Au 1er juillet 2023, le consommateur avait-il droit de recourir gratuitement à un médiateur de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000032224805"
+      ],
+      "expected_article_nums": [
+        "L. 612-1"
+      ],
+      "reference_answer": "Oui ; le professionnel garantit un recours effectif à un dispositif de médiation.",
+      "as_of": "2023-07-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t08",
+      "question": "Selon les dispositions en vigueur au 5 mai 2021, à quel moment le risque de perte du bien était-il transféré au consommateur ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044142491"
+      ],
+      "expected_article_nums": [
+        "L. 216-2"
+      ],
+      "reference_answer": "Lorsqu'il prend physiquement possession du bien, ou lorsqu'un tiers qu'il a désigné (autre que le transporteur) le fait.",
+      "as_of": "2021-05-05",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t09",
+      "question": "Au 1er janvier 2025, les clauses abusives étaient-elles réputées non écrites ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000032226417"
+      ],
+      "expected_article_nums": [
+        "L. 241-1"
+      ],
+      "reference_answer": "Oui ; le contrat demeure pour le reste s'il peut subsister sans elles.",
+      "as_of": "2025-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t10",
+      "question": "En vigueur au 12 décembre 2022, les pratiques commerciales déloyales étaient-elles interdites ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000032227301"
+      ],
+      "expected_article_nums": [
+        "L. 121-1"
+      ],
+      "reference_answer": "Oui, lorsqu'elles sont contraires à la diligence professionnelle et altèrent le comportement économique du consommateur.",
+      "as_of": "2022-12-12",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t11",
+      "question": "À la date du 1er février 2018, le professionnel devait-il informer le consommateur sur les prix avant conclusion ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000032227331"
+      ],
+      "expected_article_nums": [
+        "L. 112-1"
+      ],
+      "reference_answer": "Oui, par marquage, étiquetage, affichage ou tout autre procédé approprié.",
+      "as_of": "2018-02-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t12",
+      "question": "Au 20 août 2024, quel délai de présomption de non-conformité s'appliquait aux biens d'occasion ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044152587"
+      ],
+      "expected_article_nums": [
+        "L. 217-7"
+      ],
+      "reference_answer": "Douze mois à compter de la délivrance.",
+      "as_of": "2024-08-20",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t13",
+      "question": "Selon le droit au 1er juin 2016, les sommes versées d'avance étaient-elles des arrhes sauf stipulation contraire ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000032226990"
+      ],
+      "expected_article_nums": [
+        "L. 214-1"
+      ],
+      "reference_answer": "Oui : le consommateur qui se désiste les perd ; le professionnel qui se désiste les restitue au double.",
+      "as_of": "2016-06-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t14",
+      "question": "En vigueur le 3 mars 2022, le délai de rétractation pour une prestation de services à distance courait-il dès la conclusion du contrat ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000032226842"
+      ],
+      "expected_article_nums": [
+        "L. 221-18"
+      ],
+      "reference_answer": "Oui, pour les contrats de prestation de services le délai court à compter de la conclusion du contrat.",
+      "as_of": "2022-03-03",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t15",
+      "question": "Au 1er novembre 2021, le vendeur pouvait-il refuser réparation ou remplacement s'ils entraînaient des coûts disproportionnés ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044152610"
+      ],
+      "expected_article_nums": [
+        "L. 217-12"
+      ],
+      "reference_answer": "Oui, si la mise en conformité choisie est impossible ou disproportionnée au regard notamment de la valeur du bien et de l'importance du défaut.",
+      "as_of": "2021-11-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal",
+      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
+    },
+    {
+      "id": "t50",
+      "question": "Selon le droit en vigueur au 2017-01-01, que dispose l'article L. 111-1 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044142438"
+      ],
+      "expected_article_nums": [
+        "L. 111-1"
+      ],
+      "reference_answer": "Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractéristiques essentielles du bien ou du service, ainsi que celles du service numérique ou du contenu numérique, compte tenu de ",
+      "as_of": "2017-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
+    },
+    {
+      "id": "t51",
+      "question": "Selon le droit en vigueur au 2019-06-01, que dispose l'article L. 112-1 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000032227331"
+      ],
+      "expected_article_nums": [
+        "L. 112-1"
+      ],
+      "reference_answer": "Tout vendeur de produit ou tout prestataire de services informe le consommateur, par voie de marquage, d'étiquetage, d'affichage ou par tout autre procédé approprié, sur les prix et les conditions particulières de la vente et de l'exécution des services, selon des modalités fixées par arrêtés du ministre chargé de l'éc",
+      "as_of": "2019-06-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
+    },
+    {
+      "id": "t53",
+      "question": "Selon le droit en vigueur au 2021-04-01, que dispose l'article L. 121-2 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044563114"
+      ],
+      "expected_article_nums": [
+        "L. 121-2"
+      ],
+      "reference_answer": "Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un autre signe distinctif d'un concurrent ; 2° Lorsqu'elle repose sur des allégations, indications ou présentations fausse",
+      "as_of": "2021-04-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
+    },
+    {
+      "id": "t54",
+      "question": "Selon le droit en vigueur au 2022-01-01, que dispose l'article L. 221-1 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044563164"
+      ],
+      "expected_article_nums": [
+        "L. 221-1"
+      ],
+      "reference_answer": "I.",
+      "as_of": "2022-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
+    },
+    {
+      "id": "t55",
+      "question": "Selon le droit en vigueur au 2023-06-15, que dispose l'article L. 221-18 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000032226842"
+      ],
+      "expected_article_nums": [
+        "L. 221-18"
+      ],
+      "reference_answer": "Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à motiver sa décision ni à supporter d'autres coûts que ceux prévus aux articles L.",
+      "as_of": "2023-06-15",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
+    },
+    {
+      "id": "t56",
+      "question": "Selon le droit en vigueur au 2024-01-10, que dispose l'article L. 221-28 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044563170"
+      ],
+      "expected_article_nums": [
+        "L. 221-28"
+      ],
+      "reference_answer": "Le droit de rétractation ne peut être exercé pour les contrats : 1° De fourniture de services pleinement exécutés avant la fin du délai de rétractation et, si le contrat soumet le consommateur à une obligation de payer, dont l'exécution a commencé avec son accord préalable et exprès et avec la reconnaissance par lui de",
+      "as_of": "2024-01-10",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
+    },
+    {
+      "id": "t57",
+      "question": "Selon le droit en vigueur au 2025-03-01, que dispose l'article L. 217-3 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044142579"
+      ],
+      "expected_article_nums": [
+        "L. 217-3"
+      ],
+      "reference_answer": "Le vendeur délivre un bien conforme au contrat ainsi qu'aux critères énoncés à l'article L.",
+      "as_of": "2025-03-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
+    },
+    {
+      "id": "t58",
+      "question": "Selon le droit en vigueur au 2017-01-01, que dispose l'article L. 217-7 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044152587"
+      ],
+      "expected_article_nums": [
+        "L. 217-7"
+      ],
+      "reference_answer": "Les défauts de conformité qui apparaissent dans un délai de vingt-quatre mois à compter de la délivrance du bien, y compris du bien comportant des éléments numériques, sont, sauf preuve contraire, présumés exister au moment de la délivrance, à moins que cette présomption ne soit incompatible avec la nature du bien ou d",
+      "as_of": "2017-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
+    },
+    {
+      "id": "t59",
+      "question": "Selon le droit en vigueur au 2019-06-01, que dispose l'article L. 312-1 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000034072779"
+      ],
+      "expected_article_nums": [
+        "L. 312-1"
+      ],
+      "reference_answer": "Les dispositions du présent chapitre s'appliquent à toute opération de crédit mentionnée au 6° de l'article L.",
+      "as_of": "2019-06-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
+    },
+    {
+      "id": "t60",
+      "question": "Selon le droit en vigueur au 2020-12-15, que dispose l'article L. 312-18 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000035731428"
+      ],
+      "expected_article_nums": [
+        "L. 312-18"
+      ],
+      "reference_answer": "L'offre de contrat de crédit est établie sur support papier ou sur un autre support durable.",
+      "as_of": "2020-12-15",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
+    },
+    {
+      "id": "t61",
+      "question": "Selon le droit en vigueur au 2021-04-01, que dispose l'article L. 212-1 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000032890812"
+      ],
+      "expected_article_nums": [
+        "L. 212-1"
+      ],
+      "reference_answer": "Dans les contrats conclus entre professionnels et consommateurs, sont abusives les clauses qui ont pour objet ou pour effet de créer, au détriment du consommateur, un déséquilibre significatif entre les droits et obligations des parties au contrat.",
+      "as_of": "2021-04-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
+    },
+    {
+      "id": "t62",
+      "question": "Selon le droit en vigueur au 2022-01-01, que dispose l'article L. 241-1 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000032226417"
+      ],
+      "expected_article_nums": [
+        "L. 241-1"
+      ],
+      "reference_answer": "Les clauses abusives sont réputées non écrites.Le contrat reste applicable dans toutes ses dispositions autres que celles jugées abusives s'il peut subsister sans ces clauses.Les dispositions du présent article sont d'ordre public.",
+      "as_of": "2022-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
+    },
+    {
+      "id": "t63",
+      "question": "Selon le droit en vigueur au 2023-06-15, que dispose l'article L. 612-1 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000032224805"
+      ],
+      "expected_article_nums": [
+        "L. 612-1"
+      ],
+      "reference_answer": "Tout consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige qui l'oppose à un professionnel.",
+      "as_of": "2023-06-15",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
+    },
+    {
+      "id": "t64",
+      "question": "Selon le droit en vigueur au 2024-01-10, que dispose l'article L. 216-1 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044142498"
+      ],
+      "expected_article_nums": [
+        "L. 216-1"
+      ],
+      "reference_answer": "Le professionnel délivre le bien ou fournit le service à la date ou dans le délai indiqué au consommateur, conformément au 3° de l'article L.",
+      "as_of": "2024-01-10",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal-template",
+      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
     },
     {
       "id": "u01",
       "question": "Quel est le montant maximal de l'amende encourue par un bailleur pour un logement indigne au sens du Code de la construction ?",
+      "type": "unanswerable",
       "expected_article_ids": [],
       "expected_article_nums": [],
       "reference_answer": "je ne sais pas",
+      "as_of": null,
       "unanswerable": true,
       "validated": false,
-      "topic": "hors corpus (construction)"
+      "topic": "hors corpus (construction)",
+      "notes": null
     },
     {
       "id": "u02",
       "question": "Combien de jours de congés payés un salarié acquiert-il par mois de travail selon le Code du travail ?",
+      "type": "unanswerable",
       "expected_article_ids": [],
       "expected_article_nums": [],
       "reference_answer": "je ne sais pas",
+      "as_of": null,
       "unanswerable": true,
       "validated": false,
-      "topic": "hors corpus (travail)"
+      "topic": "hors corpus (travail)",
+      "notes": null
     },
     {
       "id": "u03",
       "question": "Quelle est la peine maximale pour un vol simple selon le Code pénal ?",
+      "type": "unanswerable",
       "expected_article_ids": [],
       "expected_article_nums": [],
       "reference_answer": "je ne sais pas",
+      "as_of": null,
       "unanswerable": true,
       "validated": false,
-      "topic": "hors corpus (pénal)"
+      "topic": "hors corpus (pénal)",
+      "notes": null
     },
     {
       "id": "u04",
       "question": "Dans quel délai un permis de construire tacite est-il acquis en zone urbaine ?",
+      "type": "unanswerable",
       "expected_article_ids": [],
       "expected_article_nums": [],
       "reference_answer": "je ne sais pas",
+      "as_of": null,
       "unanswerable": true,
       "validated": false,
-      "topic": "hors corpus (urbanisme)"
+      "topic": "hors corpus (urbanisme)",
+      "notes": null
     },
     {
       "id": "u05",
       "question": "Quel est le taux de TVA normal applicable aux prestations de restauration sur place en France métropolitaine ?",
+      "type": "unanswerable",
       "expected_article_ids": [],
       "expected_article_nums": [],
       "reference_answer": "je ne sais pas",
+      "as_of": null,
       "unanswerable": true,
       "validated": false,
-      "topic": "hors corpus (fiscalité)"
+      "topic": "hors corpus (fiscalité)",
+      "notes": null
+    },
+    {
+      "id": "u06",
+      "question": "Quelle est la durée maximale de la garde à vue de droit commun ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (procédure pénale)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u07",
+      "question": "Quel est le quantum de la peine encourue pour escroquerie simple ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (pénal)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u08",
+      "question": "Dans quel délai doit être déclarée une naissance à l'état civil ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (état civil)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u09",
+      "question": "Quelle majorité est requise pour modifier les statuts d'une SAS ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (droit des sociétés)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u10",
+      "question": "Quel est le délai de recours contre un permis de construire ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (urbanisme)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u11",
+      "question": "Quelle est la durée de validité d'une carte nationale d'identité délivrée à un majeur ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (droit administratif / CNI)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u12",
+      "question": "Quel est le plafond du livret A fixé par la réglementation bancaire ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (réglementation bancaire)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u13",
+      "question": "Quelle est la durée du préavis de licenciement pour un salarié cadre au sens de la convention collective Syntec ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (convention collective — hors snapshot)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u14",
+      "question": "Quel tribunal est compétent pour un divorce par consentement mutuel dématérialisé ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (procédure familiale)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u15",
+      "question": "Quel est le montant du SMIC horaire brut au 1er janvier 2024 ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (montant réglementaire travail — hors texte LEGI figé ici)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u16",
+      "question": "Quelle amende sanitaire est prévue pour un débit de tabac vendant à un mineur ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (santé publique)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u17",
+      "question": "Quel est le délai de prescription de l'action publique pour un délit ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (procédure pénale)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u18",
+      "question": "Comment se calcule l'impôt sur la fortune immobilière (IFI) ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (fiscalité)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u19",
+      "question": "Quelle est la durée maximale d'un bail meublé mobilité ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (bail habitation — hors Code de la consommation snapshot)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u20",
+      "question": "Quel est le seuil de revente à perte interdit pour un distributeur alimentaire hors règles conso figées ici ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (autre régime / hors snapshot)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u21",
+      "question": "Qui nomme les membres du Conseil constitutionnel ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (droit constitutionnel)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u22",
+      "question": "Quel est le délai pour contester une décision implicite de rejet d'une demande administrative ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (contentieux administratif)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u23",
+      "question": "Quelle est la distance minimale légale de plantation d'arbres par rapport à la limite séparative ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (code civil voisinage — hors snapshot MVP)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u24",
+      "question": "Quel est le taux du droit de mutation à titre onéreux sur un immeuble ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (fiscalité / DMTO)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u25",
+      "question": "Quelle est la composition du conseil de prud'hommes ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (organisation judiciaire travail)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u26",
+      "question": "Quel est le délai pour déposer une marque à l'INPI après un dépôt à l'étranger (priorité) ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (propriété intellectuelle)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u27",
+      "question": "Quelle autorité délivre l'autorisation environnementale pour une ICPE ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (environnement)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u28",
+      "question": "Quel est le régime de la communauté réduite aux acquêts pour les dettes ménagères ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (régimes matrimoniaux — hors snapshot)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u29",
+      "question": "Quelle est la durée du service national universel obligatoire ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (défense / SNU)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "u30",
+      "question": "Quel est le plafond de la micro-entreprise pour les prestations de services en N-1 ?",
+      "type": "unanswerable",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "as_of": null,
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (fiscalité / URSSAF)",
+      "notes": "Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail."
+    },
+    {
+      "id": "ac01",
+      "question": "Le consommateur dispose de quatorze jours pour se rétracter (L. 221-18), mais certains contrats semblent totalement exclus : y a-t-il contradiction avec L. 221-28 ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000032226842",
+        "LEGIARTI000044563170"
+      ],
+      "expected_article_nums": [
+        "L. 221-18",
+        "L. 221-28"
+      ],
+      "reference_answer": "Non : L. 221-18 pose le principe ; L. 221-28 énumère des exclusions légales (services pleinement exécutés avec accord, biens personnalisés, etc.). Les deux textes s'articulent, ils ne se contredisent pas.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "retractation vs exclusions",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac02",
+      "question": "La garantie de conformité dure deux ans (L. 217-3) alors que la présomption ne dure que douze mois pour un bien d'occasion (L. 217-7) : la garantie est-elle réduite à un an ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044142579",
+        "LEGIARTI000044152587"
+      ],
+      "expected_article_nums": [
+        "L. 217-3",
+        "L. 217-7"
+      ],
+      "reference_answer": "Non : le délai de garantie de deux ans (L. 217-3) n'est pas confondu avec le délai de présomption d'existence du défaut (vingt-quatre mois / douze mois pour l'occasion, L. 217-7).",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "garantie vs présomption",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac03",
+      "question": "L. 216-1 impose une délivrance sous trente jours à défaut d'accord, mais L. 111-1 parle d'indiquer une date ou un délai : le professionnel peut-il ignorer toute date ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044142498",
+        "LEGIARTI000044142438"
+      ],
+      "expected_article_nums": [
+        "L. 216-1",
+        "L. 111-1"
+      ],
+      "reference_answer": "Non : L. 111-1 impose d'informer sur la date ou le délai ; L. 216-1 fixe ensuite la règle subsidiaire (sans retard injustifié, au plus tard trente jours) si rien n'a été convenu.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "délivrance info vs délai",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac04",
+      "question": "Les clauses abusives sont réputées non écrites (L. 241-1) alors que L. 212-1 dit qu'on n'apprécie pas l'objet principal ni l'adéquation du prix : le prix peut-il être déclaré abusif ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000032890812",
+        "LEGIARTI000032226417"
+      ],
+      "expected_article_nums": [
+        "L. 212-1",
+        "L. 241-1"
+      ],
+      "reference_answer": "L'appréciation du caractère abusif ne porte ni sur l'objet principal ni sur l'adéquation prix/service (L. 212-1) ; la sanction du réputé non écrit (L. 241-1) s'applique aux clauses abusives ainsi définies, pas au prix lui-même en tant qu'adéquation.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "prix vs clause abusive",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac05",
+      "question": "L. 121-1 interdit les pratiques déloyales, et L. 121-5 dit qu'une pratique conforme à L. 121-2 à L. 121-4 est déloyale : une pratique hors de ces articles peut-elle malgré tout être déloyale ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000032227301",
+        "LEGIARTI000034072564"
+      ],
+      "expected_article_nums": [
+        "L. 121-1",
+        "L. 121-5"
+      ],
+      "reference_answer": "Oui : L. 121-5 crée une présomption / qualification pour les pratiques visées aux L. 121-2 à L. 121-4, sans épuiser la notion générale de pratique déloyale de L. 121-1.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "déloyale générale vs listes",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac06",
+      "question": "Le consommateur choisit librement réparation ou remplacement (L. 217-9), mais le vendeur peut refuser (L. 217-12) : le choix du consommateur est-il illusoire ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044152553",
+        "LEGIARTI000044152610"
+      ],
+      "expected_article_nums": [
+        "L. 217-9",
+        "L. 217-12"
+      ],
+      "reference_answer": "Non : le principe du choix appartient au consommateur (L. 217-9) ; le refus du vendeur n'est ouvert que si la mise en conformité choisie est impossible ou disproportionnée (L. 217-12).",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "choix vs refus",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac07",
+      "question": "L. 221-18 dit qu'on se rétracte sans motiver ni supporter d'autres coûts, mais mentionne les coûts des articles L. 221-23 à L. 221-25 : y a-t-il contradiction ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000032226842",
+        "LEGIARTI000044563179"
+      ],
+      "expected_article_nums": [
+        "L. 221-18",
+        "L. 221-25"
+      ],
+      "reference_answer": "Non : le principe est l'absence de coûts autres que ceux expressément prévus ; L. 221-25 précise des coûts limités (ex. frais de renvoi) lorsque les conditions d'information sont remplies.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "gratuité relative",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac08",
+      "question": "L. 111-1 liste des informations précontractuelles, L. 111-2 en ajoute pour les services : L. 111-1 suffit-il toujours seul ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044142438",
+        "LEGIARTI000032227350"
+      ],
+      "expected_article_nums": [
+        "L. 111-1",
+        "L. 111-2"
+      ],
+      "reference_answer": "Non pour les contrats de services : L. 111-2 impose des informations complémentaires « outre » celles de L. 111-1.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "info générale vs services",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac09",
+      "question": "Le risque est transféré à la prise de possession (L. 216-2) alors que la délivrance peut intervenir plus tard selon L. 216-1 : le consommateur supporte-t-il le risque avant délivrance ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044142491",
+        "LEGIARTI000044142498"
+      ],
+      "expected_article_nums": [
+        "L. 216-2",
+        "L. 216-1"
+      ],
+      "reference_answer": "Non en principe : le transfert du risque est lié à la prise de possession physique (L. 216-2), qui correspond à la délivrance au sens de L. 216-1.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "risque vs délivrance",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac10",
+      "question": "L. 312-1 fixe un champ d'application 200–75 000 €, tandis que L. 312-14 impose un devoir d'explication : ce devoir s'applique-t-il hors de ces montants ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000034072779",
+        "LEGIARTI000032226174"
+      ],
+      "expected_article_nums": [
+        "L. 312-1",
+        "L. 312-14"
+      ],
+      "reference_answer": "Le devoir d'explication de L. 312-14 s'inscrit dans le chapitre dont le champ est borné par L. 312-1 ; hors de ce champ, ce régime spécifique ne s'applique pas tel quel.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "champ crédit",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac11",
+      "question": "L. 612-1 garantit un médiateur gratuit, mais L. 616-1 ne parle que d'information sur les coordonnées : le professionnel peut-il se contenter d'afficher un numéro sans médiation réelle ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000032224805",
+        "LEGIARTI000032224762"
+      ],
+      "expected_article_nums": [
+        "L. 612-1",
+        "L. 616-1"
+      ],
+      "reference_answer": "Non : L. 612-1 impose un recours effectif à un dispositif de médiation ; L. 616-1 ajoute l'obligation d'informer sur les coordonnées du médiateur, y compris après réclamation infructueuse.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "médiation effective",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac12",
+      "question": "L. 217-4 pose des critères subjectifs de conformité et L. 217-5 des critères objectifs : un bien conforme au contrat peut-il quand même être non conforme ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044142575",
+        "LEGIARTI000044142571"
+      ],
+      "expected_article_nums": [
+        "L. 217-4",
+        "L. 217-5"
+      ],
+      "reference_answer": "Oui : la conformité s'apprécie au regard du contrat (L. 217-4) et des critères objectifs supplémentaires (L. 217-5) ; l'un ne suffit pas à écarter l'autre.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "conformité subjective/objective",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac13",
+      "question": "L. 221-19 prolonge parfois le délai de L. 221-18 : cela signifie-t-il que le délai de quatorze jours est abandonné ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000032226842",
+        "LEGIARTI000032226840"
+      ],
+      "expected_article_nums": [
+        "L. 221-18",
+        "L. 221-19"
+      ],
+      "reference_answer": "Non : L. 221-18 fixe le délai de principe ; L. 221-19 organise des prolongations lorsque l'information sur le droit de rétractation n'a pas été fournie, sans supprimer le régime de base.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "délai vs prolongation",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac14",
+      "question": "L. 221-20 et L. 221-18 semblent dupliquer le droit de rétractation : y a-t-il redondance contradictoire ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044563199",
+        "LEGIARTI000032226842"
+      ],
+      "expected_article_nums": [
+        "L. 221-20",
+        "L. 221-18"
+      ],
+      "reference_answer": "Non : L. 221-18 pose le droit et le délai ; L. 221-20 précise des modalités complémentaires liées notamment à l'information de L. 221-5, sans inventer un régime opposé.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "retractation modalités",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac15",
+      "question": "L. 111-5 renvoie à plusieurs articles d'information (L. 111-1, L. 111-2, etc.) : leur cumul crée-t-il des obligations mutuellement exclusives ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000043974986",
+        "LEGIARTI000044142438"
+      ],
+      "expected_article_nums": [
+        "L. 111-5",
+        "L. 111-1"
+      ],
+      "reference_answer": "Non : le renvoi organise un cumul d'informations selon les situations ; L. 111-1 demeure le socle, complété le cas échéant.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "cumul info",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac16",
+      "question": "L. 312-21 renvoie à L. 312-19 sur la rétractation du crédit : le délai de rétractation du crédit annule-t-il celui des contrats à distance ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000032226155",
+        "LEGIARTI000034072770"
+      ],
+      "expected_article_nums": [
+        "L. 312-21",
+        "L. 312-19"
+      ],
+      "reference_answer": "Non : il s'agit du régime propre au crédit à la consommation, distinct du droit de rétractation des contrats à distance du livre II.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crédits vs distance",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac17",
+      "question": "L. 112-5 renvoie à L. 112-1 à L. 112-4 tout en visant d'autres textes : ces renvois s'annulent-ils ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000032227323",
+        "LEGIARTI000032227331"
+      ],
+      "expected_article_nums": [
+        "L. 112-5",
+        "L. 112-1"
+      ],
+      "reference_answer": "Non : L. 112-5 articule le champ d'application et des renvois ; L. 112-1 conserve sa portée sur l'information relative aux prix.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "affichage prix champ",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac18",
+      "question": "L. 217-3 impose deux ans de garantie alors que L. 216-1 parle de trente jours pour délivrer : la garantie serait-elle limitée à trente jours ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044142579",
+        "LEGIARTI000044142498"
+      ],
+      "expected_article_nums": [
+        "L. 217-3",
+        "L. 216-1"
+      ],
+      "reference_answer": "Non : les trente jours concernent le délai de délivrance à défaut d'accord ; les deux ans concernent la garantie de conformité après délivrance.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "délivrance vs garantie",
+      "notes": "piège d'apparente contradiction ; les textes s'articulent"
+    },
+    {
+      "id": "ac50",
+      "question": "Si l'on lit L. 111-1 isolément puis L. 112-1, on croit détecter un conflit de règles : ce conflit est-il réel ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044142438",
+        "LEGIARTI000032227331"
+      ],
+      "expected_article_nums": [
+        "L. 111-1",
+        "L. 112-1"
+      ],
+      "reference_answer": "Pas de contradiction : L. 111-1 et L. 112-1 s'articulent. L. 111-1 : Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et com L. 112-1 : Tout vendeur de produit ou tout prestataire de services informe le consommateur, par voie de marquage, d'étiquetage, d'affichage ou par tout",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "Lecture isolée trompeuse",
+      "notes": "trap template on linked pair"
+    },
+    {
+      "id": "ac51",
+      "question": "Un professionnel se prévaut de L. 111-1 pour écarter L. 112-4-1 : cette opposition est-elle juridiquement fondée ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044142438",
+        "LEGIARTI000044129074"
+      ],
+      "expected_article_nums": [
+        "L. 111-1",
+        "L. 112-4-1"
+      ],
+      "reference_answer": "Pas de contradiction : L. 111-1 et L. 112-4-1 s'articulent. L. 111-1 : Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et com L. 112-4-1 : Lorsque le contrat de vente de biens ou le contrat de fourniture de contenus numériques ou de services numériques ne prévoit pas le paiement",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "opposition instrumentalisée",
+      "notes": "trap template on linked pair"
+    },
+    {
+      "id": "ac52",
+      "question": "L. 111-2 paraît absolu, alors que L. 111-1 introduit une limite : faut-il y voir une antinomie du Code de la consommation ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000032227350",
+        "LEGIARTI000044142438"
+      ],
+      "expected_article_nums": [
+        "L. 111-2",
+        "L. 111-1"
+      ],
+      "reference_answer": "Pas de contradiction : L. 111-2 et L. 111-1 s'articulent. L. 111-2 : Outre les mentions prévues à l'article L. L. 111-1 : Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et com",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "principe vs limite",
+      "notes": "trap template on linked pair"
+    },
+    {
+      "id": "ac53",
+      "question": "Peut-on soutenir que L. 121-2 annule le régime de L. 121-1, ou les deux textes doivent-ils être combinés ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000032227301",
+        "LEGIARTI000044563114"
+      ],
+      "expected_article_nums": [
+        "L. 121-1",
+        "L. 121-2"
+      ],
+      "reference_answer": "Pas de contradiction : L. 121-1 et L. 121-2 s'articulent. L. 121-1 : Les pratiques commerciales déloyales sont interdites. L. 121-2 : Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec u",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "annulation apparente",
+      "notes": "trap template on linked pair"
+    },
+    {
+      "id": "ac54",
+      "question": "Entre l'obligation décrite par L. 121-1 et le correctif de L. 121-3, y a-t-il contradiction ou simple articulation ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000032227301",
+        "LEGIARTI000044563111"
+      ],
+      "expected_article_nums": [
+        "L. 121-1",
+        "L. 121-3"
+      ],
+      "reference_answer": "Pas de contradiction : L. 121-1 et L. 121-3 s'articulent. L. 121-1 : Les pratiques commerciales déloyales sont interdites. L. 121-3 : Une pratique commerciale est également trompeuse si, compte tenu des limites propres au moyen de communication utilisé et des circonstances ",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "obligation vs correctif",
+      "notes": "trap template on linked pair"
+    },
+    {
+      "id": "ac55",
+      "question": "Le renvoi de L. 121-1 vers L. 121-4 crée-t-il une double contrainte incompatible pour le professionnel ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000032227301",
+        "LEGIARTI000044563107"
+      ],
+      "expected_article_nums": [
+        "L. 121-1",
+        "L. 121-4"
+      ],
+      "reference_answer": "Pas de contradiction : L. 121-1 et L. 121-4 s'articulent. L. 121-1 : Les pratiques commerciales déloyales sont interdites. L. 121-4 : Sont réputées trompeuses, au sens des articles L.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "double contrainte",
+      "notes": "trap template on linked pair"
+    },
+    {
+      "id": "ac56",
+      "question": "Si l'on lit L. 121-2 isolément puis L. 112-1-1, on croit détecter un conflit de règles : ce conflit est-il réel ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044563114",
+        "LEGIARTI000044549592"
+      ],
+      "expected_article_nums": [
+        "L. 121-2",
+        "L. 112-1-1"
+      ],
+      "reference_answer": "Pas de contradiction : L. 121-2 et L. 112-1-1 s'articulent. L. 121-2 : Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec u L. 112-1-1 : I.-Toute annonce d'une réduction de prix indique le prix antérieur pratiqué par le professionnel avant l'application de la réduction de prix",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "Lecture isolée trompeuse",
+      "notes": "trap template on linked pair"
+    },
+    {
+      "id": "ac57",
+      "question": "Un professionnel se prévaut de L. 121-4 pour écarter L. 121-2 : cette opposition est-elle juridiquement fondée ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044563107",
+        "LEGIARTI000044563114"
+      ],
+      "expected_article_nums": [
+        "L. 121-4",
+        "L. 121-2"
+      ],
+      "reference_answer": "Pas de contradiction : L. 121-4 et L. 121-2 s'articulent. L. 121-4 : Sont réputées trompeuses, au sens des articles L. L. 121-2 : Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec u",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "opposition instrumentalisée",
+      "notes": "trap template on linked pair"
+    },
+    {
+      "id": "ac58",
+      "question": "L. 121-4 paraît absolu, alors que L. 121-3 introduit une limite : faut-il y voir une antinomie du Code de la consommation ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044563107",
+        "LEGIARTI000044563111"
+      ],
+      "expected_article_nums": [
+        "L. 121-4",
+        "L. 121-3"
+      ],
+      "reference_answer": "Pas de contradiction : L. 121-4 et L. 121-3 s'articulent. L. 121-4 : Sont réputées trompeuses, au sens des articles L. L. 121-3 : Une pratique commerciale est également trompeuse si, compte tenu des limites propres au moyen de communication utilisé et des circonstances ",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "principe vs limite",
+      "notes": "trap template on linked pair"
+    },
+    {
+      "id": "ac63",
+      "question": "Un professionnel se prévaut de L. 221-5 pour écarter L. 112-2 : cette opposition est-elle juridiquement fondée ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044563141",
+        "LEGIARTI000034072548"
+      ],
+      "expected_article_nums": [
+        "L. 221-5",
+        "L. 112-2"
+      ],
+      "reference_answer": "Pas de contradiction : L. 221-5 et L. 112-2 s'articulent. L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques L. 112-2 : Les dispositions de l'article L.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "opposition instrumentalisée",
+      "notes": "trap template on linked pair"
+    },
+    {
+      "id": "ac64",
+      "question": "L. 221-5 paraît absolu, alors que L. 112-3 introduit une limite : faut-il y voir une antinomie du Code de la consommation ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044563141",
+        "LEGIARTI000032227327"
+      ],
+      "expected_article_nums": [
+        "L. 221-5",
+        "L. 112-3"
+      ],
+      "reference_answer": "Pas de contradiction : L. 221-5 et L. 112-3 s'articulent. L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques L. 112-3 : Lorsque le prix ne peut être raisonnablement calculé à l'avance du fait de la nature du bien ou du service, le professionnel fournit le mode",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "principe vs limite",
+      "notes": "trap template on linked pair"
+    },
+    {
+      "id": "ac65",
+      "question": "Peut-on soutenir que L. 112-4 annule le régime de L. 221-5, ou les deux textes doivent-ils être combinés ?",
+      "type": "apparent_contradiction",
+      "expected_article_ids": [
+        "LEGIARTI000044563141",
+        "LEGIARTI000032227325"
+      ],
+      "expected_article_nums": [
+        "L. 221-5",
+        "L. 112-4"
+      ],
+      "reference_answer": "Pas de contradiction : L. 221-5 et L. 112-4 s'articulent. L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques L. 112-4 : Dans le cas d'un contrat à durée indéterminée ou d'un contrat assorti d'un abonnement, le prix total inclut le total des frais exposés pour ",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "annulation apparente",
+      "notes": "trap template on linked pair"
     }
   ]
 }

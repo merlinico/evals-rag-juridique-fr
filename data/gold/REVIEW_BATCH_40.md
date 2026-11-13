@@ -1,0 +1,807 @@
+# Batch de revue humaine (40 questions)
+
+Toutes les questions du jeu d'or restent `validated: false` jusqu'à revue.
+Ce batch est **stratifié** sur les 5 `QuestionType` et **inclut** les items
+de `SAMPLE_TO_REVIEW.md`.
+
+Légende du verdict : **OK** / **À corriger** / **À reformuler**.
+
+## Index
+
+| id | type | topic | verdict |
+|---|---|---|---|
+| q08 | `direct` | garantie de conformité | |
+| q11 | `direct` | présomption de non-conformité | |
+| q14 | `direct` | rétractation | |
+| q06 | `direct` | délivrance | |
+| q05 | `direct` | clauses abusives | |
+| q23 | `direct` | médiation | |
+| q21 | `direct` | durée de validité offre de crédit | |
+| q18 | `direct` | exclusions rétractation | |
+| u01 | `unanswerable` | hors corpus (construction) | |
+| u05 | `unanswerable` | hors corpus (fiscalité) | |
+| q26 | `multi_hop` | territorialité pratiques trompeuses | |
+| t01 | `temporal` | temporal | |
+| ac01 | `apparent_contradiction` | retractation vs exclusions | |
+| q01 | `direct` | information précontractuelle | |
+| mh01 | `multi_hop` | info prix via renvoi | |
+| t02 | `temporal` | temporal | |
+| u02 | `unanswerable` | hors corpus (travail) | |
+| ac02 | `apparent_contradiction` | garantie vs présomption | |
+| q02 | `direct` | affichage des prix | |
+| mh02 | `multi_hop` | info services | |
+| t03 | `temporal` | temporal | |
+| u03 | `unanswerable` | hors corpus (pénal) | |
+| ac03 | `apparent_contradiction` | délivrance info vs délai | |
+| q03 | `direct` | pratiques déloyales | |
+| mh03 | `multi_hop` | pratiques déloyales | |
+| t04 | `temporal` | temporal | |
+| u04 | `unanswerable` | hors corpus (urbanisme) | |
+| ac04 | `apparent_contradiction` | prix vs clause abusive | |
+| q04 | `direct` | pratiques trompeuses | |
+| mh04 | `multi_hop` | rétractation coûts | |
+| t05 | `temporal` | temporal | |
+| u06 | `unanswerable` | hors corpus (procédure pénale) | |
+| ac05 | `apparent_contradiction` | déloyale générale vs listes | |
+| q07 | `direct` | transfert des risques | |
+| mh05 | `multi_hop` | garantie conformité | |
+| t06 | `temporal` | temporal | |
+| u07 | `unanswerable` | hors corpus (pénal) | |
+| ac06 | `apparent_contradiction` | choix vs refus | |
+| q09 | `direct` | conformité | |
+| mh06 | `multi_hop` | délivrance et garantie | |
+
+## Détail pour validation rapide
+
+### 1. `q08` — `direct`
+
+**Question :** Quelle est la durée de la garantie légale de conformité pour un bien neuf ?
+
+**Articles gold :** L. 217-3
+
+**Ids LEGIARTI :** `LEGIARTI000044142579`
+
+**Réponse attendue :** Le vendeur répond des défauts de conformité qui apparaissent dans un délai de deux ans à compter de la délivrance du bien.
+
+**Extraits corpus :**
+
+- **L. 217-3** (`LEGIARTI000044142579`) — Le vendeur délivre un bien conforme au contrat ainsi qu'aux critères énoncés à l'article L. 217-5. Il répond des défauts de conformité existant au moment de la délivrance du bien au sens de l'article L. 216-1, qui apparaissent dans un délai de deux ans à compter de celle-ci. Dans le cas d'un contrat de vente d'un bien…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 2. `q11` — `direct`
+
+**Question :** Pendant combien de temps un défaut de conformité est-il présumé exister dès la délivrance pour un bien neuf ?
+
+**Articles gold :** L. 217-7
+
+**Ids LEGIARTI :** `LEGIARTI000044152587`
+
+**Réponse attendue :** Les défauts apparaissant dans les vingt-quatre mois suivant la délivrance sont présumés exister au moment de la délivrance, sauf preuve contraire. Pour les biens d'occasion, ce délai est de douze mois.
+
+**Extraits corpus :**
+
+- **L. 217-7** (`LEGIARTI000044152587`) — Les défauts de conformité qui apparaissent dans un délai de vingt-quatre mois à compter de la délivrance du bien, y compris du bien comportant des éléments numériques, sont, sauf preuve contraire, présumés exister au moment de la délivrance, à moins que cette présomption ne soit incompatible avec la nature du bien ou…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 3. `q14` — `direct`
+
+**Question :** Quel est le délai de rétractation pour un contrat conclu à distance ?
+
+**Articles gold :** L. 221-18
+
+**Ids LEGIARTI :** `LEGIARTI000032226842`
+
+**Réponse attendue :** Le consommateur dispose de quatorze jours pour se rétracter, sans motiver sa décision, sous réserve des coûts prévus aux articles L. 221-23 à L. 221-25.
+
+**Extraits corpus :**
+
+- **L. 221-18** (`LEGIARTI000032226842`) — Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à motiver sa décision ni à supporter d'autres coûts que ceux prévus aux articles L. 221-23 à L. 221-25. Le délai…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 4. `q06` — `direct`
+
+**Question :** Quel est le délai maximal de délivrance d'un bien lorsqu'aucune date n'a été convenue ?
+
+**Articles gold :** L. 216-1
+
+**Ids LEGIARTI :** `LEGIARTI000044142498`
+
+**Réponse attendue :** À défaut d'indication ou d'accord, le professionnel délivre le bien sans retard injustifié et au plus tard trente jours après la conclusion du contrat.
+
+**Extraits corpus :**
+
+- **L. 216-1** (`LEGIARTI000044142498`) — Le professionnel délivre le bien ou fournit le service à la date ou dans le délai indiqué au consommateur, conformément au 3° de l'article L. 111-1, sauf si les parties en conviennent autrement. Pour l'application du présent titre, on entend par délivrance d'un bien, le transfert au consommateur de la possession…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 5. `q05` — `direct`
+
+**Question :** Qu'est-ce qu'une clause abusive dans un contrat conclu entre un professionnel et un consommateur ?
+
+**Articles gold :** L. 212-1
+
+**Ids LEGIARTI :** `LEGIARTI000032890812`
+
+**Réponse attendue :** Sont abusives les clauses qui créent, au détriment du consommateur, un déséquilibre significatif entre les droits et obligations des parties. L'appréciation ne porte ni sur l'objet principal du contrat ni sur l'adéquation du prix.
+
+**Extraits corpus :**
+
+- **L. 212-1** (`LEGIARTI000032890812`) — Dans les contrats conclus entre professionnels et consommateurs, sont abusives les clauses qui ont pour objet ou pour effet de créer, au détriment du consommateur, un déséquilibre significatif entre les droits et obligations des parties au contrat. Sans préjudice des règles d'interprétation prévues aux articles 1188,…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 6. `q23` — `direct`
+
+**Question :** Le consommateur a-t-il droit à un médiateur de la consommation ?
+
+**Articles gold :** L. 612-1
+
+**Ids LEGIARTI :** `LEGIARTI000032224805`
+
+**Réponse attendue :** Oui. Tout consommateur a le droit de recourir gratuitement à un médiateur de la consommation ; le professionnel garantit un recours effectif à un dispositif de médiation.
+
+**Extraits corpus :**
+
+- **L. 612-1** (`LEGIARTI000032224805`) — Tout consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige qui l'oppose à un professionnel. A cet effet, le professionnel garantit au consommateur le recours effectif à un dispositif de médiation de la consommation.Le professionnel peut mettre en…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 7. `q21` — `direct`
+
+**Question :** Combien de temps le prêteur doit-il maintenir les conditions d'une offre de crédit à la consommation ?
+
+**Articles gold :** L. 312-18
+
+**Ids LEGIARTI :** `LEGIARTI000035731428`
+
+**Réponse attendue :** La remise ou l'envoi de l'offre oblige le prêteur à en maintenir les conditions pendant une durée minimale de quinze jours.
+
+**Extraits corpus :**
+
+- **L. 312-18** (`LEGIARTI000035731428`) — L'offre de contrat de crédit est établie sur support papier ou sur un autre support durable. Elle est fournie en autant d'exemplaires que de parties et, le cas échéant, à chacune des cautions. La remise ou l'envoi de l'offre de contrat de crédit à l'emprunteur oblige le prêteur à en maintenir les conditions pendant…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 8. `q18` — `direct`
+
+**Question :** Quels contrats sont exclus du droit de rétractation ?
+
+**Articles gold :** L. 221-28
+
+**Ids LEGIARTI :** `LEGIARTI000044563170`
+
+**Réponse attendue :** L'article L. 221-28 exclut notamment les services pleinement exécutés avec accord exprès, les biens confectionnés selon les spécifications du consommateur, les biens périssables, et d'autres cas limitativement énumérés.
+
+**Extraits corpus :**
+
+- **L. 221-28** (`LEGIARTI000044563170`) — Le droit de rétractation ne peut être exercé pour les contrats : 1° De fourniture de services pleinement exécutés avant la fin du délai de rétractation et, si le contrat soumet le consommateur à une obligation de payer, dont l'exécution a commencé avec son accord préalable et exprès et avec la reconnaissance par lui…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 9. `u01` — `unanswerable`
+
+**Question :** Quel est le montant maximal de l'amende encourue par un bailleur pour un logement indigne au sens du Code de la construction ?
+
+**Articles gold :** — (unanswerable / hors corpus)
+
+**Réponse attendue :** je ne sais pas
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 10. `u05` — `unanswerable`
+
+**Question :** Quel est le taux de TVA normal applicable aux prestations de restauration sur place en France métropolitaine ?
+
+**Articles gold :** — (unanswerable / hors corpus)
+
+**Réponse attendue :** je ne sais pas
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 11. `q26` — `multi_hop`
+
+**Question :** Les pratiques commerciales trompeuses sont-elles interdites même si elles n'ont produit leurs effets qu'en France ?
+
+**Articles gold :** L. 132-1, L. 121-2
+
+**Ids LEGIARTI :** `LEGIARTI000032227122, LEGIARTI000044563114`
+
+**Réponse attendue :** Oui. Le délit de pratique commerciale trompeuse est constitué dès lors que la pratique est mise en œuvre ou produit ses effets en France (L. 132-1), les pratiques trompeuses étant définies notamment aux articles L. 121-2 et suivants.
+
+**Extraits corpus :**
+
+- **L. 132-1** (`LEGIARTI000032227122`) — Le délit de pratique commerciale trompeuse défini aux articles L. 121-2 à L. 121-4 est constitué dès lors que la pratique est mise en œuvre ou qu'elle produit ses effets en France.
+- **L. 121-2** (`LEGIARTI000044563114`) — Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un autre signe distinctif d'un concurrent ; 2° Lorsqu'elle repose sur des allégations, indications ou présentations…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 12. `t01` — `temporal`
+
+**Question :** Au 1er janvier 2023, quelle durée de garantie légale de conformité s'appliquait pour un bien neuf au sens de L. 217-3 ?
+
+**as_of :** `2023-01-01`
+
+**Articles gold :** L. 217-3
+
+**Ids LEGIARTI :** `LEGIARTI000044142579`
+
+**Réponse attendue :** Deux ans à compter de la délivrance du bien.
+
+**Extraits corpus :**
+
+- **L. 217-3** (`LEGIARTI000044142579`) — Le vendeur délivre un bien conforme au contrat ainsi qu'aux critères énoncés à l'article L. 217-5. Il répond des défauts de conformité existant au moment de la délivrance du bien au sens de l'article L. 216-1, qui apparaissent dans un délai de deux ans à compter de celle-ci. Dans le cas d'un contrat de vente d'un bien…
+
+*Notes :* La rédaction gelée du snapshot répond déjà ; lorsque les versions LEGI seront chargées, résoudre la version en vigueur à as_of.
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 13. `ac01` — `apparent_contradiction`
+
+**Question :** Le consommateur dispose de quatorze jours pour se rétracter (L. 221-18), mais certains contrats semblent totalement exclus : y a-t-il contradiction avec L. 221-28 ?
+
+**Articles gold :** L. 221-18, L. 221-28
+
+**Ids LEGIARTI :** `LEGIARTI000032226842, LEGIARTI000044563170`
+
+**Réponse attendue :** Non : L. 221-18 pose le principe ; L. 221-28 énumère des exclusions légales (services pleinement exécutés avec accord, biens personnalisés, etc.). Les deux textes s'articulent, ils ne se contredisent pas.
+
+**Extraits corpus :**
+
+- **L. 221-18** (`LEGIARTI000032226842`) — Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à motiver sa décision ni à supporter d'autres coûts que ceux prévus aux articles L. 221-23 à L. 221-25. Le délai…
+- **L. 221-28** (`LEGIARTI000044563170`) — Le droit de rétractation ne peut être exercé pour les contrats : 1° De fourniture de services pleinement exécutés avant la fin du délai de rétractation et, si le contrat soumet le consommateur à une obligation de payer, dont l'exécution a commencé avec son accord préalable et exprès et avec la reconnaissance par lui…
+
+*Notes :* piège d'apparente contradiction ; les textes s'articulent
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 14. `q01` — `direct`
+
+**Question :** Quelles informations essentielles le professionnel doit-il communiquer au consommateur avant la conclusion d'un contrat à titre onéreux ?
+
+**Articles gold :** L. 111-1
+
+**Ids LEGIARTI :** `LEGIARTI000044142438`
+
+**Réponse attendue :** Avant d'être lié, le consommateur doit recevoir de manière lisible et compréhensible notamment les caractéristiques essentielles du bien ou service, le prix, la date ou le délai de délivrance, et les autres informations prévues à l'article L. 111-1.
+
+**Extraits corpus :**
+
+- **L. 111-1** (`LEGIARTI000044142438`) — Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractéristiques essentielles du bien ou du service, ainsi que celles du service numérique ou du contenu numérique, compte tenu de…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 15. `mh01` — `multi_hop`
+
+**Question :** Quelles informations sur les prix l'obligation générale d'information précontractuelle (L. 111-1) renvoie-t-elle aux articles sur l'affichage des prix, et que dit L. 112-1 ?
+
+**Articles gold :** L. 111-1, L. 112-1
+
+**Ids LEGIARTI :** `LEGIARTI000044142438, LEGIARTI000032227331`
+
+**Réponse attendue :** L. 111-1 renvoie aux articles L. 112-1 à L. 112-4-1 pour le prix ; L. 112-1 impose d'informer le consommateur sur les prix par marquage, étiquetage, affichage ou procédé approprié.
+
+**Extraits corpus :**
+
+- **L. 111-1** (`LEGIARTI000044142438`) — Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractéristiques essentielles du bien ou du service, ainsi que celles du service numérique ou du contenu numérique, compte tenu de…
+- **L. 112-1** (`LEGIARTI000032227331`) — Tout vendeur de produit ou tout prestataire de services informe le consommateur, par voie de marquage, d'étiquetage, d'affichage ou par tout autre procédé approprié, sur les prix et les conditions particulières de la vente et de l'exécution des services, selon des modalités fixées par arrêtés du ministre chargé de…
+
+*Notes :* multi_hop via renvoi / articulation d'articles
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 16. `t02` — `temporal`
+
+**Question :** En vigueur au 15 juin 2022, quel était le délai de rétractation pour un contrat conclu à distance ?
+
+**as_of :** `2022-06-15`
+
+**Articles gold :** L. 221-18
+
+**Ids LEGIARTI :** `LEGIARTI000032226842`
+
+**Réponse attendue :** Quatorze jours.
+
+**Extraits corpus :**
+
+- **L. 221-18** (`LEGIARTI000032226842`) — Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à motiver sa décision ni à supporter d'autres coûts que ceux prévus aux articles L. 221-23 à L. 221-25. Le délai…
+
+*Notes :* as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 17. `u02` — `unanswerable`
+
+**Question :** Combien de jours de congés payés un salarié acquiert-il par mois de travail selon le Code du travail ?
+
+**Articles gold :** — (unanswerable / hors corpus)
+
+**Réponse attendue :** je ne sais pas
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 18. `ac02` — `apparent_contradiction`
+
+**Question :** La garantie de conformité dure deux ans (L. 217-3) alors que la présomption ne dure que douze mois pour un bien d'occasion (L. 217-7) : la garantie est-elle réduite à un an ?
+
+**Articles gold :** L. 217-3, L. 217-7
+
+**Ids LEGIARTI :** `LEGIARTI000044142579, LEGIARTI000044152587`
+
+**Réponse attendue :** Non : le délai de garantie de deux ans (L. 217-3) n'est pas confondu avec le délai de présomption d'existence du défaut (vingt-quatre mois / douze mois pour l'occasion, L. 217-7).
+
+**Extraits corpus :**
+
+- **L. 217-3** (`LEGIARTI000044142579`) — Le vendeur délivre un bien conforme au contrat ainsi qu'aux critères énoncés à l'article L. 217-5. Il répond des défauts de conformité existant au moment de la délivrance du bien au sens de l'article L. 216-1, qui apparaissent dans un délai de deux ans à compter de celle-ci. Dans le cas d'un contrat de vente d'un bien…
+- **L. 217-7** (`LEGIARTI000044152587`) — Les défauts de conformité qui apparaissent dans un délai de vingt-quatre mois à compter de la délivrance du bien, y compris du bien comportant des éléments numériques, sont, sauf preuve contraire, présumés exister au moment de la délivrance, à moins que cette présomption ne soit incompatible avec la nature du bien ou…
+
+*Notes :* piège d'apparente contradiction ; les textes s'articulent
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 19. `q02` — `direct`
+
+**Question :** Comment le vendeur doit-il informer le consommateur sur les prix ?
+
+**Articles gold :** L. 112-1
+
+**Ids LEGIARTI :** `LEGIARTI000032227331`
+
+**Réponse attendue :** Tout vendeur ou prestataire informe le consommateur sur les prix et conditions particulières par marquage, étiquetage, affichage ou tout autre procédé approprié, selon des modalités fixées par arrêté.
+
+**Extraits corpus :**
+
+- **L. 112-1** (`LEGIARTI000032227331`) — Tout vendeur de produit ou tout prestataire de services informe le consommateur, par voie de marquage, d'étiquetage, d'affichage ou par tout autre procédé approprié, sur les prix et les conditions particulières de la vente et de l'exécution des services, selon des modalités fixées par arrêtés du ministre chargé de…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 20. `mh02` — `multi_hop`
+
+**Question :** Comment L. 111-2 s'articule-t-il avec L. 111-1 pour un contrat de services ?
+
+**Articles gold :** L. 111-2, L. 111-1
+
+**Ids LEGIARTI :** `LEGIARTI000032227350, LEGIARTI000044142438`
+
+**Réponse attendue :** Outre les mentions de L. 111-1, le professionnel doit communiquer avant conclusion (ou avant exécution sans contrat écrit) des informations complémentaires sur ses coordonnées, son activité et les conditions contractuelles.
+
+**Extraits corpus :**
+
+- **L. 111-2** (`LEGIARTI000032227350`) — Outre les mentions prévues à l'article L. 111-1, tout professionnel, avant la conclusion d'un contrat de fourniture de services et, lorsqu'il n'y a pas de contrat écrit, avant l'exécution de la prestation de services, met à la disposition du consommateur ou lui communique, de manière lisible et compréhensible, les…
+- **L. 111-1** (`LEGIARTI000044142438`) — Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractéristiques essentielles du bien ou du service, ainsi que celles du service numérique ou du contenu numérique, compte tenu de…
+
+*Notes :* multi_hop via renvoi / articulation d'articles
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 21. `t03` — `temporal`
+
+**Question :** À la date du 1er mars 2024, pendant combien de temps un défaut de conformité sur un bien neuf était-il présumé exister dès la délivrance ?
+
+**as_of :** `2024-03-01`
+
+**Articles gold :** L. 217-7
+
+**Ids LEGIARTI :** `LEGIARTI000044152587`
+
+**Réponse attendue :** Vingt-quatre mois (douze mois pour les biens d'occasion).
+
+**Extraits corpus :**
+
+- **L. 217-7** (`LEGIARTI000044152587`) — Les défauts de conformité qui apparaissent dans un délai de vingt-quatre mois à compter de la délivrance du bien, y compris du bien comportant des éléments numériques, sont, sauf preuve contraire, présumés exister au moment de la délivrance, à moins que cette présomption ne soit incompatible avec la nature du bien ou…
+
+*Notes :* as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 22. `u03` — `unanswerable`
+
+**Question :** Quelle est la peine maximale pour un vol simple selon le Code pénal ?
+
+**Articles gold :** — (unanswerable / hors corpus)
+
+**Réponse attendue :** je ne sais pas
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 23. `ac03` — `apparent_contradiction`
+
+**Question :** L. 216-1 impose une délivrance sous trente jours à défaut d'accord, mais L. 111-1 parle d'indiquer une date ou un délai : le professionnel peut-il ignorer toute date ?
+
+**Articles gold :** L. 216-1, L. 111-1
+
+**Ids LEGIARTI :** `LEGIARTI000044142498, LEGIARTI000044142438`
+
+**Réponse attendue :** Non : L. 111-1 impose d'informer sur la date ou le délai ; L. 216-1 fixe ensuite la règle subsidiaire (sans retard injustifié, au plus tard trente jours) si rien n'a été convenu.
+
+**Extraits corpus :**
+
+- **L. 216-1** (`LEGIARTI000044142498`) — Le professionnel délivre le bien ou fournit le service à la date ou dans le délai indiqué au consommateur, conformément au 3° de l'article L. 111-1, sauf si les parties en conviennent autrement. Pour l'application du présent titre, on entend par délivrance d'un bien, le transfert au consommateur de la possession…
+- **L. 111-1** (`LEGIARTI000044142438`) — Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractéristiques essentielles du bien ou du service, ainsi que celles du service numérique ou du contenu numérique, compte tenu de…
+
+*Notes :* piège d'apparente contradiction ; les textes s'articulent
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 24. `q03` — `direct`
+
+**Question :** Quand une pratique commerciale est-elle considérée comme déloyale ?
+
+**Articles gold :** L. 121-1
+
+**Ids LEGIARTI :** `LEGIARTI000032227301`
+
+**Réponse attendue :** Une pratique est déloyale si elle est contraire à la diligence professionnelle et altère ou est susceptible d'altérer de manière substantielle le comportement économique du consommateur normalement informé et raisonnablement attentif.
+
+**Extraits corpus :**
+
+- **L. 121-1** (`LEGIARTI000032227301`) — Les pratiques commerciales déloyales sont interdites. Une pratique commerciale est déloyale lorsqu'elle est contraire aux exigences de la diligence professionnelle et qu'elle altère ou est susceptible d'altérer de manière substantielle le comportement économique du consommateur normalement informé et raisonnablement…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 25. `mh03` — `multi_hop`
+
+**Question :** Une pratique contraire à L. 121-2 à L. 121-4 est-elle déloyale au sens de L. 121-1, et que prévoit L. 121-5 ?
+
+**Articles gold :** L. 121-1, L. 121-5
+
+**Ids LEGIARTI :** `LEGIARTI000032227301, LEGIARTI000034072564`
+
+**Réponse attendue :** Oui : L. 121-1 interdit les pratiques déloyales et renvoie notamment aux pratiques trompeuses et agressives ; L. 121-5 précise qu'une pratique conforme à L. 121-2 à L. 121-4 est déloyale.
+
+**Extraits corpus :**
+
+- **L. 121-1** (`LEGIARTI000032227301`) — Les pratiques commerciales déloyales sont interdites. Une pratique commerciale est déloyale lorsqu'elle est contraire aux exigences de la diligence professionnelle et qu'elle altère ou est susceptible d'altérer de manière substantielle le comportement économique du consommateur normalement informé et raisonnablement…
+- **L. 121-5** (`LEGIARTI000034072564`) — Les dispositions des articles L. 121-2 à L. 121-4 sont également applicables aux pratiques qui visent les professionnels et les non-professionnels.
+
+*Notes :* multi_hop via renvoi / articulation d'articles
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 26. `t04` — `temporal`
+
+**Question :** Selon le droit applicable au 1er septembre 2021, quel délai maximal de délivrance s'imposait à défaut d'accord sur la date ?
+
+**as_of :** `2021-09-01`
+
+**Articles gold :** L. 216-1
+
+**Ids LEGIARTI :** `LEGIARTI000044142498`
+
+**Réponse attendue :** Sans retard injustifié et au plus tard trente jours après la conclusion du contrat.
+
+**Extraits corpus :**
+
+- **L. 216-1** (`LEGIARTI000044142498`) — Le professionnel délivre le bien ou fournit le service à la date ou dans le délai indiqué au consommateur, conformément au 3° de l'article L. 111-1, sauf si les parties en conviennent autrement. Pour l'application du présent titre, on entend par délivrance d'un bien, le transfert au consommateur de la possession…
+
+*Notes :* as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 27. `u04` — `unanswerable`
+
+**Question :** Dans quel délai un permis de construire tacite est-il acquis en zone urbaine ?
+
+**Articles gold :** — (unanswerable / hors corpus)
+
+**Réponse attendue :** je ne sais pas
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 28. `ac04` — `apparent_contradiction`
+
+**Question :** Les clauses abusives sont réputées non écrites (L. 241-1) alors que L. 212-1 dit qu'on n'apprécie pas l'objet principal ni l'adéquation du prix : le prix peut-il être déclaré abusif ?
+
+**Articles gold :** L. 212-1, L. 241-1
+
+**Ids LEGIARTI :** `LEGIARTI000032890812, LEGIARTI000032226417`
+
+**Réponse attendue :** L'appréciation du caractère abusif ne porte ni sur l'objet principal ni sur l'adéquation prix/service (L. 212-1) ; la sanction du réputé non écrit (L. 241-1) s'applique aux clauses abusives ainsi définies, pas au prix lui-même en tant qu'adéquation.
+
+**Extraits corpus :**
+
+- **L. 212-1** (`LEGIARTI000032890812`) — Dans les contrats conclus entre professionnels et consommateurs, sont abusives les clauses qui ont pour objet ou pour effet de créer, au détriment du consommateur, un déséquilibre significatif entre les droits et obligations des parties au contrat. Sans préjudice des règles d'interprétation prévues aux articles 1188,…
+- **L. 241-1** (`LEGIARTI000032226417`) — Les clauses abusives sont réputées non écrites.Le contrat reste applicable dans toutes ses dispositions autres que celles jugées abusives s'il peut subsister sans ces clauses.Les dispositions du présent article sont d'ordre public.
+
+*Notes :* piège d'apparente contradiction ; les textes s'articulent
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 29. `q04` — `direct`
+
+**Question :** Dans quels cas une pratique commerciale est-elle trompeuse ?
+
+**Articles gold :** L. 121-2
+
+**Ids LEGIARTI :** `LEGIARTI000044563114`
+
+**Réponse attendue :** Elle est trompeuse notamment si elle crée une confusion avec un concurrent ou repose sur des allégations fausses ou trompeuses portant sur l'existence, les caractéristiques essentielles, le prix ou d'autres éléments du bien ou service.
+
+**Extraits corpus :**
+
+- **L. 121-2** (`LEGIARTI000044563114`) — Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un autre signe distinctif d'un concurrent ; 2° Lorsqu'elle repose sur des allégations, indications ou présentations…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 30. `mh04` — `multi_hop`
+
+**Question :** Quels délais et points de départ du droit de rétractation résultent de L. 221-18, et quels coûts L. 221-25 peut-il encore imposer ?
+
+**Articles gold :** L. 221-18, L. 221-25
+
+**Ids LEGIARTI :** `LEGIARTI000032226842, LEGIARTI000044563179`
+
+**Réponse attendue :** L. 221-18 ouvre un délai de quatorze jours sans motiver la décision, sous réserve des coûts prévus aux articles L. 221-23 à L. 221-25 ; L. 221-25 traite notamment de la responsabilité des frais de renvoi lorsque le professionnel en a informé le consommateur.
+
+**Extraits corpus :**
+
+- **L. 221-18** (`LEGIARTI000032226842`) — Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à motiver sa décision ni à supporter d'autres coûts que ceux prévus aux articles L. 221-23 à L. 221-25. Le délai…
+- **L. 221-25** (`LEGIARTI000044563179`) — Si le consommateur souhaite que l'exécution d'une prestation de services ou d'un contrat mentionné au premier alinéa de l'article L. 221-4 commence avant la fin du délai de rétractation prévu à l'article L. 221-18 et si le contrat soumet le consommateur à une obligation de payer, le professionnel recueille sa demande…
+
+*Notes :* multi_hop via renvoi / articulation d'articles
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 31. `t05` — `temporal`
+
+**Question :** Au 1er janvier 2020, combien de temps le prêteur devait-il maintenir les conditions d'une offre de crédit à la consommation ?
+
+**as_of :** `2020-01-01`
+
+**Articles gold :** L. 312-18
+
+**Ids LEGIARTI :** `LEGIARTI000035731428`
+
+**Réponse attendue :** Une durée minimale de quinze jours à compter de la remise ou de l'envoi.
+
+**Extraits corpus :**
+
+- **L. 312-18** (`LEGIARTI000035731428`) — L'offre de contrat de crédit est établie sur support papier ou sur un autre support durable. Elle est fournie en autant d'exemplaires que de parties et, le cas échéant, à chacune des cautions. La remise ou l'envoi de l'offre de contrat de crédit à l'emprunteur oblige le prêteur à en maintenir les conditions pendant…
+
+*Notes :* as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 32. `u06` — `unanswerable`
+
+**Question :** Quelle est la durée maximale de la garde à vue de droit commun ?
+
+**Articles gold :** — (unanswerable / hors corpus)
+
+**Réponse attendue :** je ne sais pas
+
+*Notes :* Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail.
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 33. `ac05` — `apparent_contradiction`
+
+**Question :** L. 121-1 interdit les pratiques déloyales, et L. 121-5 dit qu'une pratique conforme à L. 121-2 à L. 121-4 est déloyale : une pratique hors de ces articles peut-elle malgré tout être déloyale ?
+
+**Articles gold :** L. 121-1, L. 121-5
+
+**Ids LEGIARTI :** `LEGIARTI000032227301, LEGIARTI000034072564`
+
+**Réponse attendue :** Oui : L. 121-5 crée une présomption / qualification pour les pratiques visées aux L. 121-2 à L. 121-4, sans épuiser la notion générale de pratique déloyale de L. 121-1.
+
+**Extraits corpus :**
+
+- **L. 121-1** (`LEGIARTI000032227301`) — Les pratiques commerciales déloyales sont interdites. Une pratique commerciale est déloyale lorsqu'elle est contraire aux exigences de la diligence professionnelle et qu'elle altère ou est susceptible d'altérer de manière substantielle le comportement économique du consommateur normalement informé et raisonnablement…
+- **L. 121-5** (`LEGIARTI000034072564`) — Les dispositions des articles L. 121-2 à L. 121-4 sont également applicables aux pratiques qui visent les professionnels et les non-professionnels.
+
+*Notes :* piège d'apparente contradiction ; les textes s'articulent
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 34. `q07` — `direct`
+
+**Question :** À quel moment le risque de perte ou d'endommagement du bien est-il transféré au consommateur ?
+
+**Articles gold :** L. 216-2
+
+**Ids LEGIARTI :** `LEGIARTI000044142491`
+
+**Réponse attendue :** Le risque est transféré au consommateur lorsqu'il prend physiquement possession du bien, ou lorsqu'un tiers qu'il a désigné le fait.
+
+**Extraits corpus :**
+
+- **L. 216-2** (`LEGIARTI000044142491`) — Tout risque de perte ou d'endommagement du bien est transféré au consommateur au moment où ce dernier ou un tiers désigné par lui prend physiquement possession de ces biens.
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 35. `mh05` — `multi_hop`
+
+**Question :** Le vendeur répond-il des défauts de conformité au regard de L. 217-3 et des critères objectifs de L. 217-5 ?
+
+**Articles gold :** L. 217-3, L. 217-5
+
+**Ids LEGIARTI :** `LEGIARTI000044142579, LEGIARTI000044142571`
+
+**Réponse attendue :** Oui : L. 217-3 impose de délivrer un bien conforme au contrat et aux critères de L. 217-5, et d'assurer la garantie pendant deux ans à compter de la délivrance.
+
+**Extraits corpus :**
+
+- **L. 217-3** (`LEGIARTI000044142579`) — Le vendeur délivre un bien conforme au contrat ainsi qu'aux critères énoncés à l'article L. 217-5. Il répond des défauts de conformité existant au moment de la délivrance du bien au sens de l'article L. 216-1, qui apparaissent dans un délai de deux ans à compter de celle-ci. Dans le cas d'un contrat de vente d'un bien…
+- **L. 217-5** (`LEGIARTI000044142571`) — I.-En plus des critères de conformité au contrat, le bien est conforme s'il répond aux critères suivants : 1° Il est propre à l'usage habituellement attendu d'un bien de même type, compte tenu, s'il y a lieu, de toute disposition du droit de l'Union européenne et du droit national ainsi que de toutes les normes…
+
+*Notes :* multi_hop via renvoi / articulation d'articles
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 36. `t06` — `temporal`
+
+**Question :** En vigueur le 10 octobre 2019, une clause créant un déséquilibre significatif au détriment du consommateur était-elle abusive ?
+
+**as_of :** `2019-10-10`
+
+**Articles gold :** L. 212-1
+
+**Ids LEGIARTI :** `LEGIARTI000032890812`
+
+**Réponse attendue :** Oui, dans les contrats conclus entre professionnels et consommateurs.
+
+**Extraits corpus :**
+
+- **L. 212-1** (`LEGIARTI000032890812`) — Dans les contrats conclus entre professionnels et consommateurs, sont abusives les clauses qui ont pour objet ou pour effet de créer, au détriment du consommateur, un déséquilibre significatif entre les droits et obligations des parties au contrat. Sans préjudice des règles d'interprétation prévues aux articles 1188,…
+
+*Notes :* as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 37. `u07` — `unanswerable`
+
+**Question :** Quel est le quantum de la peine encourue pour escroquerie simple ?
+
+**Articles gold :** — (unanswerable / hors corpus)
+
+**Réponse attendue :** je ne sais pas
+
+*Notes :* Hors snapshot ; à re-vérifier si le corpus s'étend au-delà de consommation/civil/travail.
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 38. `ac06` — `apparent_contradiction`
+
+**Question :** Le consommateur choisit librement réparation ou remplacement (L. 217-9), mais le vendeur peut refuser (L. 217-12) : le choix du consommateur est-il illusoire ?
+
+**Articles gold :** L. 217-9, L. 217-12
+
+**Ids LEGIARTI :** `LEGIARTI000044152553, LEGIARTI000044152610`
+
+**Réponse attendue :** Non : le principe du choix appartient au consommateur (L. 217-9) ; le refus du vendeur n'est ouvert que si la mise en conformité choisie est impossible ou disproportionnée (L. 217-12).
+
+**Extraits corpus :**
+
+- **L. 217-9** (`LEGIARTI000044152553`) — Le consommateur est en droit d'exiger la mise en conformité du bien aux critères énoncés dans la sous-section 1 de la présente section. Le consommateur sollicite auprès du vendeur la mise en conformité du bien, en choisissant entre la réparation et le remplacement. A cette fin, le consommateur met le bien à la…
+- **L. 217-12** (`LEGIARTI000044152610`) — Le vendeur peut ne pas procéder selon le choix opéré par le consommateur si la mise en conformité sollicitée est impossible ou entraîne des coûts disproportionnés au regard notamment : 1° De la valeur qu'aurait le bien en l'absence de défaut de conformité ; 2° De l'importance du défaut de conformité ; et 3° De la…
+
+*Notes :* piège d'apparente contradiction ; les textes s'articulent
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 39. `q09` — `direct`
+
+**Question :** Quand un bien est-il considéré comme conforme au contrat ?
+
+**Articles gold :** L. 217-4
+
+**Ids LEGIARTI :** `LEGIARTI000044142575`
+
+**Réponse attendue :** Il est conforme s'il correspond notamment à la description, au type, à la quantité et à la qualité prévues au contrat, convient à l'usage spécial accepté par le vendeur, et est délivré avec les accessoires et instructions prévus.
+
+**Extraits corpus :**
+
+- **L. 217-4** (`LEGIARTI000044142575`) — Le bien est conforme au contrat s'il répond notamment, le cas échéant, aux critères suivants : 1° Il correspond à la description, au type, à la quantité et à la qualité, notamment en ce qui concerne la fonctionnalité, la compatibilité, l'interopérabilité, ou toute autre caractéristique prévues au contrat ; 2° Il est…
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+### 40. `mh06` — `multi_hop`
+
+**Question :** Comment la notion de délivrance (L. 216-1) intervient-elle dans le point de départ de la garantie de conformité (L. 217-3) ?
+
+**Articles gold :** L. 216-1, L. 217-3
+
+**Ids LEGIARTI :** `LEGIARTI000044142498, LEGIARTI000044142579`
+
+**Réponse attendue :** L. 217-3 fait courir le délai de deux ans à compter de la délivrance au sens de L. 216-1 (transfert de la possession physique ou du contrôle du bien).
+
+**Extraits corpus :**
+
+- **L. 216-1** (`LEGIARTI000044142498`) — Le professionnel délivre le bien ou fournit le service à la date ou dans le délai indiqué au consommateur, conformément au 3° de l'article L. 111-1, sauf si les parties en conviennent autrement. Pour l'application du présent titre, on entend par délivrance d'un bien, le transfert au consommateur de la possession…
+- **L. 217-3** (`LEGIARTI000044142579`) — Le vendeur délivre un bien conforme au contrat ainsi qu'aux critères énoncés à l'article L. 217-5. Il répond des défauts de conformité existant au moment de la délivrance du bien au sens de l'article L. 216-1, qui apparaissent dans un délai de deux ans à compter de celle-ci. Dans le cas d'un contrat de vente d'un bien…
+
+*Notes :* multi_hop via renvoi / articulation d'articles
+
+Verdict : ☐ OK ☐ À corriger ☐ À reformuler
+
+---
+
+## Checklist
+
+1. La réponse de référence est supportée par le(s) article(s) gelé(s).
+2. Pas d'ambiguïté majeure (autres articles également valides non listés).
+3. `multi_hop` : les deux (ou plus) articles sont nécessaires.
+4. `temporal` : la réponse est correcte à la date `as_of`.
+5. `unanswerable` : non répondable avec le snapshot courant.
+6. `apparent_contradiction` : le « conflit » se résout par articulation des textes.
+7. Passer `validated: true` question par question dans `questions.json` après revue.
