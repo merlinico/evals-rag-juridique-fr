@@ -1,0 +1,359 @@
+{
+  "version": "0.1.0",
+  "corpus_snapshot": "cdc-v0.1-2025-07-13",
+  "language": "fr",
+  "validated": false,
+  "notes": "Jeu d'or généré pour le MVP. Toutes les questions sont marquées validated=false en attendant revue humaine.",
+  "questions": [
+    {
+      "id": "q01",
+      "question": "Quelles informations essentielles le professionnel doit-il communiquer au consommateur avant la conclusion d'un contrat à titre onéreux ?",
+      "expected_article_ids": ["LEGIARTI000044142438"],
+      "expected_article_nums": ["L. 111-1"],
+      "reference_answer": "Avant d'être lié, le consommateur doit recevoir de manière lisible et compréhensible notamment les caractéristiques essentielles du bien ou service, le prix, la date ou le délai de délivrance, et les autres informations prévues à l'article L. 111-1.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "information précontractuelle"
+    },
+    {
+      "id": "q02",
+      "question": "Comment le vendeur doit-il informer le consommateur sur les prix ?",
+      "expected_article_ids": ["LEGIARTI000032227331"],
+      "expected_article_nums": ["L. 112-1"],
+      "reference_answer": "Tout vendeur ou prestataire informe le consommateur sur les prix et conditions particulières par marquage, étiquetage, affichage ou tout autre procédé approprié, selon des modalités fixées par arrêté.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "affichage des prix"
+    },
+    {
+      "id": "q03",
+      "question": "Quand une pratique commerciale est-elle considérée comme déloyale ?",
+      "expected_article_ids": ["LEGIARTI000032227301"],
+      "expected_article_nums": ["L. 121-1"],
+      "reference_answer": "Une pratique est déloyale si elle est contraire à la diligence professionnelle et altère ou est susceptible d'altérer de manière substantielle le comportement économique du consommateur normalement informé et raisonnablement attentif.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "pratiques déloyales"
+    },
+    {
+      "id": "q04",
+      "question": "Dans quels cas une pratique commerciale est-elle trompeuse ?",
+      "expected_article_ids": ["LEGIARTI000044563114"],
+      "expected_article_nums": ["L. 121-2"],
+      "reference_answer": "Elle est trompeuse notamment si elle crée une confusion avec un concurrent ou repose sur des allégations fausses ou trompeuses portant sur l'existence, les caractéristiques essentielles, le prix ou d'autres éléments du bien ou service.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "pratiques trompeuses"
+    },
+    {
+      "id": "q05",
+      "question": "Qu'est-ce qu'une clause abusive dans un contrat conclu entre un professionnel et un consommateur ?",
+      "expected_article_ids": ["LEGIARTI000032890812"],
+      "expected_article_nums": ["L. 212-1"],
+      "reference_answer": "Sont abusives les clauses qui créent, au détriment du consommateur, un déséquilibre significatif entre les droits et obligations des parties. L'appréciation ne porte ni sur l'objet principal du contrat ni sur l'adéquation du prix.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "clauses abusives"
+    },
+    {
+      "id": "q06",
+      "question": "Quel est le délai maximal de délivrance d'un bien lorsqu'aucune date n'a été convenue ?",
+      "expected_article_ids": ["LEGIARTI000044142498"],
+      "expected_article_nums": ["L. 216-1"],
+      "reference_answer": "À défaut d'indication ou d'accord, le professionnel délivre le bien sans retard injustifié et au plus tard trente jours après la conclusion du contrat.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "délivrance"
+    },
+    {
+      "id": "q07",
+      "question": "À quel moment le risque de perte ou d'endommagement du bien est-il transféré au consommateur ?",
+      "expected_article_ids": ["LEGIARTI000044142491"],
+      "expected_article_nums": ["L. 216-2"],
+      "reference_answer": "Le risque est transféré au consommateur lorsqu'il prend physiquement possession du bien, ou lorsqu'un tiers qu'il a désigné le fait.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "transfert des risques"
+    },
+    {
+      "id": "q08",
+      "question": "Quelle est la durée de la garantie légale de conformité pour un bien neuf ?",
+      "expected_article_ids": ["LEGIARTI000044142579"],
+      "expected_article_nums": ["L. 217-3"],
+      "reference_answer": "Le vendeur répond des défauts de conformité qui apparaissent dans un délai de deux ans à compter de la délivrance du bien.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "garantie de conformité"
+    },
+    {
+      "id": "q09",
+      "question": "Quand un bien est-il considéré comme conforme au contrat ?",
+      "expected_article_ids": ["LEGIARTI000044142575"],
+      "expected_article_nums": ["L. 217-4"],
+      "reference_answer": "Il est conforme s'il correspond notamment à la description, au type, à la quantité et à la qualité prévues au contrat, convient à l'usage spécial accepté par le vendeur, et est délivré avec les accessoires et instructions prévus.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "conformité"
+    },
+    {
+      "id": "q10",
+      "question": "Quels critères objectifs de conformité s'ajoutent à ceux du contrat ?",
+      "expected_article_ids": ["LEGIARTI000044142571"],
+      "expected_article_nums": ["L. 217-5"],
+      "reference_answer": "Le bien doit notamment être propre à l'usage habituellement attendu d'un bien de même type et, le cas échéant, posséder les qualités d'un échantillon ou modèle présenté.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "conformité objective"
+    },
+    {
+      "id": "q11",
+      "question": "Pendant combien de temps un défaut de conformité est-il présumé exister dès la délivrance pour un bien neuf ?",
+      "expected_article_ids": ["LEGIARTI000044152587"],
+      "expected_article_nums": ["L. 217-7"],
+      "reference_answer": "Les défauts apparaissant dans les vingt-quatre mois suivant la délivrance sont présumés exister au moment de la délivrance, sauf preuve contraire. Pour les biens d'occasion, ce délai est de douze mois.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "présomption de non-conformité"
+    },
+    {
+      "id": "q12",
+      "question": "Quelles options le consommateur peut-il choisir pour la mise en conformité d'un bien ?",
+      "expected_article_ids": ["LEGIARTI000044152553"],
+      "expected_article_nums": ["L. 217-9"],
+      "reference_answer": "Le consommateur peut exiger la mise en conformité en choisissant entre la réparation et le remplacement, et met le bien à la disposition du vendeur.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "réparation ou remplacement"
+    },
+    {
+      "id": "q13",
+      "question": "Le vendeur peut-il refuser le choix de réparation ou de remplacement du consommateur ?",
+      "expected_article_ids": ["LEGIARTI000044152610"],
+      "expected_article_nums": ["L. 217-12"],
+      "reference_answer": "Oui, si la mise en conformité choisie est impossible ou entraîne des coûts disproportionnés au regard de la valeur du bien, de l'importance du défaut et de la possibilité d'opter pour l'autre choix.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "refus de mise en conformité"
+    },
+    {
+      "id": "q14",
+      "question": "Quel est le délai de rétractation pour un contrat conclu à distance ?",
+      "expected_article_ids": ["LEGIARTI000032226842"],
+      "expected_article_nums": ["L. 221-18"],
+      "reference_answer": "Le consommateur dispose de quatorze jours pour se rétracter, sans motiver sa décision, sous réserve des coûts prévus aux articles L. 221-23 à L. 221-25.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "rétractation"
+    },
+    {
+      "id": "q15",
+      "question": "À partir de quand court le délai de rétractation pour un contrat de vente de biens à distance ?",
+      "expected_article_ids": ["LEGIARTI000032226842"],
+      "expected_article_nums": ["L. 221-18"],
+      "reference_answer": "Pour les contrats de vente de biens, le délai court à compter de la réception du bien par le consommateur ou par un tiers qu'il a désigné, autre que le transporteur.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "point de départ rétractation"
+    },
+    {
+      "id": "q16",
+      "question": "Qu'est-ce qu'un contrat à distance au sens du Code de la consommation ?",
+      "expected_article_ids": ["LEGIARTI000044563164"],
+      "expected_article_nums": ["L. 221-1"],
+      "reference_answer": "C'est un contrat conclu entre un professionnel et un consommateur dans le cadre d'un système organisé de vente ou de prestation à distance, sans présence physique simultanée, par techniques de communication à distance.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "définition contrat à distance"
+    },
+    {
+      "id": "q17",
+      "question": "Quelles informations précontractuelles spécifiques s'appliquent avant un contrat à distance ou hors établissement ?",
+      "expected_article_ids": ["LEGIARTI000044563141"],
+      "expected_article_nums": ["L. 221-5"],
+      "reference_answer": "Avant conclusion, le professionnel fournit de manière lisible et compréhensible les informations prévues par l'article L. 221-5, notamment relatives aux caractéristiques, au professionnel, au prix et au droit de rétractation.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "info précontractuelle distance"
+    },
+    {
+      "id": "q18",
+      "question": "Quels contrats sont exclus du droit de rétractation ?",
+      "expected_article_ids": ["LEGIARTI000044563170"],
+      "expected_article_nums": ["L. 221-28"],
+      "reference_answer": "L'article L. 221-28 exclut notamment les services pleinement exécutés avec accord exprès, les biens confectionnés selon les spécifications du consommateur, les biens périssables, et d'autres cas limitativement énumérés.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "exclusions rétractation"
+    },
+    {
+      "id": "q19",
+      "question": "Quelle est la conséquence d'une clause abusive sur le contrat ?",
+      "expected_article_ids": ["LEGIARTI000032226417"],
+      "expected_article_nums": ["L. 241-1"],
+      "reference_answer": "Les clauses abusives sont réputées non écrites. Le contrat reste applicable dans toutes ses dispositions autres que celles jugées abusives, s'il peut subsister sans elles. Ces dispositions sont d'ordre public.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "sanction clause abusive"
+    },
+    {
+      "id": "q20",
+      "question": "À quels montants s'applique le chapitre relatif au crédit à la consommation (L. 312-1) ?",
+      "expected_article_ids": ["LEGIARTI000034072779"],
+      "expected_article_nums": ["L. 312-1"],
+      "reference_answer": "Le chapitre s'applique aux opérations de crédit mentionnées au 6° de l'article L. 311-1, onéreuses ou gratuites, dont le montant total est égal ou supérieur à 200 euros et inférieur ou égal à 75 000 euros.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crédit consommation"
+    },
+    {
+      "id": "q21",
+      "question": "Combien de temps le prêteur doit-il maintenir les conditions d'une offre de crédit à la consommation ?",
+      "expected_article_ids": ["LEGIARTI000035731428"],
+      "expected_article_nums": ["L. 312-18"],
+      "reference_answer": "La remise ou l'envoi de l'offre oblige le prêteur à en maintenir les conditions pendant une durée minimale de quinze jours.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "durée de validité offre de crédit"
+    },
+    {
+      "id": "q22",
+      "question": "Sous quelle forme doit être établi le contrat de crédit à la consommation ?",
+      "expected_article_ids": ["LEGIARTI000035731424"],
+      "expected_article_nums": ["L. 312-28"],
+      "reference_answer": "Le contrat est établi sur support papier ou autre support durable, distinct de la publicité et de la fiche d'information ; un encadré en début de contrat informe des caractéristiques essentielles.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "forme du contrat de crédit"
+    },
+    {
+      "id": "q23",
+      "question": "Le consommateur a-t-il droit à un médiateur de la consommation ?",
+      "expected_article_ids": ["LEGIARTI000032224805"],
+      "expected_article_nums": ["L. 612-1"],
+      "reference_answer": "Oui. Tout consommateur a le droit de recourir gratuitement à un médiateur de la consommation ; le professionnel garantit un recours effectif à un dispositif de médiation.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "médiation"
+    },
+    {
+      "id": "q24",
+      "question": "Quand le professionnel doit-il communiquer les coordonnées du médiateur au consommateur ?",
+      "expected_article_ids": ["LEGIARTI000032224762"],
+      "expected_article_nums": ["L. 616-1"],
+      "reference_answer": "Le professionnel communique les coordonnées du ou des médiateurs compétents, et les fournit aussi lorsqu'un litige n'a pas pu être réglé après réclamation préalable auprès de ses services.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "information médiateur"
+    },
+    {
+      "id": "q25",
+      "question": "Que deviennent les sommes versées d'avance par le consommateur, sauf stipulation contraire ?",
+      "expected_article_ids": ["LEGIARTI000032226990"],
+      "expected_article_nums": ["L. 214-1"],
+      "reference_answer": "Sauf stipulation contraire, les sommes versées d'avance sont des arrhes : le consommateur qui se désiste les perd, le professionnel qui se désiste les restitue au double.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "arrhes"
+    },
+    {
+      "id": "q26",
+      "question": "Les pratiques commerciales trompeuses sont-elles interdites même si elles n'ont produit leurs effets qu'en France ?",
+      "expected_article_ids": ["LEGIARTI000032227122", "LEGIARTI000044563114"],
+      "expected_article_nums": ["L. 132-1", "L. 121-2"],
+      "reference_answer": "Oui. Le délit de pratique commerciale trompeuse est constitué dès lors que la pratique est mise en œuvre ou produit ses effets en France (L. 132-1), les pratiques trompeuses étant définies notamment aux articles L. 121-2 et suivants.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "territorialité pratiques trompeuses"
+    },
+    {
+      "id": "q27",
+      "question": "Le professionnel doit-il fournir des informations complémentaires avant un contrat de services ?",
+      "expected_article_ids": ["LEGIARTI000032227350"],
+      "expected_article_nums": ["L. 111-2"],
+      "reference_answer": "Oui. Outre L. 111-1, le professionnel communique avant conclusion (ou avant exécution s'il n'y a pas de contrat écrit) des informations complémentaires sur ses coordonnées, son activité et les conditions contractuelles, listées par décret.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "info services"
+    },
+    {
+      "id": "q28",
+      "question": "Le prêteur doit-il expliquer à l'emprunteur si le crédit est adapté à sa situation ?",
+      "expected_article_ids": ["LEGIARTI000032226174"],
+      "expected_article_nums": ["L. 312-14"],
+      "reference_answer": "Oui. Le prêteur ou l'intermédiaire fournit des explications permettant de déterminer si le crédit est adapté aux besoins et à la situation financière de l'emprunteur, et attire son attention sur les caractéristiques et conséquences du crédit.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "devoir d'explication crédit"
+    },
+    {
+      "id": "q29",
+      "question": "Que signifie la délivrance d'un bien au sens du Code de la consommation ?",
+      "expected_article_ids": ["LEGIARTI000044142498"],
+      "expected_article_nums": ["L. 216-1"],
+      "reference_answer": "La délivrance s'entend du transfert au consommateur de la possession physique ou du contrôle du bien ; pour un bien comportant des éléments numériques, elle inclut aussi la fourniture de ces éléments.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "définition délivrance"
+    },
+    {
+      "id": "q30",
+      "question": "Quelle est la durée de présomption de non-conformité pour un bien d'occasion ?",
+      "expected_article_ids": ["LEGIARTI000044152587"],
+      "expected_article_nums": ["L. 217-7"],
+      "reference_answer": "Pour les biens d'occasion, le délai de présomption est fixé à douze mois à compter de la délivrance.",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "bien d'occasion"
+    },
+    {
+      "id": "u01",
+      "question": "Quel est le montant maximal de l'amende encourue par un bailleur pour un logement indigne au sens du Code de la construction ?",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (construction)"
+    },
+    {
+      "id": "u02",
+      "question": "Combien de jours de congés payés un salarié acquiert-il par mois de travail selon le Code du travail ?",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (travail)"
+    },
+    {
+      "id": "u03",
+      "question": "Quelle est la peine maximale pour un vol simple selon le Code pénal ?",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (pénal)"
+    },
+    {
+      "id": "u04",
+      "question": "Dans quel délai un permis de construire tacite est-il acquis en zone urbaine ?",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (urbanisme)"
+    },
+    {
+      "id": "u05",
+      "question": "Quel est le taux de TVA normal applicable aux prestations de restauration sur place en France métropolitaine ?",
+      "expected_article_ids": [],
+      "expected_article_nums": [],
+      "reference_answer": "je ne sais pas",
+      "unanswerable": true,
+      "validated": false,
+      "topic": "hors corpus (fiscalité)"
+    }
+  ]
+}

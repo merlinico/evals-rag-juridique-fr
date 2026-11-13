@@ -1,0 +1,860 @@
+{
+  "config": "chunk_1000",
+  "chunk_size": 1000,
+  "model": "qwen2.5:3b-instruct",
+  "generations": [
+    {
+      "question_id": "q01",
+      "question": "Quelles informations essentielles le professionnel doit-il communiquer au consommateur avant la conclusion d'un contrat à titre onéreux ?",
+      "answer": "Le professionnel doit communiquer au consommateur, de manière lisible et compréhensible, les informations suivantes avant la conclusion d'un contrat à titre onéreux :\n\n1. Les caractéristiques essentielles du bien ou du service, ainsi que celles du service numérique ou du contenu numérique, compte tenu de leur nature et du support de communication utilisé, et notamment les fonctionnalités, la compatibilité et l'interopérabilité du bien comportant des éléments numériques, du contenu numérique ou du service numérique, ainsi que l'existence de toute restriction d'installation de logiciel (L. 111-1).\n\n2. Le prix ou tout autre avantage procuré au lieu ou en complément du paiement d'un prix en application des articles L. 112-1 à L. 112-4-1 (L. 111-1).\n\n3. En l'absence d'exécution immédiate du contrat, la date ou le délai auquel le professionnel s'engage à délivrer le bien ou à exécuter le service (L. 111-1).\n\n4. Les informations relatives à l'ident",
+      "cited_article_nums": [
+        "L. 111-1",
+        "L. 112-1",
+        "L. 112-4-1"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000044142438",
+        "LEGIARTI000032227350",
+        "LEGIARTI000044563141",
+        "LEGIARTI000044563179",
+        "LEGIARTI000044142472"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044142438#0",
+        "LEGIARTI000032227350#0",
+        "LEGIARTI000044563141#0",
+        "LEGIARTI000044563179#0",
+        "LEGIARTI000044142472#1"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q02",
+      "question": "Comment le vendeur doit-il informer le consommateur sur les prix ?",
+      "answer": "Le vendeur doit informer le consommateur sur les prix par voie de marquage, d'étiquetage, d'affichage ou par tout autre procédé approprié, selon les modalités fixées par arrêtés du ministre chargé de l'économie, après consultation du Conseil national de la consommation [L. 112-1].",
+      "cited_article_nums": [
+        "L. 112-1"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000032227331",
+        "LEGIARTI000044152553",
+        "LEGIARTI000044564977",
+        "LEGIARTI000044563111",
+        "LEGIARTI000044142571"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000032227331#0",
+        "LEGIARTI000044152553#0",
+        "LEGIARTI000044564977#0",
+        "LEGIARTI000044563111#1",
+        "LEGIARTI000044142571#1"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q03",
+      "question": "Quand une pratique commerciale est-elle considérée comme déloyale ?",
+      "answer": "Une pratique commerciale est considérée comme déloyale lorsque :\n\n- Elle est contraire aux exigences de la diligence professionnelle.\n- Elle altère ou est susceptible d'altérer de manière substantielle le comportement économique du consommateur normalement informé et raisonnablement attentif et avisé, à l'égard d'un bien ou d'un service.\n- Elle est trompeuse, agressive ou vise une catégorie particulière de consommateurs ou un groupe de consommateurs vulnérables en raison d'une infirmité mentale ou physique, d'un âge ou de leur crédulité.\n\nCes pratiques sont interdites selon les articles [L. 121-1] et [L. 121-2 à L. 121-4] du Code de la consommation.",
+      "cited_article_nums": [
+        "L. 121-1",
+        "L. 121-2",
+        "L. 121-4"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000032227301",
+        "LEGIARTI000044563111",
+        "LEGIARTI000032227122",
+        "LEGIARTI000044563114",
+        "LEGIARTI000044563107"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000032227301#0",
+        "LEGIARTI000044563111#0",
+        "LEGIARTI000032227122#0",
+        "LEGIARTI000044563114#0",
+        "LEGIARTI000044563107#5"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q04",
+      "question": "Dans quels cas une pratique commerciale est-elle trompeuse ?",
+      "answer": "Une pratique commerciale est trompeuse dans les cas suivants :\n\n1. Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un autre signe distinctif d'un concurrent (Article L. 121-2 [LEGIARTI000044563114]).\n\n2. Lorsqu'elle repose sur des allégations, indications ou présentations fausses ou de nature à induire en erreur et portant sur l'un ou plusieurs des éléments suivants : l'existence, la disponibilité ou la nature du bien ou du service, ses qualités substantielles, sa composition, ses accessoires, son origine, sa quantité, son mode et sa date de fabrication, les conditions de son utilisation et son aptitude (Article L. 121-2 [LEGIARTI000044563114]).\n\n3. Lorsqu'elle omet, dissimule ou fournit de façon inintelligible, ambiguë ou à contretemps une information substantielle (Article L. 121-3 [LEGIARTI0000",
+      "cited_article_nums": [
+        "L. 121-2",
+        "L. 121-3"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000032227122",
+        "LEGIARTI000044563114",
+        "LEGIARTI000044563111",
+        "LEGIARTI000032227301",
+        "LEGIARTI000044563107"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000032227122#0",
+        "LEGIARTI000044563114#0",
+        "LEGIARTI000044563111#0",
+        "LEGIARTI000032227301#0",
+        "LEGIARTI000044563107#4"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q05",
+      "question": "Qu'est-ce qu'une clause abusive dans un contrat conclu entre un professionnel et un consommateur ?",
+      "answer": "Une clause abusive dans un contrat conclu entre un professionnel et un consommateur est une clause qui, au moment de la conclusion du contrat, crée un déséquilibre significatif entre les droits et obligations des parties, sans préjudice des règles d'interprétation prévues aux articles 1188, 1189, 1191 et 1192 du code civil. Cette appréciation se fait en tenant compte de toutes les circonstances qui entourent sa conclusion, ainsi que de celles contenues dans un autre contrat lorsque les deux contrats sont juridiquement liés. [L. 212-1]",
+      "cited_article_nums": [
+        "L. 212-1"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000032890812",
+        "LEGIARTI000044563164",
+        "LEGIARTI000032226990",
+        "LEGIARTI000032224815"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000032890812#0",
+        "LEGIARTI000032890812#1",
+        "LEGIARTI000044563164#0",
+        "LEGIARTI000032226990#0",
+        "LEGIARTI000032224815#1"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q06",
+      "question": "Quel est le délai maximal de délivrance d'un bien lorsqu'aucune date n'a été convenue ?",
+      "answer": "Le délai maximal de délivrance d'un bien lorsqu'aucune date n'a été convenue est de 30 jours après la conclusion du contrat. [L. 216-1]",
+      "cited_article_nums": [
+        "L. 216-1"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000044142498",
+        "LEGIARTI000044142472",
+        "LEGIARTI000044152587",
+        "LEGIARTI000044563170",
+        "LEGIARTI000032226840"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044142498#0",
+        "LEGIARTI000044142472#1",
+        "LEGIARTI000044152587#0",
+        "LEGIARTI000044563170#1",
+        "LEGIARTI000032226840#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q07",
+      "question": "À quel moment le risque de perte ou d'endommagement du bien est-il transféré au consommateur ?",
+      "answer": "Le risque de perte ou d'endommagement du bien est transféré au consommateur au moment où ce dernier ou un tiers désigné par lui prend physiquement possession de ces biens. C'est la règle définie dans l'article [L. 216-2] (id=LEGIARTI000044142491).\n\nCitations : [L. 216-2]",
+      "cited_article_nums": [
+        "L. 216-2"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000044142491",
+        "LEGIARTI000044142485",
+        "LEGIARTI000044139957",
+        "LEGIARTI000044142498",
+        "LEGIARTI000044142472"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044142491#0",
+        "LEGIARTI000044142485#0",
+        "LEGIARTI000044139957#0",
+        "LEGIARTI000044142498#0",
+        "LEGIARTI000044142472#1"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q08",
+      "question": "Quelle est la durée de la garantie légale de conformité pour un bien neuf ?",
+      "answer": "La durée de la garantie légale de conformité pour un bien neuf n'est pas directement stipulée dans les articles fournis. Cependant, nous savons que le bien réparé bénéficie d'une extension de la garantie de six mois dès lors que le consommateur choisit la réparation mais que celle-ci n'est pas mise en œuvre par le vendeur. \n\nDonc, si le bien n'a pas été réparé, la garantie légale de conformité reste inchangée. Pour un bien neuf, la durée de la garantie légale de conformité est donc celle prévue par la loi, généralement de deux ans à compter de la délivrance du bien, sauf si le bien comportait des éléments numériques, dans lequel cas le délai peut être plus court. \n\nCependant, sans une référence spécifique à un article précis, je ne peux pas donner une durée exacte.",
+      "cited_article_nums": [],
+      "retrieved_article_ids": [
+        "LEGIARTI000044142545",
+        "LEGIARTI000044139957",
+        "LEGIARTI000044142554",
+        "LEGIARTI000044152587",
+        "LEGIARTI000044142579"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044142545#0",
+        "LEGIARTI000044139957#0",
+        "LEGIARTI000044142554#0",
+        "LEGIARTI000044152587#0",
+        "LEGIARTI000044142579#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q09",
+      "question": "Quand un bien est-il considéré comme conforme au contrat ?",
+      "answer": "Un bien est considéré comme conforme au contrat selon les critères suivants :\n\n1. Il répond à la description, au type, à la quantité et à la qualité, notamment en ce qui concerne la fonctionnalité, la compatibilité, l'interopérabilité, ou toute autre caractéristique prévue au contrat ([L. 217-4][LEGIARTI000044142575]).\n2. Il est propre à tout usage spécial recherché par le consommateur, porté à la connaissance du vendeur au moment de la conclusion du contrat et que ce dernier a accepté ([L. 217-4][LEGIARTI000044142575]).\n3. Il est délivré avec tous les accessoires et les instructions d'installation, devant être fournis conformément au contrat ([L. 217-4][LEGIARTI000044142575]).\n4. Il est mis à jour conformément au contrat ([L. 217-4][LEGIARTI000044142575",
+      "cited_article_nums": [
+        "L. 217-4"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000044142575",
+        "LEGIARTI000044142579",
+        "LEGIARTI000044142571",
+        "LEGIARTI000044142554",
+        "LEGIARTI000044563114"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044142575#0",
+        "LEGIARTI000044142579#0",
+        "LEGIARTI000044142571#0",
+        "LEGIARTI000044142554#0",
+        "LEGIARTI000044563114#2"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q10",
+      "question": "Quels critères objectifs de conformité s'ajoutent à ceux du contrat ?",
+      "answer": "Les critères objectifs de conformité s'ajoutent aux critères de conformité au contrat, en particulier ceux énoncés dans les articles L. 217-5 et L. 217-3 du Code de la consommation. Ces articles mentionnent que le bien doit répondre aux critères suivants :\n\n- Il est propre à l'usage habituellement attendu d'un bien de même type, compte tenu de dispositions du droit de l'Union européenne et du droit national ainsi que de normes techniques ou codes de conduite spécifiques.\n- Il possède les qualités que le vendeur a présentées au consommateur sous forme d'échantillon ou de modèle avant la conclusion du contrat.\n- Les éléments numériques qu'il comporte sont fournis selon la version la plus récente disponible au moment de la conclusion du contrat, sauf si les parties en conviennent autrement.\n- Il est délivré avec tous les accessoires, y compris l'emballage, et les instructions d'installation que le consommateur peut légitimement attendre.\n- Il est mis à jour conformément au contrat.\n\nCes crit",
+      "cited_article_nums": [
+        "L. 217-5",
+        "L. 217-3"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000044152553",
+        "LEGIARTI000044142571",
+        "LEGIARTI000044142579",
+        "LEGIARTI000044142575"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044152553#0",
+        "LEGIARTI000044142571#0",
+        "LEGIARTI000044142579#0",
+        "LEGIARTI000044142571#2",
+        "LEGIARTI000044142575#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q11",
+      "question": "Pendant combien de temps un défaut de conformité est-il présumé exister dès la délivrance pour un bien neuf ?",
+      "answer": "Pour un bien neuf, les défauts de conformité sont présumés exister au moment de la délivrance du bien. Selon l'article L. 217-7 [LEGIARTI000044152587], ce délai est de vingt-quatre mois à compter de la délivrance du bien, y compris pour les biens comportant des éléments numériques. Pour les biens d'occasion, ce délai est de douze mois. \n\nCitations : [LEGIARTI000044152587], [LEGIARTI000044142579]",
+      "cited_article_nums": [
+        "L. 217-7"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000044152587",
+        "LEGIARTI000044142579",
+        "LEGIARTI000044142545",
+        "LEGIARTI000044142498",
+        "LEGIARTI000044142554"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044152587#0",
+        "LEGIARTI000044142579#0",
+        "LEGIARTI000044142545#0",
+        "LEGIARTI000044142498#0",
+        "LEGIARTI000044142554#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q12",
+      "question": "Quelles options le consommateur peut-il choisir pour la mise en conformité d'un bien ?",
+      "answer": "Le consommateur peut choisir entre la réparation ou le remplacement du bien non conforme [L. 217-9]. Si la mise en conformité est impossible ou entraîne des coûts disproportionnés, le vendeur peut refuser la mise en conformité [L. 217-12].",
+      "cited_article_nums": [
+        "L. 217-9",
+        "L. 217-12"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000044152553",
+        "LEGIARTI000044152610",
+        "LEGIARTI000044142554",
+        "LEGIARTI000044142560",
+        "LEGIARTI000044142571"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044152553#0",
+        "LEGIARTI000044152610#0",
+        "LEGIARTI000044142554#0",
+        "LEGIARTI000044142560#0",
+        "LEGIARTI000044142571#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q13",
+      "question": "Le vendeur peut-il refuser le choix de réparation ou de remplacement du consommateur ?",
+      "answer": "Le vendeur peut refuser le choix de réparation ou de remplacement du consommateur si la mise en conformité est impossible ou si elle entraîne des coûts disproportionnés, notamment au regard de la valeur du bien en l'absence de défaut de conformité, de l'importance du défaut de conformité, et de la possibilité d'opter pour l'autre choix sans inconvénient majeur pour le consommateur. [L. 217-12]",
+      "cited_article_nums": [
+        "L. 217-12"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000044152610",
+        "LEGIARTI000044152553",
+        "LEGIARTI000044142560",
+        "LEGIARTI000044563114",
+        "LEGIARTI000044563107"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044152610#0",
+        "LEGIARTI000044152553#0",
+        "LEGIARTI000044142560#0",
+        "LEGIARTI000044563114#1",
+        "LEGIARTI000044563107#1"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q14",
+      "question": "Quel est le délai de rétractation pour un contrat conclu à distance ?",
+      "answer": "Le délai de rétractation pour un contrat conclu à distance est de quatorze jours à compter du jour :\n\n1. De la conclusion du contrat, pour les contrats de prestation de services et ceux mentionnés à l'article L. 221-4 ;\n2. De la réception du bien par le consommateur ou un tiers, autre que le transporteur, désigné par lui, pour les contrats de vente de biens.\n\nCitations : [L. 221-18]",
+      "cited_article_nums": [
+        "L. 221-4",
+        "L. 221-18"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000032226842",
+        "LEGIARTI000044563179",
+        "LEGIARTI000044563164",
+        "LEGIARTI000044563141"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000032226842#0",
+        "LEGIARTI000044563179#0",
+        "LEGIARTI000044563164#0",
+        "LEGIARTI000044563141#1",
+        "LEGIARTI000044563141#2"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q15",
+      "question": "À partir de quand court le délai de rétractation pour un contrat de vente de biens à distance ?",
+      "answer": "Le délai de rétractation pour un contrat de vente de biens à distance court à compter du jour de la réception du bien par le consommateur ou un tiers désigné par lui, autre que le transporteur, pour les contrats de vente de biens. [L. 221-18]",
+      "cited_article_nums": [
+        "L. 221-18"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000032226842",
+        "LEGIARTI000044563141",
+        "LEGIARTI000044563199",
+        "LEGIARTI000044563164"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000032226842#0",
+        "LEGIARTI000044563141#1",
+        "LEGIARTI000044563141#2",
+        "LEGIARTI000044563199#0",
+        "LEGIARTI000044563164#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q16",
+      "question": "Qu'est-ce qu'un contrat à distance au sens du Code de la consommation ?",
+      "answer": "Un contrat à distance, au sens du Code de la consommation, est un contrat conclu entre un professionnel et un consommateur, dans le cadre d'un système organisé de vente ou de prestation de services à distance, sans la présence physique simultanée du professionnel et du consommateur, par le recours exclusif à une ou plusieurs techniques de communication à distance jusqu'à la conclusion du contrat [L. 221-1][L. 221-1].",
+      "cited_article_nums": [
+        "L. 221-1"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000044563164",
+        "LEGIARTI000044563141",
+        "LEGIARTI000044563179"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044563164#0",
+        "LEGIARTI000044563164#1",
+        "LEGIARTI000044563141#1",
+        "LEGIARTI000044563141#0",
+        "LEGIARTI000044563179#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q17",
+      "question": "Quelles informations précontractuelles spécifiques s'appliquent avant un contrat à distance ou hors établissement ?",
+      "answer": "Avant un contrat à distance ou hors établissement, les informations précontractuelles spécifiques s'appliquent selon les articles suivants :\n\n- [L. 111-1] : Les informations suivantes sont fournies au consommateur :\n  1. Les caractéristiques essentielles du bien, du service, du service numérique ou du contenu numérique ;\n  2. Le prix du bien, du service, du service numérique ou du contenu numérique ;\n  3. La date à laquelle ou le délai dans lequel le professionnel s'engage à livrer le bien ou à fournir le service, le service numérique ou le contenu numérique ;\n  4. Les informations relatives à son identité, à ses coordonnées postales, téléphoniques et électroniques, aux modalités de résiliation, aux modes de règlement des litiges, aux autres conditions contractuelles et, le cas échéant, aux coûts de l'utilisation de la technique de communication à distance ;\n  5. L'existence et les modalités de mise en œuvre des garanties légales, notamment la garantie légale de conformité et la garantie légale des vices cach",
+      "cited_article_nums": [
+        "L. 111-1"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000044563164",
+        "LEGIARTI000044563141",
+        "LEGIARTI000044142438",
+        "LEGIARTI000044563179"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044563164#0",
+        "LEGIARTI000044563141#0",
+        "LEGIARTI000044142438#0",
+        "LEGIARTI000044142438#1",
+        "LEGIARTI000044563179#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q18",
+      "question": "Quels contrats sont exclus du droit de rétractation ?",
+      "answer": "Les contrats sont exclus du droit de rétractation selon les articles suivants :\n\n- [L. 221-28] : Les contrats de fourniture de services pleinement exécutés avant la fin du délai de rétractation, si le contrat soumet le consommateur à une obligation de payer, dont l'exécution a commencé avec son accord préalable et exprès et avec la reconnaissance par lui de la perte de son droit de rétractation.\n- [L. 221-28] : Les contrats de fourniture de biens ou de services dont le prix dépend de fluctuations sur le marché financier échappant au contrôle du professionnel et susceptibles de se produire pendant le délai de rétractation.\n- [L. 221-28] : Les contrats de fourniture de biens confectionnés selon les spécifications du consommateur ou nettement personnalisés.\n- [L. 221-28] : Les contrats de fourniture de biens susceptibles de se détériorer ou de se périmer rapidement.\n- [L. 221-28] : Les",
+      "cited_article_nums": [
+        "L. 221-28"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000044563170",
+        "LEGIARTI000044563141",
+        "LEGIARTI000032226842",
+        "LEGIARTI000044563179"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044563170#0",
+        "LEGIARTI000044563141#2",
+        "LEGIARTI000032226842#0",
+        "LEGIARTI000044563179#0",
+        "LEGIARTI000044563141#1"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q19",
+      "question": "Quelle est la conséquence d'une clause abusive sur le contrat ?",
+      "answer": "La conséquence d'une clause abusive sur le contrat est qu'il est considéré comme non exécutable. Il s'agit d'une conséquence directe de la violation du principe de l'équilibre du contrat, qui est un des principes fondamentaux du Code de la consommation. Si une clause est reconnue abusive, le professionnel doit apporter la preuve du caractère non abusif de la clause litigieuse. Cette règle est applicable quel que soit la forme ou le support du contrat.",
+      "cited_article_nums": [],
+      "retrieved_article_ids": [
+        "LEGIARTI000032890812",
+        "LEGIARTI000032226842",
+        "LEGIARTI000044142472",
+        "LEGIARTI000044563164"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000032890812#0",
+        "LEGIARTI000032890812#1",
+        "LEGIARTI000032226842#0",
+        "LEGIARTI000044142472#0",
+        "LEGIARTI000044563164#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q20",
+      "question": "À quels montants s'applique le chapitre relatif au crédit à la consommation (L. 312-1) ?",
+      "answer": "Le chapitre relatif au crédit à la consommation (L. 312-1) s'applique aux opérations de crédit mentionnées à l'article L. 311-1, dès lors que le montant total du crédit est égal ou supérieur à 200 euros et inférieur ou égal à 75 000 euros. [L. 312-1]",
+      "cited_article_nums": [
+        "L. 312-1",
+        "L. 311-1"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000034072779",
+        "LEGIARTI000032226144",
+        "LEGIARTI000044142498",
+        "LEGIARTI000032226174",
+        "LEGIARTI000035731424"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000034072779#0",
+        "LEGIARTI000032226144#0",
+        "LEGIARTI000044142498#0",
+        "LEGIARTI000032226174#0",
+        "LEGIARTI000035731424#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q21",
+      "question": "Combien de temps le prêteur doit-il maintenir les conditions d'une offre de crédit à la consommation ?",
+      "answer": "Le prêteur doit maintenir les conditions d'une offre de crédit à la consommation pendant une durée minimale de quinze jours à compter de la remise ou de l'envoi de l'offre à l'emprunteur. C'est stipulé dans l'article [L. 312-18] du Code de la consommation.",
+      "cited_article_nums": [
+        "L. 312-18"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000035731428",
+        "LEGIARTI000032226174",
+        "LEGIARTI000032226144",
+        "LEGIARTI000044563141",
+        "LEGIARTI000032890824"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000035731428#0",
+        "LEGIARTI000032226174#0",
+        "LEGIARTI000032226144#0",
+        "LEGIARTI000044563141#1",
+        "LEGIARTI000032890824#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q22",
+      "question": "Sous quelle forme doit être établi le contrat de crédit à la consommation ?",
+      "answer": "Le contrat de crédit à la consommation doit être établi sur support papier ou sur un autre support durable [L. 312-28]. Il constitue un document distinct de tout support ou document publicitaire, ainsi que de la fiche mentionnée à l'article L. 312-12 [L. 312-28].",
+      "cited_article_nums": [
+        "L. 312-28",
+        "L. 312-12"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000035731424",
+        "LEGIARTI000044142571",
+        "LEGIARTI000035731428",
+        "LEGIARTI000032224815",
+        "LEGIARTI000044563141"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000035731424#0",
+        "LEGIARTI000044142571#0",
+        "LEGIARTI000035731428#0",
+        "LEGIARTI000032224815#1",
+        "LEGIARTI000044563141#1"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q23",
+      "question": "Le consommateur a-t-il droit à un médiateur de la consommation ?",
+      "answer": "Oui, le consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de résoudre amiablement son litige avec un professionnel. Cela est stipulé dans l'article [L. 612-1] du Code de la consommation.",
+      "cited_article_nums": [
+        "L. 612-1"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000032224805",
+        "LEGIARTI000032224815",
+        "LEGIARTI000044563141",
+        "LEGIARTI000044142438",
+        "LEGIARTI000044152553"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000032224805#0",
+        "LEGIARTI000032224815#1",
+        "LEGIARTI000044563141#1",
+        "LEGIARTI000044142438#1",
+        "LEGIARTI000044152553#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q24",
+      "question": "Quand le professionnel doit-il communiquer les coordonnées du médiateur au consommateur ?",
+      "answer": "Le professionnel doit communiquer les coordonnées du médiateur de la consommation au consommateur dès lors qu'un litige n'a pas pu être réglé dans le cadre d'une réclamation préalable directement introduite auprès de ses services [L. 616-1].",
+      "cited_article_nums": [
+        "L. 616-1"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000032224805",
+        "LEGIARTI000032224762",
+        "LEGIARTI000044142438",
+        "LEGIARTI000032224815"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000032224805#0",
+        "LEGIARTI000032224762#0",
+        "LEGIARTI000044142438#1",
+        "LEGIARTI000032224815#1",
+        "LEGIARTI000044142438#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q25",
+      "question": "Que deviennent les sommes versées d'avance par le consommateur, sauf stipulation contraire ?",
+      "answer": "Les sommes versées d'avance par le consommateur, sauf stipulation contraire, sont des arrhes, au sens de l'article [L. 214-1] du Code de la consommation. Dans ce cas, chacun des contractants peut revenir sur son engagement : le consommateur perd les arrhes, le professionnel les restitue au double.",
+      "cited_article_nums": [
+        "L. 214-1"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000032226990",
+        "LEGIARTI000044563170",
+        "LEGIARTI000044563164",
+        "LEGIARTI000044142571",
+        "LEGIARTI000044563141"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000032226990#0",
+        "LEGIARTI000044563170#1",
+        "LEGIARTI000044563164#2",
+        "LEGIARTI000044142571#1",
+        "LEGIARTI000044563141#2"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q26",
+      "question": "Les pratiques commerciales trompeuses sont-elles interdites même si elles n'ont produit leurs effets qu'en France ?",
+      "answer": "Je ne sais pas",
+      "cited_article_nums": [],
+      "retrieved_article_ids": [
+        "LEGIARTI000032227122",
+        "LEGIARTI000044563114",
+        "LEGIARTI000044563107",
+        "LEGIARTI000032227301"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000032227122#0",
+        "LEGIARTI000044563114#0",
+        "LEGIARTI000044563107#4",
+        "LEGIARTI000044563107#5",
+        "LEGIARTI000032227301#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": true,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q27",
+      "question": "Le professionnel doit-il fournir des informations complémentaires avant un contrat de services ?",
+      "answer": "Je ne sais pas",
+      "cited_article_nums": [],
+      "retrieved_article_ids": [
+        "LEGIARTI000032227350",
+        "LEGIARTI000044563141",
+        "LEGIARTI000044142438",
+        "LEGIARTI000044563164"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000032227350#0",
+        "LEGIARTI000044563141#3",
+        "LEGIARTI000044563141#0",
+        "LEGIARTI000044142438#0",
+        "LEGIARTI000044563164#2"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": true,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q28",
+      "question": "Le prêteur doit-il expliquer à l'emprunteur si le crédit est adapté à sa situation ?",
+      "answer": "[LEGIARTI000032226174]\nLe prêteur doit fournir des explications à l'emprunteur pour qu'il puisse déterminer si le contrat de crédit proposé est adapté à ses besoins et à sa situation financière, en se basant notamment sur les informations contenues dans la fiche mentionnée à l'article L. 312-12.",
+      "cited_article_nums": [
+        "L. 312-12"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000032226174",
+        "LEGIARTI000032226144",
+        "LEGIARTI000032890824",
+        "LEGIARTI000035731428",
+        "LEGIARTI000035731424"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000032226174#0",
+        "LEGIARTI000032226144#0",
+        "LEGIARTI000032890824#0",
+        "LEGIARTI000035731428#0",
+        "LEGIARTI000035731424#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q29",
+      "question": "Que signifie la délivrance d'un bien au sens du Code de la consommation ?",
+      "answer": "La délivrance d'un bien au sens du Code de la consommation comprend le transfert au consommateur de la possession physique ou du contrôle du bien. Dans le cas d'un bien comportant des éléments numériques, la délivrance inclut également la fourniture de ces éléments au sens de l'article L. 224-25-4 [L. 224-25-4].",
+      "cited_article_nums": [
+        "L. 224-25-4"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000044142498",
+        "LEGIARTI000044142472",
+        "LEGIARTI000051830271",
+        "LEGIARTI000044142579",
+        "LEGIARTI000044563114"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044142498#0",
+        "LEGIARTI000044142472#0",
+        "LEGIARTI000051830271#0",
+        "LEGIARTI000044142579#0",
+        "LEGIARTI000044563114#1"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "q30",
+      "question": "Quelle est la durée de présomption de non-conformité pour un bien d'occasion ?",
+      "answer": "La durée de présomption de non-conformité pour un bien d'occasion est de douze mois. [L. 217-7]",
+      "cited_article_nums": [
+        "L. 217-7"
+      ],
+      "retrieved_article_ids": [
+        "LEGIARTI000044152587",
+        "LEGIARTI000044142579",
+        "LEGIARTI000044142554",
+        "LEGIARTI000044142545",
+        "LEGIARTI000032226842"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044152587#0",
+        "LEGIARTI000044142579#0",
+        "LEGIARTI000044142554#0",
+        "LEGIARTI000044142545#0",
+        "LEGIARTI000032226842#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": false,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "u01",
+      "question": "Quel est le montant maximal de l'amende encourue par un bailleur pour un logement indigne au sens du Code de la construction ?",
+      "answer": "Je ne sais pas",
+      "cited_article_nums": [],
+      "retrieved_article_ids": [
+        "LEGIARTI000044563179",
+        "LEGIARTI000032227274",
+        "LEGIARTI000032226990",
+        "LEGIARTI000049532070",
+        "LEGIARTI000032890824"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044563179#1",
+        "LEGIARTI000032227274#0",
+        "LEGIARTI000032226990#0",
+        "LEGIARTI000049532070#0",
+        "LEGIARTI000032890824#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": true,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "u02",
+      "question": "Combien de jours de congés payés un salarié acquiert-il par mois de travail selon le Code du travail ?",
+      "answer": "Je ne sais pas.",
+      "cited_article_nums": [],
+      "retrieved_article_ids": [
+        "LEGIARTI000034388081",
+        "LEGIARTI000051830271",
+        "LEGIARTI000034072548",
+        "LEGIARTI000044563141",
+        "LEGIARTI000032890824"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000034388081#0",
+        "LEGIARTI000051830271#1",
+        "LEGIARTI000034072548#0",
+        "LEGIARTI000044563141#2",
+        "LEGIARTI000032890824#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": true,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "u03",
+      "question": "Quelle est la peine maximale pour un vol simple selon le Code pénal ?",
+      "answer": "Je ne sais pas",
+      "cited_article_nums": [],
+      "retrieved_article_ids": [
+        "LEGIARTI000044563164",
+        "LEGIARTI000049571108",
+        "LEGIARTI000044152610",
+        "LEGIARTI000049532070",
+        "LEGIARTI000032224805"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044563164#1",
+        "LEGIARTI000049571108#0",
+        "LEGIARTI000044152610#0",
+        "LEGIARTI000049532070#0",
+        "LEGIARTI000032224805#0"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": true,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "u04",
+      "question": "Dans quel délai un permis de construire tacite est-il acquis en zone urbaine ?",
+      "answer": "Je ne sais pas",
+      "cited_article_nums": [],
+      "retrieved_article_ids": [
+        "LEGIARTI000034072770",
+        "LEGIARTI000032226840",
+        "LEGIARTI000044142554",
+        "LEGIARTI000044152587",
+        "LEGIARTI000044563141"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000034072770#0",
+        "LEGIARTI000032226840#0",
+        "LEGIARTI000044142554#0",
+        "LEGIARTI000044152587#0",
+        "LEGIARTI000044563141#2"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": true,
+      "chunk_size": 1000
+    },
+    {
+      "question_id": "u05",
+      "question": "Quel est le taux de TVA normal applicable aux prestations de restauration sur place en France métropolitaine ?",
+      "answer": "Je ne sais pas.",
+      "cited_article_nums": [],
+      "retrieved_article_ids": [
+        "LEGIARTI000044563107",
+        "LEGIARTI000044563111",
+        "LEGIARTI000043545855"
+      ],
+      "retrieved_chunk_ids": [
+        "LEGIARTI000044563107#6",
+        "LEGIARTI000044563111#1",
+        "LEGIARTI000043545855#1",
+        "LEGIARTI000044563107#7",
+        "LEGIARTI000044563107#8"
+      ],
+      "model": "qwen2.5:3b-instruct",
+      "abstained": true,
+      "chunk_size": 1000
+    }
+  ]
+}

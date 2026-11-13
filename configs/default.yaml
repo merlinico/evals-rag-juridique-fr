@@ -1,0 +1,31 @@
+corpus_path: data/corpus/articles.json
+gold_path: data/gold/questions.json
+
+retrieval:
+  embedding_model: intfloat/multilingual-e5-small
+  top_k: 5
+  rrf_k: 60
+  overlap: 100
+
+chunking:
+  # Deux tailles comparées dans le rapport de régression
+  sizes:
+    - 500
+    - 1000
+
+generation:
+  model: qwen2.5:3b-instruct
+  base_url: http://127.0.0.1:11434
+  temperature: 0.0
+  fixtures_dir: data/fixtures
+
+metrics:
+  recall_k: 5
+  overlap_threshold: 0.25
+  # Seuils CI vs baseline (échec si en dessous)
+  min_recall_at_k: 0.55
+  min_faithfulness: 0.50
+
+report:
+  output_path: reports/regression.md
+  baseline_path: data/fixtures/baseline_metrics.json

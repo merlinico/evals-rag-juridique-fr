@@ -1,0 +1,696 @@
+{
+  "source": {
+    "producer": "DILA (Direction de l'information légale et administrative)",
+    "dataset": "LEGI — Codes, lois et règlements consolidés",
+    "texte": "Code de la consommation",
+    "texte_cid": "LEGITEXT000006069565",
+    "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)",
+    "licence_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+    "download_url": "https://echanges.dila.gouv.fr/OPENDATA/LEGI/Freemium_legi_global_20250713-140000.tar.gz",
+    "dump_file": "Freemium_legi_global_20250713-140000.tar.gz",
+    "dump_date": "2025-07-13",
+    "data_gouv": "https://www.data.gouv.fr/datasets/legi-codes-lois-et-reglements-consolides",
+    "derived_via": "Hugging Face dataset VinceGx33/legi-french-law-2025 (etalab-2.0), filtré puis gelé",
+    "snapshot_id": "cdc-v0.1-2025-07-13",
+    "freeze_date": "2026-11-13",
+    "n_articles": 75,
+    "note": "Sous-ensemble figé à des fins d'évaluation RAG. Ne constitue pas une base juridique opposable."
+  },
+  "articles": [
+    {
+      "id": "LEGIARTI000044142438",
+      "num": "L. 111-1",
+      "title": "Article L. 111-1",
+      "text": "Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractéristiques essentielles du bien ou du service, ainsi que celles du service numérique ou du contenu numérique, compte tenu de leur nature et du support de communication utilisé, et notamment les fonctionnalités, la compatibilité et l'interopérabilité du bien comportant des éléments numériques, du contenu numérique ou du service numérique, ainsi que l'existence de toute restriction d'installation de logiciel ; 2° Le prix ou tout autre avantage procuré au lieu ou en complément du paiement d'un prix en application des articles L. 112-1 à L. 112-4-1 ; 3° En l'absence d'exécution immédiate du contrat, la date ou le délai auquel le professionnel s'engage à délivrer le bien ou à exécuter le service ; 4° Les informations relatives à l'identité du professionnel, à ses coordonnées postales, téléphoniques et électroniques et à ses activités, pour autant qu'elles ne ressortent pas du contexte ; 5° L'existence et les modalités de mise en œuvre des garanties légales, notamment la garantie légale de conformité et la garantie légale des vices cachés, et des éventuelles garanties commerciales, ainsi que, le cas échéant, du service après-vente et les informations afférentes aux autres conditions contractuelles ; 6° La possibilité de recourir à un médiateur de la consommation dans les conditions prévues au titre Ier du livre VI. La liste et le contenu précis de ces informations sont fixés par décret en Conseil d'Etat. Les dispositions du présent article s'appliquent également aux contrats portant sur la fourniture d'eau, de gaz ou d'électricité, y compris lorsqu'ils ne sont pas conditionnés dans un volume délimité ou en quantité déterminée, ainsi que de chauffage urbain. Ces contrats font également référence à la nécessité d'une consommation sobre et respectueuse de la préservation de l'environnement.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre Ier : Obligation générale d'information précontractuelle"
+    },
+    {
+      "id": "LEGIARTI000032227350",
+      "num": "L. 111-2",
+      "title": "Article L. 111-2",
+      "text": "Outre les mentions prévues à l'article L. 111-1, tout professionnel, avant la conclusion d'un contrat de fourniture de services et, lorsqu'il n'y a pas de contrat écrit, avant l'exécution de la prestation de services, met à la disposition du consommateur ou lui communique, de manière lisible et compréhensible, les informations complémentaires relatives à ses coordonnées, à son activité de prestation de services et aux autres conditions contractuelles, dont la liste et le contenu sont fixés par décret en Conseil d'Etat. Les informations complémentaires qui ne sont communiquées qu'à la demande du consommateur sont également précisées par décret en Conseil d'Etat.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre Ier : Obligation générale d'information précontractuelle"
+    },
+    {
+      "id": "LEGIARTI000032227331",
+      "num": "L. 112-1",
+      "title": "Article L. 112-1",
+      "text": "Tout vendeur de produit ou tout prestataire de services informe le consommateur, par voie de marquage, d'étiquetage, d'affichage ou par tout autre procédé approprié, sur les prix et les conditions particulières de la vente et de l'exécution des services, selon des modalités fixées par arrêtés du ministre chargé de l'économie, après consultation du Conseil national de la consommation.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre II : Information sur les prix et conditions de vente"
+    },
+    {
+      "id": "LEGIARTI000032227327",
+      "num": "L. 112-3",
+      "title": "Article L. 112-3",
+      "text": "Lorsque le prix ne peut être raisonnablement calculé à l'avance du fait de la nature du bien ou du service, le professionnel fournit le mode de calcul du prix et, s'il y a lieu, tous les frais supplémentaires de transport, de livraison ou d'affranchissement et tous les autres frais éventuels.Lorsque les frais supplémentaires ne peuvent raisonnablement être calculés à l'avance, le professionnel mentionne qu'ils peuvent être exigibles.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre II : Information sur les prix et conditions de vente"
+    },
+    {
+      "id": "LEGIARTI000032227325",
+      "num": "L. 112-4",
+      "title": "Article L. 112-4",
+      "text": "Dans le cas d'un contrat à durée indéterminée ou d'un contrat assorti d'un abonnement, le prix total inclut le total des frais exposés pour chaque période de facturation. Lorsque de tels contrats sont facturés à un tarif fixe, le prix total inclut également le total des coûts mensuels.Lorsque le coût total ne peut être raisonnablement calculé à l'avance, le mode de calcul du prix est communiqué.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre II : Information sur les prix et conditions de vente"
+    },
+    {
+      "id": "LEGIARTI000032227301",
+      "num": "L. 121-1",
+      "title": "Article L. 121-1",
+      "text": "Les pratiques commerciales déloyales sont interdites. Une pratique commerciale est déloyale lorsqu'elle est contraire aux exigences de la diligence professionnelle et qu'elle altère ou est susceptible d'altérer de manière substantielle le comportement économique du consommateur normalement informé et raisonnablement attentif et avisé, à l'égard d'un bien ou d'un service. Le caractère déloyal d'une pratique commerciale visant une catégorie particulière de consommateurs ou un groupe de consommateurs vulnérables en raison d'une infirmité mentale ou physique, de leur âge ou de leur crédulité s'apprécie au regard de la capacité moyenne de discernement de la catégorie ou du groupe. Constituent, en particulier, des pratiques commerciales déloyales les pratiques commerciales trompeuses définies aux articles L. 121-2 à L. 121-4 et les pratiques commerciales agressives définies aux articles L. 121-6 et L. 121-7.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre II : PRATIQUES COMMERCIALES INTERDITES ET PRATIQUES COMMERCIALES RÉGLEMENTÉES > Titre II : PRATIQUES COMMERCIALES > Chapitre Ier : Pratiques commerciales interdites > Section 1 : Pratiques commerciales déloyales"
+    },
+    {
+      "id": "LEGIARTI000044563114",
+      "num": "L. 121-2",
+      "title": "Article L. 121-2",
+      "text": "Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un autre signe distinctif d'un concurrent ; 2° Lorsqu'elle repose sur des allégations, indications ou présentations fausses ou de nature à induire en erreur et portant sur l'un ou plusieurs des éléments suivants : a) L'existence, la disponibilité ou la nature du bien ou du service ; b) Les caractéristiques essentielles du bien ou du service, à savoir : ses qualités substantielles, sa composition, ses accessoires, son origine, notamment au regard des règles justifiant l'apposition des mentions “ fabriqué en France ” ou “ origine France ” ou de toute mention, signe ou symbole équivalent, au sens du code des douanes de l'Union sur l'origine non préférentielle des produits, sa quantité, son mode et sa date de fabrication, les conditions de son utilisation et son aptitude à l'usage, ses propriétés et les résultats attendus de son utilisation, notamment son impact environnemental, ainsi que les résultats et les principales caractéristiques des tests et contrôles effectués sur le bien ou le service ; c) Le prix ou le mode de calcul du prix, le caractère promotionnel du prix notamment les réductions de prix au sens du I de l'article L. 112-1-1, les comparaisons de prix et les conditions de vente, de paiement et de livraison du bien ou du service ; d) Le service après-vente, la nécessité d'un service, d'une pièce détachée, d'un remplacement ou d'une réparation ; e) La portée des engagements de l'annonceur, notamment en matière environnementale, la nature, le procédé ou le motif de la vente ou de la prestation de services ; f) L'identité, les qualités, les aptitudes et les droits du professionnel ; g) Le traitement des réclamations et les droits du consommateur ; 3° Lorsque la personne pour le compte de laquelle elle est mise en œuvre n'est pas clairement identifiable ; 4° Lorsqu'un bien est présenté comme étant identique à un bien commercialisé dans un ou plusieurs autres Etats membres alors qu'il a une composition ou des caractéristiques différentes.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre II : PRATIQUES COMMERCIALES INTERDITES ET PRATIQUES COMMERCIALES RÉGLEMENTÉES > Titre II : PRATIQUES COMMERCIALES > Chapitre Ier : Pratiques commerciales interdites > Section 1 : Pratiques commerciales déloyales > Sous-section 1 : Pratiques commerciales trompeuses"
+    },
+    {
+      "id": "LEGIARTI000044563111",
+      "num": "L. 121-3",
+      "title": "Article L. 121-3",
+      "text": "Une pratique commerciale est également trompeuse si, compte tenu des limites propres au moyen de communication utilisé et des circonstances qui l'entourent, elle omet, dissimule ou fournit de façon inintelligible, ambiguë ou à contretemps une information substantielle ou lorsqu'elle n'indique pas sa véritable intention commerciale dès lors que celle-ci ne ressort pas déjà du contexte. Lorsque le moyen de communication utilisé impose des limites d'espace ou de temps, il y a lieu, pour apprécier si des informations substantielles ont été omises, de tenir compte de ces limites ainsi que de toute mesure prise par le professionnel pour mettre ces informations à la disposition du consommateur par d'autres moyens. Dans toute communication commerciale constituant une invitation à l'achat et destinée au consommateur mentionnant le prix et les caractéristiques du bien ou du service proposé, sont considérées comme substantielles les informations suivantes : 1° Les caractéristiques principales du bien ou du service ; 2° L'adresse et l'identité du professionnel ; 3° Le prix toutes taxes comprises et les frais de livraison à la charge du consommateur, ou leur mode de calcul, s'ils ne peuvent être établis à l'avance ; 4° Les modalités de paiement, de livraison et d'exécution, dès lors qu'elles sont différentes de celles habituellement pratiquées dans le domaine d'activité professionnelle concerné ; 5° L'existence d'un droit de rétractation, si ce dernier est prévu par la loi ; 6° La qualité de professionnel ou non du vendeur qui propose des produits sur une place de marché, telle qu'elle a été déclarée à l'opérateur de la place de marché en ligne. Lorsque le consommateur peut rechercher des produits offerts par différents professionnels ou par des particuliers à partir d'une requête consistant en un mot clé, une phrase ou la saisie d'autres données, sont réputées substantielles les informations mises à sa disposition concernant les principaux paramètres qui déterminent le classement des produits qui lui sont présentés et leur ordre d'importance. Ces informations doivent figurer dans une rubrique spécifique de l'interface en ligne, directement et aisément accessible à partir de la page sur laquelle les résultats de la requête sont présentés. Lorsqu'un professionnel donne accès à des avis de consommateurs sur des produits, les informations permettant d'établir si et comment le professionnel garantit que les avis publiés émanent de consommateurs ayant effectivement utilisé ou acheté le produit sont réputées substantielles.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre II : PRATIQUES COMMERCIALES INTERDITES ET PRATIQUES COMMERCIALES RÉGLEMENTÉES > Titre II : PRATIQUES COMMERCIALES > Chapitre Ier : Pratiques commerciales interdites > Section 1 : Pratiques commerciales déloyales > Sous-section 1 : Pratiques commerciales trompeuses"
+    },
+    {
+      "id": "LEGIARTI000044563107",
+      "num": "L. 121-4",
+      "title": "Article L. 121-4",
+      "text": "Sont réputées trompeuses, au sens des articles L. 121-2 et L. 121-3, les pratiques commerciales qui ont pour objet : 1° Pour un professionnel, de se prétendre signataire d'un code de conduite alors qu'il ne l'est pas ; 2° D'afficher un certificat, un label de qualité ou un équivalent sans avoir obtenu l'autorisation nécessaire ; 3° D'affirmer qu'un code de conduite a reçu l'approbation d'un organisme public ou privé alors que ce n'est pas le cas ; 4° D'affirmer qu'un professionnel, y compris à travers ses pratiques commerciales ou qu'un produit ou service a été agréé, approuvé ou autorisé par un organisme public ou privé alors que ce n'est pas le cas ou de ne pas respecter les conditions de l'agrément, de l'approbation ou de l'autorisation reçue ; 5° De proposer l'achat de produits ou la fourniture de services à un prix indiqué sans révéler les raisons plausibles que pourrait avoir le professionnel de penser qu'il ne pourra fournir lui-même ou faire fournir par un autre professionnel, les produits ou services en question ou des produits ou services équivalents au prix indiqué, pendant une période et dans des quantités qui soient raisonnables compte tenu du produit ou du service, de l'ampleur de la publicité faite pour le produit ou le service et du prix proposé ; 6° De proposer l'achat de produits ou la fourniture de services à un prix indiqué, et ensuite : a) De refuser de présenter aux consommateurs l'article ayant fait l'objet de la publicité ; b) Ou de refuser de prendre des commandes concernant ces produits ou ces services ou de les livrer ou de les fournir dans un délai raisonnable ; c) Ou d'en présenter un échantillon défectueux, dans le but de faire la promotion d'un produit ou d'un service différent ; 7° De déclarer faussement qu'un produit ou un service ne sera disponible que pendant une période très limitée ou qu'il ne sera disponible que sous des conditions particulières pendant une période très limitée afin d'obtenir une décision immédiate et priver les consommateurs d'une possibilité ou d'un délai suffisant pour opérer un choix en connaissance de cause ; 8° De s'engager à fournir un service après-vente aux consommateurs avec lesquels le professionnel a communiqué avant la transaction dans une langue qui n'est pas une langue officielle de l'Etat membre de l'Union européenne dans lequel il est établi et, ensuite, assurer ce service uniquement dans une autre langue sans clairement en informer le consommateur avant que celui-ci ne s'engage dans la transaction ; 9° De déclarer ou de donner l'impression que la vente d'un produit ou la fourniture d'un service est licite alors qu'elle ne l'est pas ; 10° De présenter les droits conférés au consommateur par la loi comme constituant une caractéristique propre à la proposition faite par le professionnel ; 11° D'utiliser un contenu rédactionnel dans les médias pour faire la promotion d'un produit ou d'un service alors que le professionnel a financé celle-ci lui-même, sans l'indiquer clairement dans le contenu ou à l'aide d'images ou de sons clairement identifiables par le consommateur ; 12° De formuler des affirmations matériellement inexactes en ce qui concerne la nature et l'ampleur des risques auxquels s'expose le consommateur sur le plan de sa sécurité personnelle ou de celle de sa famille s'il n'achète pas le produit ou le service ; 13° De promouvoir un produit ou un service similaire à celui d'un autre fournisseur clairement identifié, de manière à inciter délibérément le consommateur à penser que le produit ou le service provient de ce fournisseur alors que tel n'est pas le cas ; 14° De déclarer que le professionnel est sur le point de cesser ses activités ou de les établir ailleurs alors que tel n'est pas le cas ; 15° D'affirmer d'un produit ou d'un service qu'il augmente les chances de gagner aux jeux d'argent et de hasard ; 16° D'affirmer faussement qu'un produit ou une prestation de services est de nature à guérir des maladies, des dysfonctionnements ou des malformations ; 17° De communiquer des informations matériellement inexactes sur les conditions de marché ou sur les possibilités de trouver un produit ou un service, dans le but d'inciter le consommateur à acquérir celui-ci à des conditions moins favorables que les conditions normales de marché ; 18° D'affirmer, dans le cadre d'une pratique commerciale, qu'un concours est organisé ou qu'un prix peut être gagné sans attribuer les prix décrits ou un équivalent raisonnable ; 19° De décrire un produit ou un service comme étant \" gratuit \", \" à titre gracieux \", \" sans frais \" ou autres termes similaires si le consommateur doit payer quoi que ce soit d'autre que les coûts inévitables liés à la réponse à la pratique commerciale et au fait de prendre possession ou livraison de l'article ; 20° D'inclure dans un support publicitaire une facture ou un document similaire demandant paiement qui donne au consommateur l'impression qu'il a déjà commandé le produit ou le service commercialisé alors que tel n'est pas le cas ; 21° De faussement affirmer ou donner l'impression que le professionnel n'agit pas à des fins qui entrent dans le cadre de son activité commerciale, industrielle, artisanale, libérale ou agricole ou de se présenter faussement comme un consommateur ; 22° De créer faussement l'impression que le service après-vente en rapport avec un produit ou un service est disponible dans un Etat membre de l'Union européenne autre que celui dans lequel le produit ou le service est vendu ; 23° Dans une publicité, de donner l'impression, par des opérations de promotion coordonnées à l'échelle nationale, que le consommateur bénéficie d'une réduction de prix comparable à celle des soldes, tels que définis à l'article L. 310-3 du code de commerce, en dehors de leur période légale mentionnée au même article L. 310-3 ; 24° De faire figurer un drapeau français, une carte de France ou tout symbole représentatif de la France sur les emballages alimentaires lorsque les ingrédients primaires définis par le règlement (UE) n° 1169/2011 du Parlement européen et du Conseil du 25 octobre 2011 concernant l'information des consommateurs sur les denrées alimentaires, modifiant les règlements (CE) n° 1924/2006 et (CE) n° 1925/2006 du Parlement européen et du Conseil et abrogeant la directive 87/250/ CEE de la Commission, la directive 90/496/ CEE du Conseil, la directive 1999/10/ CE de la Commission, la directive 2000/13/ CE du Parlement européen et du Conseil, les directives 2002/67/ CE et 2008/5/ CE de la Commission et le règlement (CE) n° 608/2004 de la Commission ne sont pas d'origine française. Par dérogation au 24° du présent article, sont exclus du dispositif les ingrédients primaires dont l'origine française est difficile, voire impossible à garantir, car issus de filières non productrices en France ou dont la production est manifestement insuffisante sur le territoire ; 25° De fournir des résultats de recherche en réponse à une requête réalisée en ligne par un consommateur sans l'informer clairement de tout paiement effectué spécifiquement par un tiers pour obtenir un meilleur classement de l'un ou de plusieurs des produits apparaissant dans les résultats de recherche ou pour qu'un ou plusieurs produits y apparaissent ; 26° De revendre des billets pour des manifestations à des consommateurs lorsque le professionnel les a acquis en utilisant un moyen automatisé lui permettant de contourner toute limite imposée au nombre de billets qu'une personne peut acheter ou toute interdiction applicable à l'achat de billets ; 27° D'affirmer que des avis sur un produit sont diffusés par des consommateurs qui ont effectivement utilisé ou acheté le produit sans avoir pris les mesures nécessaires pour le vérifier ; 28° De diffuser ou faire diffuser par une autre personne morale ou physique des faux avis ou de fausses recommandations de consommateurs ou modifier des avis de consommateurs ou des recommandations afin de promouvoir des produits.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre II : PRATIQUES COMMERCIALES INTERDITES ET PRATIQUES COMMERCIALES RÉGLEMENTÉES > Titre II : PRATIQUES COMMERCIALES > Chapitre Ier : Pratiques commerciales interdites > Section 1 : Pratiques commerciales déloyales > Sous-section 1 : Pratiques commerciales trompeuses"
+    },
+    {
+      "id": "LEGIARTI000034072564",
+      "num": "L. 121-5",
+      "title": "Article L. 121-5",
+      "text": "Les dispositions des articles L. 121-2 à L. 121-4 sont également applicables aux pratiques qui visent les professionnels et les non-professionnels.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre II : PRATIQUES COMMERCIALES INTERDITES ET PRATIQUES COMMERCIALES RÉGLEMENTÉES > Titre II : PRATIQUES COMMERCIALES > Chapitre Ier : Pratiques commerciales interdites > Section 1 : Pratiques commerciales déloyales > Sous-section 1 : Pratiques commerciales trompeuses"
+    },
+    {
+      "id": "LEGIARTI000044563164",
+      "num": "L. 221-1",
+      "title": "Article L. 221-1",
+      "text": "I. - Pour l'application du présent titre, sont considérés comme : 1° Contrat à distance : tout contrat conclu entre un professionnel et un consommateur, dans le cadre d'un système organisé de vente ou de prestation de services à distance, sans la présence physique simultanée du professionnel et du consommateur, par le recours exclusif à une ou plusieurs techniques de communication à distance jusqu'à la conclusion du contrat ; 2° Contrat hors établissement : tout contrat conclu entre un professionnel et un consommateur : a) Dans un lieu qui n'est pas celui où le professionnel exerce son activité en permanence ou de manière habituelle, en la présence physique simultanée des parties, y compris à la suite d'une sollicitation ou d'une offre faite par le consommateur ; b) Ou dans le lieu où le professionnel exerce son activité en permanence ou de manière habituelle ou au moyen d'une technique de communication à distance, immédiatement après que le consommateur a été sollicité personnellement et individuellement dans un lieu différent de celui où le professionnel exerce en permanence ou de manière habituelle son activité et où les parties étaient, physiquement et simultanément, présentes ; c) Ou pendant une excursion organisée par le professionnel ayant pour but ou pour effet de promouvoir et de vendre des biens ou des services au consommateur. II. - Les dispositions du présent titre s'appliquent aux contrats portant sur la vente d'un ou plusieurs biens, au sens de l'article 528 du code civil, et au contrat en vertu duquel le professionnel fournit ou s'engage à fournir un service au consommateur en contrepartie duquel le consommateur en paie ou s'engage à en payer le prix. Le contrat ayant pour objet à la fois le transfert de propriété d'un bien et la fourniture d'une prestation de services, y compris la prestation de livraison de biens, est assimilée à un contrat de vente. III. - Les dispositions du présent titre s'appliquent également aux contrats par lesquels le professionnel fournit ou s'engage à fournir au consommateur un contenu numérique sans support matériel ou un service numérique et pour lesquels le consommateur lui fournit ou s'engage à lui fournir des données à caractère personnel, sauf lorsque ces données sont exclusivement traitées par lui pour fournir le contenu numérique sans support matériel ou le service numérique, ou lui permettre de remplir les obligations légales qui lui incombent.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre II : RÈGLES DE FORMATION ET D'EXÉCUTION DE CERTAINS CONTRATS > Chapitre Ier : Contrats conclus à distance et hors établissement > Section 1 : Définitions et champ d'application"
+    },
+    {
+      "id": "LEGIARTI000032226882",
+      "num": "L. 221-3",
+      "title": "Article L. 221-3",
+      "text": "Les dispositions des sections 2, 3, 6 du présent chapitre applicables aux relations entre consommateurs et professionnels, sont étendues aux contrats conclus hors établissement entre deux professionnels dès lors que l'objet de ces contrats n'entre pas dans le champ de l'activité principale du professionnel sollicité et que le nombre de salariés employés par celui-ci est inférieur ou égal à cinq.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre II : RÈGLES DE FORMATION ET D'EXÉCUTION DE CERTAINS CONTRATS > Chapitre Ier : Contrats conclus à distance et hors établissement > Section 1 : Définitions et champ d'application"
+    },
+    {
+      "id": "LEGIARTI000044563153",
+      "num": "L. 221-4",
+      "title": "Article L. 221-4",
+      "text": "Les dispositions du présent chapitre s'appliquent aux contrats portant sur la fourniture d'eau, de gaz ou d'électricité lorsqu'ils ne sont pas conditionnés dans un volume délimité ou en quantité déterminée ainsi que sur la fourniture de chauffage urbain. Elles s'appliquent également aux contrats portant sur la fourniture de contenu numérique sans support matériel.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre II : RÈGLES DE FORMATION ET D'EXÉCUTION DE CERTAINS CONTRATS > Chapitre Ier : Contrats conclus à distance et hors établissement > Section 1 : Définitions et champ d'application"
+    },
+    {
+      "id": "LEGIARTI000044563141",
+      "num": "L. 221-5",
+      "title": "Article L. 221-5",
+      "text": "I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractéristiques essentielles du bien, du service, du service numérique ou du contenu numérique ; 2° Le prix du bien, du service, du service numérique ou du contenu numérique, en application des articles L. 112-1 à L. 112-4 ; 3° La date à laquelle ou le délai dans lequel le professionnel s'engage à livrer le bien ou à fournir le service, le service numérique ou le contenu numérique ; 4° Les informations relatives à son identité, à ses coordonnées postales, téléphoniques et électroniques, aux modalités de résiliation, aux modes de règlement des litiges, aux autres conditions contractuelles et, le cas échéant, aux coûts de l'utilisation de la technique de communication à distance, à l'existence de codes de bonne conduite et aux cautions et garanties financières ; 5° S'il y a lieu, les informations relatives aux garanties légales, aux fonctionnalités, à la compatibilité et à l'interopérabilité du contenu numérique, du service numérique ou du bien comportant des éléments numériques, aux autres conditions contractuelles et, le cas échéant, à l'existence de toute restriction d'installation de logiciel ; 6° La possibilité de recourir à un médiateur de la consommation dans les conditions prévues au titre Ier du livre VI ; 7° Lorsque le droit de rétractation existe, les conditions, le délai et les modalités d'exercice de ce droit ainsi que le formulaire type de rétractation, dont les conditions de présentation et les mentions qu'il contient sont fixées par décret en Conseil d'Etat ; 8° Le cas échéant, le fait que le consommateur supporte les frais de renvoi du bien en cas de rétractation et, pour les contrats à distance, le coût de renvoi du bien lorsque celui-ci, en raison de sa nature, ne peut normalement être renvoyé par la poste ; 9° L'information sur l'obligation du consommateur de payer des frais lorsqu'il exerce son droit de rétractation d'un contrat de prestation de services, de distribution d'eau, de fourniture de gaz ou d'électricité et d'abonnement à un réseau de chauffage urbain dont il a demandé expressément l'exécution avant la fin du délai de rétractation ; ces frais sont calculés selon les modalités fixées à l'article L. 221-25 ; 10° Lorsque le droit de rétractation ne peut être exercé en application de l'article L. 221-28, l'information selon laquelle le consommateur ne bénéficie pas de ce droit ou, le cas échéant, les circonstances dans lesquelles il le perd ; 11° L'application d'un prix personnalisé sur la base d'une prise de décision automatisée, s'il y a lieu. La liste et le contenu de ces informations sont précisés par décret en Conseil d'Etat. Dans le cas d'une vente aux enchères publiques telle que définie par le premier alinéa de l'article L. 321-3 du code de commerce, les informations relatives à l'identité et aux coordonnées postales, téléphoniques et électroniques du professionnel prévues au 4° du I du présent article peuvent être remplacées par celles du mandataire. II.-Outre les informations prévues au I, tout professionnel, avant la conclusion d'un contrat de fourniture de services et, lorsqu'il n'y a pas de contrat, avant l'exécution de la prestation de services, fournit les informations complémentaires prévues par l'article L. 111-2.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre II : RÈGLES DE FORMATION ET D'EXÉCUTION DE CERTAINS CONTRATS > Chapitre Ier : Contrats conclus à distance et hors établissement > Section 2 : Obligation d'information précontractuelle"
+    },
+    {
+      "id": "LEGIARTI000032226842",
+      "num": "L. 221-18",
+      "title": "Article L. 221-18",
+      "text": "Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à motiver sa décision ni à supporter d'autres coûts que ceux prévus aux articles L. 221-23 à L. 221-25. Le délai mentionné au premier alinéa court à compter du jour : 1° De la conclusion du contrat, pour les contrats de prestation de services et ceux mentionnés à l'article L. 221-4 ; 2° De la réception du bien par le consommateur ou un tiers, autre que le transporteur, désigné par lui, pour les contrats de vente de biens. Pour les contrats conclus hors établissement, le consommateur peut exercer son droit de rétractation à compter de la conclusion du contrat. Dans le cas d'une commande portant sur plusieurs biens livrés séparément ou dans le cas d'une commande d'un bien composé de lots ou de pièces multiples dont la livraison est échelonnée sur une période définie, le délai court à compter de la réception du dernier bien ou lot ou de la dernière pièce. Pour les contrats prévoyant la livraison régulière de biens pendant une période définie, le délai court à compter de la réception du premier bien.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre II : RÈGLES DE FORMATION ET D'EXÉCUTION DE CERTAINS CONTRATS > Chapitre Ier : Contrats conclus à distance et hors établissement > Section 6 : Droit de rétractation applicable aux contrats conclus à distance et hors établissement"
+    },
+    {
+      "id": "LEGIARTI000032226840",
+      "num": "L. 221-19",
+      "title": "Article L. 221-19",
+      "text": "Conformément au règlement n° 1182/71/ CEE du Conseil du 3 juin 1971 portant détermination des règles applicables aux délais, aux dates et aux termes : 1° Le jour où le contrat est conclu ou le jour de la réception du bien n'est pas compté dans le délai mentionné à l'article L. 221-18 ; 2° Le délai commence à courir au début de la première heure du premier jour et prend fin à l'expiration de la dernière heure du dernier jour du délai ; 3° Si ce délai expire un samedi, un dimanche ou un jour férié ou chômé, il est prorogé jusqu'au premier jour ouvrable suivant.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre II : RÈGLES DE FORMATION ET D'EXÉCUTION DE CERTAINS CONTRATS > Chapitre Ier : Contrats conclus à distance et hors établissement > Section 6 : Droit de rétractation applicable aux contrats conclus à distance et hors établissement"
+    },
+    {
+      "id": "LEGIARTI000044563199",
+      "num": "L. 221-20",
+      "title": "Article L. 221-20",
+      "text": "Lorsque les informations relatives au droit de rétractation n'ont pas été fournies au consommateur dans les conditions prévues au 7° de l'article L. 221-5, le délai de rétractation est prolongé de douze mois à compter de l'expiration du délai de rétractation initial, déterminé conformément à l'article L. 221-18. Toutefois, lorsque la fourniture de ces informations intervient pendant cette prolongation, le délai de rétractation expire au terme d'une période de quatorze jours à compter du jour où le consommateur a reçu ces informations.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre II : RÈGLES DE FORMATION ET D'EXÉCUTION DE CERTAINS CONTRATS > Chapitre Ier : Contrats conclus à distance et hors établissement > Section 6 : Droit de rétractation applicable aux contrats conclus à distance et hors établissement"
+    },
+    {
+      "id": "LEGIARTI000044563193",
+      "num": "L. 221-21",
+      "title": "Article L. 221-21",
+      "text": "Le consommateur exerce son droit de rétractation en informant le professionnel de sa décision de se rétracter par l'envoi, avant l'expiration du délai prévu à l'article L. 221-18, du formulaire de rétractation mentionné au 7° de l'article L. 221-5 ou de toute autre déclaration, dénuée d'ambiguïté, exprimant sa volonté de se rétracter. Le professionnel peut également permettre au consommateur de remplir et de transmettre en ligne, sur son site internet, le formulaire ou la déclaration prévus au premier alinéa. Dans cette hypothèse, le professionnel communique, sans délai, au consommateur un accusé de réception de la rétractation sur un support durable.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre II : RÈGLES DE FORMATION ET D'EXÉCUTION DE CERTAINS CONTRATS > Chapitre Ier : Contrats conclus à distance et hors établissement > Section 6 : Droit de rétractation applicable aux contrats conclus à distance et hors établissement"
+    },
+    {
+      "id": "LEGIARTI000044563179",
+      "num": "L. 221-25",
+      "title": "Article L. 221-25",
+      "text": "Si le consommateur souhaite que l'exécution d'une prestation de services ou d'un contrat mentionné au premier alinéa de l'article L. 221-4 commence avant la fin du délai de rétractation prévu à l'article L. 221-18 et si le contrat soumet le consommateur à une obligation de payer, le professionnel recueille sa demande expresse par tout moyen pour les contrats conclus à distance et sur papier ou sur support durable pour les contrats conclus hors établissement. Il demande au consommateur de reconnaître qu'après qu'il aura entièrement exécuté le contrat, celui-ci ne disposera plus du droit de rétractation. Le consommateur qui a exercé son droit de rétractation d'un contrat de prestation de services ou d'un contrat mentionné au premier alinéa de l'article L. 221-4 dont l'exécution a commencé, à sa demande expresse, avant la fin du délai de rétractation verse au professionnel un montant correspondant au service fourni jusqu'à la communication de sa décision de se rétracter ; ce montant est proportionné au prix total de la prestation convenu dans le contrat. Si le prix total est excessif, le montant approprié est calculé sur la base de la valeur marchande de ce qui a été fourni. Aucune somme n'est due par le consommateur ayant exercé son droit de rétractation si sa demande expresse n'a pas été recueillie en application du premier alinéa ou si le professionnel n'a pas respecté l'obligation d'information prévue au 9° de l'article L. 221-5.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre II : RÈGLES DE FORMATION ET D'EXÉCUTION DE CERTAINS CONTRATS > Chapitre Ier : Contrats conclus à distance et hors établissement > Section 6 : Droit de rétractation applicable aux contrats conclus à distance et hors établissement"
+    },
+    {
+      "id": "LEGIARTI000044563170",
+      "num": "L. 221-28",
+      "title": "Article L. 221-28",
+      "text": "Le droit de rétractation ne peut être exercé pour les contrats : 1° De fourniture de services pleinement exécutés avant la fin du délai de rétractation et, si le contrat soumet le consommateur à une obligation de payer, dont l'exécution a commencé avec son accord préalable et exprès et avec la reconnaissance par lui de la perte de son droit de rétractation, lorsque la prestation aura été pleinement exécutée par le professionnel ; 2° De fourniture de biens ou de services dont le prix dépend de fluctuations sur le marché financier échappant au contrôle du professionnel et susceptibles de se produire pendant le délai de rétractation ; 3° De fourniture de biens confectionnés selon les spécifications du consommateur ou nettement personnalisés ; 4° De fourniture de biens susceptibles de se détériorer ou de se périmer rapidement ; 5° De fourniture de biens qui ont été descellés par le consommateur après la livraison et qui ne peuvent être renvoyés pour des raisons d'hygiène ou de protection de la santé ; 6° De fourniture de biens qui, après avoir été livrés et de par leur nature, sont mélangés de manière indissociable avec d'autres articles ; 7° De fourniture de boissons alcoolisées dont la livraison est différée au-delà de trente jours et dont la valeur convenue à la conclusion du contrat dépend de fluctuations sur le marché échappant au contrôle du professionnel ; 8° De travaux d'entretien ou de réparation à réaliser en urgence au domicile du consommateur et expressément sollicités par lui, dans la limite des pièces de rechange et travaux strictement nécessaires pour répondre à l'urgence ; 9° De fourniture d'enregistrements audio ou vidéo ou de logiciels informatiques lorsqu'ils ont été descellés par le consommateur après la livraison ; 10° De fourniture d'un journal, d'un périodique ou d'un magazine, sauf pour les contrats d'abonnement à ces publications ; 11° Conclus lors d'une enchère publique ; 12° De prestations de services d'hébergement, autres que d'hébergement résidentiel, de services de transport de biens, de locations de voitures, de restauration ou d'activités de loisirs qui doivent être fournis à une date ou à une période déterminée ; 13° De fourniture d'un contenu numérique sans support matériel dont l'exécution a commencé avant la fin du délai de rétractation et, si le contrat soumet le consommateur à une obligation de payer, lorsque : a) Il a donné préalablement son consentement exprès pour que l'exécution du contrat commence avant l'expiration du délai de rétractation ; et b) Il a reconnu qu'il perdra son droit de rétractation ; et c) Le professionnel a fourni une confirmation de l'accord du consommateur conformément aux dispositions du deuxième l'alinéa de l'article L. 221-13.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre II : RÈGLES DE FORMATION ET D'EXÉCUTION DE CERTAINS CONTRATS > Chapitre Ier : Contrats conclus à distance et hors établissement > Section 6 : Droit de rétractation applicable aux contrats conclus à distance et hors établissement"
+    },
+    {
+      "id": "LEGIARTI000044142579",
+      "num": "L. 217-3",
+      "title": "Article L. 217-3",
+      "text": "Le vendeur délivre un bien conforme au contrat ainsi qu'aux critères énoncés à l'article L. 217-5. Il répond des défauts de conformité existant au moment de la délivrance du bien au sens de l'article L. 216-1, qui apparaissent dans un délai de deux ans à compter de celle-ci. Dans le cas d'un contrat de vente d'un bien comportant des éléments numériques : 1° Lorsque le contrat prévoit la fourniture continue d'un contenu numérique ou d'un service numérique pendant une durée inférieure ou égale à deux ans, ou lorsque le contrat ne détermine pas la durée de fourniture, le vendeur répond des défauts de conformité de ce contenu numérique ou de ce service numérique qui apparaissent dans un délai de deux ans à compter de la délivrance du bien ; 2° Lorsque le contrat prévoit la fourniture continue d'un contenu numérique ou d'un service numérique pendant une durée supérieure à deux ans, le vendeur répond des défauts de conformité de ce contenu numérique ou de ce service numérique qui apparaissent au cours de la période durant laquelle celui-ci est fourni en vertu du contrat. Pour de tels biens, le délai applicable ne prive pas le consommateur de son droit aux mises à jour conformément aux dispositions de l'article L. 217-19. Le vendeur répond également, durant les mêmes délais, des défauts de conformité résultant de l'emballage, des instructions de montage, ou de l'installation lorsque celle-ci a été mise à sa charge par le contrat ou a été réalisée sous sa responsabilité, ou encore lorsque l'installation incorrecte, effectuée par le consommateur comme prévu au contrat, est due à des lacunes ou erreurs dans les instructions d'installation fournies par le vendeur. Ce délai de garantie s'applique sans préjudice des articles 2224 et suivants du code civil. Le point de départ de la prescription de l'action du consommateur est le jour de la connaissance par ce dernier du défaut de conformité.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VII : Obligation de conformité au contrat > Chapitre VII : Obligation de conformité dans les contrats de vente de biens > Section 2 : Garantie légale de conformité > Section 2 : Garantie légale de conformité pour les biens > Sous-section 1 : Droits du consommateur"
+    },
+    {
+      "id": "LEGIARTI000044142575",
+      "num": "L. 217-4",
+      "title": "Article L. 217-4",
+      "text": "Le bien est conforme au contrat s'il répond notamment, le cas échéant, aux critères suivants : 1° Il correspond à la description, au type, à la quantité et à la qualité, notamment en ce qui concerne la fonctionnalité, la compatibilité, l'interopérabilité, ou toute autre caractéristique prévues au contrat ; 2° Il est propre à tout usage spécial recherché par le consommateur, porté à la connaissance du vendeur au plus tard au moment de la conclusion du contrat et que ce dernier a accepté ; 3° Il est délivré avec tous les accessoires et les instructions d'installation, devant être fournis conformément au contrat ; 4° Il est mis à jour conformément au contrat.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VII : Obligation de conformité au contrat > Chapitre VII : Obligation de conformité dans les contrats de vente de biens > Section 2 : Garantie légale de conformité > Section 2 : Garantie légale de conformité pour les biens > Sous-section 1 : Droits du consommateur"
+    },
+    {
+      "id": "LEGIARTI000044142571",
+      "num": "L. 217-5",
+      "title": "Article L. 217-5",
+      "text": "I.-En plus des critères de conformité au contrat, le bien est conforme s'il répond aux critères suivants : 1° Il est propre à l'usage habituellement attendu d'un bien de même type, compte tenu, s'il y a lieu, de toute disposition du droit de l'Union européenne et du droit national ainsi que de toutes les normes techniques ou, en l'absence de telles normes techniques, des codes de conduite spécifiques applicables au secteur concerné ; 2° Le cas échéant, il possède les qualités que le vendeur a présentées au consommateur sous forme d'échantillon ou de modèle, avant la conclusion du contrat ; 3° Le cas échéant, les éléments numériques qu'il comporte sont fournis selon la version la plus récente qui est disponible au moment de la conclusion du contrat, sauf si les parties en conviennent autrement ; 4° Le cas échéant, il est délivré avec tous les accessoires, y compris l'emballage, et les instructions d'installation que le consommateur peut légitimement attendre ; 5° Le cas échéant, il est fourni avec les mises à jour que le consommateur peut légitimement attendre, conformément aux dispositions de l'article L. 217-19 ; 6° Il correspond à la quantité, à la qualité et aux autres caractéristiques, y compris en termes de durabilité, de fonctionnalité, de compatibilité et de sécurité, que le consommateur peut légitimement attendre pour des biens de même type, eu égard à la nature du bien ainsi qu'aux déclarations publiques faites par le vendeur, par toute personne en amont dans la chaîne de transactions, ou par une personne agissant pour leur compte, y compris dans la publicité ou sur l'étiquetage. II.-Toutefois, le vendeur n'est pas tenu par toutes déclarations publiques mentionnées à l'alinéa qui précède s'il démontre : 1° Qu'il ne les connaissait pas et n'était légitimement pas en mesure de les connaître ; 2° Qu'au moment de la conclusion du contrat, les déclarations publiques avaient été rectifiées dans des conditions comparables aux déclarations initiales ; ou 3° Que les déclarations publiques n'ont pas pu avoir d'influence sur la décision d'achat. III.-Le consommateur ne peut contester la conformité en invoquant un défaut concernant une ou plusieurs caractéristiques particulières du bien, dont il a été spécifiquement informé qu'elles s'écartaient des critères de conformité énoncés au présent article, écart auquel il a expressément et séparément consenti lors de la conclusion du contrat.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VII : Obligation de conformité au contrat > Chapitre VII : Obligation de conformité dans les contrats de vente de biens > Section 2 : Garantie légale de conformité > Section 2 : Garantie légale de conformité pour les biens > Sous-section 1 : Droits du consommateur"
+    },
+    {
+      "id": "LEGIARTI000044152587",
+      "num": "L. 217-7",
+      "title": "Article L. 217-7",
+      "text": "Les défauts de conformité qui apparaissent dans un délai de vingt-quatre mois à compter de la délivrance du bien, y compris du bien comportant des éléments numériques, sont, sauf preuve contraire, présumés exister au moment de la délivrance, à moins que cette présomption ne soit incompatible avec la nature du bien ou du défaut invoqué. Pour les biens d'occasion, ce délai est fixé à douze mois. Lorsque le contrat de vente d'un bien comportant des éléments numériques prévoit la fourniture continue d'un contenu numérique ou d'un service numérique, sont présumés exister au moment de la délivrance du bien les défauts de conformité qui apparaissent : 1° Durant un délai de deux ans à compter de la délivrance du bien, lorsque le contrat prévoit cette fourniture pendant une durée inférieure ou égale à deux ans ou lorsque le contrat ne détermine pas la durée de fourniture ; 2° Durant la période durant laquelle le contenu numérique ou le service numérique est fourni en vertu du contrat, lorsque celui-ci prévoit cette fourniture pendant une durée supérieure à deux ans.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VII : Obligation de conformité au contrat > Chapitre VII : Obligation de conformité dans les contrats de vente de biens > Section 2 : Garantie légale de conformité > Section 2 : Garantie légale de conformité pour les biens > Sous-section 1 : Droits du consommateur"
+    },
+    {
+      "id": "LEGIARTI000044142560",
+      "num": "L. 217-8",
+      "title": "Article L. 217-8",
+      "text": "En cas de défaut de conformité, le consommateur a droit à la mise en conformité du bien par réparation ou remplacement ou, à défaut, à la réduction du prix ou à la résolution du contrat, dans les conditions énoncées à la présente sous-section. Le consommateur a, par ailleurs, le droit de suspendre le paiement de tout ou partie du prix ou la remise de l'avantage prévu au contrat jusqu'à ce que le vendeur ait satisfait aux obligations qui lui incombent au titre du présent chapitre, dans les conditions des articles 1219 et 1220 du code civil. Les dispositions du présent chapitre sont sans préjudice de l'allocation de dommages et intérêts.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VII : Obligation de conformité au contrat > Chapitre VII : Obligation de conformité dans les contrats de vente de biens > Section 2 : Garantie légale de conformité > Section 2 : Garantie légale de conformité pour les biens > Sous-section 2 : Mise en œuvre de la garantie légale de conformité"
+    },
+    {
+      "id": "LEGIARTI000044152553",
+      "num": "L. 217-9",
+      "title": "Article L. 217-9",
+      "text": "Le consommateur est en droit d'exiger la mise en conformité du bien aux critères énoncés dans la sous-section 1 de la présente section. Le consommateur sollicite auprès du vendeur la mise en conformité du bien, en choisissant entre la réparation et le remplacement. A cette fin, le consommateur met le bien à la disposition du vendeur.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VII : Obligation de conformité au contrat > Chapitre VII : Obligation de conformité dans les contrats de vente de biens > Section 2 : Garantie légale de conformité > Section 2 : Garantie légale de conformité pour les biens > Sous-section 2 : Mise en œuvre de la garantie légale de conformité"
+    },
+    {
+      "id": "LEGIARTI000044142554",
+      "num": "L. 217-10",
+      "title": "Article L. 217-10",
+      "text": "La mise en conformité du bien a lieu dans un délai raisonnable qui ne peut être supérieur à trente jours suivant la demande du consommateur et sans inconvénient majeur pour lui, compte tenu de la nature du bien et de l'usage recherché par le consommateur. La réparation ou le remplacement du bien non conforme inclut, s'il y a lieu, l'enlèvement et la reprise de ce bien et l'installation du bien réparé ou du bien de remplacement par le vendeur. Un décret précise les modalités de la mise en conformité du bien.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VII : Obligation de conformité au contrat > Chapitre VII : Obligation de conformité dans les contrats de vente de biens > Section 2 : Garantie légale de conformité > Section 2 : Garantie légale de conformité pour les biens > Sous-section 2 : Mise en œuvre de la garantie légale de conformité"
+    },
+    {
+      "id": "LEGIARTI000044152610",
+      "num": "L. 217-12",
+      "title": "Article L. 217-12",
+      "text": "Le vendeur peut ne pas procéder selon le choix opéré par le consommateur si la mise en conformité sollicitée est impossible ou entraîne des coûts disproportionnés au regard notamment : 1° De la valeur qu'aurait le bien en l'absence de défaut de conformité ; 2° De l'importance du défaut de conformité ; et 3° De la possibilité éventuelle d'opter pour l'autre choix sans inconvénient majeur pour le consommateur. Le vendeur peut refuser la mise en conformité du bien si celle-ci est impossible ou entraîne des coûts disproportionnés notamment au regard des 1° et 2°. Lorsque ces conditions ne sont pas respectées, le consommateur peut, après mise en demeure, poursuivre l'exécution forcée en nature de la solution initialement sollicitée, conformément aux articles 1221 et suivants du code civil. Tout refus par le vendeur de procéder selon le choix du consommateur ou de mettre le bien en conformité, est motivé par écrit ou sur support durable.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VII : Obligation de conformité au contrat > Chapitre VII : Obligation de conformité dans les contrats de vente de biens > Section 2 : Garantie légale de conformité > Section 2 : Garantie légale de conformité pour les biens > Sous-section 2 : Mise en œuvre de la garantie légale de conformité"
+    },
+    {
+      "id": "LEGIARTI000044142545",
+      "num": "L. 217-13",
+      "title": "Article L. 217-13",
+      "text": "Tout bien réparé dans le cadre de la garantie légale de conformité bénéficie d'une extension de cette garantie de six mois. Dès lors que le consommateur fait le choix de la réparation mais que celle-ci n'est pas mise en œuvre par le vendeur, la mise en conformité par le remplacement du bien fait courir, au bénéfice du consommateur, un nouveau délai de garantie légale de conformité attaché au bien remplacé. Cette disposition s'applique à compter du jour où le bien de remplacement est délivré au consommateur.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VII : Obligation de conformité au contrat > Chapitre VII : Obligation de conformité dans les contrats de vente de biens > Section 2 : Garantie légale de conformité > Section 2 : Garantie légale de conformité pour les biens > Sous-section 2 : Mise en œuvre de la garantie légale de conformité"
+    },
+    {
+      "id": "LEGIARTI000044139957",
+      "num": "L. 217-28",
+      "title": "Article L. 217-28",
+      "text": "Lorsque le consommateur demande au garant, pendant le cours de la garantie légale ou de la garantie commerciale qui lui a été consentie lors de l'acquisition ou de la réparation d'un bien, une remise en état couverte par cette garantie, toute période d'immobilisation suspend la garantie qui restait à courir jusqu'à la délivrance du bien remis en état. Cette période court à compter de la demande d'intervention du consommateur ou de la mise à disposition pour réparation ou remplacement du bien en cause, si ce point de départ s'avère plus favorable au consommateur. Le délai de garantie est également suspendu lorsque le consommateur et le garant entrent en négociation en vue d'un règlement à l'amiable.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VII : Obligation de conformité au contrat > Chapitre VII : Obligation de conformité dans les contrats de vente de biens > Section 5 : Information du consommateur et obligations du vendeur concernant les mises à jour de logiciels > Section 5 : Dispositions diverses"
+    },
+    {
+      "id": "LEGIARTI000034072779",
+      "num": "L. 312-1",
+      "title": "Article L. 312-1",
+      "text": "Les dispositions du présent chapitre s'appliquent à toute opération de crédit mentionnée au 6° de l'article L. 311-1, qu'elle soit conclue à titre onéreux ou à titre gratuit et, le cas échéant, à son cautionnement, dès lors que le montant total du crédit est égal ou supérieur à 200 euros et inférieur ou égal à 75 000 euros.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre III : CRÉDIT > Titre Ier : OPÉRATIONS DE CRÉDIT > Chapitre II : Crédit à la consommation > Section 1 : Champ d'application"
+    },
+    {
+      "id": "LEGIARTI000032226174",
+      "num": "L. 312-14",
+      "title": "Article L. 312-14",
+      "text": "Le prêteur ou l'intermédiaire de crédit fournit à l'emprunteur les explications lui permettant de déterminer si le contrat de crédit proposé est adapté à ses besoins et à sa situation financière, notamment à partir des informations contenues dans la fiche mentionnée à l'article L. 312-12. Il attire l'attention de l'emprunteur sur les caractéristiques essentielles du ou des crédits proposés et sur les conséquences que ces crédits peuvent avoir sur sa situation financière, y compris en cas de défaut de paiement. Ces informations sont données, le cas échéant, sur la base des préférences exprimées par l'emprunteur. Lorsque le crédit est proposé sur un lieu de vente, le prêteur veille à ce que l'emprunteur reçoive ces explications de manière complète et appropriée sur le lieu même de la vente, dans des conditions garantissant la confidentialité des échanges.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre III : CRÉDIT > Titre Ier : OPÉRATIONS DE CRÉDIT > Chapitre II : Crédit à la consommation > Section 4 : Explications fournies à l'emprunteur et évaluation de sa solvabilité > Sous-section 1 : Explications fournies à l'emprunteur"
+    },
+    {
+      "id": "LEGIARTI000035731428",
+      "num": "L. 312-18",
+      "title": "Article L. 312-18",
+      "text": "L'offre de contrat de crédit est établie sur support papier ou sur un autre support durable. Elle est fournie en autant d'exemplaires que de parties et, le cas échéant, à chacune des cautions. La remise ou l'envoi de l'offre de contrat de crédit à l'emprunteur oblige le prêteur à en maintenir les conditions pendant une durée minimale de quinze jours à compter de cette remise ou de cet envoi.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre III : CRÉDIT > Titre Ier : OPÉRATIONS DE CRÉDIT > Chapitre II : Crédit à la consommation > Section 5 : Formation du contrat de crédit"
+    },
+    {
+      "id": "LEGIARTI000034072770",
+      "num": "L. 312-19",
+      "title": "Article L. 312-19",
+      "text": "L'emprunteur peut se rétracter sans motifs dans un délai de quatorze jours calendaires révolus à compter du jour de l'acceptation de l'offre de contrat de crédit comprenant les informations prévues à l'article L. 312-28.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre III : CRÉDIT > Titre Ier : OPÉRATIONS DE CRÉDIT > Chapitre II : Crédit à la consommation > Section 5 : Formation du contrat de crédit"
+    },
+    {
+      "id": "LEGIARTI000032226155",
+      "num": "L. 312-21",
+      "title": "Article L. 312-21",
+      "text": "Afin de permettre l'exercice du droit de rétractation mentionné à l'article L. 312-19, un formulaire détachable est joint à son exemplaire du contrat de crédit.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre III : CRÉDIT > Titre Ier : OPÉRATIONS DE CRÉDIT > Chapitre II : Crédit à la consommation > Section 5 : Formation du contrat de crédit"
+    },
+    {
+      "id": "LEGIARTI000032226144",
+      "num": "L. 312-26",
+      "title": "Article L. 312-26",
+      "text": "A compter du jour suivant la mise à disposition des fonds à l'emprunteur et en cas de rétractation, l'emprunteur rembourse au prêteur le capital versé et paye les intérêts cumulés sur ce capital depuis la date à laquelle le crédit lui a été versé jusqu'à la date à laquelle le capital est remboursé, sans retard indu et au plus tard trente jours après avoir envoyé la notification de la rétractation au prêteur. Les intérêts sont calculés sur la base du taux débiteur figurant au contrat.Le prêteur n'a droit à aucune indemnité versée par l'emprunteur en cas de rétractation.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre III : CRÉDIT > Titre Ier : OPÉRATIONS DE CRÉDIT > Chapitre II : Crédit à la consommation > Section 5 : Formation du contrat de crédit"
+    },
+    {
+      "id": "LEGIARTI000035731424",
+      "num": "L. 312-28",
+      "title": "Article L. 312-28",
+      "text": "Le contrat de crédit est établi sur support papier ou sur un autre support durable. Il constitue un document distinct de tout support ou document publicitaire, ainsi que de la fiche mentionnée à l'article L. 312-12. Un encadré, inséré au début du contrat, informe l'emprunteur des caractéristiques essentielles du crédit. La liste des informations figurant dans le contrat et dans l'encadré mentionné au premier alinéa est fixée par décret en Conseil d'Etat.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre III : CRÉDIT > Titre Ier : OPÉRATIONS DE CRÉDIT > Chapitre II : Crédit à la consommation > Section 6 : Informations mentionnées dans le contrat"
+    },
+    {
+      "id": "LEGIARTI000032890824",
+      "num": "L. 312-39",
+      "title": "Article L. 312-39",
+      "text": "En cas de défaillance de l'emprunteur, le prêteur peut exiger le remboursement immédiat du capital restant dû, majoré des intérêts échus mais non payés. Jusqu'à la date du règlement effectif, les sommes restant dues produisent les intérêts de retard à un taux égal à celui du prêt.En outre, le prêteur peut demander à l'emprunteur défaillant une indemnité qui, dépendant de la durée restant à courir du contrat et sans préjudice de l'application de l'article 1231-5 du code civil, est fixée suivant un barème déterminé par décret.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre III : CRÉDIT > Titre Ier : OPÉRATIONS DE CRÉDIT > Chapitre II : Crédit à la consommation > Section 7 : Exécution du contrat de crédit > Sous-section 3 : Défaillance de l'emprunteur > Sous-section 4 : Défaillance de l'emprunteur"
+    },
+    {
+      "id": "LEGIARTI000032890812",
+      "num": "L. 212-1",
+      "title": "Article L. 212-1",
+      "text": "Dans les contrats conclus entre professionnels et consommateurs, sont abusives les clauses qui ont pour objet ou pour effet de créer, au détriment du consommateur, un déséquilibre significatif entre les droits et obligations des parties au contrat. Sans préjudice des règles d'interprétation prévues aux articles 1188, 1189, 1191 et 1192 du code civil, le caractère abusif d'une clause s'apprécie en se référant, au moment de la conclusion du contrat, à toutes les circonstances qui entourent sa conclusion, de même qu'à toutes les autres clauses du contrat. Il s'apprécie également au regard de celles contenues dans un autre contrat lorsque les deux contrats sont juridiquement liés dans leur conclusion ou leur exécution. L'appréciation du caractère abusif des clauses au sens du premier alinéa ne porte ni sur la définition de l'objet principal du contrat ni sur l'adéquation du prix ou de la rémunération au bien vendu ou au service offert pour autant que les clauses soient rédigées de façon claire et compréhensible. Un décret en Conseil d'Etat, pris après avis de la commission des clauses abusives, détermine des types de clauses qui, eu égard à la gravité des atteintes qu'elles portent à l'équilibre du contrat, doivent être regardées, de manière irréfragable, comme abusives au sens du premier alinéa. Un décret pris dans les mêmes conditions, détermine une liste de clauses présumées abusives ; en cas de litige concernant un contrat comportant une telle clause, le professionnel doit apporter la preuve du caractère non abusif de la clause litigieuse. Ces dispositions sont applicables quels que soient la forme ou le support du contrat. Il en est ainsi notamment des bons de commande, factures, bons de garantie, bordereaux ou bons de livraison, billets ou tickets, contenant des stipulations négociées librement ou non ou des références à des conditions générales préétablies.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre II : Clauses abusives"
+    },
+    {
+      "id": "LEGIARTI000032227000",
+      "num": "L. 212-2",
+      "title": "Article L. 212-2",
+      "text": "Les dispositions de l'article L. 212-1 sont également applicables aux contrats conclus entre des professionnels et des non-professionnels.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre II : Clauses abusives"
+    },
+    {
+      "id": "LEGIARTI000032226417",
+      "num": "L. 241-1",
+      "title": "Article L. 241-1",
+      "text": "Les clauses abusives sont réputées non écrites.Le contrat reste applicable dans toutes ses dispositions autres que celles jugées abusives s'il peut subsister sans ces clauses.Les dispositions du présent article sont d'ordre public.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre IV : SANCTIONS > Chapitre Ier : Conditions générales des contrats > Section 1 : Clauses abusives > Section 1 : Présentation des contrats et clauses abusives > Sous-section 1 : Sanctions civiles"
+    },
+    {
+      "id": "LEGIARTI000032224815",
+      "num": "L. 611-1",
+      "title": "Article L. 611-1",
+      "text": "Pour l'application du présent titre, on entend par :1° Litige national : un litige de nature contractuelle entre un consommateur et un professionnel portant sur l'exécution d'un contrat de vente ou de fourniture de services, lorsqu'au moment de sa conclusion, le consommateur réside dans le même Etat membre que celui du lieu d'établissement du professionnel ;2° Litige transfrontalier : un litige de nature contractuelle entre un consommateur et un professionnel portant sur l'exécution d'un contrat de vente ou de fourniture de services, lorsqu'au moment de sa conclusion le consommateur réside dans un Etat membre autre que celui du lieu d'établissement du professionnel ;3° Contrat de vente : tout contrat au sens de l'article 1582 du code civil, ainsi que tout contrat ayant à la fois pour objet la vente d'un bien et la fourniture d'un service, conclu entre un professionnel et un consommateur ;4° Contrat de prestation de services : tout contrat ayant pour objet la fourniture d'un service par le professionnel en contrepartie duquel le consommateur s'engage à payer le prix ;5° Médiation des litiges de la consommation : un processus de médiation conventionnelle, tel que défini à l'article 21 de la loi n° 95-125 du 8 février 1995 relative à l'organisation des juridictions et de la procédure civile, pénale et administrative ou un autre processus de médiation conventionnelle prévu par la loi ;6° Médiateur de la consommation : la personne physique ou la personne morale accomplissant une mission de médiation conventionnelle ;7° Médiateur public : médiateur désigné par une autorité publique dans les conditions fixées par la loi, laquelle détermine également son statut, son champ de compétences dans le domaine des litiges prévus au présent titre et ses modalités d'intervention.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre VI : RÈGLEMENT DES LITIGES > Titre Ier : MÉDIATION > Chapitre Ier : Définitions et champ d'application"
+    },
+    {
+      "id": "LEGIARTI000032224805",
+      "num": "L. 612-1",
+      "title": "Article L. 612-1",
+      "text": "Tout consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige qui l'oppose à un professionnel. A cet effet, le professionnel garantit au consommateur le recours effectif à un dispositif de médiation de la consommation.Le professionnel peut mettre en place son propre dispositif de médiation de la consommation ou proposer au consommateur le recours à tout autre médiateur de la consommation répondant aux exigences du présent titre.Lorsqu'il existe un médiateur de la consommation dont la compétence s'étend à l'ensemble des entreprises d'un domaine d'activité économique dont il relève, le professionnel permet toujours au consommateur d'y recourir.Les modalités selon lesquelles le processus de médiation est mis en œuvre sont précisées par décret en Conseil d'Etat.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre VI : RÈGLEMENT DES LITIGES > Titre Ier : MÉDIATION > Chapitre II : Processus de médiation des litiges de consommation"
+    },
+    {
+      "id": "LEGIARTI000032224762",
+      "num": "L. 616-1",
+      "title": "Article L. 616-1",
+      "text": "Tout professionnel communique au consommateur, selon des modalités fixées par décret en Conseil d'Etat, les coordonnées du ou des médiateurs compétents dont il relève.Le professionnel est également tenu de fournir cette même information au consommateur, dès lors qu'un litige n'a pas pu être réglé dans le cadre d'une réclamation préalable directement introduite auprès de ses services.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre VI : RÈGLEMENT DES LITIGES > Titre Ier : MÉDIATION > Chapitre VI : Information et assistance du consommateur"
+    },
+    {
+      "id": "LEGIARTI000049464060",
+      "num": "L. 421-1",
+      "title": "Article L. 421-1",
+      "text": "Pour l'application du présent titre, on entend par “ opérateur économique ” le fabricant, le mandataire, l'importateur, le distributeur, le prestataire de services d'exécution des commandes ou toute autre personne physique ou morale soumise à des obligations liées à la fabrication de produits ou à leur mise à disposition sur le marché, au sens du 13 de l'article 3 du règlement (UE) 2023/988 du Parlement européen et du Conseil du 10 mai 2023 relatif à la sécurité générale des produits, modifiant le règlement (UE) n° 1025/2012 du Parlement européen et du Conseil et la directive (UE) 2020/1828 du Parlement européen et du Conseil, et abrogeant la directive 2001/95/ CE du Parlement européen et du Conseil et la directive 87/357/ CEE du Conseil.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre IV : CONFORMITÉ ET SÉCURITÉ DES PRODUITS ET SERVICES > Titre II : SÉCURITÉ > Chapitre Ier : Obligation générale de sécurité"
+    },
+    {
+      "id": "LEGIARTI000049464053",
+      "num": "L. 421-3",
+      "title": "Article L. 421-3",
+      "text": "Les prestations de services doivent présenter, dans des conditions normales d'utilisation ou dans d'autres conditions raisonnablement prévisibles par le professionnel, la sécurité à laquelle on peut légitimement s'attendre et ne pas porter atteinte à la santé des personnes.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre IV : CONFORMITÉ ET SÉCURITÉ DES PRODUITS ET SERVICES > Titre II : SÉCURITÉ > Chapitre Ier : Obligation générale de sécurité"
+    },
+    {
+      "id": "LEGIARTI000044142498",
+      "num": "L. 216-1",
+      "title": "Article L. 216-1",
+      "text": "Le professionnel délivre le bien ou fournit le service à la date ou dans le délai indiqué au consommateur, conformément au 3° de l'article L. 111-1, sauf si les parties en conviennent autrement. Pour l'application du présent titre, on entend par délivrance d'un bien, le transfert au consommateur de la possession physique ou du contrôle du bien. Dans le cas d'un bien comportant des éléments numériques, la délivrance inclut également la fourniture de ces éléments au sens de l'article L. 224-25-4. A défaut d'indication ou d'accord quant à la date de délivrance ou de fourniture, le professionnel délivre le bien ou fournit le service sans retard injustifié et au plus tard trente jours après la conclusion du contrat. Le présent chapitre s'applique également à la fourniture d'un contenu numérique sur un support matériel servant exclusivement à son transport.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VI : Livraison et transfert de risque > Chapitre VI : Délivrance, fourniture et transfert de risque"
+    },
+    {
+      "id": "LEGIARTI000044142491",
+      "num": "L. 216-2",
+      "title": "Article L. 216-2",
+      "text": "Tout risque de perte ou d'endommagement du bien est transféré au consommateur au moment où ce dernier ou un tiers désigné par lui prend physiquement possession de ces biens.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VI : Livraison et transfert de risque > Chapitre VI : Délivrance, fourniture et transfert de risque"
+    },
+    {
+      "id": "LEGIARTI000044142485",
+      "num": "L. 216-3",
+      "title": "Article L. 216-3",
+      "text": "Lorsque le consommateur confie le bien à un transporteur autre que celui proposé par le professionnel, le risque de perte ou d'endommagement du bien est transféré au consommateur lors de la remise du bien au transporteur.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VI : Livraison et transfert de risque > Chapitre VI : Délivrance, fourniture et transfert de risque"
+    },
+    {
+      "id": "LEGIARTI000044142472",
+      "num": "L. 216-6",
+      "title": "Article L. 216-6",
+      "text": "I.-En cas de manquement du professionnel à son obligation de délivrance du bien ou de fourniture du service dans les conditions prévues à l'article L. 216-1, le consommateur peut : 1° Notifier au professionnel la suspension du paiement de tout ou partie du prix jusqu'à ce que le professionnel s'exécute, dans les conditions des articles 1219 et 1220 du code civil ; 2° Résoudre le contrat si, après avoir mis en demeure le professionnel d'effectuer la délivrance ou de fournir le service dans un délai supplémentaire raisonnable, ce dernier ne s'est pas exécuté dans ce délai. Le contrat est considéré comme résolu à la réception par le professionnel de la lettre ou de l'écrit l'informant de cette résolution, à moins que le professionnel ne se soit exécuté entre-temps. II.-Le consommateur peut toutefois immédiatement résoudre le contrat : 1° Lorsque le professionnel refuse de délivrer le bien ou de fournir le service ou lorsqu'il est manifeste qu'il ne livrera pas le bien ou ne fournira pas le service ; 2° Lorsque le professionnel n'exécute pas son obligation de délivrance du bien ou de fourniture du service à la date ou à l'expiration du délai prévu à l'article L. 216-1 et que cette date ou ce délai constitue pour le consommateur une condition essentielle du contrat. Cette condition essentielle résulte des circonstances qui entourent la conclusion du contrat ou d'une demande expresse du consommateur avant la conclusion du contrat. Les dispositions du présent article sont sans préjudice de l'allocation de dommages et intérêts.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre VI : Livraison et transfert de risque > Chapitre VI : Délivrance, fourniture et transfert de risque"
+    },
+    {
+      "id": "LEGIARTI000032226990",
+      "num": "L. 214-1",
+      "title": "Article L. 214-1",
+      "text": "Sauf stipulation contraire, pour tout contrat de vente ou de prestation de services conclu entre un professionnel et un consommateur, les sommes versées d'avance sont des arrhes, au sens de l'article 1590 du code civil.Dans ce cas, chacun des contractants peut revenir sur son engagement, le consommateur en perdant les arrhes, le professionnel en les restituant au double.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre II : FORMATION ET ÉXECUTION DES CONTRATS > Titre Ier : CONDITIONS GÉNÉRALES DES CONTRATS > Chapitre IV : Arrhes et acomptes"
+    },
+    {
+      "id": "LEGIARTI000032227122",
+      "num": "L. 132-1",
+      "title": "Article L. 132-1",
+      "text": "Le délit de pratique commerciale trompeuse défini aux articles L. 121-2 à L. 121-4 est constitué dès lors que la pratique est mise en œuvre ou qu'elle produit ses effets en France.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre III : SANCTIONS > Chapitre II : Pratiques commerciales interdites et pratiques commerciales réglementées > Section 1 : Pratiques commerciales interdites > Sous-section 1 : Pratiques commerciales trompeuses"
+    },
+    {
+      "id": "LEGIARTI000049532070",
+      "num": "L. 132-2",
+      "title": "Article L. 132-2",
+      "text": "Les pratiques commerciales trompeuses mentionnées aux articles L. 121-2 à L. 121-4 sont punies d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Le montant de l'amende peut être porté, de manière proportionnée aux avantages tirés du délit, à 10 % du chiffre d'affaires moyen annuel, calculé sur les trois derniers chiffres d'affaires annuels connus à la date des faits, ou à 50 % des dépenses engagées pour la réalisation de la publicité ou de la pratique constituant ce délit. Ce taux est porté à 80 % dans le cas des pratiques commerciales trompeuses mentionnées aux b et e du 2° de l'article L. 121-2 lorsqu'elles reposent sur des allégations en matière environnementale. Lorsque l'infraction a été commise par l'utilisation d'un service de communication au public en ligne ou par le biais d'un support numérique ou électronique, les peines sont portées à cinq ans d'emprisonnement et à 750 000 euros d'amende.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre III : SANCTIONS > Chapitre II : Pratiques commerciales interdites et pratiques commerciales réglementées > Section 1 : Pratiques commerciales interdites > Sous-section 1 : Pratiques commerciales trompeuses"
+    },
+    {
+      "id": "LEGIARTI000034388081",
+      "num": "L. 111-3",
+      "title": "Article L. 111-3",
+      "text": "Les dispositions des articles L. 111-1 et L. 111-2 s'appliquent sans préjudice des dispositions particulières en matière d'information des consommateurs propres à certaines activités. Les dispositions de l'article L. 111-2 ne s'appliquent ni aux services mentionnés aux livres Ier à III et au titre V du livre V du code monétaire et financier, ni aux opérations pratiquées par les entreprises régies par le code des assurances, par les fonds de retraite professionnelle supplémentaires mentionnés à l'article L. 381-1 du même code, par les mutuelles et unions régies par le livre II du code de la mutualité, par les mutuelles et unions de retraite professionnelle supplémentaire mentionnées à l'article L. 214-1 du même code, par les institutions de prévoyance et unions régies par le titre III du livre IX du code de la sécurité sociale et par les institutions de retraite professionnelle supplémentaire mentionnées à l'article L. 942-1 du même code.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre Ier : Obligation générale d'information précontractuelle"
+    },
+    {
+      "id": "LEGIARTI000044330854",
+      "num": "L. 111-4",
+      "title": "Article L. 111-4",
+      "text": "Le fabricant ou l'importateur de biens meubles informe le vendeur professionnel de la disponibilité ou de la non-disponibilité des pièces détachées indispensables à l'utilisation des biens concernés et, le cas échéant, de la période pendant laquelle ou de la date jusqu'à laquelle ces pièces sont disponibles sur le marché. Pour les équipements électriques et électroniques et les éléments d'ameublement, lorsque cette information n'est pas fournie au vendeur professionnel, les pièces détachées indispensables à l'utilisation des biens sont réputées non disponibles. Les fabricants ou importateurs d'équipements électriques et électroniques informent les vendeurs de leurs produits ainsi que les réparateurs et les reconditionneurs professionnels, à la demande de ces derniers, du détail des éléments constituant l'engagement de durée de disponibilité des pièces détachées. Cette information est rendue disponible notamment à partir d'un support dématérialisé. Les fabricants et les importateurs d'équipements électroménagers, de petits équipements informatiques et de télécommunications, d'écrans et de moniteurs assurent, pour une liste de produits fixée par voie réglementaire, la disponibilité des pièces détachées de ces produits pendant la période de commercialisation du modèle concerné ainsi que pendant une période minimale complémentaire après la date de mise sur le marché de la dernière unité de ce modèle. La durée de cette période minimale complémentaire ne peut être inférieure à cinq ans. Les modalités d'application de cette obligation de disponibilité des pièces détachées, notamment la liste des produits et pièces concernés, les échéances à partir desquelles les pièces détachées sont disponibles pendant la commercialisation des produits ainsi que les périodes minimales complémentaires prévues sont précisées par décret en Conseil d'Etat. Ces informations sont délivrées obligatoirement au consommateur par le vendeur de manière lisible avant la conclusion du contrat et confirmées par écrit lors de l'achat du bien. Dès lors qu'il a indiqué la période ou la date mentionnées au premier alinéa, le fabricant ou l'importateur fournit obligatoirement, dans un délai de quinze jours ouvrables, dans des conditions non discriminatoires, aux vendeurs professionnels, aux reconditionneurs ou aux réparateurs, agréés ou non, qui le demandent les pièces détachées indispensables à l'utilisation des biens vendus. Pour certaines catégories de biens définies par décret, lorsqu'une pièce détachée indispensable à l'utilisation d'un bien disponible sur le marché peut être fabriquée par un moyen d'impression en trois dimensions et qu'elle n'est plus disponible sur le marché, le fabricant ou l'importateur de biens meubles doit, sous réserve du respect des droits de propriété intellectuelle et en particulier sous réserve du consentement du détenteur de la propriété intellectuelle, fournir aux vendeurs professionnels, aux reconditionneurs ou aux réparateurs, agréés ou non, qui le demandent le plan de fabrication par un moyen d'impression en trois dimensions de la pièce détachée ou, à défaut, les informations techniques utiles à l'élaboration de ce plan dont le fabricant dispose. Les modalités d'application du présent article sont précisées par décret.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre Ier : Obligation générale d'information précontractuelle"
+    },
+    {
+      "id": "LEGIARTI000043960416",
+      "num": "L. 111-4-1",
+      "title": "Article L. 111-4-1",
+      "text": "I. - Les fabricants et les importateurs d'outils de bricolage et de jardinage motorisés, d'articles de sport et de loisirs, y compris les bicyclettes, de bicyclettes à assistance électrique et d'engins de déplacement personnel motorisés assurent, pour une liste de produits fixée par voie réglementaire, la disponibilité des pièces détachées de ces produits pendant la période de commercialisation du modèle concerné ainsi que pendant une période minimale complémentaire après la date de mise sur le marché de la dernière unité de ce modèle. La durée de cette période minimale complémentaire ne peut être inférieure à cinq ans. II. - Les modalités d'application du présent article, notamment la liste des produits et pièces concernés, les échéances à partir desquelles les pièces détachées sont disponibles pendant la commercialisation des produits ainsi que les périodes minimales complémentaires prévues au I sont précisées par décret en Conseil d'Etat.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre Ier : Obligation générale d'information précontractuelle"
+    },
+    {
+      "id": "LEGIARTI000043974986",
+      "num": "L. 111-5",
+      "title": "Article L. 111-5",
+      "text": "En cas de litige relatif à l'application des dispositions des articles L. 111-1, L. 111-2, L. 111-4 et L. 111-4-1, il appartient au professionnel de prouver qu'il a exécuté ses obligations.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre Ier : Obligation générale d'information précontractuelle"
+    },
+    {
+      "id": "LEGIARTI000044564977",
+      "num": "L. 111-6",
+      "title": "Article L. 111-6",
+      "text": "Le producteur de biens comportant des éléments numériques informe le vendeur professionnel de la durée au cours de laquelle les mises à jour logicielles, que le producteur fournit, restent compatibles avec les fonctionnalités du bien. Le vendeur met ces informations à la disposition du consommateur. Le producteur informe le consommateur, de façon lisible et compréhensible, des caractéristiques essentielles de chaque mise à jour des éléments numériques du bien, notamment de l'espace de stockage qu'elle requiert, de son impact sur les performances du bien et de l'évolution des fonctionnalités qu'elle comporte. Les modalités d'application du présent article sont précisées par décret.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre Ier : Obligation générale d'information précontractuelle"
+    },
+    {
+      "id": "LEGIARTI000049571125",
+      "num": "L. 111-7",
+      "title": "Article L. 111-7",
+      "text": "I. - (Abrogé). II. - Tout fournisseur de place de marché en ligne ou de comparateur en ligne est tenu de délivrer au consommateur une information loyale, claire et transparente sur : 1° Les conditions générales d'utilisation du service d'intermédiation qu'il propose et sur les modalités de classement ainsi que, s'agissant des comparateurs en ligne, de référencement et de déréférencement des contenus, des biens ou des services auxquels ce service permet d'accéder ; 2° L'existence d'une relation contractuelle, d'un lien capitalistique ou d'une rémunération à son profit, dès lors qu'ils influencent le classement ou le référencement des contenus, des biens ou des services proposés ou mis en ligne ; 3° La qualité de l'annonceur et les droits et obligations des parties en matière civile et fiscale, lorsque des consommateurs sont mis en relation avec des professionnels ou des non-professionnels. Un décret précise les conditions d'application du présent article en tenant compte de la nature de l'activité des personnes mentionnées au premier alinéa en ligne. Ce décret précise, par ailleurs, pour tout fournisseur de comparateur en ligne, les informations communiquées aux consommateurs portant sur les éléments de cette comparaison et ce qui relève de la publicité au sens de l'article 20 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique. Ce décret fixe également les modalités selon lesquelles, lorsque des professionnels, vendeurs ou prestataires de services sont mis en relation avec des consommateurs, les personnes mentionnées au premier alinéa met à leur disposition un espace leur permettant de communiquer aux consommateurs les informations prévues aux articles L. 221-5 et L. 221-6.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre Ier : Obligation générale d'information précontractuelle"
+    },
+    {
+      "id": "LEGIARTI000049571119",
+      "num": "L. 111-7-2",
+      "title": "Article L. 111-7-2",
+      "text": "Sans préjudice des obligations d'information prévues à l'article 19 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique et à l'article L. 111-7 du présent code, toute personne physique ou morale dont l'activité consiste, à titre principal ou accessoire, à collecter, à modérer ou à diffuser des avis en ligne provenant de consommateurs est tenue de délivrer aux utilisateurs une information loyale, claire et transparente sur les modalités de publication et de traitement des avis mis en ligne. Elle précise si ces avis font ou non l'objet d'un contrôle et, si tel est le cas, elle indique les caractéristiques principales du contrôle mis en œuvre. Elle affiche la date de l'avis et ses éventuelles mises à jour. Elle indique aux consommateurs dont l'avis en ligne n'a pas été publié les raisons qui justifient son rejet. Elle met en place une fonctionnalité gratuite qui permet aux responsables des produits ou des services faisant l'objet d'un avis en ligne de lui signaler un doute sur l'authenticité de cet avis, à condition que ce signalement soit motivé. Un décret, pris après avis de la Commission nationale de l'informatique et des libertés, fixe les modalités et le contenu de ces informations.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre Ier : Obligation générale d'information précontractuelle"
+    },
+    {
+      "id": "LEGIARTI000049571116",
+      "num": "L. 111-7-3",
+      "title": "Article L. 111-7-3",
+      "text": "Les fournisseurs de plateformes en ligne, de moteurs de recherche en ligne et de comparateurs en ligne et les personnes qui fournissent des services de communications interpersonnelles non fondés sur la numérotation, au sens du 6° quater de l'article L. 32 du code des postes et des communications électroniques, dont l'activité dépasse un ou plusieurs seuils définis par décret réalisent un audit de cybersécurité, dont les résultats sont présentés au consommateur dans les conditions prévues au dernier alinéa du présent article, portant sur la sécurisation et la localisation des données qu'ils hébergent, directement ou par l'intermédiaire d'un tiers, et sur leur propre sécurisation, dans les conditions prévues au présent article. L'audit mentionné au premier alinéa est effectué par des prestataires d'audit qualifiés par l'Agence nationale de la sécurité des systèmes d'information. Un arrêté conjoint des ministres chargés du numérique et de la consommation, pris après avis de la Commission nationale de l'informatique et des libertés, fixe les critères qui sont pris en compte par l'audit prévu au même premier alinéa et ses conditions en matière de durée de validité ainsi que les modalités de sa présentation. Le résultat de l'audit est présenté au consommateur de façon lisible, claire et compréhensible et est accompagné d'une présentation ou d'une expression complémentaire, au moyen d'un système d'information coloriel.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre Ier : Obligation générale d'information précontractuelle"
+    },
+    {
+      "id": "LEGIARTI000032227338",
+      "num": "L. 111-8",
+      "title": "Article L. 111-8",
+      "text": "Les dispositions du présent chapitre sont d'ordre public.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre Ier : Obligation générale d'information précontractuelle"
+    },
+    {
+      "id": "LEGIARTI000044549592",
+      "num": "L. 112-1-1",
+      "title": "Article L. 112-1-1",
+      "text": "I.-Toute annonce d'une réduction de prix indique le prix antérieur pratiqué par le professionnel avant l'application de la réduction de prix. Ce prix antérieur correspond au prix le plus bas pratiqué par le professionnel à l'égard de tous les consommateurs au cours des trente derniers jours précédant l'application de la réduction de prix. Par exception au deuxième alinéa, en cas de réductions de prix successives pendant une période déterminée, le prix antérieur est celui pratiqué avant l'application de la première réduction de prix. Le présent I ne s'applique pas aux annonces de réduction de prix portant sur des produits périssables menacés d'une altération rapide. II.-Les présentes dispositions ne s'appliquent pas aux opérations par lesquelles un professionnel compare les prix qu'il affiche avec ceux d'autres professionnels.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre II : Information sur les prix et conditions de vente"
+    },
+    {
+      "id": "LEGIARTI000034072548",
+      "num": "L. 112-2",
+      "title": "Article L. 112-2",
+      "text": "Les dispositions de l'article L. 112-1 s'appliquent à toutes les activités de production, de distribution et de services, y compris celles qui sont le fait de personnes publiques, notamment dans le cadre de conventions de délégation de service public ainsi qu'aux prestations mentionnées au titre IV bis du livre IV du code de commerce. Les règles relatives à l'obligation de renseignements du public par les établissements de crédit, les sociétés de financement, les établissements de monnaie électronique, les établissements de paiement et les organismes mentionnés à l'article L. 518-1 du code monétaire et financier sont fixées par l'article L. 312-1-1 du même code.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre II : Information sur les prix et conditions de vente"
+    },
+    {
+      "id": "LEGIARTI000044129074",
+      "num": "L. 112-4-1",
+      "title": "Article L. 112-4-1",
+      "text": "Lorsque le contrat de vente de biens ou le contrat de fourniture de contenus numériques ou de services numériques ne prévoit pas le paiement d'un prix, le professionnel précise la nature de l'avantage procuré par le consommateur au sens des articles L. 217-1 et L. 224-25-2.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre II : Information sur les prix et conditions de vente"
+    },
+    {
+      "id": "LEGIARTI000032227323",
+      "num": "L. 112-5",
+      "title": "Article L. 112-5",
+      "text": "Tout professionnel peut demander à l'autorité administrative chargée de la concurrence et de la consommation de prendre formellement position sur la conformité aux articles L. 112-1 à L. 112-4 et aux mesures réglementaires prises pour leur application, des modalités de l'information sur les prix de vente au consommateur qu'il envisage de mettre en place. Cette prise de position formelle a pour objet de prémunir le demandeur d'un changement d'appréciation de l'autorité administrative qui serait de nature à l'exposer à la sanction administrative prévue aux articles L. 131-5 et L. 131-6. L'autorité administrative prend formellement position sur cette demande dans un délai fixé par décret en Conseil d'Etat. Le silence gardé par l'autorité administrative à l'issue de ce délai vaut rejet de cette demande. Un décret en Conseil d'Etat précise les modalités d'application du présent article, notamment le contenu, les modalités de dépôt et d'avis de réception de la demande.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre II : Information sur les prix et conditions de vente"
+    },
+    {
+      "id": "LEGIARTI000032227321",
+      "num": "L. 112-6",
+      "title": "Article L. 112-6",
+      "text": "La garantie mentionnée à l'article L. 112-5 prend fin : 1° A la date à laquelle la situation du professionnel n'est plus identique à celle présentée dans la demande ; les modalités de constatation de cette situation et d'information du professionnel sont précisées par décret en Conseil d'Etat ; 2° A la date à laquelle est intervenue une modification dans la législation ou la réglementation applicable de nature à affecter la validité de la garantie ; 3° A compter du jour où l'autorité administrative notifie au professionnel la modification de son appréciation. Cette notification fait l'objet d'une information préalable du professionnel.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre II : Information sur les prix et conditions de vente"
+    },
+    {
+      "id": "LEGIARTI000043545855",
+      "num": "L. 112-7",
+      "title": "Article L. 112-7",
+      "text": "Tout opérateur de service de communications vocales au sens des 7° et 15° de l'article L. 32 du code des postes et des communications électroniques est tenu de proposer de manière équitable au consommateur, lors de la souscription d'un service de communications vocales, une offre dans laquelle les communications au départ du réseau auquel le consommateur a été raccordé par son opérateur et à destination du territoire national sont facturées à la seconde, dès la première seconde, hors éventuellement un coût fixe de connexion. Les consommateurs ayant opté pour un mode de règlement prépayé bénéficient d'une facturation à la seconde, dès la première seconde, de leurs communications de téléphonie vocale au départ du réseau auquel le consommateur a été raccordé par son opérateur et à destination du territoire national. Ces consommateurs peuvent bénéficier, sur demande, de tout autre mode de facturation proposé par l'opérateur. Le présent article ne s'applique pas aux appels vers les numéros pouvant être surtaxés. La comptabilisation des communications fait l'objet d'une information claire préalable à toute souscription de service, quel que soit le mode de règlement choisi.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre II : Information sur les prix et conditions de vente"
+    },
+    {
+      "id": "LEGIARTI000049571108",
+      "num": "L. 112-8",
+      "title": "Article L. 112-8",
+      "text": "Les entreprises dont le chiffre d'affaires est supérieur à un seuil défini par décret rendent le numéro de téléphone destiné à recueillir l'appel d'un consommateur en vue d'obtenir la bonne exécution d'un contrat conclu avec un professionnel ou le traitement d'une réclamation accessible aux personnes sourdes, malentendantes, sourdaveugles et aphasiques par la mise à disposition d'un service de traduction simultanée écrite et visuelle défini au IV de l'article 105 de la loi n° 2016-1321 du 7 octobre 2016 pour une République numérique, sans surcoût pour les utilisateurs finals et à la charge des entreprises concernées. Les services d'accueil téléphonique concernés sont accessibles directement ou, à défaut, par l'intermédiaire d'une interface en ligne dédiée délivrant le service de traduction simultanée écrite et visuelle. L'accessibilité est soit assurée directement par l'entreprise, soit confiée par elle, sous sa responsabilité, à un opérateur spécialisé qui en assure la mise en œuvre et l'exécution, soit assurée par l'intermédiaire de la solution d'accessibilité téléphonique universelle mentionnée au IV de l'article 105 de la loi n° 2016-1321 du 7 octobre 2016. L'autorité administrative chargée de la concurrence et de la consommation peut recourir à l'expertise des services du ministère chargé des personnes handicapées dans le cadre des investigations nécessaires au contrôle des dispositions du présent article.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre II : Information sur les prix et conditions de vente"
+    },
+    {
+      "id": "LEGIARTI000041557442",
+      "num": "L. 112-9",
+      "title": "Article L. 112-9",
+      "text": "Les commerces de vente au détail disposant d'une surface de vente supérieure à 400 mètres carrés s'assurent que des contenants réemployables ou réutilisables propres, se substituant aux emballages à usage unique, sont mis à la disposition du consommateur final, à titre gratuit ou onéreux, dans le cadre de la vente de produits présentés sans emballage.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre Ier : INFORMATION DES CONSOMMATEURS > Chapitre II : Information sur les prix et conditions de vente"
+    },
+    {
+      "id": "LEGIARTI000032227274",
+      "num": "L. 121-10",
+      "title": "Article L. 121-10",
+      "text": "Est interdit le fait d'abuser de la faiblesse ou de l'ignorance d'une personne pour se faire remettre, sans contreparties réelles, des sommes en numéraire ou par virement, des chèques bancaires ou postaux, des ordres de paiement par carte de paiement ou carte de crédit ou bien des valeurs mobilières, au sens de l'article 529 du code civil.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre II : PRATIQUES COMMERCIALES INTERDITES ET PRATIQUES COMMERCIALES RÉGLEMENTÉES > Titre II : PRATIQUES COMMERCIALES > Chapitre Ier : Pratiques commerciales interdites > Section 2 : Abus de faiblesse"
+    },
+    {
+      "id": "LEGIARTI000051830271",
+      "num": "L. 121-11",
+      "title": "Article L. 121-11",
+      "text": "Est interdit le fait de refuser à un consommateur la vente d'un produit ou la prestation d'un service, sauf motif légitime ; Est également interdit le fait de subordonner la vente d'un produit à l'achat d'une quantité imposée ou à l'achat concomitant d'un autre produit ou d'un autre service ainsi que de subordonner la prestation d'un service à celle d'un autre service ou à l'achat d'un produit dès lors que cette subordination constitue une pratique commerciale déloyale au sens de l'article L. 121-1. Est également interdit le fait de subordonner la vente d'un bien ou la fourniture d'un service à la conclusion d'un contrat d'assurance accessoire au bien ou au service vendu ou au consentement au démarchage téléphonique mentionné au chapitre III du titre II du livre II, sans permettre au consommateur d'acheter le bien ou d'obtenir la fourniture du service séparément. Pour les établissements de crédit et les organismes mentionnés à l'article L. 518-1 du code monétaire et financier, les règles relatives aux ventes subordonnées sont fixées par les dispositions du 1 du I de l'article L. 312-1-2 du même code. Les dispositions du présent article s'appliquent à toutes les activités de production, de distribution et de services, y compris celles qui sont le fait de personnes publiques, notamment dans le cadre de conventions de délégation de service public.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre II : PRATIQUES COMMERCIALES INTERDITES ET PRATIQUES COMMERCIALES RÉGLEMENTÉES > Titre II : PRATIQUES COMMERCIALES > Chapitre Ier : Pratiques commerciales interdites > Section 3 : Refus et subordination de vente et de prestation de services"
+    },
+    {
+      "id": "LEGIARTI000032227266",
+      "num": "L. 121-12",
+      "title": "Article L. 121-12",
+      "text": "Est interdit le fait d'exiger le paiement immédiat ou différé de biens ou de services fournis par un professionnel ou, s'agissant de biens, d'exiger leur renvoi ou leur conservation, sans que ceux-ci aient fait l'objet d'une commande préalable du consommateur.Les dispositions du présent article s'appliquent également aux contrats portant sur la fourniture d'eau, de gaz ou d'électricité lorsqu'ils ne sont pas conditionnés dans un volume délimité ou en quantité déterminée ainsi que sur la fourniture de chauffage urbain et de contenu numérique non fourni sur support matériel.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre II : PRATIQUES COMMERCIALES INTERDITES ET PRATIQUES COMMERCIALES RÉGLEMENTÉES > Titre II : PRATIQUES COMMERCIALES > Chapitre Ier : Pratiques commerciales interdites > Section 4 : Vente et prestation de services sans commande préalable"
+    },
+    {
+      "id": "LEGIARTI000032227264",
+      "num": "L. 121-13",
+      "title": "Article L. 121-13",
+      "text": "Les dispositions de l'article L. 121-12 ne font pas obstacle à la perception d'intérêts, de commissions ou de frais au titre de facilités de caisse ou de découverts bancaires prévus par la convention de compte instituée à l'article L. 312-1-1 du code monétaire et financier qui précise le montant ou le mode de calcul de ces rémunérations. Il en est de même dans le cas où une modification des conditions initiales du contrat résulte de la mise en œuvre d'une clause de révision dont les modalités ont été expressément définies et ont recueilli l'accord des parties au moment de la signature du contrat.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre II : PRATIQUES COMMERCIALES INTERDITES ET PRATIQUES COMMERCIALES RÉGLEMENTÉES > Titre II : PRATIQUES COMMERCIALES > Chapitre Ier : Pratiques commerciales interdites > Section 4 : Vente et prestation de services sans commande préalable"
+    },
+    {
+      "id": "LEGIARTI000032227262",
+      "num": "L. 121-14",
+      "title": "Article L. 121-14",
+      "text": "Le paiement résultant d'une obligation législative ou réglementaire n'exige pas d'engagement exprès et préalable.",
+      "texte_cid": "LEGITEXT000006069565",
+      "etat": "VIGUEUR",
+      "contexte": "Partie législative nouvelle > Livre Ier : INFORMATION DES CONSOMMATEURS ET PRATIQUES COMMERCIALES > Titre II : PRATIQUES COMMERCIALES INTERDITES ET PRATIQUES COMMERCIALES RÉGLEMENTÉES > Titre II : PRATIQUES COMMERCIALES > Chapitre Ier : Pratiques commerciales interdites > Section 4 : Vente et prestation de services sans commande préalable"
+    }
+  ]
+}
