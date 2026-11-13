@@ -1,0 +1,16 @@
+{
+  "chunk_500": {
+    "chunk_size": 500,
+    "recall_at_k": 0.95,
+    "faithfulness": 0.8857,
+    "correct_abstention_rate": 1.0,
+    "false_abstention_rate": 0.2
+  },
+  "chunk_1000": {
+    "chunk_size": 1000,
+    "recall_at_k": 0.9667,
+    "faithfulness": 0.7714,
+    "correct_abstention_rate": 1.0,
+    "false_abstention_rate": 0.0667
+  }
+}
