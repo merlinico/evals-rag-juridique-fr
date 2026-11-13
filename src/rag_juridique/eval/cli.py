@@ -9,11 +9,11 @@ from typing import Any
 from rag_juridique.eval.pipeline import (
     compare_to_baseline,
     load_config,
-    load_gold,
     metrics_to_dict,
     run_config,
 )
 from rag_juridique.eval.report import render_regression_report, summary_table_dict, write_report
+from rag_juridique.gold.loader import load_gold
 
 
 def main(argv: list[str] | None = None) -> int:

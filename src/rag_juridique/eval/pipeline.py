@@ -1,18 +1,25 @@
 from __future__ import annotations
 
-import json
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
 import yaml
 
+from rag_juridique.contracts.generation import GenerationRecord
+from rag_juridique.contracts.gold import Question
+from rag_juridique.contracts.metrics import (
+    MetricName,
+    MetricReport,
+    MetricResult,
+    PerConfigMetrics,
+)
 from rag_juridique.corpus.loader import load_corpus
 from rag_juridique.generation.ollama import (
     OllamaGenerator,
     extract_citations,
     is_abstention,
-    load_generation_fixture,
+    load_generation_records,
 )
 from rag_juridique.metrics.abstention import abstention_metrics
 from rag_juridique.metrics.faithfulness import faithfulness_score
@@ -42,15 +49,37 @@ class ConfigMetrics:
     n_questions: int
     cases: list[ConfigCaseResult]
 
+    def to_contract(self) -> PerConfigMetrics:
+        """Map MVP aggregates onto the frozen PerConfigMetrics contract."""
+        return PerConfigMetrics(
+            config_id=self.name,
+            chunk_size=self.chunk_size,
+            recall_at_k=self.recall_at_k,
+            faithfulness=self.faithfulness,
+            correct_abstention_rate=self.correct_abstention_rate,
+            false_abstention_rate=self.false_abstention_rate,
+            n_questions=self.n_questions,
+            cases=[asdict(c) for c in self.cases],
+            metrics=[
+                MetricResult(
+                    name=MetricName.RECALL_AT_K, value=self.recall_at_k, k=None
+                ),
+                MetricResult(name=MetricName.FAITHFULNESS, value=self.faithfulness),
+                MetricResult(
+                    name=MetricName.CORRECT_ABSTENTION_RATE,
+                    value=self.correct_abstention_rate,
+                ),
+                MetricResult(
+                    name=MetricName.FALSE_ABSTENTION_RATE,
+                    value=self.false_abstention_rate,
+                ),
+            ],
+        )
+
 
 def load_config(path: Path | str) -> dict[str, Any]:
     with open(path, encoding="utf-8") as f:
         return yaml.safe_load(f)
-
-
-def load_gold(path: Path | str) -> list[dict[str, Any]]:
-    raw = json.loads(Path(path).read_text(encoding="utf-8"))
-    return list(raw["questions"])
 
 
 def run_config(
@@ -58,7 +87,7 @@ def run_config(
     name: str,
     chunk_size: int,
     config: dict[str, Any],
-    gold: list[dict[str, Any]],
+    gold: list[Question],
     use_fixtures: bool,
     fixtures_path: Path | None,
     generate: bool,
@@ -78,10 +107,10 @@ def run_config(
         dense_model=dense_model,
     )
 
-    fixture_by_id: dict[str, dict[str, Any]] = {}
+    fixture_by_id: dict[str, GenerationRecord] = {}
     if use_fixtures and fixtures_path and fixtures_path.exists():
-        for item in load_generation_fixture(str(fixtures_path)):
-            fixture_by_id[item["question_id"]] = item
+        for item in load_generation_records(str(fixtures_path)):
+            fixture_by_id[item.question_id] = item
 
     generator = None
     if generate:
@@ -102,12 +131,12 @@ def run_config(
     top_k = int(retrieval_cfg.get("top_k", 5))
 
     for q in gold:
-        qid = q["id"]
-        question = q["question"]
-        expected_ids = list(q.get("expected_article_ids") or [])
-        unanswerable = bool(q.get("unanswerable"))
+        qid = q.id
+        question = q.question
+        expected_ids = list(q.expected_article_ids)
+        unanswerable = bool(q.unanswerable)
 
-        hits = retriever.retrieve(question, top_k=top_k)
+        hits = retriever.retrieve(question, k=top_k, as_of=q.as_of)
         retrieved_ids: list[str] = []
         for h in hits:
             if h.chunk.article_id not in retrieved_ids:
@@ -121,27 +150,31 @@ def run_config(
 
         if use_fixtures and qid in fixture_by_id:
             gen = fixture_by_id[qid]
-            answer = str(gen["answer"])
-            cited = list(gen.get("cited_article_nums") or extract_citations(answer))
-            abstained = bool(gen.get("abstained", is_abstention(answer)))
+            answer = gen.answer
+            cited = list(gen.cited_ids or extract_citations(answer))
+            abstained = bool(gen.abstained if gen.abstained is not None else is_abstention(answer))
         elif generate and generator is not None:
             result = generator.generate(qid, question, hits)
             answer = result.answer
             cited = result.cited_article_nums
             abstained = result.abstained
-            generations.append(
-                {
-                    "question_id": qid,
-                    "question": question,
-                    "answer": answer,
-                    "cited_article_nums": cited,
-                    "retrieved_article_ids": retrieved_ids,
-                    "retrieved_chunk_ids": [h.chunk.chunk_id for h in hits],
-                    "model": result.model,
-                    "abstained": abstained,
-                    "chunk_size": chunk_size,
-                }
+            record = GenerationRecord(
+                question_id=qid,
+                config_id=name,
+                model=result.model,
+                prompt_hash="",
+                answer=answer,
+                cited_ids=cited,
+                abstained=abstained,
+                question=question,
+                retrieved_article_ids=retrieved_ids,
+                retrieved_chunk_ids=[h.chunk.chunk_id for h in hits],
+                chunk_size=chunk_size,
             )
+            # Persist both contract fields and MVP keys for fixture round-trips.
+            payload = record.model_dump()
+            payload["cited_article_nums"] = cited
+            generations.append(payload)
         else:
             # Deterministic heuristic fallback for offline smoke tests.
             answer, cited, abstained = _heuristic_answer(q, hits)
@@ -187,8 +220,8 @@ def run_config(
     return metrics, generations
 
 
-def _heuristic_answer(q: dict[str, Any], hits: list[Any]) -> tuple[str, list[str], bool]:
-    if q.get("unanswerable"):
+def _heuristic_answer(q: Question, hits: list[Any]) -> tuple[str, list[str], bool]:
+    if q.unanswerable:
         return "je ne sais pas", [], True
     if not hits:
         return "je ne sais pas", [], True
@@ -199,7 +232,7 @@ def _heuristic_answer(q: dict[str, Any], hits: list[Any]) -> tuple[str, list[str
         if n not in seen:
             seen.add(n)
             nums.append(n)
-    expected = list(q.get("expected_article_nums") or [])
+    expected = list(q.expected_article_nums)
     cite = expected[0] if expected else nums[0]
     snippet = hits[0].chunk.text[:280].rsplit(" ", 1)[0]
     answer = (
@@ -220,6 +253,10 @@ def metrics_to_dict(m: ConfigMetrics) -> dict[str, Any]:
         "n_questions": m.n_questions,
         "cases": [asdict(c) for c in m.cases],
     }
+
+
+def build_metric_report(metrics: list[ConfigMetrics]) -> MetricReport:
+    return MetricReport(configs=[m.to_contract() for m in metrics])
 
 
 def compare_to_baseline(

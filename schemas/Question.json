@@ -1,0 +1,111 @@
+{
+  "$defs": {
+    "QuestionType": {
+      "description": "Five gold question types for phase 2.",
+      "enum": [
+        "direct",
+        "multi_hop",
+        "temporal",
+        "unanswerable",
+        "apparent_contradiction"
+      ],
+      "title": "QuestionType",
+      "type": "string"
+    }
+  },
+  "description": "One gold question.\n\n`expected_article_ids` are the gold passage ids (LEGIARTI). For temporal\nquestions, `as_of` selects the article version in force at that date.",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "question": {
+      "title": "Question",
+      "type": "string"
+    },
+    "type": {
+      "$ref": "#/$defs/QuestionType",
+      "default": "direct"
+    },
+    "expected_article_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Expected Article Ids",
+      "type": "array"
+    },
+    "expected_article_nums": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Expected Article Nums",
+      "type": "array"
+    },
+    "reference_answer": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reference Answer"
+    },
+    "as_of": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "For temporal questions: date at which the answer must hold",
+      "title": "As Of"
+    },
+    "unanswerable": {
+      "default": false,
+      "title": "Unanswerable",
+      "type": "boolean"
+    },
+    "validated": {
+      "default": false,
+      "title": "Validated",
+      "type": "boolean"
+    },
+    "topic": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Topic"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "id",
+    "question"
+  ],
+  "title": "Question",
+  "type": "object"
+}

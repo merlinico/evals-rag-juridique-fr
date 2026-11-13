@@ -1,6 +1,6 @@
+from rag_juridique.corpus.chunking import chunk_articles
 from rag_juridique.corpus.loader import load_corpus
 from rag_juridique.retrieval.bm25 import BM25Index
-from rag_juridique.corpus.chunking import chunk_articles
 
 
 def test_bm25_finds_retractation_article():

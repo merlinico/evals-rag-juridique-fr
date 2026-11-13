@@ -22,6 +22,7 @@ corpus versionné, questions d'or, métriques déterministes, et garde-fous CI.
 5. Métriques : recall@k, abstention, faithfulness (citation + overlap)
 6. Comparaison de **deux tailles de chunks** → `reports/regression.md`
 7. CI : fixtures de génération commités ; échec si recall/fidélité chutent
+8. Contrats gelés inter-modules (`src/rag_juridique/contracts/`, `schemas/`) — ownership phase 2 dans `AGENTS.md`
 
 ## Résultats (baseline)
 

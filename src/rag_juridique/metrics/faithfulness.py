@@ -5,7 +5,6 @@ from dataclasses import dataclass
 
 from rag_juridique.generation.ollama import is_abstention
 
-
 _TOKEN_RE = re.compile(r"[\w\-']+", re.UNICODE)
 
 

@@ -1,0 +1,142 @@
+{
+  "$defs": {
+    "GenerationRecord": {
+      "description": "One cached generation used as a CI fixture.\n\nRequired logical fields: question_id, config_id, model, prompt_hash,\nanswer, cited ids, abstained. Legacy MVP fixtures omit config_id /\nprompt_hash / cited_ids — validators fill defaults from existing keys.",
+      "properties": {
+        "question_id": {
+          "title": "Question Id",
+          "type": "string"
+        },
+        "config_id": {
+          "default": "unknown",
+          "description": "Eval config id, e.g. chunk_500 or hybrid+rerank",
+          "title": "Config Id",
+          "type": "string"
+        },
+        "model": {
+          "title": "Model",
+          "type": "string"
+        },
+        "prompt_hash": {
+          "default": "",
+          "description": "sha256 of the exact prompt; empty for legacy fixtures",
+          "title": "Prompt Hash",
+          "type": "string"
+        },
+        "answer": {
+          "title": "Answer",
+          "type": "string"
+        },
+        "cited_ids": {
+          "description": "Cited article numbers (display ids) or LEGIARTI ids",
+          "items": {
+            "type": "string"
+          },
+          "title": "Cited Ids",
+          "type": "array"
+        },
+        "abstained": {
+          "default": false,
+          "title": "Abstained",
+          "type": "boolean"
+        },
+        "question": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Question"
+        },
+        "retrieved_article_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Retrieved Article Ids",
+          "type": "array"
+        },
+        "retrieved_chunk_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Retrieved Chunk Ids",
+          "type": "array"
+        },
+        "chunk_size": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Chunk Size"
+        }
+      },
+      "required": [
+        "question_id",
+        "model",
+        "answer"
+      ],
+      "title": "GenerationRecord",
+      "type": "object"
+    }
+  },
+  "description": "File envelope for `data/fixtures/generations_*.json`.",
+  "properties": {
+    "config": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Config"
+    },
+    "chunk_size": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Chunk Size"
+    },
+    "model": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model"
+    },
+    "generations": {
+      "items": {
+        "$ref": "#/$defs/GenerationRecord"
+      },
+      "title": "Generations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "generations"
+  ],
+  "title": "GenerationFixture",
+  "type": "object"
+}
