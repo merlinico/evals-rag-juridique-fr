@@ -1,0 +1,83 @@
+{
+  "description": "Indexed retrieval unit derived from one or more articles.",
+  "properties": {
+    "chunk_id": {
+      "title": "Chunk Id",
+      "type": "string"
+    },
+    "article_id": {
+      "title": "Article Id",
+      "type": "string"
+    },
+    "article_num": {
+      "title": "Article Num",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "text": {
+      "title": "Text",
+      "type": "string"
+    },
+    "start_char": {
+      "default": 0,
+      "title": "Start Char",
+      "type": "integer"
+    },
+    "end_char": {
+      "default": 0,
+      "title": "End Char",
+      "type": "integer"
+    },
+    "parent_context": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Structural chunker: livre/titre/chapitre preamble",
+      "title": "Parent Context"
+    },
+    "version_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "ArticleVersion.version_id when temporal",
+      "title": "Version Id"
+    },
+    "as_of": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "As Of"
+    }
+  },
+  "required": [
+    "chunk_id",
+    "article_id",
+    "article_num",
+    "title",
+    "text"
+  ],
+  "title": "Chunk",
+  "type": "object"
+}

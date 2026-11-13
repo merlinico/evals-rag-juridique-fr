@@ -1,0 +1,78 @@
+{
+  "$defs": {
+    "CrossRefKind": {
+      "description": "How one article points at another.",
+      "enum": [
+        "explicit_citation",
+        "renvoi",
+        "other"
+      ],
+      "title": "CrossRefKind",
+      "type": "string"
+    }
+  },
+  "description": "Directed reference from one article to another.",
+  "properties": {
+    "source_article_id": {
+      "title": "Source Article Id",
+      "type": "string"
+    },
+    "target_article_id": {
+      "title": "Target Article Id",
+      "type": "string"
+    },
+    "kind": {
+      "$ref": "#/$defs/CrossRefKind",
+      "default": "explicit_citation"
+    },
+    "target_num": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Surface form of the cited article number",
+      "title": "Target Num"
+    },
+    "span_start": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Char offset in source text",
+      "title": "Span Start"
+    },
+    "span_end": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Span End"
+    },
+    "metadata": {
+      "additionalProperties": true,
+      "title": "Metadata",
+      "type": "object"
+    }
+  },
+  "required": [
+    "source_article_id",
+    "target_article_id"
+  ],
+  "title": "CrossRef",
+  "type": "object"
+}

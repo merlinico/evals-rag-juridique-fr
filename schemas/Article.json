@@ -1,0 +1,103 @@
+{
+  "description": "Canonical article unit shared by corpus, chunking, and retrieval.\n\nHierarchy fields (livre / titre / chapitre) are optional so the MVP\nsnapshot remains valid; phase-2 corpus fills them from LEGI structure.",
+  "properties": {
+    "id": {
+      "description": "Stable LEGIARTI id",
+      "title": "Id",
+      "type": "string"
+    },
+    "num": {
+      "description": "Human article number, e.g. 'L. 111-1'",
+      "title": "Num",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "text": {
+      "title": "Text",
+      "type": "string"
+    },
+    "texte_cid": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Parent code / texte LEGITEXT id",
+      "title": "Texte Cid"
+    },
+    "etat": {
+      "default": "VIGUEUR",
+      "title": "Etat",
+      "type": "string"
+    },
+    "contexte": {
+      "default": "",
+      "title": "Contexte",
+      "type": "string"
+    },
+    "code": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Short code key: civil | consommation | travail",
+      "title": "Code"
+    },
+    "livre": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Livre"
+    },
+    "titre": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Titre"
+    },
+    "chapitre": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Chapitre"
+    }
+  },
+  "required": [
+    "id",
+    "num",
+    "title",
+    "text"
+  ],
+  "title": "Article",
+  "type": "object"
+}

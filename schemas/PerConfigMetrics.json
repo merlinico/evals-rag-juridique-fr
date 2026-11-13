@@ -1,0 +1,207 @@
+{
+  "$defs": {
+    "MetricName": {
+      "description": "Canonical metric names for reports and CI gates.",
+      "enum": [
+        "recall_at_k",
+        "ndcg",
+        "mrr",
+        "citation_accuracy",
+        "faithfulness",
+        "correct_abstention_rate",
+        "false_abstention_rate",
+        "risk_coverage"
+      ],
+      "title": "MetricName",
+      "type": "string"
+    },
+    "MetricResult": {
+      "description": "One named metric value, optionally with uncertainty.",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/MetricName"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "title": "Name"
+        },
+        "value": {
+          "title": "Value",
+          "type": "number"
+        },
+        "k": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "K"
+        },
+        "ci_low": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Bootstrap CI lower",
+          "title": "Ci Low"
+        },
+        "ci_high": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Bootstrap CI upper",
+          "title": "Ci High"
+        },
+        "n": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Sample size",
+          "title": "N"
+        },
+        "by_question_type": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "By Question Type",
+          "type": "object"
+        },
+        "metadata": {
+          "additionalProperties": true,
+          "title": "Metadata",
+          "type": "object"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "title": "MetricResult",
+      "type": "object"
+    }
+  },
+  "description": "Aggregated metrics for one retrieval/generation config.",
+  "properties": {
+    "config_id": {
+      "title": "Config Id",
+      "type": "string"
+    },
+    "chunk_size": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Chunk Size"
+    },
+    "metrics": {
+      "items": {
+        "$ref": "#/$defs/MetricResult"
+      },
+      "title": "Metrics",
+      "type": "array"
+    },
+    "recall_at_k": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Recall At K"
+    },
+    "faithfulness": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Faithfulness"
+    },
+    "correct_abstention_rate": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Correct Abstention Rate"
+    },
+    "false_abstention_rate": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "False Abstention Rate"
+    },
+    "n_questions": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "N Questions"
+    },
+    "cases": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Cases",
+      "type": "array"
+    }
+  },
+  "required": [
+    "config_id"
+  ],
+  "title": "PerConfigMetrics",
+  "type": "object"
+}

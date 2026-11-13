@@ -1,13 +1,18 @@
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import asdict, dataclass
 from typing import Any
 
 import httpx
 
+from rag_juridique.contracts.generation import GenerationFixture, GenerationRecord
+from rag_juridique.contracts.retrieval import RetrievedChunk
 from rag_juridique.generation.prompt import build_rag_prompt
-from rag_juridique.retrieval.hybrid import RetrievalResult
+
+# Back-compat for prompt / callers still typing RetrievalResult.
+RetrievalResult = RetrievedChunk
 
 
 @dataclass
@@ -40,7 +45,7 @@ class OllamaGenerator:
         self,
         question_id: str,
         question: str,
-        hits: list[RetrievalResult],
+        hits: list[RetrievedChunk],
     ) -> GenerationResult:
         prompt = build_rag_prompt(question, hits)
         answer = self._complete(prompt)
@@ -82,8 +87,6 @@ def is_abstention(answer: str) -> bool:
 
 def extract_citations(answer: str) -> list[str]:
     """Extract article numbers like L. 111-1 / L.111-1 / article L111-1."""
-    import re
-
     patterns = [
         r"\b([LRD]\.?\s*\d+(?:-\d+)*(?:-\d+)?)\b",
         r"\barticle\s+([LRD]\.?\s*\d+(?:-\d+)*)\b",
@@ -101,8 +104,6 @@ def extract_citations(answer: str) -> list[str]:
 
 
 def _normalize_article_num(raw: str) -> str:
-    import re
-
     s = raw.strip().upper().replace(" ", "")
     m = re.match(r"^([LRD])\.?(\d.*)$", s, flags=re.IGNORECASE)
     if not m:
@@ -114,11 +115,24 @@ def generation_to_dict(result: GenerationResult) -> dict[str, Any]:
     return asdict(result)
 
 
-def load_generation_fixture(path: str) -> list[dict[str, Any]]:
+def load_generation_records(path: str) -> list[GenerationRecord]:
+    """Load fixtures as typed GenerationRecord (legacy MVP files supported)."""
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
     if isinstance(data, dict) and "generations" in data:
-        return list(data["generations"])
+        fixture = GenerationFixture.model_validate(data)
+        return fixture.generations
     if isinstance(data, list):
-        return data
+        return [GenerationRecord.model_validate(item) for item in data]
     raise ValueError(f"Unexpected fixture format in {path}")
+
+
+def load_generation_fixture(path: str) -> list[dict[str, Any]]:
+    """Back-compat: return plain dicts (cited_article_nums preserved)."""
+    records = load_generation_records(path)
+    out: list[dict[str, Any]] = []
+    for record in records:
+        item = record.model_dump()
+        item["cited_article_nums"] = list(record.cited_ids)
+        out.append(item)
+    return out

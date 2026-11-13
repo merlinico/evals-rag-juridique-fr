@@ -1,0 +1,76 @@
+{
+  "description": "A dated LEGI version of an article (version in force over an interval).",
+  "properties": {
+    "version_id": {
+      "description": "LEGIARTI id of this version",
+      "title": "Version Id",
+      "type": "string"
+    },
+    "article_id": {
+      "description": "Logical article key (often the current / tip version id)",
+      "title": "Article Id",
+      "type": "string"
+    },
+    "num": {
+      "title": "Num",
+      "type": "string"
+    },
+    "text": {
+      "title": "Text",
+      "type": "string"
+    },
+    "etat": {
+      "default": "VIGUEUR",
+      "title": "Etat",
+      "type": "string"
+    },
+    "debut": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Inclusive start of force (YYYY-MM-DD)",
+      "title": "Debut"
+    },
+    "fin": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Exclusive end of force; null = still in force",
+      "title": "Fin"
+    },
+    "titre": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Titre"
+    }
+  },
+  "required": [
+    "version_id",
+    "article_id",
+    "num",
+    "text"
+  ],
+  "title": "ArticleVersion",
+  "type": "object"
+}

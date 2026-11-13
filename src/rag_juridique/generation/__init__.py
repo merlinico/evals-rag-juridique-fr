@@ -1,9 +1,9 @@
-from rag_juridique.generation.ollama import OllamaGenerator, GenerationResult
-from rag_juridique.generation.prompt import build_rag_prompt, ABSTENTION_PHRASE
+from rag_juridique.generation.ollama import GenerationResult, OllamaGenerator
+from rag_juridique.generation.prompt import ABSTENTION_PHRASE, build_rag_prompt
 
 __all__ = [
-    "OllamaGenerator",
-    "GenerationResult",
-    "build_rag_prompt",
     "ABSTENTION_PHRASE",
+    "GenerationResult",
+    "OllamaGenerator",
+    "build_rag_prompt",
 ]

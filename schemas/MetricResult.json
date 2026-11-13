@@ -1,0 +1,106 @@
+{
+  "$defs": {
+    "MetricName": {
+      "description": "Canonical metric names for reports and CI gates.",
+      "enum": [
+        "recall_at_k",
+        "ndcg",
+        "mrr",
+        "citation_accuracy",
+        "faithfulness",
+        "correct_abstention_rate",
+        "false_abstention_rate",
+        "risk_coverage"
+      ],
+      "title": "MetricName",
+      "type": "string"
+    }
+  },
+  "description": "One named metric value, optionally with uncertainty.",
+  "properties": {
+    "name": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/MetricName"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "Name"
+    },
+    "value": {
+      "title": "Value",
+      "type": "number"
+    },
+    "k": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "K"
+    },
+    "ci_low": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Bootstrap CI lower",
+      "title": "Ci Low"
+    },
+    "ci_high": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Bootstrap CI upper",
+      "title": "Ci High"
+    },
+    "n": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Sample size",
+      "title": "N"
+    },
+    "by_question_type": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "By Question Type",
+      "type": "object"
+    },
+    "metadata": {
+      "additionalProperties": true,
+      "title": "Metadata",
+      "type": "object"
+    }
+  },
+  "required": [
+    "name",
+    "value"
+  ],
+  "title": "MetricResult",
+  "type": "object"
+}
