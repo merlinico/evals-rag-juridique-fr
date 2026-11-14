@@ -434,14 +434,16 @@ def curated_extra_questions(by_num: dict[str, Article]) -> list[Question]:
         ),
         (
             "ac05",
-            "L. 121-1 interdit les pratiques déloyales, et L. 121-5 dit qu'une pratique "
-            "conforme à L. 121-2 à L. 121-4 est déloyale : une pratique hors de ces "
-            "articles peut-elle malgré tout être déloyale ?",
+            "L. 121-1 interdit les pratiques commerciales déloyales à l'égard des "
+            "consommateurs, tandis que L. 121-5 étend L. 121-2 à L. 121-4 aux pratiques "
+            "qui visent les professionnels et les non-professionnels : y a-t-il "
+            "contradiction sur le champ d'application ?",
             ["L. 121-1", "L. 121-5"],
-            "Oui : L. 121-5 crée une présomption / qualification pour les pratiques "
-            "visées aux L. 121-2 à L. 121-4, sans épuiser la notion générale de "
-            "pratique déloyale de L. 121-1.",
-            "déloyale générale vs listes",
+            "Non : L. 121-1 définit et interdit les pratiques déloyales visant le "
+            "consommateur ; L. 121-5 étend le régime des articles L. 121-2 à L. 121-4 "
+            "aux pratiques qui visent les professionnels et les non-professionnels, "
+            "sans créer d'antinomie.",
+            "déloyale champ L.121-5",
         ),
         (
             "ac06",

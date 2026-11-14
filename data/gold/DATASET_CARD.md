@@ -27,10 +27,13 @@ des codes civil, de la consommation et du travail (dump LEGI / DILA, Licence Ouv
 
 > Ce fichier est prêt pour un upload Hugging Face ultérieur. **Aucun upload n'a été effectué.**
 
-## Contenu (phase 2, v0.3)
+## Contenu (phase 2, v0.3.2)
 
 - **~180 questions** en français (`data/gold/questions.json`), toutes `validated: false`.
 - Snapshot corpus : `codes-v0.2-2025-07-13` (`articles.json.gz` + `versions.json.gz` + `crossrefs.json.gz`).
+- Correctifs revue : découpage robuste aux abréviations `L./R./D./1°`, CrossRef hors-code filtrés,
+  `u02` requalifié (congés payés / L. 3141-3), `ac05` corrigé, batch civil/travail ;
+  passe qualité v0.3.2 (réponses mh synthétisées, acteurs par domaine, diffs temporels concrets).
 - Cinq types (`QuestionType`) :
   - `direct` — une question, un (ou quelques) article(s) gold ;
   - `multi_hop` — **CrossRef réels** entre articles (≥ 2), codes civil / consommation / travail ;

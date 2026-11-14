@@ -12,8 +12,8 @@ Abstention : taux correct / fausse abstention + courbe **risk-coverage**.
 
 | Config | chunk | recall@k | nDCG | MRR | citation | faithfulness | abst. OK | fausse abst. | RC-AUC |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| chunk_500 | 500 | 0.950 | 0.832 | 0.803 | 0.921 | 0.886 | 1.000 | 0.200 | 0.119 |
-| chunk_1000 | 1000 | 0.967 | 0.897 | 0.873 | 0.824 | 0.771 | 1.000 | 0.067 | 0.101 |
+| chunk_500 | 500 | 0.470 | 0.419 | 0.428 | 0.562 | 0.556 | 1.000 | 0.046 | 0.314 |
+| chunk_1000 | 1000 | 0.470 | 0.427 | 0.437 | 0.544 | 0.533 | 1.000 | 0.020 | 0.319 |
 
 ## Intervalles de confiance (bootstrap)
 
@@ -21,27 +21,27 @@ Abstention : taux correct / fausse abstention + courbe **risk-coverage**.
 
 | Métrique | valeur | IC | n |
 |---|---:|---|---:|
-| recall_at_k | 0.950 | [0.867, 1.000] | 30 |
-| ndcg | 0.832 | [0.731, 0.913] | 30 |
-| mrr | 0.803 | [0.703, 0.900] | 30 |
-| citation_accuracy | 0.921 | [0.821, 0.993] | 35 |
-| faithfulness | 0.886 | [0.771, 0.971] | 35 |
-| correct_abstention_rate | 1.000 | [1.000, 1.000] | 5 |
-| false_abstention_rate | 0.200 | [0.067, 0.367] | 30 |
-| risk_coverage | 0.119 | — | 35 |
+| recall_at_k | 0.470 | [0.397, 0.546] | 151 |
+| ndcg | 0.419 | [0.350, 0.488] | 151 |
+| mrr | 0.428 | [0.352, 0.505] | 151 |
+| citation_accuracy | 0.562 | [0.483, 0.635] | 180 |
+| faithfulness | 0.556 | [0.483, 0.633] | 180 |
+| correct_abstention_rate | 1.000 | [1.000, 1.000] | 29 |
+| false_abstention_rate | 0.046 | [0.013, 0.086] | 151 |
+| risk_coverage | 0.314 | — | 180 |
 
 ### chunk_1000
 
 | Métrique | valeur | IC | n |
 |---|---:|---|---:|
-| recall_at_k | 0.967 | [0.900, 1.000] | 30 |
-| ndcg | 0.897 | [0.800, 0.967] | 30 |
-| mrr | 0.873 | [0.773, 0.957] | 30 |
-| citation_accuracy | 0.824 | [0.705, 0.929] | 35 |
-| faithfulness | 0.771 | [0.629, 0.914] | 35 |
-| correct_abstention_rate | 1.000 | [1.000, 1.000] | 5 |
-| false_abstention_rate | 0.067 | [0.000, 0.167] | 30 |
-| risk_coverage | 0.101 | — | 35 |
+| recall_at_k | 0.470 | [0.397, 0.546] | 151 |
+| ndcg | 0.427 | [0.356, 0.495] | 151 |
+| mrr | 0.437 | [0.363, 0.514] | 151 |
+| citation_accuracy | 0.544 | [0.471, 0.615] | 180 |
+| faithfulness | 0.533 | [0.461, 0.611] | 180 |
+| correct_abstention_rate | 1.000 | [1.000, 1.000] | 29 |
+| false_abstention_rate | 0.020 | [0.000, 0.046] | 151 |
+| risk_coverage | 0.319 | — | 180 |
 
 
 ## Erreurs par type de question
@@ -50,15 +50,21 @@ Abstention : taux correct / fausse abstention + courbe **risk-coverage**.
 
 | type | n | error_rate | recall | faith | citation | miss retr. | fausse abst. | cite KO |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| direct | 30 | 0.367 | 0.95 | 0.8667 | 0.9083 | 2 | 6 | 4 |
-| unanswerable | 5 | 0.000 | — | 1.0 | 1.0 | 0 | 0 | 0 |
+| apparent_contradiction | 30 | 0.367 | 0.75 | 0.8333 | 0.8333 | 11 | 0 | 5 |
+| direct | 51 | 0.314 | 0.8627 | 0.8235 | 0.848 | 7 | 6 | 9 |
+| multi_hop | 40 | 0.950 | 0.0875 | 0.075 | 0.075 | 38 | 1 | 37 |
+| temporal | 30 | 0.967 | 0.0333 | 0.0333 | 0.0333 | 29 | 0 | 29 |
+| unanswerable | 29 | 0.000 | — | 1.0 | 1.0 | 0 | 0 | 0 |
 
 ### chunk_1000
 
 | type | n | error_rate | recall | faith | citation | miss retr. | fausse abst. | cite KO |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| direct | 30 | 0.333 | 0.9667 | 0.7333 | 0.7944 | 1 | 2 | 8 |
-| unanswerable | 5 | 0.000 | — | 1.0 | 1.0 | 0 | 0 | 0 |
+| apparent_contradiction | 30 | 0.367 | 0.7833 | 0.8667 | 0.8667 | 11 | 0 | 4 |
+| direct | 51 | 0.333 | 0.8235 | 0.7059 | 0.7418 | 9 | 2 | 15 |
+| multi_hop | 40 | 0.975 | 0.0875 | 0.075 | 0.075 | 38 | 1 | 37 |
+| temporal | 30 | 0.933 | 0.0667 | 0.0667 | 0.0667 | 28 | 0 | 28 |
+| unanswerable | 29 | 0.000 | — | 1.0 | 1.0 | 0 | 0 | 0 |
 
 
 ## Tests de significance entre configs
@@ -67,17 +73,17 @@ Test apparié bootstrap unilatéral : H1 = la config B régresse vs A (mean Δ <
 
 | A | B | métrique | mean A | mean B | Δ (B−A) | p | significatif | n |
 |---|---|---|---:|---:|---:|---:|---|---:|
-| chunk_500 | chunk_1000 | recall_at_k | 0.950 | 0.967 | +0.017 | 0.922 | non | 30 |
-| chunk_500 | chunk_1000 | faithfulness | 0.886 | 0.771 | -0.114 | 0.041 | oui | 35 |
-| chunk_500 | chunk_1000 | ndcg | 0.832 | 0.897 | +0.065 | 0.985 | non | 30 |
-| chunk_500 | chunk_1000 | mrr | 0.803 | 0.873 | +0.071 | 0.966 | non | 30 |
+| chunk_500 | chunk_1000 | recall_at_k | 0.470 | 0.470 | +0.000 | 0.501 | non | 151 |
+| chunk_500 | chunk_1000 | faithfulness | 0.556 | 0.533 | -0.022 | 0.145 | non | 180 |
+| chunk_500 | chunk_1000 | ndcg | 0.419 | 0.427 | +0.008 | 0.678 | non | 151 |
+| chunk_500 | chunk_1000 | mrr | 0.428 | 0.437 | +0.009 | 0.676 | non | 151 |
 
 
 ## Commentaire
 
-- Meilleur rappel : **chunk_1000** (0.967).
-- Meilleure fidélité : **chunk_500** (0.886).
-- Écart de recall@5 (chunk_1000 − chunk_500) : +0.017.
+- Meilleur rappel : **chunk_500** (0.470).
+- Meilleure fidélité : **chunk_500** (0.556).
+- Écart de recall@5 (chunk_1000 − chunk_500) : +0.000.
 - Les deux chunk sizes sont proches sur ce petit corpus gelé ; des écarts plus nets sont attendus avec un corpus plus large ou un reranker.
 
 ## Gate CI (significance)

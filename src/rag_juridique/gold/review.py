@@ -24,12 +24,21 @@ SAMPLE_TO_REVIEW_IDS = [
 ]
 
 
+def _topic_code(q: Question) -> str | None:
+    topic = q.topic or ""
+    for code in ("civil", "consommation", "travail"):
+        if code in topic:
+            return code
+    return None
+
+
 def select_review_batch(
     questions: list[Question],
     *,
     size: int = 40,
     must_include: list[str] | None = None,
 ) -> list[Question]:
+    """Stratified batch with civil/travail coverage for multi_hop & temporal."""
     must = list(must_include or SAMPLE_TO_REVIEW_IDS)
     by_id = {q.id: q for q in questions}
     chosen: list[Question] = []
@@ -41,10 +50,24 @@ def select_review_batch(
             chosen.append(q)
             seen.add(qid)
 
-    # Stratify remaining slots across the 5 types.
     remaining_slots = size - len(chosen)
     if remaining_slots <= 0:
         return chosen[:size]
+
+    # Force code diversity for graph-backed types first.
+    for qtype in (QuestionType.MULTI_HOP, QuestionType.TEMPORAL):
+        for code in ("civil", "travail", "consommation"):
+            if remaining_slots <= 0:
+                break
+            for q in questions:
+                if q.id in seen or q.type != qtype:
+                    continue
+                if _topic_code(q) != code:
+                    continue
+                chosen.append(q)
+                seen.add(q.id)
+                remaining_slots -= 1
+                break
 
     per_type: dict[str, list[Question]] = defaultdict(list)
     for q in questions:
@@ -53,9 +76,7 @@ def select_review_batch(
         per_type[q.type.value].append(q)
 
     type_order = [t.value for t in QuestionType]
-    # Round-robin until filled, preferring types still missing in the batch.
     present = {q.type.value for q in chosen}
-    # First ensure every type appears at least once if possible.
     for t in type_order:
         if remaining_slots <= 0:
             break
@@ -66,7 +87,6 @@ def select_review_batch(
             present.add(t)
             remaining_slots -= 1
 
-    idx = 0
     while remaining_slots > 0:
         progressed = False
         for t in type_order:
@@ -80,9 +100,6 @@ def select_review_batch(
                 progressed = True
         if not progressed:
             break
-        idx += 1
-        if idx > 1000:
-            break
 
     return chosen[:size]
 
@@ -92,6 +109,7 @@ def render_review_markdown(
     articles: list[Article],
     *,
     title: str = "Batch de revue humaine (40 questions)",
+    header_note: str | None = None,
 ) -> str:
     by_id = {a.id: a for a in articles}
     lines: list[str] = [
@@ -101,13 +119,19 @@ def render_review_markdown(
         "Ce batch est **stratifié** sur les 5 `QuestionType` et **inclut** les items",
         "de `SAMPLE_TO_REVIEW.md`.",
         "",
-        "Légende du verdict : **OK** / **À corriger** / **À reformuler**.",
-        "",
-        "## Index",
-        "",
-        "| id | type | topic | verdict |",
-        "|---|---|---|---|",
     ]
+    if header_note:
+        lines.extend([header_note, ""])
+    lines.extend(
+        [
+            "Légende du verdict : **OK** / **À corriger** / **À reformuler**.",
+            "",
+            "## Index",
+            "",
+            "| id | type | topic | verdict |",
+            "|---|---|---|---|",
+        ]
+    )
     for q in batch:
         topic = q.topic or "—"
         lines.append(f"| {q.id} | `{q.type.value}` | {topic} | |")
@@ -169,7 +193,12 @@ def write_review_batch(
     path: Path | str,
     batch: list[Question],
     articles: list[Article],
+    *,
+    header_note: str | None = None,
 ) -> Path:
     out = Path(path)
-    out.write_text(render_review_markdown(batch, articles), encoding="utf-8")
+    out.write_text(
+        render_review_markdown(batch, articles, header_note=header_note),
+        encoding="utf-8",
+    )
     return out
