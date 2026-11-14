@@ -12,8 +12,8 @@ Abstention : taux correct / fausse abstention + courbe **risk-coverage**.
 
 | Config | chunk | recall@k | nDCG | MRR | citation | faithfulness | abst. OK | fausse abst. | RC-AUC |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| chunk_500 | 500 | 0.470 | 0.419 | 0.428 | 0.562 | 0.556 | 1.000 | 0.046 | 0.314 |
-| chunk_1000 | 1000 | 0.470 | 0.427 | 0.437 | 0.544 | 0.533 | 1.000 | 0.020 | 0.319 |
+| chunk_500 | 500 | 0.483 | 0.432 | 0.446 | 0.562 | 0.556 | 1.000 | 0.046 | 0.315 |
+| chunk_1000 | 1000 | 0.483 | 0.441 | 0.454 | 0.544 | 0.533 | 1.000 | 0.020 | 0.313 |
 
 ## Intervalles de confiance (bootstrap)
 
@@ -21,27 +21,27 @@ Abstention : taux correct / fausse abstention + courbe **risk-coverage**.
 
 | Métrique | valeur | IC | n |
 |---|---:|---|---:|
-| recall_at_k | 0.470 | [0.397, 0.546] | 151 |
-| ndcg | 0.419 | [0.350, 0.488] | 151 |
-| mrr | 0.428 | [0.352, 0.505] | 151 |
+| recall_at_k | 0.483 | [0.411, 0.556] | 151 |
+| ndcg | 0.432 | [0.362, 0.498] | 151 |
+| mrr | 0.446 | [0.374, 0.521] | 151 |
 | citation_accuracy | 0.562 | [0.483, 0.635] | 180 |
 | faithfulness | 0.556 | [0.483, 0.633] | 180 |
 | correct_abstention_rate | 1.000 | [1.000, 1.000] | 29 |
 | false_abstention_rate | 0.046 | [0.013, 0.086] | 151 |
-| risk_coverage | 0.314 | — | 180 |
+| risk_coverage | 0.315 | — | 180 |
 
 ### chunk_1000
 
 | Métrique | valeur | IC | n |
 |---|---:|---|---:|
-| recall_at_k | 0.470 | [0.397, 0.546] | 151 |
-| ndcg | 0.427 | [0.356, 0.495] | 151 |
-| mrr | 0.437 | [0.363, 0.514] | 151 |
+| recall_at_k | 0.483 | [0.411, 0.560] | 151 |
+| ndcg | 0.441 | [0.370, 0.509] | 151 |
+| mrr | 0.454 | [0.379, 0.528] | 151 |
 | citation_accuracy | 0.544 | [0.471, 0.615] | 180 |
 | faithfulness | 0.533 | [0.461, 0.611] | 180 |
 | correct_abstention_rate | 1.000 | [1.000, 1.000] | 29 |
 | false_abstention_rate | 0.020 | [0.000, 0.046] | 151 |
-| risk_coverage | 0.319 | — | 180 |
+| risk_coverage | 0.313 | — | 180 |
 
 
 ## Erreurs par type de question
@@ -52,7 +52,7 @@ Abstention : taux correct / fausse abstention + courbe **risk-coverage**.
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | apparent_contradiction | 30 | 0.367 | 0.75 | 0.8333 | 0.8333 | 11 | 0 | 5 |
 | direct | 51 | 0.314 | 0.8627 | 0.8235 | 0.848 | 7 | 6 | 9 |
-| multi_hop | 40 | 0.950 | 0.0875 | 0.075 | 0.075 | 38 | 1 | 37 |
+| multi_hop | 40 | 0.950 | 0.1375 | 0.075 | 0.075 | 38 | 1 | 37 |
 | temporal | 30 | 0.967 | 0.0333 | 0.0333 | 0.0333 | 29 | 0 | 29 |
 | unanswerable | 29 | 0.000 | — | 1.0 | 1.0 | 0 | 0 | 0 |
 
@@ -62,7 +62,7 @@ Abstention : taux correct / fausse abstention + courbe **risk-coverage**.
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | apparent_contradiction | 30 | 0.367 | 0.7833 | 0.8667 | 0.8667 | 11 | 0 | 4 |
 | direct | 51 | 0.333 | 0.8235 | 0.7059 | 0.7418 | 9 | 2 | 15 |
-| multi_hop | 40 | 0.975 | 0.0875 | 0.075 | 0.075 | 38 | 1 | 37 |
+| multi_hop | 40 | 0.950 | 0.1375 | 0.075 | 0.075 | 37 | 1 | 37 |
 | temporal | 30 | 0.933 | 0.0667 | 0.0667 | 0.0667 | 28 | 0 | 28 |
 | unanswerable | 29 | 0.000 | — | 1.0 | 1.0 | 0 | 0 | 0 |
 
@@ -73,15 +73,15 @@ Test apparié bootstrap unilatéral : H1 = la config B régresse vs A (mean Δ <
 
 | A | B | métrique | mean A | mean B | Δ (B−A) | p | significatif | n |
 |---|---|---|---:|---:|---:|---:|---|---:|
-| chunk_500 | chunk_1000 | recall_at_k | 0.470 | 0.470 | +0.000 | 0.501 | non | 151 |
+| chunk_500 | chunk_1000 | recall_at_k | 0.483 | 0.483 | +0.000 | 0.492 | non | 151 |
 | chunk_500 | chunk_1000 | faithfulness | 0.556 | 0.533 | -0.022 | 0.145 | non | 180 |
-| chunk_500 | chunk_1000 | ndcg | 0.419 | 0.427 | +0.008 | 0.678 | non | 151 |
-| chunk_500 | chunk_1000 | mrr | 0.428 | 0.437 | +0.009 | 0.676 | non | 151 |
+| chunk_500 | chunk_1000 | ndcg | 0.432 | 0.441 | +0.009 | 0.702 | non | 151 |
+| chunk_500 | chunk_1000 | mrr | 0.446 | 0.454 | +0.008 | 0.655 | non | 151 |
 
 
 ## Commentaire
 
-- Meilleur rappel : **chunk_500** (0.470).
+- Meilleur rappel : **chunk_500** (0.483).
 - Meilleure fidélité : **chunk_500** (0.556).
 - Écart de recall@5 (chunk_1000 − chunk_500) : +0.000.
 - Les deux chunk sizes sont proches sur ce petit corpus gelé ; des écarts plus nets sont attendus avec un corpus plus large ou un reranker.
