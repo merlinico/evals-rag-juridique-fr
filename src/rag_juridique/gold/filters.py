@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections import Counter
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from typing import Iterable
 
@@ -68,9 +69,18 @@ def validate_schema_rules(q: Question) -> str | None:
     return None
 
 
-def check_answerability(q: Question, by_id: dict[str, Article]) -> str | None:
+def check_answerability(
+    q: Question,
+    by_id: dict[str, Article],
+    *,
+    gold_text_resolver: Callable[[Question, Article], str] | None = None,
+) -> str | None:
     """Answerable: gold ids exist and reference tokens overlap article text.
     Unanswerable: no strong lexical hit against the whole corpus.
+
+    ``gold_text_resolver`` optionally supplies historical text for temporal
+    questions (``Corpus.version_at``), so answerability is checked against the
+    version in force at ``as_of`` rather than the tip only.
     """
     if q.type == QuestionType.UNANSWERABLE or q.unanswerable:
         q_tok = tokens(q.question)
@@ -85,7 +95,10 @@ def check_answerability(q: Question, by_id: dict[str, Article]) -> str | None:
         art = by_id.get(aid)
         if art is None:
             return f"unknown_article_id:{aid}"
-        texts.append(art.text)
+        if gold_text_resolver is not None:
+            texts.append(gold_text_resolver(q, art))
+        else:
+            texts.append(art.text)
     joined = " ".join(texts)
     # Reference answer (if any) should be supported by gold articles.
     if q.reference_answer:
@@ -131,16 +144,33 @@ def check_leakage(q: Question, by_id: dict[str, Article]) -> str | None:
     return None
 
 
+def make_version_text_resolver(corpus) -> Callable[[Question, Article], str]:
+    """Resolve gold support text via ``Corpus.version_at`` for temporal questions."""
+
+    def _resolve(q: Question, art: Article) -> str:
+        if q.type == QuestionType.TEMPORAL and q.as_of is not None:
+            ver = corpus.version_at(art.id, q.as_of)
+            if ver is not None and ver.text.strip():
+                return ver.text
+        return art.text
+
+    return _resolve
+
+
 def filter_candidates(
     candidates: list[Question],
     articles: list[Article],
     *,
     dedup_threshold: float = 0.82,
+    gold_text_resolver: Callable[[Question, Article], str] | None = None,
+    existing_for_dedup: list[Question] | None = None,
 ) -> tuple[list[Question], FilterStats]:
     stats = FilterStats(candidates_in=len(candidates))
     by_id = _article_map(articles)
     kept: list[Question] = []
     kept_tok: list[set[str]] = []
+    if existing_for_dedup:
+        kept_tok.extend(tokens(q.question) for q in existing_for_dedup)
 
     for q in candidates:
         # Force validated=false contract for this pipeline.
@@ -153,7 +183,9 @@ def filter_candidates(
             stats.rejected_by_type[q.type.value] += 1
             continue
 
-        reason = check_answerability(q, by_id)
+        reason = check_answerability(
+            q, by_id, gold_text_resolver=gold_text_resolver
+        )
         if reason:
             stats.rejected_answerability += 1
             stats.rejected_by_type[q.type.value] += 1

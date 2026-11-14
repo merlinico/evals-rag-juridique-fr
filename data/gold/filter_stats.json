@@ -1,30 +1,61 @@
 {
-  "candidates_in": 241,
-  "kept": 228,
-  "rejected_answerability": 2,
-  "rejected_dedup": 11,
+  "mode": "regen_graph",
+  "corpus_snapshot": "codes-v0.2-2025-07-13",
+  "n_articles": 16455,
+  "n_crossrefs": 16976,
+  "n_versions": 29226,
+  "multi_hop_filter": {
+    "candidates_in": 80,
+    "kept": 80,
+    "rejected_answerability": 0,
+    "rejected_dedup": 0,
+    "rejected_leakage": 0,
+    "rejected_schema": 0,
+    "rejected_by_type": {},
+    "kept_by_type": {
+      "multi_hop": 80
+    },
+    "rejection_rate": 0.0
+  },
+  "temporal_filter": {
+    "candidates_in": 90,
+    "kept": 55,
+    "rejected_answerability": 28,
+    "rejected_dedup": 7,
+    "rejected_leakage": 0,
+    "rejected_schema": 0,
+    "rejected_by_type": {
+      "temporal": 35
+    },
+    "kept_by_type": {
+      "temporal": 55
+    },
+    "rejection_rate": 0.3889
+  },
+  "candidates_in": 170,
+  "kept": 135,
+  "rejected_answerability": 28,
+  "rejected_dedup": 7,
   "rejected_leakage": 0,
   "rejected_schema": 0,
-  "rejected_by_type": {
-    "multi_hop": 2,
-    "temporal": 2,
-    "apparent_contradiction": 9
-  },
-  "kept_by_type": {
-    "direct": 69,
-    "multi_hop": 61,
-    "unanswerable": 30,
-    "temporal": 29,
-    "apparent_contradiction": 39
-  },
-  "rejection_rate": 0.0539,
-  "selected_total": 179,
+  "rejection_rate": 0.2059,
+  "selected_total": 180,
   "selected_by_type": {
     "direct": 50,
     "multi_hop": 40,
-    "temporal": 29,
     "unanswerable": 30,
-    "apparent_contradiction": 30
+    "apparent_contradiction": 30,
+    "temporal": 30
+  },
+  "multi_hop_by_code": {
+    "consommation": 16,
+    "civil": 12,
+    "travail": 11
+  },
+  "temporal_by_code": {
+    "consommation": 13,
+    "civil": 10,
+    "travail": 7
   },
   "review_batch_ids": [
     "q08",
@@ -75,7 +106,21 @@
     "temporal": 6,
     "apparent_contradiction": 6
   },
-  "corpus_snapshot": "cdc-v0.1-2025-07-13",
-  "n_articles": 75,
-  "cross_refs_file_present": false
+  "review_batch_ids_removed": [],
+  "review_batch_ids_added": [],
+  "review_batch_content_changed": [
+    "t01",
+    "mh01",
+    "t02",
+    "mh02",
+    "t03",
+    "mh03",
+    "t04",
+    "mh04",
+    "t05",
+    "mh05",
+    "t06",
+    "mh06"
+  ],
+  "cross_refs_file_present": true
 }

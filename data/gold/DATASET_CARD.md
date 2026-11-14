@@ -2,7 +2,7 @@
 language:
   - fr
 license: mit
-pretty_name: Gold QA — Code de la consommation (RAG eval)
+pretty_name: Gold QA — Codes civil / consommation / travail (RAG eval)
 task_categories:
   - question-answering
   - text-retrieval
@@ -11,61 +11,54 @@ tags:
   - legal
   - french
   - evaluation
+  - code-civil
   - code-de-la-consommation
+  - code-du-travail
   - multi-hop
   - temporal
 size_categories:
   - n<1K
 ---
 
-# Dataset card — Gold QA (Code de la consommation)
+# Dataset card — Gold QA (codes FR)
 
-Jeux de questions de référence pour évaluer un pipeline RAG sur un **sous-ensemble figé**
-du Code de la consommation (dump LEGI / DILA, Licence Ouverte 2.0).
+Jeux de questions de référence pour évaluer un pipeline RAG sur un **snapshot figé**
+des codes civil, de la consommation et du travail (dump LEGI / DILA, Licence Ouverte 2.0).
 
 > Ce fichier est prêt pour un upload Hugging Face ultérieur. **Aucun upload n'a été effectué.**
 
-## Contenu (phase 2)
+## Contenu (phase 2, v0.3)
 
-- **150–200 questions** en français (`data/gold/questions.json`), toutes `validated: false`.
+- **~180 questions** en français (`data/gold/questions.json`), toutes `validated: false`.
+- Snapshot corpus : `codes-v0.2-2025-07-13` (`articles.json.gz` + `versions.json.gz` + `crossrefs.json.gz`).
 - Cinq types (`QuestionType`) :
   - `direct` — une question, un (ou quelques) article(s) gold ;
-  - `multi_hop` — articulation via renvois / citations croisées (≥ 2 articles) ;
-  - `temporal` — réponse à une date `as_of` (versions LEGI dès qu'elles sont fournies par le corpus) ;
+  - `multi_hop` — **CrossRef réels** entre articles (≥ 2), codes civil / consommation / travail ;
+  - `temporal` — `as_of` où `Corpus.version_at` renvoie une rédaction **différente** du tip ;
   - `unanswerable` — hors snapshot (abstention attendue, sans `expected_article_ids`) ;
   - `apparent_contradiction` — pièges d'apparente antinomie résolus par articulation des textes.
-- Champs contrats : `expected_article_ids`, `expected_article_nums`, `reference_answer`,
-  `as_of`, `validated`, `topic`, `notes`.
-- Pipeline : génération scriptée / templates → auto-filtre (answerability, dédup, leakage) ;
+- Pipeline : génération scriptée → auto-filtre (answerability, dédup, leakage) ;
   stats dans `filter_stats.json`.
-- **Batch de revue humaine** : `REVIEW_BATCH_40.md` (40 questions stratifiées, inclut
-  l'échantillon historique `SAMPLE_TO_REVIEW.md`).
+- **Batch de revue** : `REVIEW_BATCH_40.md` (inclut `SAMPLE_TO_REVIEW.md`).
 
 ## Source juridique
 
-Les articles provenance sont décrits dans `data/corpus/SOURCE.md` :
-DILA / LEGI, `Freemium_legi_global_20250713-140000.tar.gz`, Licence Ouverte 2.0.
+Voir `data/corpus/SOURCE.md` : DILA / LEGI, Licence Ouverte 2.0.
 
-Le présent jeu de questions / réponses de référence est sous licence MIT (ce dépôt).
+Le jeu de questions / réponses de référence est sous licence MIT (ce dépôt).
 Les textes d'articles restent sous Licence Ouverte (DILA).
 
-## Extensibilité corpus
-
-Le pipeline lit le snapshot courant (`load_corpus`). S'ils existent, il consomme aussi :
-
-- `data/corpus/cross_refs.json` (graphe agent corpus) — sinon extraction depuis le texte ;
-- `data/corpus/versions.json` (prévu) pour ancrer plus finement les `temporal`.
-
-Régénérer :
+## Régénération
 
 ```bash
+# Jeu complet (templates MVP + filtres)
 uv run python -m rag_juridique.gold.build
+# multi_hop + temporal uniquement depuis CrossRef / version_at
+uv run python -m rag_juridique.gold.regen_cli
 ```
 
 ## Limitations
 
-- Sous-ensemble non exhaustif du code (MVP consommation ; extensible civil / travail).
-- Questions générées pour l'évaluation RAG, **non validées juridiquement** tant que
-  `validated: false`.
+- Questions générées pour l'évaluation RAG, **non validées juridiquement** (`validated: false`).
 - Ne constitue pas un conseil juridique.
-- Les `unanswerable` hors civil/travail/consommation restent à re-vérifier si le corpus s'étend.
+- Les `unanswerable` restent à re-vérifier si le périmètre du snapshot change.
