@@ -60,8 +60,18 @@ def test_gold_infers_type_from_legacy():
     unans = [q for q in questions if q.unanswerable]
     assert unans
     assert all(q.type == QuestionType.UNANSWERABLE for q in unans)
-    directs = [q for q in questions if not q.unanswerable]
-    assert all(q.type == QuestionType.DIRECT for q in directs)
+    # Legacy rows without `type` still infer DIRECT / UNANSWERABLE (model validator).
+    legacy = Question.model_validate(
+        {
+            "id": "legacy",
+            "question": "?",
+            "expected_article_ids": ["LEGIARTI000044142438"],
+            "unanswerable": False,
+        }
+    )
+    assert legacy.type == QuestionType.DIRECT
+    # Phase-2 gold may mix all QuestionType values once typed explicitly.
+    assert {q.type for q in questions} <= set(QuestionType)
 
 
 def test_question_temporal_fields():

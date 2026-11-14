@@ -1,4 +1,4 @@
-"""Gold-set loading (owned by the gold-set phase-2 agent)."""
+"""Gold-set loading and phase-2 generation pipeline (agent b)."""
 
 from rag_juridique.gold.loader import load_gold, load_gold_set
 

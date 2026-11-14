@@ -12,6 +12,16 @@ corpus:
     - consommation
     - travail
 
+gold:
+  target_min: 150
+  target_max: 200
+  review_batch_size: 40
+  review_batch_path: data/gold/REVIEW_BATCH_40.md
+  filter_stats_path: data/gold/filter_stats.json
+  # Align with corpus agent (a) artefacts when present:
+  cross_refs_path: data/corpus/crossrefs.json.gz
+  versions_path: data/corpus/versions.json.gz
+
 retrieval:
   # MVP CI baselines (chunk_500 / chunk_1000) keep e5 via eval CLI injection.
   embedding_model: intfloat/multilingual-e5-small
