@@ -173,6 +173,10 @@ dev = [
     { name = "pytest" },
     { name = "ruff" },
 ]
+nli = [
+    { name = "torch" },
+    { name = "transformers" },
+]
 
 [package.metadata]
 requires-dist = [
@@ -186,9 +190,11 @@ requires-dist = [
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.6" },
     { name = "scikit-learn", specifier = ">=1.4" },
     { name = "sentence-transformers", specifier = ">=3.0.0" },
+    { name = "torch", marker = "extra == 'nli'", specifier = ">=2.2" },
     { name = "tqdm", specifier = ">=4.66" },
+    { name = "transformers", marker = "extra == 'nli'", specifier = ">=4.40" },
 ]
-provides-extras = ["dev"]
+provides-extras = ["dev", "nli"]
 
 [[package]]
 name = "filelock"
