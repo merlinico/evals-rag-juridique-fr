@@ -64,8 +64,8 @@ def validate_schema_rules(q: Question) -> str | None:
         return "as_of_on_non_temporal"
     if q.type == QuestionType.MULTI_HOP and len(q.expected_article_ids) < 2:
         return "multi_hop_needs_two_articles"
-    if q.validated:
-        return "must_remain_validated_false"
+    # ``validated=true`` is allowed on committed gold after human review.
+    # Candidate generation still forces ``validated=false`` in ``filter_candidates``.
     return None
 
 

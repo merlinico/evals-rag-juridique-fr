@@ -1,145 +1,9 @@
 {
-  "mode": "handwrite_mh_answers_v033",
+  "mode": "validate_review_batch_v034",
   "corpus_snapshot": "codes-v0.2-2025-07-13",
-  "n_articles": 16455,
-  "n_crossrefs": 15686,
-  "selected_total": 180,
-  "selected_by_type": {
-    "direct": 51,
-    "multi_hop": 40,
-    "temporal": 30,
-    "unanswerable": 29,
-    "apparent_contradiction": 30
-  },
-  "changed_ids": [
-    "mh01",
-    "mh02",
-    "mh03",
-    "mh04",
-    "mh05",
-    "mh06",
-    "mh07",
-    "mh08",
-    "mh09",
-    "mh10",
-    "mh11",
-    "mh12",
-    "mh13",
-    "mh14",
-    "mh15",
-    "mh16",
-    "mh17",
-    "mh18",
-    "mh19",
-    "mh20",
-    "mh21",
-    "mh22",
-    "mh23",
-    "mh24",
-    "mh25",
-    "mh26",
-    "mh27",
-    "mh28",
-    "mh29",
-    "mh30",
-    "mh31",
-    "mh32",
-    "mh33",
-    "mh34",
-    "mh35",
-    "mh36",
-    "mh37",
-    "mh38",
-    "mh39"
-  ],
-  "reformulated_question_ids": [
-    "mh01",
-    "mh02",
-    "mh03",
-    "mh04",
-    "mh05",
-    "mh06",
-    "mh07",
-    "mh08",
-    "mh09",
-    "mh10",
-    "mh11",
-    "mh12",
-    "mh13",
-    "mh14",
-    "mh15",
-    "mh16",
-    "mh17",
-    "mh18",
-    "mh19",
-    "mh20",
-    "mh21",
-    "mh22",
-    "mh23",
-    "mh24",
-    "mh25",
-    "mh26",
-    "mh27",
-    "mh28",
-    "mh29",
-    "mh30",
-    "mh31",
-    "mh32",
-    "mh33",
-    "mh34",
-    "mh35",
-    "mh36",
-    "mh37",
-    "mh38",
-    "mh39"
-  ],
-  "weak_items": [
-    {
-      "id": "mh22",
-      "articles": [
-        "1178",
-        "1352"
-      ],
-      "reason": "1178 renvoie à toute la série 1352–1352-9 ; l'item ne cible que 1352.",
-      "severity": "thin"
-    },
-    {
-      "id": "mh23",
-      "articles": [
-        "1178",
-        "1352-9"
-      ],
-      "reason": "1178 renvoie à toute la série 1352–1352-9 ; l'item ne cible que 1352-9.",
-      "severity": "thin"
-    },
-    {
-      "id": "mh24",
-      "articles": [
-        "1187",
-        "1352"
-      ],
-      "reason": "1187 renvoie à toute la série 1352–1352-9 ; l'item ne cible que 1352.",
-      "severity": "thin"
-    },
-    {
-      "id": "mh25",
-      "articles": [
-        "1187",
-        "1352-9"
-      ],
-      "reason": "1187 renvoie à toute la série 1352–1352-9 ; l'item ne cible que 1352-9.",
-      "severity": "thin"
-    },
-    {
-      "id": "mh39",
-      "articles": [
-        "L. 1221-11",
-        "L. 8271-7"
-      ],
-      "reason": "Renvoi purement organique aux agents de constat ; le texte tip de L. 8271-7 porte sur le travail dissimulé (L. 8221-1) via L. 8271-1-2 et n'explicite pas le contrôle de la DPAE. Question peu informative pour un gold multi_hop."
-    }
-  ],
-  "review_batch_ids": [
+  "n_questions": 180,
+  "n_validated": 40,
+  "validated_ids": [
     "q08",
     "q11",
     "q14",
@@ -181,6 +45,7 @@
     "mh05",
     "t06"
   ],
-  "crossrefs_removed_prior": 1290,
-  "validated": false
+  "validator": "validé par Nicolas Merli, 2026-11-14",
+  "gold_set_validated": false,
+  "unchanged_answers_and_articles": true
 }
