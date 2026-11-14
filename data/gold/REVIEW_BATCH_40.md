@@ -4,6 +4,10 @@ Toutes les questions du jeu d'or restent `validated: false` jusqu'à revue.
 Ce batch est **stratifié** sur les 5 `QuestionType` et **inclut** les items
 de `SAMPLE_TO_REVIEW.md`.
 
+> **Regen graph (v0.3)** : mêmes ids de batch, mais le **contenu** de
+> `mh01`–`mh06` et `t01`–`t06` a changé (CrossRef réels + `version_at` sur le
+> corpus complet). Les items `SAMPLE_TO_REVIEW` (q08…/u01/u05) sont inchangés.
+
 Légende du verdict : **OK** / **À corriger** / **À reformuler**.
 
 ## Index
@@ -21,35 +25,35 @@ Légende du verdict : **OK** / **À corriger** / **À reformuler**.
 | u01 | `unanswerable` | hors corpus (construction) | |
 | u05 | `unanswerable` | hors corpus (fiscalité) | |
 | q26 | `multi_hop` | territorialité pratiques trompeuses | |
-| t01 | `temporal` | temporal | |
+| t01 | `temporal` | temporal:consommation | |
 | ac01 | `apparent_contradiction` | retractation vs exclusions | |
 | q01 | `direct` | information précontractuelle | |
-| mh01 | `multi_hop` | info prix via renvoi | |
-| t02 | `temporal` | temporal | |
+| mh01 | `multi_hop` | crossref:consommation:renvoi | |
+| t02 | `temporal` | temporal:consommation | |
 | u02 | `unanswerable` | hors corpus (travail) | |
 | ac02 | `apparent_contradiction` | garantie vs présomption | |
 | q02 | `direct` | affichage des prix | |
-| mh02 | `multi_hop` | info services | |
-| t03 | `temporal` | temporal | |
+| mh02 | `multi_hop` | crossref:consommation:renvoi | |
+| t03 | `temporal` | temporal:consommation | |
 | u03 | `unanswerable` | hors corpus (pénal) | |
 | ac03 | `apparent_contradiction` | délivrance info vs délai | |
 | q03 | `direct` | pratiques déloyales | |
-| mh03 | `multi_hop` | pratiques déloyales | |
-| t04 | `temporal` | temporal | |
+| mh03 | `multi_hop` | crossref:consommation:renvoi | |
+| t04 | `temporal` | temporal:consommation | |
 | u04 | `unanswerable` | hors corpus (urbanisme) | |
 | ac04 | `apparent_contradiction` | prix vs clause abusive | |
 | q04 | `direct` | pratiques trompeuses | |
-| mh04 | `multi_hop` | rétractation coûts | |
-| t05 | `temporal` | temporal | |
+| mh04 | `multi_hop` | crossref:consommation:renvoi | |
+| t05 | `temporal` | temporal:consommation | |
 | u06 | `unanswerable` | hors corpus (procédure pénale) | |
 | ac05 | `apparent_contradiction` | déloyale générale vs listes | |
 | q07 | `direct` | transfert des risques | |
-| mh05 | `multi_hop` | garantie conformité | |
-| t06 | `temporal` | temporal | |
+| mh05 | `multi_hop` | crossref:consommation:renvoi | |
+| t06 | `temporal` | temporal:consommation | |
 | u07 | `unanswerable` | hors corpus (pénal) | |
 | ac06 | `apparent_contradiction` | choix vs refus | |
 | q09 | `direct` | conformité | |
-| mh06 | `multi_hop` | délivrance et garantie | |
+| mh06 | `multi_hop` | crossref:consommation:renvoi | |
 
 ## Détail pour validation rapide
 
@@ -242,21 +246,21 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 12. `t01` — `temporal`
 
-**Question :** Au 1er janvier 2023, quelle durée de garantie légale de conformité s'appliquait pour un bien neuf au sens de L. 217-3 ?
+**Question :** Au 2012-01-01, quelle était la rédaction applicable de l'article L. 121-4 (de la consommation) ?
 
-**as_of :** `2023-01-01`
+**as_of :** `2012-01-01`
 
-**Articles gold :** L. 217-3
+**Articles gold :** L. 121-4
 
-**Ids LEGIARTI :** `LEGIARTI000044142579`
+**Ids LEGIARTI :** `LEGIARTI000044563107`
 
-**Réponse attendue :** Deux ans à compter de la délivrance du bien.
+**Réponse attendue :** Au 2012-01-01, l'article L. 121-4 disposait : En cas de condamnation, le tribunal ordonne la publication du jugement. (version LEGIARTI000018048136 ; rédaction courante différente : Sont réputées trompeuses, au sens des articles L.)
 
 **Extraits corpus :**
 
-- **L. 217-3** (`LEGIARTI000044142579`) — Le vendeur délivre un bien conforme au contrat ainsi qu'aux critères énoncés à l'article L. 217-5. Il répond des défauts de conformité existant au moment de la délivrance du bien au sens de l'article L. 216-1, qui apparaissent dans un délai de deux ans à compter de celle-ci. Dans le cas d'un contrat de vente d'un bien…
+- **L. 121-4** (`LEGIARTI000044563107`) — Sont réputées trompeuses, au sens des articles L. 121-2 et L. 121-3, les pratiques commerciales qui ont pour objet : 1° Pour un professionnel, de se prétendre signataire d'un code de conduite alors qu'il ne l'est pas ; 2° D'afficher un certificat, un label de qualité ou un équivalent sans avoir obtenu l'autorisation…
 
-*Notes :* La rédaction gelée du snapshot répond déjà ; lorsque les versions LEGI seront chargées, résoudre la version en vigueur à as_of.
+*Notes :* version_at(2012-01-01)=LEGIARTI000018048136 ≠ tip LEGIARTI000044563107; debut=2008-01-05 fin=2014-03-19
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -303,20 +307,20 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 15. `mh01` — `multi_hop`
 
-**Question :** Quelles informations sur les prix l'obligation générale d'information précontractuelle (L. 111-1) renvoie-t-elle aux articles sur l'affichage des prix, et que dit L. 112-1 ?
+**Question :** Pour appliquer l'article L. 112-6, faut-il aussi lire l'article L. 112-5 (de la consommation) ? Que disent-ils ensemble ?
 
-**Articles gold :** L. 111-1, L. 112-1
+**Articles gold :** L. 112-6, L. 112-5
 
-**Ids LEGIARTI :** `LEGIARTI000044142438, LEGIARTI000032227331`
+**Ids LEGIARTI :** `LEGIARTI000032227321, LEGIARTI000032227323`
 
-**Réponse attendue :** L. 111-1 renvoie aux articles L. 112-1 à L. 112-4-1 pour le prix ; L. 112-1 impose d'informer le consommateur sur les prix par marquage, étiquetage, affichage ou procédé approprié.
+**Réponse attendue :** L. 112-6 (consommation) : La garantie mentionnée à l'article L. L. 112-5 : Tout professionnel peut demander à l'autorité administrative chargée de la concurrence et de la consommation de prendre formellement position sur la conformité aux articles L. Le renvoi (renvoi) articule les deux dispositions.
 
 **Extraits corpus :**
 
-- **L. 111-1** (`LEGIARTI000044142438`) — Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractéristiques essentielles du bien ou du service, ainsi que celles du service numérique ou du contenu numérique, compte tenu de…
-- **L. 112-1** (`LEGIARTI000032227331`) — Tout vendeur de produit ou tout prestataire de services informe le consommateur, par voie de marquage, d'étiquetage, d'affichage ou par tout autre procédé approprié, sur les prix et les conditions particulières de la vente et de l'exécution des services, selon des modalités fixées par arrêtés du ministre chargé de…
+- **L. 112-6** (`LEGIARTI000032227321`) — La garantie mentionnée à l'article L. 112-5 prend fin : 1° A la date à laquelle la situation du professionnel n'est plus identique à celle présentée dans la demande ; les modalités de constatation de cette situation et d'information du professionnel sont précisées par décret en Conseil d'Etat ; 2° A la date à laquelle…
+- **L. 112-5** (`LEGIARTI000032227323`) — Tout professionnel peut demander à l'autorité administrative chargée de la concurrence et de la consommation de prendre formellement position sur la conformité aux articles L. 112-1 à L. 112-4 et aux mesures réglementaires prises pour leur application, des modalités de l'information sur les prix de vente au…
 
-*Notes :* multi_hop via renvoi / articulation d'articles
+*Notes :* CrossRef réel renvoi LEGIARTI000032227321→LEGIARTI000032227323 (corpus codes-v0.2-2025-07-13)
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -324,21 +328,21 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 16. `t02` — `temporal`
 
-**Question :** En vigueur au 15 juin 2022, quel était le délai de rétractation pour un contrat conclu à distance ?
+**Question :** En date du 2018-01-01, que prévoyait l'article L. 771-2 du Code de la consommation ?
 
-**as_of :** `2022-06-15`
+**as_of :** `2018-01-01`
 
-**Articles gold :** L. 221-18
+**Articles gold :** L. 771-2
 
-**Ids LEGIARTI :** `LEGIARTI000032226842`
+**Ids LEGIARTI :** `LEGIARTI000045178745`
 
-**Réponse attendue :** Quatorze jours.
+**Réponse attendue :** Au 2018-01-01, l'article L. 771-2 disposait : Sont applicables dans les îles Wallis et Futuna, sous réserve des adaptations prévues à l'article L. (version LEGIARTI000034130174 ; rédaction courante différente : Sont applicables dans les îles Wallis et Futuna, sous réserve des adaptations…)
 
 **Extraits corpus :**
 
-- **L. 221-18** (`LEGIARTI000032226842`) — Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à motiver sa décision ni à supporter d'autres coûts que ceux prévus aux articles L. 221-23 à L. 221-25. Le délai…
+- **L. 771-2** (`LEGIARTI000045178745`) — Sont applicables dans les îles Wallis et Futuna, sous réserve des adaptations prévues à l'article L. 771-3, les dispositions des articles mentionnés dans la colonne de gauche du tableau ci-après, dans leur rédaction indiquée dans la colonne de droite du même tableau : ARTICLES APPLICABLES DANS LEUR RÉDACTION L. 711-1…
 
-*Notes :* as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible
+*Notes :* version_at(2018-01-01)=LEGIARTI000034130174 ≠ tip LEGIARTI000045178745; debut=2017-07-01 fin=2019-06-01
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -397,20 +401,20 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 20. `mh02` — `multi_hop`
 
-**Question :** Comment L. 111-2 s'articule-t-il avec L. 111-1 pour un contrat de services ?
+**Question :** En combinant les articles L. 121-22 et L. 762-2 (de la consommation), quelles règles s'appliquent au renvoi mentionné ?
 
-**Articles gold :** L. 111-2, L. 111-1
+**Articles gold :** L. 121-22, L. 762-2
 
-**Ids LEGIARTI :** `LEGIARTI000032227350, LEGIARTI000044142438`
+**Ids LEGIARTI :** `LEGIARTI000044224603, LEGIARTI000032224273`
 
-**Réponse attendue :** Outre les mentions de L. 111-1, le professionnel doit communiquer avant conclusion (ou avant exécution sans contrat écrit) des informations complémentaires sur ses coordonnées, son activité et les conditions contractuelles.
+**Réponse attendue :** L. 121-22 (consommation) : Est interdite toute publicité portant : 1° Sur une opération commerciale soumise à autorisation ou à déclaration au titre soit de l'article L. L. 762-2 : La collecte des informations contenues dans le fichier mentionné à l'article L. Le renvoi (renvoi) articule les deux dispositions.
 
 **Extraits corpus :**
 
-- **L. 111-2** (`LEGIARTI000032227350`) — Outre les mentions prévues à l'article L. 111-1, tout professionnel, avant la conclusion d'un contrat de fourniture de services et, lorsqu'il n'y a pas de contrat écrit, avant l'exécution de la prestation de services, met à la disposition du consommateur ou lui communique, de manière lisible et compréhensible, les…
-- **L. 111-1** (`LEGIARTI000044142438`) — Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractéristiques essentielles du bien ou du service, ainsi que celles du service numérique ou du contenu numérique, compte tenu de…
+- **L. 121-22** (`LEGIARTI000044224603`) — Est interdite toute publicité portant : 1° Sur une opération commerciale soumise à autorisation ou à déclaration au titre soit de l'article L. 122-24 du présent code, soit des articles L. 310-1 à L. 310-4 et L. 310-7 du code de commerce, soit des articles L. 752-1 et L. 752-16 du même code, et qui n'a pas fait l'objet…
+- **L. 762-2** (`LEGIARTI000032224273`) — La collecte des informations contenues dans le fichier mentionné à l'article L. 751-1 par des personnes autres que la Banque de France et les entreprises mentionnées au premier alinéa de l'article L. 751-2 est punie des peines prévues à l'article 226-18 du code pénal.
 
-*Notes :* multi_hop via renvoi / articulation d'articles
+*Notes :* CrossRef réel renvoi LEGIARTI000044224603→LEGIARTI000032224273 (corpus codes-v0.2-2025-07-13)
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -418,21 +422,21 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 21. `t03` — `temporal`
 
-**Question :** À la date du 1er mars 2024, pendant combien de temps un défaut de conformité sur un bien neuf était-il présumé exister dès la délivrance ?
+**Question :** En date du 2016-10-01, que prévoyait l'article L. 412-1 du Code de la consommation ?
 
-**as_of :** `2024-03-01`
+**as_of :** `2016-10-01`
 
-**Articles gold :** L. 217-7
+**Articles gold :** L. 412-1
 
-**Ids LEGIARTI :** `LEGIARTI000044152587`
+**Ids LEGIARTI :** `LEGIARTI000041985019`
 
-**Réponse attendue :** Vingt-quatre mois (douze mois pour les biens d'occasion).
+**Réponse attendue :** Au 2016-10-01, l'article L. 412-1 disposait : Des décrets en Conseil d'Etat déterminent les règles auxquelles doivent satisfaire les produits et services, notamment en ce qui concerne :1° La fabrication, l'importation, la vente, la mise en vente, l'exposition, la détention et la distribution à titre gratuit de toutes marchan (version LEGIARTI000032225492 ; rédaction courante différente : I.-Des décrets en Conseil d'Etat définissent les règles auxquelles doivent…)
 
 **Extraits corpus :**
 
-- **L. 217-7** (`LEGIARTI000044152587`) — Les défauts de conformité qui apparaissent dans un délai de vingt-quatre mois à compter de la délivrance du bien, y compris du bien comportant des éléments numériques, sont, sauf preuve contraire, présumés exister au moment de la délivrance, à moins que cette présomption ne soit incompatible avec la nature du bien ou…
+- **L. 412-1** (`LEGIARTI000041985019`) — I.-Des décrets en Conseil d'Etat définissent les règles auxquelles doivent satisfaire les marchandises. Ils déterminent notamment : 1° Les conditions dans lesquelles l'exportation, l'offre, la vente, la distribution à titre gratuit, la détention, l'étiquetage, le conditionnement ou le mode d'utilisation des…
 
-*Notes :* as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible
+*Notes :* version_at(2016-10-01)=LEGIARTI000032225492 ≠ tip LEGIARTI000041985019; debut=2016-07-01 fin=2017-02-23
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -491,20 +495,20 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 25. `mh03` — `multi_hop`
 
-**Question :** Une pratique contraire à L. 121-2 à L. 121-4 est-elle déloyale au sens de L. 121-1, et que prévoit L. 121-5 ?
+**Question :** Quel est le contenu du renvoi de l'article L. 131-2 vers l'article L. 111-4 dans le Code de la consommation ?
 
-**Articles gold :** L. 121-1, L. 121-5
+**Articles gold :** L. 131-2, L. 111-4
 
-**Ids LEGIARTI :** `LEGIARTI000032227301, LEGIARTI000034072564`
+**Ids LEGIARTI :** `LEGIARTI000032227140, LEGIARTI000044330854`
 
-**Réponse attendue :** Oui : L. 121-1 interdit les pratiques déloyales et renvoie notamment aux pratiques trompeuses et agressives ; L. 121-5 précise qu'une pratique conforme à L. 121-2 à L. 121-4 est déloyale.
+**Réponse attendue :** L. 131-2 (consommation) : Tout manquement à l'obligation d'informer sur la durée de disponibilité des pièces détachées mentionnée à l'article L. L. 111-4 : Le fabricant ou l'importateur de biens meubles informe le vendeur professionnel de la disponibilité ou de la non-disponibilité des pièces détachées indispensables à l'utilisation d Le renvoi (renvoi) articule les deux dispositions.
 
 **Extraits corpus :**
 
-- **L. 121-1** (`LEGIARTI000032227301`) — Les pratiques commerciales déloyales sont interdites. Une pratique commerciale est déloyale lorsqu'elle est contraire aux exigences de la diligence professionnelle et qu'elle altère ou est susceptible d'altérer de manière substantielle le comportement économique du consommateur normalement informé et raisonnablement…
-- **L. 121-5** (`LEGIARTI000034072564`) — Les dispositions des articles L. 121-2 à L. 121-4 sont également applicables aux pratiques qui visent les professionnels et les non-professionnels.
+- **L. 131-2** (`LEGIARTI000032227140`) — Tout manquement à l'obligation d'informer sur la durée de disponibilité des pièces détachées mentionnée à l'article L. 111-4 est passible d'une amende administrative dont le montant ne peut excéder 3 000 euros pour une personne physique et 15 000 euros pour une personne morale. Cette amende est prononcée dans les…
+- **L. 111-4** (`LEGIARTI000044330854`) — Le fabricant ou l'importateur de biens meubles informe le vendeur professionnel de la disponibilité ou de la non-disponibilité des pièces détachées indispensables à l'utilisation des biens concernés et, le cas échéant, de la période pendant laquelle ou de la date jusqu'à laquelle ces pièces sont disponibles sur le…
 
-*Notes :* multi_hop via renvoi / articulation d'articles
+*Notes :* CrossRef réel renvoi LEGIARTI000032227140→LEGIARTI000044330854 (corpus codes-v0.2-2025-07-13)
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -512,21 +516,21 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 26. `t04` — `temporal`
 
-**Question :** Selon le droit applicable au 1er septembre 2021, quel délai maximal de délivrance s'imposait à défaut d'accord sur la date ?
+**Question :** En date du 2023-01-01, que prévoyait l'article L. 511-7 du Code de la consommation ?
 
-**as_of :** `2021-09-01`
+**as_of :** `2023-01-01`
 
-**Articles gold :** L. 216-1
+**Articles gold :** L. 511-7
 
-**Ids LEGIARTI :** `LEGIARTI000044142498`
+**Ids LEGIARTI :** `LEGIARTI000051558799`
 
-**Réponse attendue :** Sans retard injustifié et au plus tard trente jours après la conclusion du contrat.
+**Réponse attendue :** Au 2023-01-01, l'article L. 511-7 disposait : Les agents sont habilités à rechercher et à constater les infractions ou les manquements aux dispositions : 1° Du règlement (CE) n° 1371/2007 du Parlement européen et du Conseil du 23 octobre 2007 sur les droits et obligations des voyageurs ferroviaires ; 2° De l'article 23 du rè (version LEGIARTI000043984101 ; rédaction courante différente : Les agents sont habilités à rechercher et à constater les infractions ou les…)
 
 **Extraits corpus :**
 
-- **L. 216-1** (`LEGIARTI000044142498`) — Le professionnel délivre le bien ou fournit le service à la date ou dans le délai indiqué au consommateur, conformément au 3° de l'article L. 111-1, sauf si les parties en conviennent autrement. Pour l'application du présent titre, on entend par délivrance d'un bien, le transfert au consommateur de la possession…
+- **L. 511-7** (`LEGIARTI000051558799`) — Les agents sont habilités à rechercher et à constater les infractions ou les manquements aux dispositions : 1° Du règlement (UE) 2021/782 du Parlement européen et du Conseil du 29 avril 2021 sur les droits et obligations des voyageurs ferroviaires ; 2° De l'article 23 du règlement (CE) n° 1008/2008 du Parlement…
 
-*Notes :* as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible
+*Notes :* version_at(2023-01-01)=LEGIARTI000043984101 ≠ tip LEGIARTI000051558799; debut=2023-01-01 fin=2023-06-07
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -585,20 +589,20 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 30. `mh04` — `multi_hop`
 
-**Question :** Quels délais et points de départ du droit de rétractation résultent de L. 221-18, et quels coûts L. 221-25 peut-il encore imposer ?
+**Question :** Quel est le contenu du renvoi de l'article L. 131-3-1 vers l'article L. 111-6 dans le Code de la consommation ?
 
-**Articles gold :** L. 221-18, L. 221-25
+**Articles gold :** L. 131-3-1, L. 111-6
 
-**Ids LEGIARTI :** `LEGIARTI000032226842, LEGIARTI000044563179`
+**Ids LEGIARTI :** `LEGIARTI000044526142, LEGIARTI000044564977`
 
-**Réponse attendue :** L. 221-18 ouvre un délai de quatorze jours sans motiver la décision, sous réserve des coûts prévus aux articles L. 221-23 à L. 221-25 ; L. 221-25 traite notamment de la responsabilité des frais de renvoi lorsque le professionnel en a informé le consommateur.
+**Réponse attendue :** L. 131-3-1 (consommation) : Tout manquement à l'obligation d'information mentionnée à l'article L. L. 111-6 : Le producteur de biens comportant des éléments numériques informe le vendeur professionnel de la durée au cours de laquelle les mises à jour logicielles, que le producteur fournit, Le renvoi (renvoi) articule les deux dispositions.
 
 **Extraits corpus :**
 
-- **L. 221-18** (`LEGIARTI000032226842`) — Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à motiver sa décision ni à supporter d'autres coûts que ceux prévus aux articles L. 221-23 à L. 221-25. Le délai…
-- **L. 221-25** (`LEGIARTI000044563179`) — Si le consommateur souhaite que l'exécution d'une prestation de services ou d'un contrat mentionné au premier alinéa de l'article L. 221-4 commence avant la fin du délai de rétractation prévu à l'article L. 221-18 et si le contrat soumet le consommateur à une obligation de payer, le professionnel recueille sa demande…
+- **L. 131-3-1** (`LEGIARTI000044526142`) — Tout manquement à l'obligation d'information mentionnée à l'article L. 111-6 est passible d'une amende administrative dont le montant ne peut excéder 3 000 euros pour une personne physique et 15 000 euros pour une personne morale. Cette amende est prononcée dans les conditions prévues au chapitre II du titre II du…
+- **L. 111-6** (`LEGIARTI000044564977`) — Le producteur de biens comportant des éléments numériques informe le vendeur professionnel de la durée au cours de laquelle les mises à jour logicielles, que le producteur fournit, restent compatibles avec les fonctionnalités du bien. Le vendeur met ces informations à la disposition du consommateur. Le producteur…
 
-*Notes :* multi_hop via renvoi / articulation d'articles
+*Notes :* CrossRef réel renvoi LEGIARTI000044526142→LEGIARTI000044564977 (corpus codes-v0.2-2025-07-13)
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -606,21 +610,21 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 31. `t05` — `temporal`
 
-**Question :** Au 1er janvier 2020, combien de temps le prêteur devait-il maintenir les conditions d'une offre de crédit à la consommation ?
+**Question :** En date du 2012-01-01, que prévoyait l'article L. 311-1 du Code de la consommation ?
 
-**as_of :** `2020-01-01`
+**as_of :** `2012-01-01`
 
-**Articles gold :** L. 312-18
+**Articles gold :** L. 311-1
 
-**Ids LEGIARTI :** `LEGIARTI000035731428`
+**Ids LEGIARTI :** `LEGIARTI000034072668`
 
-**Réponse attendue :** Une durée minimale de quinze jours à compter de la remise ou de l'envoi.
+**Réponse attendue :** Au 2012-01-01, l'article L. 311-1 disposait : Au sens du présent chapitre, sont considérés comme : 1° Prêteur, toute personne qui consent ou s'engage à consentir un crédit mentionné à l'article L. (version LEGIARTI000022431920 ; rédaction courante différente : Pour l'application des dispositions du présent titre, sont considérés comme :…)
 
 **Extraits corpus :**
 
-- **L. 312-18** (`LEGIARTI000035731428`) — L'offre de contrat de crédit est établie sur support papier ou sur un autre support durable. Elle est fournie en autant d'exemplaires que de parties et, le cas échéant, à chacune des cautions. La remise ou l'envoi de l'offre de contrat de crédit à l'emprunteur oblige le prêteur à en maintenir les conditions pendant…
+- **L. 311-1** (`LEGIARTI000034072668`) — Pour l'application des dispositions du présent titre, sont considérés comme : 1° Prêteur, toute personne qui consent ou s'engage à consentir un crédit mentionné au présent titre dans le cadre de l'exercice de ses activités commerciales ou professionnelles ; 2° Emprunteur ou consommateur, toute personne physique qui…
 
-*Notes :* as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible
+*Notes :* version_at(2012-01-01)=LEGIARTI000022431920 ≠ tip LEGIARTI000034072668; debut=2011-05-01 fin=2016-07-01
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -681,20 +685,20 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 35. `mh05` — `multi_hop`
 
-**Question :** Le vendeur répond-il des défauts de conformité au regard de L. 217-3 et des critères objectifs de L. 217-5 ?
+**Question :** L'article L. 132-11-1 du Code de la consommation renvoie à l'article L. 132-11 : que dispose L. 132-11-1, et que précise L. 132-11 ?
 
-**Articles gold :** L. 217-3, L. 217-5
+**Articles gold :** L. 132-11-1, L. 132-11
 
-**Ids LEGIARTI :** `LEGIARTI000044142579, LEGIARTI000044142571`
+**Ids LEGIARTI :** `LEGIARTI000046190610, LEGIARTI000037556685`
 
-**Réponse attendue :** Oui : L. 217-3 impose de délivrer un bien conforme au contrat et aux critères de L. 217-5, et d'assurer la garantie pendant deux ans à compter de la délivrance.
+**Réponse attendue :** L. 132-11-1 (consommation) : Lorsque les pratiques commerciales agressives mentionnées aux articles L. L. 132-11 : Les pratiques commerciales agressives mentionnées aux articles L. Le renvoi (renvoi) articule les deux dispositions.
 
 **Extraits corpus :**
 
-- **L. 217-3** (`LEGIARTI000044142579`) — Le vendeur délivre un bien conforme au contrat ainsi qu'aux critères énoncés à l'article L. 217-5. Il répond des défauts de conformité existant au moment de la délivrance du bien au sens de l'article L. 216-1, qui apparaissent dans un délai de deux ans à compter de celle-ci. Dans le cas d'un contrat de vente d'un bien…
-- **L. 217-5** (`LEGIARTI000044142571`) — I.-En plus des critères de conformité au contrat, le bien est conforme s'il répond aux critères suivants : 1° Il est propre à l'usage habituellement attendu d'un bien de même type, compte tenu, s'il y a lieu, de toute disposition du droit de l'Union européenne et du droit national ainsi que de toutes les normes…
+- **L. 132-11-1** (`LEGIARTI000046190610`) — Lorsque les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 ont été suivies de la conclusion d'un ou de plusieurs contrats, la peine d'emprisonnement prévue à l'article L. 132-11 est portée à trois ans.
+- **L. 132-11** (`LEGIARTI000037556685`) — Les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 sont punies d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Le montant de l'amende peut être porté, de manière proportionnée aux avantages tirés du délit, à 10 % du chiffre d'affaires moyen annuel, calculé sur les…
 
-*Notes :* multi_hop via renvoi / articulation d'articles
+*Notes :* CrossRef réel renvoi LEGIARTI000046190610→LEGIARTI000037556685 (corpus codes-v0.2-2025-07-13)
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -702,21 +706,21 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 36. `t06` — `temporal`
 
-**Question :** En vigueur le 10 octobre 2019, une clause créant un déséquilibre significatif au détriment du consommateur était-elle abusive ?
+**Question :** En date du 2016-10-01, que prévoyait l'article L. 224-3 du Code de la consommation ?
 
-**as_of :** `2019-10-10`
+**as_of :** `2016-10-01`
 
-**Articles gold :** L. 212-1
+**Articles gold :** L. 224-3
 
-**Ids LEGIARTI :** `LEGIARTI000032890812`
+**Ids LEGIARTI :** `LEGIARTI000046197680`
 
-**Réponse attendue :** Oui, dans les contrats conclus entre professionnels et consommateurs.
+**Réponse attendue :** Au 2016-10-01, l'article L. 224-3 disposait : L'offre de fourniture d'électricité ou de gaz naturel précise, dans des termes clairs et compréhensibles, les informations suivantes : 1° L'identité du fournisseur, l'adresse de son siège social et son numéro d'inscription au registre du commerce et des sociétés ou tout document (version LEGIARTI000032226733 ; rédaction courante différente : L'offre de fourniture d'électricité ou de gaz naturel précise, dans des termes…)
 
 **Extraits corpus :**
 
-- **L. 212-1** (`LEGIARTI000032890812`) — Dans les contrats conclus entre professionnels et consommateurs, sont abusives les clauses qui ont pour objet ou pour effet de créer, au détriment du consommateur, un déséquilibre significatif entre les droits et obligations des parties au contrat. Sans préjudice des règles d'interprétation prévues aux articles 1188,…
+- **L. 224-3** (`LEGIARTI000046197680`) — L'offre de fourniture d'électricité ou de gaz naturel précise, dans des termes clairs et compréhensibles, les informations suivantes : 1° L'identité du fournisseur, l'adresse de son siège social, son numéro unique d'identification ainsi que la mention RCS suivie du nom de la ville où se trouve le greffe où il est…
 
-*Notes :* as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible
+*Notes :* version_at(2016-10-01)=LEGIARTI000032226733 ≠ tip LEGIARTI000046197680; debut=2016-07-01 fin=2018-01-01
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -777,20 +781,20 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 40. `mh06` — `multi_hop`
 
-**Question :** Comment la notion de délivrance (L. 216-1) intervient-elle dans le point de départ de la garantie de conformité (L. 217-3) ?
+**Question :** En combinant les articles L. 132-11-2 et L. 132-11 (de la consommation), quelles règles s'appliquent au renvoi mentionné ?
 
-**Articles gold :** L. 216-1, L. 217-3
+**Articles gold :** L. 132-11-2, L. 132-11
 
-**Ids LEGIARTI :** `LEGIARTI000044142498, LEGIARTI000044142579`
+**Ids LEGIARTI :** `LEGIARTI000046190612, LEGIARTI000037556685`
 
-**Réponse attendue :** L. 217-3 fait courir le délai de deux ans à compter de la délivrance au sens de L. 216-1 (transfert de la possession physique ou du contrôle du bien).
+**Réponse attendue :** L. 132-11-2 (consommation) : Lorsque les pratiques commerciales agressives mentionnées aux articles L. L. 132-11 : Les pratiques commerciales agressives mentionnées aux articles L. Le renvoi (renvoi) articule les deux dispositions.
 
 **Extraits corpus :**
 
-- **L. 216-1** (`LEGIARTI000044142498`) — Le professionnel délivre le bien ou fournit le service à la date ou dans le délai indiqué au consommateur, conformément au 3° de l'article L. 111-1, sauf si les parties en conviennent autrement. Pour l'application du présent titre, on entend par délivrance d'un bien, le transfert au consommateur de la possession…
-- **L. 217-3** (`LEGIARTI000044142579`) — Le vendeur délivre un bien conforme au contrat ainsi qu'aux critères énoncés à l'article L. 217-5. Il répond des défauts de conformité existant au moment de la délivrance du bien au sens de l'article L. 216-1, qui apparaissent dans un délai de deux ans à compter de celle-ci. Dans le cas d'un contrat de vente d'un bien…
+- **L. 132-11-2** (`LEGIARTI000046190612`) — Lorsque les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 ont été commises en bande organisée, la peine d'emprisonnement prévue à l'article L. 132-11 est portée à sept ans.
+- **L. 132-11** (`LEGIARTI000037556685`) — Les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 sont punies d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Le montant de l'amende peut être porté, de manière proportionnée aux avantages tirés du délit, à 10 % du chiffre d'affaires moyen annuel, calculé sur les…
 
-*Notes :* multi_hop via renvoi / articulation d'articles
+*Notes :* CrossRef réel renvoi LEGIARTI000046190612→LEGIARTI000037556685 (corpus codes-v0.2-2025-07-13)
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 

@@ -1,9 +1,9 @@
 {
-  "version": "0.2.0",
-  "corpus_snapshot": "cdc-v0.1-2025-07-13",
+  "version": "0.3.0",
+  "corpus_snapshot": "codes-v0.2-2025-07-13",
   "language": "fr",
   "validated": false,
-  "notes": "Gold set phase 2 (150–200). Généré par pipeline scripté (generate → auto-filter). validated=false jusqu'à revue humaine. Étendable : cross_refs.json / versions LEGI de l'agent corpus (a).",
+  "notes": "Gold set phase 2 — multi_hop via CrossRef réels et temporal via Corpus.version_at (snapshot codes-v0.2-2025-07-13). validated=false jusqu'à revue humaine.",
   "questions": [
     {
       "id": "q01",
@@ -873,1240 +873,6 @@
       "validated": false,
       "topic": "territorialité pratiques trompeuses",
       "notes": null
-    },
-    {
-      "id": "mh01",
-      "question": "Quelles informations sur les prix l'obligation générale d'information précontractuelle (L. 111-1) renvoie-t-elle aux articles sur l'affichage des prix, et que dit L. 112-1 ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044142438",
-        "LEGIARTI000032227331"
-      ],
-      "expected_article_nums": [
-        "L. 111-1",
-        "L. 112-1"
-      ],
-      "reference_answer": "L. 111-1 renvoie aux articles L. 112-1 à L. 112-4-1 pour le prix ; L. 112-1 impose d'informer le consommateur sur les prix par marquage, étiquetage, affichage ou procédé approprié.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "info prix via renvoi",
-      "notes": "multi_hop via renvoi / articulation d'articles"
-    },
-    {
-      "id": "mh02",
-      "question": "Comment L. 111-2 s'articule-t-il avec L. 111-1 pour un contrat de services ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000032227350",
-        "LEGIARTI000044142438"
-      ],
-      "expected_article_nums": [
-        "L. 111-2",
-        "L. 111-1"
-      ],
-      "reference_answer": "Outre les mentions de L. 111-1, le professionnel doit communiquer avant conclusion (ou avant exécution sans contrat écrit) des informations complémentaires sur ses coordonnées, son activité et les conditions contractuelles.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "info services",
-      "notes": "multi_hop via renvoi / articulation d'articles"
-    },
-    {
-      "id": "mh03",
-      "question": "Une pratique contraire à L. 121-2 à L. 121-4 est-elle déloyale au sens de L. 121-1, et que prévoit L. 121-5 ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000032227301",
-        "LEGIARTI000034072564"
-      ],
-      "expected_article_nums": [
-        "L. 121-1",
-        "L. 121-5"
-      ],
-      "reference_answer": "Oui : L. 121-1 interdit les pratiques déloyales et renvoie notamment aux pratiques trompeuses et agressives ; L. 121-5 précise qu'une pratique conforme à L. 121-2 à L. 121-4 est déloyale.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "pratiques déloyales",
-      "notes": "multi_hop via renvoi / articulation d'articles"
-    },
-    {
-      "id": "mh04",
-      "question": "Quels délais et points de départ du droit de rétractation résultent de L. 221-18, et quels coûts L. 221-25 peut-il encore imposer ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000032226842",
-        "LEGIARTI000044563179"
-      ],
-      "expected_article_nums": [
-        "L. 221-18",
-        "L. 221-25"
-      ],
-      "reference_answer": "L. 221-18 ouvre un délai de quatorze jours sans motiver la décision, sous réserve des coûts prévus aux articles L. 221-23 à L. 221-25 ; L. 221-25 traite notamment de la responsabilité des frais de renvoi lorsque le professionnel en a informé le consommateur.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "rétractation coûts",
-      "notes": "multi_hop via renvoi / articulation d'articles"
-    },
-    {
-      "id": "mh05",
-      "question": "Le vendeur répond-il des défauts de conformité au regard de L. 217-3 et des critères objectifs de L. 217-5 ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044142579",
-        "LEGIARTI000044142571"
-      ],
-      "expected_article_nums": [
-        "L. 217-3",
-        "L. 217-5"
-      ],
-      "reference_answer": "Oui : L. 217-3 impose de délivrer un bien conforme au contrat et aux critères de L. 217-5, et d'assurer la garantie pendant deux ans à compter de la délivrance.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "garantie conformité",
-      "notes": "multi_hop via renvoi / articulation d'articles"
-    },
-    {
-      "id": "mh06",
-      "question": "Comment la notion de délivrance (L. 216-1) intervient-elle dans le point de départ de la garantie de conformité (L. 217-3) ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044142498",
-        "LEGIARTI000044142579"
-      ],
-      "expected_article_nums": [
-        "L. 216-1",
-        "L. 217-3"
-      ],
-      "reference_answer": "L. 217-3 fait courir le délai de deux ans à compter de la délivrance au sens de L. 216-1 (transfert de la possession physique ou du contrôle du bien).",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "délivrance et garantie",
-      "notes": "multi_hop via renvoi / articulation d'articles"
-    },
-    {
-      "id": "mh07",
-      "question": "Quelle est la différence de régime entre la définition des clauses abusives (L. 212-1) et leur sanction (L. 241-1) ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000032890812",
-        "LEGIARTI000032226417"
-      ],
-      "expected_article_nums": [
-        "L. 212-1",
-        "L. 241-1"
-      ],
-      "reference_answer": "L. 212-1 définit comme abusives les clauses créant un déséquilibre significatif au détriment du consommateur ; L. 241-1 les répute non écrites tout en maintenant le reste du contrat s'il peut subsister.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "clauses abusives",
-      "notes": "multi_hop via renvoi / articulation d'articles"
-    },
-    {
-      "id": "mh08",
-      "question": "L. 216-6 renvoie à quel manquement à L. 216-1 et quelles options ouvre-t-il au consommateur ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044142472",
-        "LEGIARTI000044142498"
-      ],
-      "expected_article_nums": [
-        "L. 216-6",
-        "L. 216-1"
-      ],
-      "reference_answer": "En cas de manquement à l'obligation de délivrance de L. 216-1, L. 216-6 permet au consommateur d'enjoindre au professionnel d'exécuter, puis le cas échéant de résoudre le contrat.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "inexécution délivrance",
-      "notes": "multi_hop via renvoi / articulation d'articles"
-    },
-    {
-      "id": "mh09",
-      "question": "Comment L. 132-1 et L. 121-2 s'articulent-ils pour le délit de pratique commerciale trompeuse ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000032227122",
-        "LEGIARTI000044563114"
-      ],
-      "expected_article_nums": [
-        "L. 132-1",
-        "L. 121-2"
-      ],
-      "reference_answer": "L. 121-2 définit les pratiques trompeuses ; L. 132-1 précise que le délit est constitué dès lors que la pratique est mise en œuvre ou produit ses effets en France.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "pratiques trompeuses",
-      "notes": "multi_hop via renvoi / articulation d'articles"
-    },
-    {
-      "id": "mh10",
-      "question": "Que doit contenir l'offre de crédit (L. 312-18) et sous quelle forme le contrat est-il ensuite établi (L. 312-28) ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000035731428",
-        "LEGIARTI000035731424"
-      ],
-      "expected_article_nums": [
-        "L. 312-18",
-        "L. 312-28"
-      ],
-      "reference_answer": "L. 312-18 impose une offre sur support durable maintenue au moins quinze jours ; L. 312-28 exige un contrat sur support papier ou durable, distinct de la publicité, avec un encadré des caractéristiques essentielles.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "crédit forme",
-      "notes": "multi_hop via renvoi / articulation d'articles"
-    },
-    {
-      "id": "mh11",
-      "question": "Quelles informations L. 221-5 exige-t-il avant un contrat à distance, et quel délai de rétractation L. 221-18 ouvre-t-il ensuite ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563141",
-        "LEGIARTI000032226842"
-      ],
-      "expected_article_nums": [
-        "L. 221-5",
-        "L. 221-18"
-      ],
-      "reference_answer": "L. 221-5 impose des informations précontractuelles spécifiques lisibles et compréhensibles ; L. 221-18 ouvre ensuite un délai de quatorze jours pour se rétracter.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "distance info+retractation",
-      "notes": "multi_hop via renvoi / articulation d'articles"
-    },
-    {
-      "id": "mh12",
-      "question": "L. 212-2 renvoie-t-il à L. 212-1 pour l'appréciation des clauses des contrats de vente de biens et de fourniture de services numériques ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000032227000",
-        "LEGIARTI000032890812"
-      ],
-      "expected_article_nums": [
-        "L. 212-2",
-        "L. 212-1"
-      ],
-      "reference_answer": "Oui : L. 212-2 prévoit que pour ces contrats, le caractère abusif s'apprécie notamment au regard de L. 212-1.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "clauses abusives numériques",
-      "notes": "multi_hop via renvoi / articulation d'articles"
-    },
-    {
-      "id": "mh50",
-      "question": "L'article L. 111-1 renvoie à l'article L. 112-1 : que dispose L. 111-1, et que précise L. 112-1 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044142438",
-        "LEGIARTI000032227331"
-      ],
-      "expected_article_nums": [
-        "L. 111-1",
-        "L. 112-1"
-      ],
-      "reference_answer": "L. 111-1 : Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractérist L. 112-1 : Tout vendeur de produit ou tout prestataire de services informe le consommateur, par voie de marquage, d'étiquetage, d'affichage ou par tout autre procédé approprié, sur les prix et les conditions par",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:renvoi"
-    },
-    {
-      "id": "mh51",
-      "question": "L'article L. 111-1 renvoie à l'article L. 112-4-1 : que dispose L. 111-1, et que précise L. 112-4-1 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044142438",
-        "LEGIARTI000044129074"
-      ],
-      "expected_article_nums": [
-        "L. 111-1",
-        "L. 112-4-1"
-      ],
-      "reference_answer": "L. 111-1 : Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractérist L. 112-4-1 : Lorsque le contrat de vente de biens ou le contrat de fourniture de contenus numériques ou de services numériques ne prévoit pas le paiement d'un prix, le professionnel précise la nature de l'avantage",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:renvoi"
-    },
-    {
-      "id": "mh52",
-      "question": "L'article L. 111-2 renvoie à l'article L. 111-1 : que dispose L. 111-2, et que précise L. 111-1 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000032227350",
-        "LEGIARTI000044142438"
-      ],
-      "expected_article_nums": [
-        "L. 111-2",
-        "L. 111-1"
-      ],
-      "reference_answer": "L. 111-2 : Outre les mentions prévues à l'article L. L. 111-1 : Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractérist",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "mh53",
-      "question": "L'article L. 121-1 renvoie à l'article L. 121-2 : que dispose L. 121-1, et que précise L. 121-2 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000032227301",
-        "LEGIARTI000044563114"
-      ],
-      "expected_article_nums": [
-        "L. 121-1",
-        "L. 121-2"
-      ],
-      "reference_answer": "L. 121-1 : Les pratiques commerciales déloyales sont interdites. L. 121-2 : Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:renvoi"
-    },
-    {
-      "id": "mh54",
-      "question": "L'article L. 121-1 renvoie à l'article L. 121-3 : que dispose L. 121-1, et que précise L. 121-3 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000032227301",
-        "LEGIARTI000044563111"
-      ],
-      "expected_article_nums": [
-        "L. 121-1",
-        "L. 121-3"
-      ],
-      "reference_answer": "L. 121-1 : Les pratiques commerciales déloyales sont interdites. L. 121-3 : Une pratique commerciale est également trompeuse si, compte tenu des limites propres au moyen de communication utilisé et des circonstances qui l'entourent, elle omet, dissimule ou fournit de façon in",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:renvoi"
-    },
-    {
-      "id": "mh55",
-      "question": "L'article L. 121-1 renvoie à l'article L. 121-4 : que dispose L. 121-1, et que précise L. 121-4 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000032227301",
-        "LEGIARTI000044563107"
-      ],
-      "expected_article_nums": [
-        "L. 121-1",
-        "L. 121-4"
-      ],
-      "reference_answer": "L. 121-1 : Les pratiques commerciales déloyales sont interdites. L. 121-4 : Sont réputées trompeuses, au sens des articles L.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:renvoi"
-    },
-    {
-      "id": "mh56",
-      "question": "L'article L. 121-2 renvoie à l'article L. 112-1-1 : que dispose L. 121-2, et que précise L. 112-1-1 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563114",
-        "LEGIARTI000044549592"
-      ],
-      "expected_article_nums": [
-        "L. 121-2",
-        "L. 112-1-1"
-      ],
-      "reference_answer": "L. 121-2 : Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un L. 112-1-1 : I.-Toute annonce d'une réduction de prix indique le prix antérieur pratiqué par le professionnel avant l'application de la réduction de prix.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "mh57",
-      "question": "L'article L. 121-4 renvoie à l'article L. 121-2 : que dispose L. 121-4, et que précise L. 121-2 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563107",
-        "LEGIARTI000044563114"
-      ],
-      "expected_article_nums": [
-        "L. 121-4",
-        "L. 121-2"
-      ],
-      "reference_answer": "L. 121-4 : Sont réputées trompeuses, au sens des articles L. L. 121-2 : Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "mh58",
-      "question": "L'article L. 121-4 renvoie à l'article L. 121-3 : que dispose L. 121-4, et que précise L. 121-3 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563107",
-        "LEGIARTI000044563111"
-      ],
-      "expected_article_nums": [
-        "L. 121-4",
-        "L. 121-3"
-      ],
-      "reference_answer": "L. 121-4 : Sont réputées trompeuses, au sens des articles L. L. 121-3 : Une pratique commerciale est également trompeuse si, compte tenu des limites propres au moyen de communication utilisé et des circonstances qui l'entourent, elle omet, dissimule ou fournit de façon in",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "mh59",
-      "question": "L'article L. 121-5 renvoie à l'article L. 121-2 : que dispose L. 121-5, et que précise L. 121-2 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000034072564",
-        "LEGIARTI000044563114"
-      ],
-      "expected_article_nums": [
-        "L. 121-5",
-        "L. 121-2"
-      ],
-      "reference_answer": "L. 121-5 : Les dispositions des articles L. L. 121-2 : Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:renvoi"
-    },
-    {
-      "id": "mh60",
-      "question": "L'article L. 121-5 renvoie à l'article L. 121-3 : que dispose L. 121-5, et que précise L. 121-3 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000034072564",
-        "LEGIARTI000044563111"
-      ],
-      "expected_article_nums": [
-        "L. 121-5",
-        "L. 121-3"
-      ],
-      "reference_answer": "L. 121-5 : Les dispositions des articles L. L. 121-3 : Une pratique commerciale est également trompeuse si, compte tenu des limites propres au moyen de communication utilisé et des circonstances qui l'entourent, elle omet, dissimule ou fournit de façon in",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:renvoi"
-    },
-    {
-      "id": "mh61",
-      "question": "L'article L. 121-5 renvoie à l'article L. 121-4 : que dispose L. 121-5, et que précise L. 121-4 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000034072564",
-        "LEGIARTI000044563107"
-      ],
-      "expected_article_nums": [
-        "L. 121-5",
-        "L. 121-4"
-      ],
-      "reference_answer": "L. 121-5 : Les dispositions des articles L. L. 121-4 : Sont réputées trompeuses, au sens des articles L.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:renvoi"
-    },
-    {
-      "id": "mh62",
-      "question": "L'article L. 221-5 renvoie à l'article L. 112-1 : que dispose L. 221-5, et que précise L. 112-1 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563141",
-        "LEGIARTI000032227331"
-      ],
-      "expected_article_nums": [
-        "L. 221-5",
-        "L. 112-1"
-      ],
-      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 112-1 : Tout vendeur de produit ou tout prestataire de services informe le consommateur, par voie de marquage, d'étiquetage, d'affichage ou par tout autre procédé approprié, sur les prix et les conditions par",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:renvoi"
-    },
-    {
-      "id": "mh63",
-      "question": "L'article L. 221-5 renvoie à l'article L. 112-2 : que dispose L. 221-5, et que précise L. 112-2 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563141",
-        "LEGIARTI000034072548"
-      ],
-      "expected_article_nums": [
-        "L. 221-5",
-        "L. 112-2"
-      ],
-      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 112-2 : Les dispositions de l'article L.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:renvoi"
-    },
-    {
-      "id": "mh64",
-      "question": "L'article L. 221-5 renvoie à l'article L. 112-3 : que dispose L. 221-5, et que précise L. 112-3 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563141",
-        "LEGIARTI000032227327"
-      ],
-      "expected_article_nums": [
-        "L. 221-5",
-        "L. 112-3"
-      ],
-      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 112-3 : Lorsque le prix ne peut être raisonnablement calculé à l'avance du fait de la nature du bien ou du service, le professionnel fournit le mode de calcul du prix et, s'il y a lieu, tous les frais supplém",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:renvoi"
-    },
-    {
-      "id": "mh65",
-      "question": "L'article L. 221-5 renvoie à l'article L. 112-4 : que dispose L. 221-5, et que précise L. 112-4 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563141",
-        "LEGIARTI000032227325"
-      ],
-      "expected_article_nums": [
-        "L. 221-5",
-        "L. 112-4"
-      ],
-      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 112-4 : Dans le cas d'un contrat à durée indéterminée ou d'un contrat assorti d'un abonnement, le prix total inclut le total des frais exposés pour chaque période de facturation.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:renvoi"
-    },
-    {
-      "id": "mh66",
-      "question": "L'article L. 221-5 renvoie à l'article L. 221-25 : que dispose L. 221-5, et que précise L. 221-25 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563141",
-        "LEGIARTI000044563179"
-      ],
-      "expected_article_nums": [
-        "L. 221-5",
-        "L. 221-25"
-      ],
-      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 221-25 : Si le consommateur souhaite que l'exécution d'une prestation de services ou d'un contrat mentionné au premier alinéa de l'article L.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "mh67",
-      "question": "L'article L. 221-5 renvoie à l'article L. 221-28 : que dispose L. 221-5, et que précise L. 221-28 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563141",
-        "LEGIARTI000044563170"
-      ],
-      "expected_article_nums": [
-        "L. 221-5",
-        "L. 221-28"
-      ],
-      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 221-28 : Le droit de rétractation ne peut être exercé pour les contrats : 1° De fourniture de services pleinement exécutés avant la fin du délai de rétractation et, si le contrat soumet le consommateur à une o",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "mh68",
-      "question": "L'article L. 221-5 renvoie à l'article L. 111-2 : que dispose L. 221-5, et que précise L. 111-2 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563141",
-        "LEGIARTI000032227350"
-      ],
-      "expected_article_nums": [
-        "L. 221-5",
-        "L. 111-2"
-      ],
-      "reference_answer": "L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib L. 111-2 : Outre les mentions prévues à l'article L.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "mh69",
-      "question": "L'article L. 221-18 renvoie à l'article L. 221-25 : que dispose L. 221-18, et que précise L. 221-25 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000032226842",
-        "LEGIARTI000044563179"
-      ],
-      "expected_article_nums": [
-        "L. 221-18",
-        "L. 221-25"
-      ],
-      "reference_answer": "L. 221-18 : Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à  L. 221-25 : Si le consommateur souhaite que l'exécution d'une prestation de services ou d'un contrat mentionné au premier alinéa de l'article L.",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:renvoi"
-    },
-    {
-      "id": "mh70",
-      "question": "L'article L. 221-18 renvoie à l'article L. 221-4 : que dispose L. 221-18, et que précise L. 221-4 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000032226842",
-        "LEGIARTI000044563153"
-      ],
-      "expected_article_nums": [
-        "L. 221-18",
-        "L. 221-4"
-      ],
-      "reference_answer": "L. 221-18 : Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à  L. 221-4 : Les dispositions du présent chapitre s'appliquent aux contrats portant sur la fourniture d'eau, de gaz ou d'électricité lorsqu'ils ne sont pas conditionnés dans un volume délimité ou en quantité déter",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "mh71",
-      "question": "L'article L. 221-19 renvoie à l'article L. 221-18 : que dispose L. 221-19, et que précise L. 221-18 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000032226840",
-        "LEGIARTI000032226842"
-      ],
-      "expected_article_nums": [
-        "L. 221-19",
-        "L. 221-18"
-      ],
-      "reference_answer": "L. 221-19 : Conformément au règlement n° 1182/71/ CEE du Conseil du 3 juin 1971 portant détermination des règles applicables aux délais, aux dates et aux termes : 1° Le jour où le contrat est conclu ou le jour de L. 221-18 : Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à ",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "mh72",
-      "question": "L'article L. 221-20 renvoie à l'article L. 221-5 : que dispose L. 221-20, et que précise L. 221-5 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563199",
-        "LEGIARTI000044563141"
-      ],
-      "expected_article_nums": [
-        "L. 221-20",
-        "L. 221-5"
-      ],
-      "reference_answer": "L. 221-20 : Lorsque les informations relatives au droit de rétractation n'ont pas été fournies au consommateur dans les conditions prévues au 7° de l'article L. L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "mh73",
-      "question": "L'article L. 221-20 renvoie à l'article L. 221-18 : que dispose L. 221-20, et que précise L. 221-18 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563199",
-        "LEGIARTI000032226842"
-      ],
-      "expected_article_nums": [
-        "L. 221-20",
-        "L. 221-18"
-      ],
-      "reference_answer": "L. 221-20 : Lorsque les informations relatives au droit de rétractation n'ont pas été fournies au consommateur dans les conditions prévues au 7° de l'article L. L. 221-18 : Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à ",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "mh74",
-      "question": "L'article L. 221-21 renvoie à l'article L. 221-18 : que dispose L. 221-21, et que précise L. 221-18 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563193",
-        "LEGIARTI000032226842"
-      ],
-      "expected_article_nums": [
-        "L. 221-21",
-        "L. 221-18"
-      ],
-      "reference_answer": "L. 221-21 : Le consommateur exerce son droit de rétractation en informant le professionnel de sa décision de se rétracter par l'envoi, avant l'expiration du délai prévu à l'article L. L. 221-18 : Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à ",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "mh75",
-      "question": "L'article L. 221-21 renvoie à l'article L. 221-5 : que dispose L. 221-21, et que précise L. 221-5 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563193",
-        "LEGIARTI000044563141"
-      ],
-      "expected_article_nums": [
-        "L. 221-21",
-        "L. 221-5"
-      ],
-      "reference_answer": "L. 221-21 : Le consommateur exerce son droit de rétractation en informant le professionnel de sa décision de se rétracter par l'envoi, avant l'expiration du délai prévu à l'article L. L. 221-5 : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de fourniture de services, de contenu numérique ou de services numériques, le professionnel fournit au consommateur, de manière lisib",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "mh76",
-      "question": "L'article L. 221-25 renvoie à l'article L. 221-4 : que dispose L. 221-25, et que précise L. 221-4 sur ce point ?",
-      "type": "multi_hop",
-      "expected_article_ids": [
-        "LEGIARTI000044563179",
-        "LEGIARTI000044563153"
-      ],
-      "expected_article_nums": [
-        "L. 221-25",
-        "L. 221-4"
-      ],
-      "reference_answer": "L. 221-25 : Si le consommateur souhaite que l'exécution d'une prestation de services ou d'un contrat mentionné au premier alinéa de l'article L. L. 221-4 : Les dispositions du présent chapitre s'appliquent aux contrats portant sur la fourniture d'eau, de gaz ou d'électricité lorsqu'ils ne sont pas conditionnés dans un volume délimité ou en quantité déter",
-      "as_of": null,
-      "unanswerable": false,
-      "validated": false,
-      "topic": "renvoi",
-      "notes": "edge:text_extract:explicit_citation"
-    },
-    {
-      "id": "t01",
-      "question": "Au 1er janvier 2023, quelle durée de garantie légale de conformité s'appliquait pour un bien neuf au sens de L. 217-3 ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000044142579"
-      ],
-      "expected_article_nums": [
-        "L. 217-3"
-      ],
-      "reference_answer": "Deux ans à compter de la délivrance du bien.",
-      "as_of": "2023-01-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "La rédaction gelée du snapshot répond déjà ; lorsque les versions LEGI seront chargées, résoudre la version en vigueur à as_of."
-    },
-    {
-      "id": "t02",
-      "question": "En vigueur au 15 juin 2022, quel était le délai de rétractation pour un contrat conclu à distance ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000032226842"
-      ],
-      "expected_article_nums": [
-        "L. 221-18"
-      ],
-      "reference_answer": "Quatorze jours.",
-      "as_of": "2022-06-15",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t03",
-      "question": "À la date du 1er mars 2024, pendant combien de temps un défaut de conformité sur un bien neuf était-il présumé exister dès la délivrance ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000044152587"
-      ],
-      "expected_article_nums": [
-        "L. 217-7"
-      ],
-      "reference_answer": "Vingt-quatre mois (douze mois pour les biens d'occasion).",
-      "as_of": "2024-03-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t04",
-      "question": "Selon le droit applicable au 1er septembre 2021, quel délai maximal de délivrance s'imposait à défaut d'accord sur la date ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000044142498"
-      ],
-      "expected_article_nums": [
-        "L. 216-1"
-      ],
-      "reference_answer": "Sans retard injustifié et au plus tard trente jours après la conclusion du contrat.",
-      "as_of": "2021-09-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t05",
-      "question": "Au 1er janvier 2020, combien de temps le prêteur devait-il maintenir les conditions d'une offre de crédit à la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000035731428"
-      ],
-      "expected_article_nums": [
-        "L. 312-18"
-      ],
-      "reference_answer": "Une durée minimale de quinze jours à compter de la remise ou de l'envoi.",
-      "as_of": "2020-01-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t06",
-      "question": "En vigueur le 10 octobre 2019, une clause créant un déséquilibre significatif au détriment du consommateur était-elle abusive ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000032890812"
-      ],
-      "expected_article_nums": [
-        "L. 212-1"
-      ],
-      "reference_answer": "Oui, dans les contrats conclus entre professionnels et consommateurs.",
-      "as_of": "2019-10-10",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t07",
-      "question": "Au 1er juillet 2023, le consommateur avait-il droit de recourir gratuitement à un médiateur de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000032224805"
-      ],
-      "expected_article_nums": [
-        "L. 612-1"
-      ],
-      "reference_answer": "Oui ; le professionnel garantit un recours effectif à un dispositif de médiation.",
-      "as_of": "2023-07-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t08",
-      "question": "Selon les dispositions en vigueur au 5 mai 2021, à quel moment le risque de perte du bien était-il transféré au consommateur ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000044142491"
-      ],
-      "expected_article_nums": [
-        "L. 216-2"
-      ],
-      "reference_answer": "Lorsqu'il prend physiquement possession du bien, ou lorsqu'un tiers qu'il a désigné (autre que le transporteur) le fait.",
-      "as_of": "2021-05-05",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t09",
-      "question": "Au 1er janvier 2025, les clauses abusives étaient-elles réputées non écrites ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000032226417"
-      ],
-      "expected_article_nums": [
-        "L. 241-1"
-      ],
-      "reference_answer": "Oui ; le contrat demeure pour le reste s'il peut subsister sans elles.",
-      "as_of": "2025-01-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t10",
-      "question": "En vigueur au 12 décembre 2022, les pratiques commerciales déloyales étaient-elles interdites ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000032227301"
-      ],
-      "expected_article_nums": [
-        "L. 121-1"
-      ],
-      "reference_answer": "Oui, lorsqu'elles sont contraires à la diligence professionnelle et altèrent le comportement économique du consommateur.",
-      "as_of": "2022-12-12",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t11",
-      "question": "À la date du 1er février 2018, le professionnel devait-il informer le consommateur sur les prix avant conclusion ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000032227331"
-      ],
-      "expected_article_nums": [
-        "L. 112-1"
-      ],
-      "reference_answer": "Oui, par marquage, étiquetage, affichage ou tout autre procédé approprié.",
-      "as_of": "2018-02-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t12",
-      "question": "Au 20 août 2024, quel délai de présomption de non-conformité s'appliquait aux biens d'occasion ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000044152587"
-      ],
-      "expected_article_nums": [
-        "L. 217-7"
-      ],
-      "reference_answer": "Douze mois à compter de la délivrance.",
-      "as_of": "2024-08-20",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t13",
-      "question": "Selon le droit au 1er juin 2016, les sommes versées d'avance étaient-elles des arrhes sauf stipulation contraire ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000032226990"
-      ],
-      "expected_article_nums": [
-        "L. 214-1"
-      ],
-      "reference_answer": "Oui : le consommateur qui se désiste les perd ; le professionnel qui se désiste les restitue au double.",
-      "as_of": "2016-06-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t14",
-      "question": "En vigueur le 3 mars 2022, le délai de rétractation pour une prestation de services à distance courait-il dès la conclusion du contrat ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000032226842"
-      ],
-      "expected_article_nums": [
-        "L. 221-18"
-      ],
-      "reference_answer": "Oui, pour les contrats de prestation de services le délai court à compter de la conclusion du contrat.",
-      "as_of": "2022-03-03",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t15",
-      "question": "Au 1er novembre 2021, le vendeur pouvait-il refuser réparation ou remplacement s'ils entraînaient des coûts disproportionnés ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000044152610"
-      ],
-      "expected_article_nums": [
-        "L. 217-12"
-      ],
-      "reference_answer": "Oui, si la mise en conformité choisie est impossible ou disproportionnée au regard notamment de la valeur du bien et de l'importance du défaut.",
-      "as_of": "2021-11-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal",
-      "notes": "as_of renseigné ; résolution de version déléguée au corpus (ArticleVersion) lorsqu'il sera disponible"
-    },
-    {
-      "id": "t50",
-      "question": "Selon le droit en vigueur au 2017-01-01, que dispose l'article L. 111-1 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000044142438"
-      ],
-      "expected_article_nums": [
-        "L. 111-1"
-      ],
-      "reference_answer": "Avant que le consommateur ne soit lié par un contrat à titre onéreux, le professionnel communique au consommateur, de manière lisible et compréhensible, les informations suivantes : 1° Les caractéristiques essentielles du bien ou du service, ainsi que celles du service numérique ou du contenu numérique, compte tenu de ",
-      "as_of": "2017-01-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
-    },
-    {
-      "id": "t51",
-      "question": "Selon le droit en vigueur au 2019-06-01, que dispose l'article L. 112-1 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000032227331"
-      ],
-      "expected_article_nums": [
-        "L. 112-1"
-      ],
-      "reference_answer": "Tout vendeur de produit ou tout prestataire de services informe le consommateur, par voie de marquage, d'étiquetage, d'affichage ou par tout autre procédé approprié, sur les prix et les conditions particulières de la vente et de l'exécution des services, selon des modalités fixées par arrêtés du ministre chargé de l'éc",
-      "as_of": "2019-06-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
-    },
-    {
-      "id": "t53",
-      "question": "Selon le droit en vigueur au 2021-04-01, que dispose l'article L. 121-2 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000044563114"
-      ],
-      "expected_article_nums": [
-        "L. 121-2"
-      ],
-      "reference_answer": "Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes : 1° Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un autre signe distinctif d'un concurrent ; 2° Lorsqu'elle repose sur des allégations, indications ou présentations fausse",
-      "as_of": "2021-04-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
-    },
-    {
-      "id": "t54",
-      "question": "Selon le droit en vigueur au 2022-01-01, que dispose l'article L. 221-1 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000044563164"
-      ],
-      "expected_article_nums": [
-        "L. 221-1"
-      ],
-      "reference_answer": "I.",
-      "as_of": "2022-01-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
-    },
-    {
-      "id": "t55",
-      "question": "Selon le droit en vigueur au 2023-06-15, que dispose l'article L. 221-18 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000032226842"
-      ],
-      "expected_article_nums": [
-        "L. 221-18"
-      ],
-      "reference_answer": "Le consommateur dispose d'un délai de quatorze jours pour exercer son droit de rétractation d'un contrat conclu à distance, à la suite d'un démarchage téléphonique ou hors établissement, sans avoir à motiver sa décision ni à supporter d'autres coûts que ceux prévus aux articles L.",
-      "as_of": "2023-06-15",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
-    },
-    {
-      "id": "t56",
-      "question": "Selon le droit en vigueur au 2024-01-10, que dispose l'article L. 221-28 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000044563170"
-      ],
-      "expected_article_nums": [
-        "L. 221-28"
-      ],
-      "reference_answer": "Le droit de rétractation ne peut être exercé pour les contrats : 1° De fourniture de services pleinement exécutés avant la fin du délai de rétractation et, si le contrat soumet le consommateur à une obligation de payer, dont l'exécution a commencé avec son accord préalable et exprès et avec la reconnaissance par lui de",
-      "as_of": "2024-01-10",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
-    },
-    {
-      "id": "t57",
-      "question": "Selon le droit en vigueur au 2025-03-01, que dispose l'article L. 217-3 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000044142579"
-      ],
-      "expected_article_nums": [
-        "L. 217-3"
-      ],
-      "reference_answer": "Le vendeur délivre un bien conforme au contrat ainsi qu'aux critères énoncés à l'article L.",
-      "as_of": "2025-03-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
-    },
-    {
-      "id": "t58",
-      "question": "Selon le droit en vigueur au 2017-01-01, que dispose l'article L. 217-7 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000044152587"
-      ],
-      "expected_article_nums": [
-        "L. 217-7"
-      ],
-      "reference_answer": "Les défauts de conformité qui apparaissent dans un délai de vingt-quatre mois à compter de la délivrance du bien, y compris du bien comportant des éléments numériques, sont, sauf preuve contraire, présumés exister au moment de la délivrance, à moins que cette présomption ne soit incompatible avec la nature du bien ou d",
-      "as_of": "2017-01-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
-    },
-    {
-      "id": "t59",
-      "question": "Selon le droit en vigueur au 2019-06-01, que dispose l'article L. 312-1 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000034072779"
-      ],
-      "expected_article_nums": [
-        "L. 312-1"
-      ],
-      "reference_answer": "Les dispositions du présent chapitre s'appliquent à toute opération de crédit mentionnée au 6° de l'article L.",
-      "as_of": "2019-06-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
-    },
-    {
-      "id": "t60",
-      "question": "Selon le droit en vigueur au 2020-12-15, que dispose l'article L. 312-18 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000035731428"
-      ],
-      "expected_article_nums": [
-        "L. 312-18"
-      ],
-      "reference_answer": "L'offre de contrat de crédit est établie sur support papier ou sur un autre support durable.",
-      "as_of": "2020-12-15",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
-    },
-    {
-      "id": "t61",
-      "question": "Selon le droit en vigueur au 2021-04-01, que dispose l'article L. 212-1 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000032890812"
-      ],
-      "expected_article_nums": [
-        "L. 212-1"
-      ],
-      "reference_answer": "Dans les contrats conclus entre professionnels et consommateurs, sont abusives les clauses qui ont pour objet ou pour effet de créer, au détriment du consommateur, un déséquilibre significatif entre les droits et obligations des parties au contrat.",
-      "as_of": "2021-04-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
-    },
-    {
-      "id": "t62",
-      "question": "Selon le droit en vigueur au 2022-01-01, que dispose l'article L. 241-1 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000032226417"
-      ],
-      "expected_article_nums": [
-        "L. 241-1"
-      ],
-      "reference_answer": "Les clauses abusives sont réputées non écrites.Le contrat reste applicable dans toutes ses dispositions autres que celles jugées abusives s'il peut subsister sans ces clauses.Les dispositions du présent article sont d'ordre public.",
-      "as_of": "2022-01-01",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
-    },
-    {
-      "id": "t63",
-      "question": "Selon le droit en vigueur au 2023-06-15, que dispose l'article L. 612-1 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000032224805"
-      ],
-      "expected_article_nums": [
-        "L. 612-1"
-      ],
-      "reference_answer": "Tout consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige qui l'oppose à un professionnel.",
-      "as_of": "2023-06-15",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
-    },
-    {
-      "id": "t64",
-      "question": "Selon le droit en vigueur au 2024-01-10, que dispose l'article L. 216-1 du Code de la consommation ?",
-      "type": "temporal",
-      "expected_article_ids": [
-        "LEGIARTI000044142498"
-      ],
-      "expected_article_nums": [
-        "L. 216-1"
-      ],
-      "reference_answer": "Le professionnel délivre le bien ou fournit le service à la date ou dans le délai indiqué au consommateur, conformément au 3° de l'article L.",
-      "as_of": "2024-01-10",
-      "unanswerable": false,
-      "validated": false,
-      "topic": "temporal-template",
-      "notes": "Prototype temporal sur snapshot courant ; versions LEGI à venir"
     },
     {
       "id": "u01",
@@ -3067,6 +1833,1257 @@
       "validated": false,
       "topic": "annulation apparente",
       "notes": "trap template on linked pair"
+    },
+    {
+      "id": "mh01",
+      "question": "Pour appliquer l'article L. 112-6, faut-il aussi lire l'article L. 112-5 (de la consommation) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227321",
+        "LEGIARTI000032227323"
+      ],
+      "expected_article_nums": [
+        "L. 112-6",
+        "L. 112-5"
+      ],
+      "reference_answer": "L. 112-6 (consommation) : La garantie mentionnée à l'article L. L. 112-5 : Tout professionnel peut demander à l'autorité administrative chargée de la concurrence et de la consommation de prendre formellement position sur la conformité aux articles L. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032227321→LEGIARTI000032227323 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh02",
+      "question": "En combinant les articles L. 121-22 et L. 762-2 (de la consommation), quelles règles s'appliquent au renvoi mentionné ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044224603",
+        "LEGIARTI000032224273"
+      ],
+      "expected_article_nums": [
+        "L. 121-22",
+        "L. 762-2"
+      ],
+      "reference_answer": "L. 121-22 (consommation) : Est interdite toute publicité portant : 1° Sur une opération commerciale soumise à autorisation ou à déclaration au titre soit de l'article L. L. 762-2 : La collecte des informations contenues dans le fichier mentionné à l'article L. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000044224603→LEGIARTI000032224273 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh03",
+      "question": "Quel est le contenu du renvoi de l'article L. 131-2 vers l'article L. 111-4 dans le Code de la consommation ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227140",
+        "LEGIARTI000044330854"
+      ],
+      "expected_article_nums": [
+        "L. 131-2",
+        "L. 111-4"
+      ],
+      "reference_answer": "L. 131-2 (consommation) : Tout manquement à l'obligation d'informer sur la durée de disponibilité des pièces détachées mentionnée à l'article L. L. 111-4 : Le fabricant ou l'importateur de biens meubles informe le vendeur professionnel de la disponibilité ou de la non-disponibilité des pièces détachées indispensables à l'utilisation d Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032227140→LEGIARTI000044330854 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh04",
+      "question": "Quel est le contenu du renvoi de l'article L. 131-3-1 vers l'article L. 111-6 dans le Code de la consommation ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044526142",
+        "LEGIARTI000044564977"
+      ],
+      "expected_article_nums": [
+        "L. 131-3-1",
+        "L. 111-6"
+      ],
+      "reference_answer": "L. 131-3-1 (consommation) : Tout manquement à l'obligation d'information mentionnée à l'article L. L. 111-6 : Le producteur de biens comportant des éléments numériques informe le vendeur professionnel de la durée au cours de laquelle les mises à jour logicielles, que le producteur fournit, Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000044526142→LEGIARTI000044564977 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh05",
+      "question": "L'article L. 132-11-1 du Code de la consommation renvoie à l'article L. 132-11 : que dispose L. 132-11-1, et que précise L. 132-11 ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000046190610",
+        "LEGIARTI000037556685"
+      ],
+      "expected_article_nums": [
+        "L. 132-11-1",
+        "L. 132-11"
+      ],
+      "reference_answer": "L. 132-11-1 (consommation) : Lorsque les pratiques commerciales agressives mentionnées aux articles L. L. 132-11 : Les pratiques commerciales agressives mentionnées aux articles L. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000046190610→LEGIARTI000037556685 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh06",
+      "question": "En combinant les articles L. 132-11-2 et L. 132-11 (de la consommation), quelles règles s'appliquent au renvoi mentionné ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000046190612",
+        "LEGIARTI000037556685"
+      ],
+      "expected_article_nums": [
+        "L. 132-11-2",
+        "L. 132-11"
+      ],
+      "reference_answer": "L. 132-11-2 (consommation) : Lorsque les pratiques commerciales agressives mentionnées aux articles L. L. 132-11 : Les pratiques commerciales agressives mentionnées aux articles L. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000046190612→LEGIARTI000037556685 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh07",
+      "question": "Pour appliquer l'article L. 132-16, faut-il aussi lire l'article L. 121-12 (de la consommation) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227075",
+        "LEGIARTI000032227266"
+      ],
+      "expected_article_nums": [
+        "L. 132-16",
+        "L. 121-12"
+      ],
+      "reference_answer": "L. 132-16 (consommation) : Tout contrat conclu à la suite d'une pratique commerciale illicite mentionnée à l'article L. L. 121-12 : Est interdit le fait d'exiger le paiement immédiat ou différé de biens ou de services fournis par un professionnel ou, s'agissant de biens, d'exiger leur renvoi ou leur conservatio Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032227075→LEGIARTI000032227266 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh08",
+      "question": "En combinant les articles L. 132-17 et L. 121-12 (de la consommation), quelles règles s'appliquent au renvoi mentionné ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227071",
+        "LEGIARTI000032227266"
+      ],
+      "expected_article_nums": [
+        "L. 132-17",
+        "L. 121-12"
+      ],
+      "reference_answer": "L. 132-17 (consommation) : La violation de l'interdiction mentionnée à l'article L. L. 121-12 : Est interdit le fait d'exiger le paiement immédiat ou différé de biens ou de services fournis par un professionnel ou, s'agissant de biens, d'exiger leur renvoi ou leur conservatio Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032227071→LEGIARTI000032227266 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh09",
+      "question": "Pour appliquer l'article L. 132-2-1, faut-il aussi lire l'article L. 132-2 (de la consommation) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000046190577",
+        "LEGIARTI000049532070"
+      ],
+      "expected_article_nums": [
+        "L. 132-2-1",
+        "L. 132-2"
+      ],
+      "reference_answer": "L. 132-2-1 (consommation) : Lorsque les pratiques commerciales trompeuses mentionnées aux articles L. L. 132-2 : Les pratiques commerciales trompeuses mentionnées aux articles L. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000046190577→LEGIARTI000049532070 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh10",
+      "question": "Pour appliquer l'article L. 132-2-2, faut-il aussi lire l'article L. 132-2 (de la consommation) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000046190579",
+        "LEGIARTI000049532070"
+      ],
+      "expected_article_nums": [
+        "L. 132-2-2",
+        "L. 132-2"
+      ],
+      "reference_answer": "L. 132-2-2 (consommation) : Lorsque les pratiques commerciales trompeuses mentionnées aux articles L. L. 132-2 : Les pratiques commerciales trompeuses mentionnées aux articles L. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000046190579→LEGIARTI000049532070 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh11",
+      "question": "Pour appliquer l'article L. 132-22, faut-il aussi lire l'article L. 121-17 (de la consommation) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227053",
+        "LEGIARTI000032227250"
+      ],
+      "expected_article_nums": [
+        "L. 132-22",
+        "L. 121-17"
+      ],
+      "reference_answer": "L. 132-22 (consommation) : Tout manquement à l'obligation de recueil du consentement exprès du consommateur dans les conditions prévues à l'article L. L. 121-17 : Préalablement à la conclusion d'un contrat de vente ou de prestation de services, le professionnel s'assure du consentement exprès du consommateur pour tout paiement supplémentaire Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032227053→LEGIARTI000032227250 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh12",
+      "question": "L'article L. 132-23 du Code de la consommation renvoie à l'article L. 121-21 : que dispose L. 132-23, et que précise L. 121-21 ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227049",
+        "LEGIARTI000032227234"
+      ],
+      "expected_article_nums": [
+        "L. 132-23",
+        "L. 121-21"
+      ],
+      "reference_answer": "L. 132-23 (consommation) : La violation de l'interdiction relative aux frais de recouvrement mentionnée à l'article L. L. 121-21 : Est interdit le fait pour un professionnel de solliciter ou de percevoir d'un consommateur des frais de recouvrement dans des conditions contraires au deuxième alinéa de l'article Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032227049→LEGIARTI000032227234 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh13",
+      "question": "Pour appliquer l'article L. 132-24, faut-il aussi lire l'article L. 121-22 (de la consommation) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227045",
+        "LEGIARTI000044224603"
+      ],
+      "expected_article_nums": [
+        "L. 132-24",
+        "L. 121-22"
+      ],
+      "reference_answer": "L. 132-24 (consommation) : Le fait pour tout annonceur de diffuser ou faire diffuser une publicité interdite dans les conditions prévues à l'article L. L. 121-22 : Est interdite toute publicité portant : 1° Sur une opération commerciale soumise à autorisation ou à déclaration au titre soit de l'article L. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032227045→LEGIARTI000044224603 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh14",
+      "question": "L'article L. 132-7 du Code de la consommation renvoie à l'article L. 132-6 : que dispose L. 132-7, et que précise L. 132-6 ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032227110",
+        "LEGIARTI000032227112"
+      ],
+      "expected_article_nums": [
+        "L. 132-7",
+        "L. 132-6"
+      ],
+      "reference_answer": "L. 132-7 (consommation) : Le refus de communication des éléments de justification ou des publicités diffusées dans les conditions prévues à l'article L. L. 132-6 : Pour l'application des articles L. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032227110→LEGIARTI000032227112 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh15",
+      "question": "Pour appliquer l'article L. 216-6, faut-il aussi lire l'article L. 216-1 (de la consommation) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044142472",
+        "LEGIARTI000044142498"
+      ],
+      "expected_article_nums": [
+        "L. 216-6",
+        "L. 216-1"
+      ],
+      "reference_answer": "L. 216-6 (consommation) : I.-En cas de manquement du professionnel à son obligation de délivrance du bien ou de fourniture du service dans les conditions prévues à l'article L. L. 216-1 : Le professionnel délivre le bien ou fournit le service à la date ou dans le délai indiqué au consommateur, conformément au 3° de l'article L. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000044142472→LEGIARTI000044142498 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh16",
+      "question": "Pour appliquer l'article L. 216-7, faut-il aussi lire l'article L. 216-6 (de la consommation) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044139707",
+        "LEGIARTI000044142472"
+      ],
+      "expected_article_nums": [
+        "L. 216-7",
+        "L. 216-6"
+      ],
+      "reference_answer": "L. 216-7 (consommation) : Lorsque le contrat est résolu dans les conditions prévues à l'article L. L. 216-6 : I.-En cas de manquement du professionnel à son obligation de délivrance du bien ou de fourniture du service dans les conditions prévues à l'article L. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:consommation:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000044139707→LEGIARTI000044142472 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh17",
+      "question": "L'article 1007 du Code civil renvoie à l'article 1006 : que dispose 1007, et que précise 1006 ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000039368517",
+        "LEGIARTI000006434591"
+      ],
+      "expected_article_nums": [
+        "1007",
+        "1006"
+      ],
+      "reference_answer": "1007 (civil) : Tout testament olographe ou mystique sera, avant d'être mis à exécution, déposé entre les mains d'un notaire. 1006 : Lorsqu'au décès du testateur il n'y aura pas d'héritiers auxquels une quotité de ses biens soit réservée par la loi, le légataire universel sera saisi de plein droit par la mort du Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:civil:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000039368517→LEGIARTI000006434591 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh18",
+      "question": "En combinant les articles 1051 et 1056 (civil), quelles règles s'appliquent au renvoi mentionné ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000006434912",
+        "LEGIARTI000006434955"
+      ],
+      "expected_article_nums": [
+        "1051",
+        "1056"
+      ],
+      "reference_answer": "1051 (civil) : Le second gratifié est réputé tenir ses droits de l'auteur de la libéralité. 1056 : Lorsque le second gratifié prédécède au grevé ou renonce au bénéfice de la libéralité graduelle, les biens ou droits qui en faisaient l'objet dépendent de la succession du grevé, à Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:civil:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000006434912→LEGIARTI000006434955 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh19",
+      "question": "En combinant les articles 1054 et 930 (civil), quelles règles s'appliquent au renvoi mentionné ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000006434932",
+        "LEGIARTI000006433774"
+      ],
+      "expected_article_nums": [
+        "1054",
+        "930"
+      ],
+      "reference_answer": "1054 (civil) : Si le grevé est héritier réservataire du disposant, la charge ne peut être imposée que sur la quotité disponible. 930 : La renonciation est établie par acte authentique spécifique reçu par deux notaires. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:civil:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000006434932→LEGIARTI000006433774 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh20",
+      "question": "En combinant les articles 1096 et 953 (civil), quelles règles s'appliquent au renvoi mentionné ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000006435819",
+        "LEGIARTI000006433883"
+      ],
+      "expected_article_nums": [
+        "1096",
+        "953"
+      ],
+      "reference_answer": "1096 (civil) : La donation de biens à venir faite entre époux pendant le mariage est toujours révocable. 953 : La donation entre vifs ne pourra être révoquée que pour cause d'inexécution des conditions sous lesquelles elle aura été faite, pour cause d'ingratitude, et pour cause de survenanc Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:civil:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000006435819→LEGIARTI000006433883 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh21",
+      "question": "En combinant les articles 1096 et 958 (civil), quelles règles s'appliquent au renvoi mentionné ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000006435819",
+        "LEGIARTI000022336269"
+      ],
+      "expected_article_nums": [
+        "1096",
+        "958"
+      ],
+      "reference_answer": "1096 (civil) : La donation de biens à venir faite entre époux pendant le mariage est toujours révocable. 958 : La révocation pour cause d'ingratitude ne préjudiciera ni aux aliénations faites par le donataire, ni aux hypothèques et autres charges réelles qu'il aura pu imposer sur l'objet de Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:civil:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000006435819→LEGIARTI000022336269 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh22",
+      "question": "En combinant les articles 1174 et 1366 (civil), quelles règles s'appliquent au renvoi mentionné ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032041178",
+        "LEGIARTI000032042461"
+      ],
+      "expected_article_nums": [
+        "1174",
+        "1366"
+      ],
+      "reference_answer": "1174 (civil) : Lorsqu'un écrit est exigé pour la validité d'un contrat, il peut être établi et conservé sous forme électronique dans les conditions prévues aux articles 1366 et 1367 et, lorsqu'un 1366 : L'écrit électronique a la même force probante que l'écrit sur support papier, sous réserve que puisse être dûment identifiée la personne dont il émane et qu'il soit établi et conse Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:civil:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032041178→LEGIARTI000032042461 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh23",
+      "question": "En combinant les articles 1174 et 1367 (civil), quelles règles s'appliquent au renvoi mentionné ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032041178",
+        "LEGIARTI000032042456"
+      ],
+      "expected_article_nums": [
+        "1174",
+        "1367"
+      ],
+      "reference_answer": "1174 (civil) : Lorsqu'un écrit est exigé pour la validité d'un contrat, il peut être établi et conservé sous forme électronique dans les conditions prévues aux articles 1366 et 1367 et, lorsqu'un 1367 : La signature nécessaire à la perfection d'un acte juridique identifie son auteur. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:civil:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032041178→LEGIARTI000032042456 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh24",
+      "question": "En combinant les articles 1178 et 1352 (civil), quelles règles s'appliquent au renvoi mentionné ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032041243",
+        "LEGIARTI000032042250"
+      ],
+      "expected_article_nums": [
+        "1178",
+        "1352"
+      ],
+      "reference_answer": "1178 (civil) : Un contrat qui ne remplit pas les conditions requises pour sa validité est nul. 1352 : La restitution d'une chose autre que d'une somme d'argent a lieu en nature ou, lorsque cela est impossible, en valeur, estimée au jour de la restitution. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:civil:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032041243→LEGIARTI000032042250 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh25",
+      "question": "Pour appliquer l'article 1178, faut-il aussi lire l'article 1352-9 (civil) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032041243",
+        "LEGIARTI000032035830"
+      ],
+      "expected_article_nums": [
+        "1178",
+        "1352-9"
+      ],
+      "reference_answer": "1178 (civil) : Un contrat qui ne remplit pas les conditions requises pour sa validité est nul. 1352-9 : Les sûretés constituées pour le paiement de l'obligation sont reportées de plein droit sur l'obligation de restituer sans toutefois que la caution soit privée du bénéfice du terme. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:civil:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032041243→LEGIARTI000032035830 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh26",
+      "question": "Pour appliquer l'article 1187, faut-il aussi lire l'article 1352 (civil) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032041195",
+        "LEGIARTI000032042250"
+      ],
+      "expected_article_nums": [
+        "1187",
+        "1352"
+      ],
+      "reference_answer": "1187 (civil) : La caducité met fin au contrat. 1352 : La restitution d'une chose autre que d'une somme d'argent a lieu en nature ou, lorsque cela est impossible, en valeur, estimée au jour de la restitution. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:civil:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032041195→LEGIARTI000032042250 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh27",
+      "question": "Pour appliquer l'article 1187, faut-il aussi lire l'article 1352-9 (civil) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032041195",
+        "LEGIARTI000032035830"
+      ],
+      "expected_article_nums": [
+        "1187",
+        "1352-9"
+      ],
+      "reference_answer": "1187 (civil) : La caducité met fin au contrat. 1352-9 : Les sûretés constituées pour le paiement de l'obligation sont reportées de plein droit sur l'obligation de restituer sans toutefois que la caution soit privée du bénéfice du terme. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:civil:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032041195→LEGIARTI000032035830 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh28",
+      "question": "Quel est le contenu du renvoi de l'article 1218 vers l'article 1351 dans le Code civil ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000032041431",
+        "LEGIARTI000032042212"
+      ],
+      "expected_article_nums": [
+        "1218",
+        "1351"
+      ],
+      "reference_answer": "1218 (civil) : Il y a force majeure en matière contractuelle lorsqu'un événement échappant au contrôle du débiteur, qui ne pouvait être raisonnablement prévu lors de la conclusion du contrat et d 1351 : L'impossibilité d'exécuter la prestation libère le débiteur à due concurrence lorsqu'elle procède d'un cas de force majeure et qu'elle est définitive, à moins qu'il n'ait convenu d Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:civil:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000032041431→LEGIARTI000032042212 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh29",
+      "question": "L'article L. 1111-3 du Code du travail renvoie à l'article L. 5134-72 : que dispose L. 1111-3, et que précise L. 5134-72 ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000031565369",
+        "LEGIARTI000026549836"
+      ],
+      "expected_article_nums": [
+        "L. 1111-3",
+        "L. 5134-72"
+      ],
+      "reference_answer": "L. 1111-3 (travail) : Ne sont pas pris en compte dans le calcul des effectifs de l'entreprise : 1° Les apprentis ; 2° Les titulaires d'un contrat initiative-emploi, pendant la durée d'attribution de l'a L. 5134-72 : L'aide à l'insertion professionnelle attribuée au titre d'un contrat initiative-emploi peut être modulée en fonction : 1° De la catégorie et du secteur d'activité de l'employeur. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:travail:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000031565369→LEGIARTI000026549836 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh30",
+      "question": "L'article L. 1111-3 du Code du travail renvoie à l'article L. 5134-30 : que dispose L. 1111-3, et que précise L. 5134-30 ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000031565369",
+        "LEGIARTI000026549775"
+      ],
+      "expected_article_nums": [
+        "L. 1111-3",
+        "L. 5134-30"
+      ],
+      "reference_answer": "L. 1111-3 (travail) : Ne sont pas pris en compte dans le calcul des effectifs de l'entreprise : 1° Les apprentis ; 2° Les titulaires d'un contrat initiative-emploi, pendant la durée d'attribution de l'a L. 5134-30 : L'aide à l'insertion professionnelle attribuée au titre d'un contrat d'accompagnement dans l'emploi peut être modulée en fonction : 1° De la catégorie et du secteur d'activité de l Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:travail:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000031565369→LEGIARTI000026549775 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh31",
+      "question": "Pour appliquer l'article L. 1121-2, faut-il aussi lire l'article 6 (du travail) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000045389811",
+        "LEGIARTI000006419285"
+      ],
+      "expected_article_nums": [
+        "L. 1121-2",
+        "6"
+      ],
+      "reference_answer": "L. 1121-2 (travail) : Aucune personne ne peut être écartée d'une procédure de recrutement ou de l'accès à un stage ou à une période de formation en entreprise, aucun salarié ne peut être sanctionné, lic 6 : On ne peut déroger, par des conventions particulières, aux lois qui intéressent l'ordre public et les bonnes moeurs. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:travail:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000045389811→LEGIARTI000006419285 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh32",
+      "question": "Pour appliquer l'article L. 1132-2, faut-il aussi lire l'article L. 1132-1 (du travail) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000006900789",
+        "LEGIARTI000045391841"
+      ],
+      "expected_article_nums": [
+        "L. 1132-2",
+        "L. 1132-1"
+      ],
+      "reference_answer": "L. 1132-2 (travail) : Aucun salarié ne peut être sanctionné, licencié ou faire l'objet d'une mesure discriminatoire mentionnée à l'article L. L. 1132-1 : Aucune personne ne peut être écartée d'une procédure de recrutement ou de nomination ou de l'accès à un stage ou à une période de formation en entreprise, aucun salarié ne peut êtr Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:travail:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000006900789→LEGIARTI000045391841 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh33",
+      "question": "L'article L. 1132-3-1 du Code du travail renvoie à l'article L. 1132-1 : que dispose L. 1132-3-1, et que précise L. 1132-1 ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000024459527",
+        "LEGIARTI000045391841"
+      ],
+      "expected_article_nums": [
+        "L. 1132-3-1",
+        "L. 1132-1"
+      ],
+      "reference_answer": "L. 1132-3-1 (travail) : Aucun salarié ne peut être sanctionné, licencié ou faire l'objet d'une mesure discriminatoire mentionnée à l'article L. L. 1132-1 : Aucune personne ne peut être écartée d'une procédure de recrutement ou de nomination ou de l'accès à un stage ou à une période de formation en entreprise, aucun salarié ne peut êtr Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:travail:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000024459527→LEGIARTI000045391841 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh34",
+      "question": "En combinant les articles L. 1132-3-2 et L. 1132-1 (du travail), quelles règles s'appliquent au renvoi mentionné ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000027417669",
+        "LEGIARTI000045391841"
+      ],
+      "expected_article_nums": [
+        "L. 1132-3-2",
+        "L. 1132-1"
+      ],
+      "reference_answer": "L. 1132-3-2 (travail) : Aucun salarié ne peut être sanctionné, licencié ou faire l'objet d'une mesure discriminatoire mentionnée à l'article L. L. 1132-1 : Aucune personne ne peut être écartée d'une procédure de recrutement ou de nomination ou de l'accès à un stage ou à une période de formation en entreprise, aucun salarié ne peut êtr Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:travail:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000027417669→LEGIARTI000045391841 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh35",
+      "question": "L'article L. 1134-2 du Code du travail renvoie à l'article L. 1134-1 : que dispose L. 1134-2, et que précise L. 1134-1 ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000035902388",
+        "LEGIARTI000033461510"
+      ],
+      "expected_article_nums": [
+        "L. 1134-2",
+        "L. 1134-1"
+      ],
+      "reference_answer": "L. 1134-2 (travail) : Les organisations syndicales représentatives au niveau national, au niveau départemental ou de la collectivité en Guadeloupe, en Guyane, en Martinique, à Mayotte, à La Réunion, à S L. 1134-1 : Lorsque survient un litige en raison d'une méconnaissance des dispositions du chapitre II, le candidat à un emploi, à un stage ou à une période de formation en entreprise ou le sal Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:travail:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000035902388→LEGIARTI000033461510 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh36",
+      "question": "Quel est le contenu du renvoi de l'article L. 1134-3 vers l'article L. 1134-1 dans le Code du travail ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000033461502",
+        "LEGIARTI000033461510"
+      ],
+      "expected_article_nums": [
+        "L. 1134-3",
+        "L. 1134-1"
+      ],
+      "reference_answer": "L. 1134-3 (travail) : Les associations régulièrement constituées depuis cinq ans au moins pour la lutte contre les discriminations ou oeuvrant dans le domaine du handicap peuvent exercer en justice tout L. 1134-1 : Lorsque survient un litige en raison d'une méconnaissance des dispositions du chapitre II, le candidat à un emploi, à un stage ou à une période de formation en entreprise ou le sal Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:travail:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000033461502→LEGIARTI000033461510 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh37",
+      "question": "Pour appliquer l'article L. 1142-9, faut-il aussi lire l'article L. 1142-8 (du travail) ? Que disent-ils ensemble ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044605442",
+        "LEGIARTI000044605453"
+      ],
+      "expected_article_nums": [
+        "L. 1142-9",
+        "L. 1142-8"
+      ],
+      "reference_answer": "L. 1142-9 (travail) : Dans les entreprises d'au moins cinquante salariés, lorsque les résultats obtenus par l'entreprise au regard des indicateurs mentionnés à l'article L. L. 1142-8 : Dans les entreprises d'au moins cinquante salariés, l'employeur publie chaque année l'ensemble des indicateurs relatifs aux écarts de rémunération entre les femmes et les hommes et Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:travail:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000044605442→LEGIARTI000044605453 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh38",
+      "question": "Quel est le contenu du renvoi de l'article L. 1142-9 vers l'article L. 2242-3 dans le Code du travail ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044605442",
+        "LEGIARTI000037389684"
+      ],
+      "expected_article_nums": [
+        "L. 1142-9",
+        "L. 2242-3"
+      ],
+      "reference_answer": "L. 1142-9 (travail) : Dans les entreprises d'au moins cinquante salariés, lorsque les résultats obtenus par l'entreprise au regard des indicateurs mentionnés à l'article L. L. 2242-3 : En l'absence d'accord relatif à l'égalité professionnelle entre les femmes et les hommes à l'issue de la négociation mentionnée au 2° de l'article L. Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:travail:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000044605442→LEGIARTI000037389684 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "mh39",
+      "question": "L'article L. 1142-9-1 du Code du travail renvoie à l'article L. 1142-8 : que dispose L. 1142-9-1, et que précise L. 1142-8 ?",
+      "type": "multi_hop",
+      "expected_article_ids": [
+        "LEGIARTI000044566243",
+        "LEGIARTI000044605453"
+      ],
+      "expected_article_nums": [
+        "L. 1142-9-1",
+        "L. 1142-8"
+      ],
+      "reference_answer": "L. 1142-9-1 (travail) : Lorsque les résultats obtenus par l'entreprise au regard des indicateurs mentionnés à l'article L. L. 1142-8 : Dans les entreprises d'au moins cinquante salariés, l'employeur publie chaque année l'ensemble des indicateurs relatifs aux écarts de rémunération entre les femmes et les hommes et Le renvoi (renvoi) articule les deux dispositions.",
+      "as_of": null,
+      "unanswerable": false,
+      "validated": false,
+      "topic": "crossref:travail:renvoi",
+      "notes": "CrossRef réel renvoi LEGIARTI000044566243→LEGIARTI000044605453 (corpus codes-v0.2-2025-07-13)"
+    },
+    {
+      "id": "t01",
+      "question": "Au 2012-01-01, quelle était la rédaction applicable de l'article L. 121-4 (de la consommation) ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044563107"
+      ],
+      "expected_article_nums": [
+        "L. 121-4"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article L. 121-4 disposait : En cas de condamnation, le tribunal ordonne la publication du jugement. (version LEGIARTI000018048136 ; rédaction courante différente : Sont réputées trompeuses, au sens des articles L.)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:consommation",
+      "notes": "version_at(2012-01-01)=LEGIARTI000018048136 ≠ tip LEGIARTI000044563107; debut=2008-01-05 fin=2014-03-19"
+    },
+    {
+      "id": "t02",
+      "question": "En date du 2018-01-01, que prévoyait l'article L. 771-2 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000045178745"
+      ],
+      "expected_article_nums": [
+        "L. 771-2"
+      ],
+      "reference_answer": "Au 2018-01-01, l'article L. 771-2 disposait : Sont applicables dans les îles Wallis et Futuna, sous réserve des adaptations prévues à l'article L. (version LEGIARTI000034130174 ; rédaction courante différente : Sont applicables dans les îles Wallis et Futuna, sous réserve des adaptations…)",
+      "as_of": "2018-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:consommation",
+      "notes": "version_at(2018-01-01)=LEGIARTI000034130174 ≠ tip LEGIARTI000045178745; debut=2017-07-01 fin=2019-06-01"
+    },
+    {
+      "id": "t03",
+      "question": "En date du 2016-10-01, que prévoyait l'article L. 412-1 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000041985019"
+      ],
+      "expected_article_nums": [
+        "L. 412-1"
+      ],
+      "reference_answer": "Au 2016-10-01, l'article L. 412-1 disposait : Des décrets en Conseil d'Etat déterminent les règles auxquelles doivent satisfaire les produits et services, notamment en ce qui concerne :1° La fabrication, l'importation, la vente, la mise en vente, l'exposition, la détention et la distribution à titre gratuit de toutes marchan (version LEGIARTI000032225492 ; rédaction courante différente : I.-Des décrets en Conseil d'Etat définissent les règles auxquelles doivent…)",
+      "as_of": "2016-10-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:consommation",
+      "notes": "version_at(2016-10-01)=LEGIARTI000032225492 ≠ tip LEGIARTI000041985019; debut=2016-07-01 fin=2017-02-23"
+    },
+    {
+      "id": "t04",
+      "question": "En date du 2023-01-01, que prévoyait l'article L. 511-7 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000051558799"
+      ],
+      "expected_article_nums": [
+        "L. 511-7"
+      ],
+      "reference_answer": "Au 2023-01-01, l'article L. 511-7 disposait : Les agents sont habilités à rechercher et à constater les infractions ou les manquements aux dispositions : 1° Du règlement (CE) n° 1371/2007 du Parlement européen et du Conseil du 23 octobre 2007 sur les droits et obligations des voyageurs ferroviaires ; 2° De l'article 23 du rè (version LEGIARTI000043984101 ; rédaction courante différente : Les agents sont habilités à rechercher et à constater les infractions ou les…)",
+      "as_of": "2023-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:consommation",
+      "notes": "version_at(2023-01-01)=LEGIARTI000043984101 ≠ tip LEGIARTI000051558799; debut=2023-01-01 fin=2023-06-07"
+    },
+    {
+      "id": "t05",
+      "question": "En date du 2012-01-01, que prévoyait l'article L. 311-1 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000034072668"
+      ],
+      "expected_article_nums": [
+        "L. 311-1"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article L. 311-1 disposait : Au sens du présent chapitre, sont considérés comme : 1° Prêteur, toute personne qui consent ou s'engage à consentir un crédit mentionné à l'article L. (version LEGIARTI000022431920 ; rédaction courante différente : Pour l'application des dispositions du présent titre, sont considérés comme :…)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:consommation",
+      "notes": "version_at(2012-01-01)=LEGIARTI000022431920 ≠ tip LEGIARTI000034072668; debut=2011-05-01 fin=2016-07-01"
+    },
+    {
+      "id": "t06",
+      "question": "En date du 2016-10-01, que prévoyait l'article L. 224-3 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000046197680"
+      ],
+      "expected_article_nums": [
+        "L. 224-3"
+      ],
+      "reference_answer": "Au 2016-10-01, l'article L. 224-3 disposait : L'offre de fourniture d'électricité ou de gaz naturel précise, dans des termes clairs et compréhensibles, les informations suivantes : 1° L'identité du fournisseur, l'adresse de son siège social et son numéro d'inscription au registre du commerce et des sociétés ou tout document (version LEGIARTI000032226733 ; rédaction courante différente : L'offre de fourniture d'électricité ou de gaz naturel précise, dans des termes…)",
+      "as_of": "2016-10-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:consommation",
+      "notes": "version_at(2016-10-01)=LEGIARTI000032226733 ≠ tip LEGIARTI000046197680; debut=2016-07-01 fin=2018-01-01"
+    },
+    {
+      "id": "t07",
+      "question": "Selon le droit en vigueur au 2015-06-01, que disposait l'article L. 121-23 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000042615545"
+      ],
+      "expected_article_nums": [
+        "L. 121-23"
+      ],
+      "reference_answer": "Au 2015-06-01, l'article L. 121-23 disposait : Toute infraction aux articles L. (version LEGIARTI000028747532 ; rédaction courante différente : Sous réserve des dispositions de l'article L.)",
+      "as_of": "2015-06-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:consommation",
+      "notes": "version_at(2015-06-01)=LEGIARTI000028747532 ≠ tip LEGIARTI000042615545; debut=2014-06-14 fin=2016-07-01"
+    },
+    {
+      "id": "t08",
+      "question": "Quelle règle résultait de l'article L. 221-5 (Code de la consommation) tel qu'en vigueur le 2012-01-01 ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044563141"
+      ],
+      "expected_article_nums": [
+        "L. 221-5"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article L. 221-5 disposait : En cas de danger grave ou immédiat, le ministre chargé de la consommation et le ou les ministres intéressés peuvent suspendre par arrêté conjoint, pour une durée n'excédant pas un an, la fabrication, l'importation, l'exportation, la mise sur le marché à titre gratuit ou onéreux d (version LEGIARTI000006292351 ; rédaction courante différente : I.-Préalablement à la conclusion d'un contrat de vente de biens ou de…)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:consommation",
+      "notes": "version_at(2012-01-01)=LEGIARTI000006292351 ≠ tip LEGIARTI000044563141; debut=2004-07-10 fin=2016-07-01"
+    },
+    {
+      "id": "t09",
+      "question": "Au 2016-10-01, quelle était la rédaction applicable de l'article L. 224-12 (de la consommation) ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000051560277"
+      ],
+      "expected_article_nums": [
+        "L. 224-12"
+      ],
+      "reference_answer": "Au 2016-10-01, l'article L. 224-12 disposait : Les factures de fourniture d'électricité et de gaz naturel sont présentées dans les conditions fixées par un arrêté du ministre chargé de la consommation et du ministre chargé de l'énergie pris après avis du Conseil national de la consommation.Un arrêté pris dans les mêmes condit (version LEGIARTI000032226711 ; rédaction courante différente : Les factures de fourniture d'électricité et de gaz naturel sont présentées dans…)",
+      "as_of": "2016-10-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:consommation",
+      "notes": "version_at(2016-10-01)=LEGIARTI000032226711 ≠ tip LEGIARTI000051560277; debut=2016-07-01 fin=2019-05-24"
+    },
+    {
+      "id": "t10",
+      "question": "Selon le droit en vigueur au 2016-10-01, que disposait l'article L. 511-22 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000041985451"
+      ],
+      "expected_article_nums": [
+        "L. 511-22"
+      ],
+      "reference_answer": "Au 2016-10-01, l'article L. 511-22 disposait : I-Sont habilités à rechercher et à constater, dans l'exercice de leurs fonctions, les infractions aux dispositions du livre IV et les infractions et les manquements mentionnés aux articles L. (version LEGIARTI000032225148 ; rédaction courante différente : I-Sont habilités à rechercher et à constater, dans l'exercice de leurs…)",
+      "as_of": "2016-10-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:consommation",
+      "notes": "version_at(2016-10-01)=LEGIARTI000032225148 ≠ tip LEGIARTI000041985451; debut=2016-07-01 fin=2017-02-23"
+    },
+    {
+      "id": "t11",
+      "question": "Au 2018-01-01, quelle était la rédaction applicable de l'article L. 351-3 (de la consommation) ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000048527384"
+      ],
+      "expected_article_nums": [
+        "L. 351-3"
+      ],
+      "reference_answer": "Au 2018-01-01, l'article L. 351-3 disposait : Sont applicables dans les îles Wallis et Futuna, sous réserve des adaptations prévues à l'article L. (version LEGIARTI000034130274 ; rédaction courante différente : Sont applicables dans les îles Wallis et Futuna, sous réserve des adaptations…)",
+      "as_of": "2018-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:consommation",
+      "notes": "version_at(2018-01-01)=LEGIARTI000034130274 ≠ tip LEGIARTI000048527384; debut=2017-07-01 fin=2018-04-01"
+    },
+    {
+      "id": "t12",
+      "question": "Selon le droit en vigueur au 2021-01-01, que disposait l'article L. 521-3-1 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000049571083"
+      ],
+      "expected_article_nums": [
+        "L. 521-3-1"
+      ],
+      "reference_answer": "Au 2021-01-01, l'article L. 521-3-1 disposait : Lorsque les agents habilités constatent, avec les pouvoirs prévus au présent livre, une infraction ou un manquement aux dispositions mentionnées aux articles L. (version LEGIARTI000042615686 ; rédaction courante différente : Lorsque les agents habilités constatent, avec les pouvoirs prévus au présent…)",
+      "as_of": "2021-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:consommation",
+      "notes": "version_at(2021-01-01)=LEGIARTI000042615686 ≠ tip LEGIARTI000049571083; debut=2020-12-05 fin=2022-08-18"
+    },
+    {
+      "id": "t13",
+      "question": "Selon le droit en vigueur au 2016-10-01, que disposait l'article L. 221-28 du Code de la consommation ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044563170"
+      ],
+      "expected_article_nums": [
+        "L. 221-28"
+      ],
+      "reference_answer": "Au 2016-10-01, l'article L. 221-28 disposait : Le droit de rétractation ne peut être exercé pour les contrats :1° De fourniture de services pleinement exécutés avant la fin du délai de rétractation et dont l'exécution a commencé après accord préalable exprès du consommateur et renoncement exprès à son droit de rétractation ;2 (version LEGIARTI000032226820 ; rédaction courante différente : Le droit de rétractation ne peut être exercé pour les contrats : 1° De…)",
+      "as_of": "2016-10-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:consommation",
+      "notes": "version_at(2016-10-01)=LEGIARTI000032226820 ≠ tip LEGIARTI000044563170; debut=2016-07-01 fin=2022-05-28"
+    },
+    {
+      "id": "t14",
+      "question": "Selon le droit en vigueur au 2012-01-01, que disposait l'article 63 du Code civil ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000043982427"
+      ],
+      "expected_article_nums": [
+        "63"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article 63 disposait : Avant la célébration du mariage, l'officier de l'état civil fera une publication par voie d'affiche apposée à la porte de la maison commune. (version LEGIARTI000017841367 ; rédaction courante différente : Avant la célébration du mariage, l'officier de l'état civil fera une…)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:civil",
+      "notes": "version_at(2012-01-01)=LEGIARTI000017841367 ≠ tip LEGIARTI000043982427; debut=2007-12-22 fin=2019-03-25"
+    },
+    {
+      "id": "t15",
+      "question": "En date du 2012-01-01, que prévoyait l'article 57 du Code civil ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000043896203"
+      ],
+      "expected_article_nums": [
+        "57"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article 57 disposait : L'acte de naissance énoncera le jour, l'heure et le lieu de la naissance, le sexe de l'enfant, les prénoms qui lui seront donnés, le nom de famille, suivi le cas échéant de la mention de la déclaration conjointe de ses parents quant au choix effectué, ainsi que les prénoms, noms, (version LEGIARTI000006420911 ; rédaction courante différente : L'acte de naissance énoncera le jour, l'heure et le lieu de la naissance, le…)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:civil",
+      "notes": "version_at(2012-01-01)=LEGIARTI000006420911 ≠ tip LEGIARTI000043896203; debut=2006-07-01 fin=2021-08-04"
+    },
+    {
+      "id": "t16",
+      "question": "Quelle règle résultait de l'article 1397 (Code civil) tel qu'en vigueur le 2012-01-01 ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000038584427"
+      ],
+      "expected_article_nums": [
+        "1397"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article 1397 disposait : Après deux années d'application du régime matrimonial, les époux peuvent convenir, dans l'intérêt de la famille, de le modifier, ou même d'en changer entièrement, par un acte notarié. (version LEGIARTI000006439175 ; rédaction courante différente : Les époux peuvent convenir, dans l'intérêt de la famille, de modifier leur…)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:civil",
+      "notes": "version_at(2012-01-01)=LEGIARTI000006439175 ≠ tip LEGIARTI000038584427; debut=2007-03-07 fin=2016-10-01"
+    },
+    {
+      "id": "t17",
+      "question": "En date du 2012-01-01, que prévoyait l'article 2331 du Code civil ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044071379"
+      ],
+      "expected_article_nums": [
+        "2331"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article 2331 disposait : Les créances privilégiées sur la généralité des meubles sont celles ci-après exprimées, et s'exercent dans l'ordre suivant : 1° Les frais de justice ; 2° Les frais funéraires ; 3° Les frais quelconques de la dernière maladie, quelle qu'en ait été la terminaison, concurremment ent (version LEGIARTI000022233293 ; rédaction courante différente : Outre celles prévues par des lois spéciales, les créances privilégiées sur la…)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:civil",
+      "notes": "version_at(2012-01-01)=LEGIARTI000022233293 ≠ tip LEGIARTI000044071379; debut=2010-05-08 fin=2022-01-01"
+    },
+    {
+      "id": "t18",
+      "question": "Au 2015-06-01, quelle était la rédaction applicable de l'article 2508 (civil) ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000035902940"
+      ],
+      "expected_article_nums": [
+        "2508"
+      ],
+      "reference_answer": "Au 2015-06-01, l'article 2508 disposait : Les dispositions du titre XIX du livre III et du titre II du livre IV sont applicables à Mayotte sous réserve des dispositions du titre IV du présent livre et des dispositions suivantes : 1° Le 4° de l'article 2331 est applicable à Mayotte dans les conditions suivantes : a) Au pr (version LEGIARTI000026424147 ; rédaction courante différente : Les dispositions du titre XIX du livre III et du titre II du livre IV sont…)",
+      "as_of": "2015-06-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:civil",
+      "notes": "version_at(2015-06-01)=LEGIARTI000026424147 ≠ tip LEGIARTI000035902940; debut=2013-01-01 fin=2018-01-01"
+    },
+    {
+      "id": "t19",
+      "question": "Quelle règle résultait de l'article 910 (Code civil) tel qu'en vigueur le 2012-01-01 ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000030930145"
+      ],
+      "expected_article_nums": [
+        "910"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article 910 disposait : Les dispositions entre vifs ou par testament au profit des établissements de santé, des établissements sociaux et médico-sociaux ou d'établissements d'utilité publique n'ont leur effet qu'autant qu'elles sont autorisées par arrêté du représentant de l'Etat dans le département. (version LEGIARTI000024025866 ; rédaction courante différente : I.)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:civil",
+      "notes": "version_at(2012-01-01)=LEGIARTI000024025866 ≠ tip LEGIARTI000030930145; debut=2011-05-19 fin=2015-07-25"
+    },
+    {
+      "id": "t20",
+      "question": "En date du 2012-01-01, que prévoyait l'article 2402 du Code civil ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044072139"
+      ],
+      "expected_article_nums": [
+        "2402"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article 2402 disposait : Quand les époux ont stipulé la participation aux acquêts, la clause, sauf convention contraire, confère de plein droit à l'un et à l'autre la faculté d'inscrire l'hypothèque légale pour la sûreté de la créance de participation. (version LEGIARTI000006449421 ; rédaction courante différente : Outre celles prévues par des lois spéciales, les créances auxquelles une…)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:civil",
+      "notes": "version_at(2012-01-01)=LEGIARTI000006449421 ≠ tip LEGIARTI000044072139; debut=2006-03-24 fin=2021-09-17"
+    },
+    {
+      "id": "t21",
+      "question": "En date du 2012-01-01, que prévoyait l'article 255 du Code civil ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000042193461"
+      ],
+      "expected_article_nums": [
+        "255"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article 255 disposait : Le juge peut notamment : 1° Proposer aux époux une mesure de médiation et, après avoir recueilli leur accord, désigner un médiateur familial pour y procéder. (version LEGIARTI000006423536 ; rédaction courante différente : Le juge peut notamment : 1° Proposer aux époux une mesure de médiation, sauf si…)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:civil",
+      "notes": "version_at(2012-01-01)=LEGIARTI000006423536 ≠ tip LEGIARTI000042193461; debut=2005-01-01 fin=2020-08-01"
+    },
+    {
+      "id": "t22",
+      "question": "Quelle règle résultait de l'article 2529 (Code civil) tel qu'en vigueur le 2012-01-01 ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000044073627"
+      ],
+      "expected_article_nums": [
+        "2529"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article 2529 disposait : Dans le cas où plusieurs formalités de nature à produire des effets opposables aux tiers en vertu de l'article 2528, sont requises le même jour relativement au même immeuble, celle qui est requise en vertu du titre dont la date est la plus ancienne est réputée d'un rang antérieur (version LEGIARTI000006450865 ; rédaction courante différente : Dans le cas où plusieurs formalités de nature à produire des effets opposables…)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:civil",
+      "notes": "version_at(2012-01-01)=LEGIARTI000006450865 ≠ tip LEGIARTI000044073627; debut=2006-03-24 fin=2022-01-01"
+    },
+    {
+      "id": "t23",
+      "question": "Quelle règle résultait de l'article 375 (Code civil) tel qu'en vigueur le 2012-01-01 ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000045136798"
+      ],
+      "expected_article_nums": [
+        "375"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article 375 disposait : Si la santé, la sécurité ou la moralité d'un mineur non émancipé sont en danger, ou si les conditions de son éducation ou de son développement physique, affectif, intellectuel et social sont gravement compromises, des mesures d'assistance éducative peuvent être ordonnées par just (version LEGIARTI000006426776 ; rédaction courante différente : Si la santé, la sécurité ou la moralité d'un mineur non émancipé sont en…)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:civil",
+      "notes": "version_at(2012-01-01)=LEGIARTI000006426776 ≠ tip LEGIARTI000045136798; debut=2007-03-06 fin=2015-03-22"
+    },
+    {
+      "id": "t24",
+      "question": "Quelle règle résultait de l'article L. 6123-5 (Code du travail) tel qu'en vigueur le 2023-01-01 ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000048700924"
+      ],
+      "expected_article_nums": [
+        "L. 6123-5"
+      ],
+      "reference_answer": "Au 2023-01-01, l'article L. 6123-5 disposait : France compétences est une institution nationale publique dotée de la personnalité morale et de l'autonomie financière. (version LEGIARTI000045178424 ; rédaction courante différente : France compétences est une institution nationale publique dotée de la…)",
+      "as_of": "2023-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:travail",
+      "notes": "version_at(2023-01-01)=LEGIARTI000045178424 ≠ tip LEGIARTI000048700924; debut=2022-09-01 fin=2023-04-16"
+    },
+    {
+      "id": "t25",
+      "question": "Selon le droit en vigueur au 2018-01-01, que disposait l'article L. 5312-1 du Code du travail ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000048600658"
+      ],
+      "expected_article_nums": [
+        "L. 5312-1"
+      ],
+      "reference_answer": "Au 2018-01-01, l'article L. 5312-1 disposait : Pôle emploi est une institution nationale publique dotée de la personnalité morale et de l'autonomie financière qui a pour mission de : 1° Prospecter le marché du travail, développer une expertise sur l'évolution des emplois et des qualifications, procéder à la collecte des offre (version LEGIARTI000036432442 ; rédaction courante différente : I.-L'opérateur France Travail est une institution nationale publique dotée de…)",
+      "as_of": "2018-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:travail",
+      "notes": "version_at(2018-01-01)=LEGIARTI000036432442 ≠ tip LEGIARTI000048600658; debut=2018-01-01 fin=2019-01-01"
+    },
+    {
+      "id": "t26",
+      "question": "Quelle règle résultait de l'article L. 1233-58 (Code du travail) tel qu'en vigueur le 2015-06-01 ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000036261741"
+      ],
+      "expected_article_nums": [
+        "L. 1233-58"
+      ],
+      "reference_answer": "Au 2015-06-01, l'article L. 1233-58 disposait : I.-En cas de redressement ou de liquidation judiciaire, l'employeur, l'administrateur ou le liquidateur, selon le cas, qui envisage des licenciements économiques, met en œuvre un plan de licenciement dans les conditions prévues aux articles L. (version LEGIARTI000029144984 ; rédaction courante différente : I.-En cas de redressement ou de liquidation judiciaire, l'employeur,…)",
+      "as_of": "2015-06-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:travail",
+      "notes": "version_at(2015-06-01)=LEGIARTI000029144984 ≠ tip LEGIARTI000036261741; debut=2014-07-01 fin=2015-08-08"
+    },
+    {
+      "id": "t27",
+      "question": "Quelle règle résultait de l'article L. 6332-14 (Code du travail) tel qu'en vigueur le 2012-01-01 ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000051221005"
+      ],
+      "expected_article_nums": [
+        "L. 6332-14"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article L. 6332-14 disposait : Les organismes collecteurs paritaires agréés au titre des contrats ou des périodes de professionnalisation et du droit individuel à la formation prennent en charge les actions d'évaluation, d'accompagnement et de formation prévues aux articles L. (version LEGIARTI000021342218 ; rédaction courante différente : I.-L'opérateur de compétences prend en charge au titre de la section financière…)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:travail",
+      "notes": "version_at(2012-01-01)=LEGIARTI000021342218 ≠ tip LEGIARTI000051221005; debut=2009-11-26 fin=2015-01-01"
+    },
+    {
+      "id": "t28",
+      "question": "En date du 2012-01-01, que prévoyait l'article L. 6111-3 du Code du travail ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000037385609"
+      ],
+      "expected_article_nums": [
+        "L. 6111-3"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article L. 6111-3 disposait : Toute personne dispose du droit à être informée, conseillée et accompagnée en matière d'orientation professionnelle, au titre du droit à l'éducation garanti à chacun par l'article L. (version LEGIARTI000021340983 ; rédaction courante différente : I.-Toute personne dispose du droit à être informée, conseillée et accompagnée…)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:travail",
+      "notes": "version_at(2012-01-01)=LEGIARTI000021340983 ≠ tip LEGIARTI000037385609; debut=2009-11-26 fin=2015-01-01"
+    },
+    {
+      "id": "t29",
+      "question": "Au 2012-01-01, quelle était la rédaction applicable de l'article L. 4121-3-1 (du travail) ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000043893919"
+      ],
+      "expected_article_nums": [
+        "L. 4121-3-1"
+      ],
+      "reference_answer": "Au 2012-01-01, l'article L. 4121-3-1 disposait : Pour chaque travailleur exposé à un ou plusieurs facteurs de risques professionnels déterminés par décret et liés à des contraintes physiques marquées, à un environnement physique agressif ou à certains rythmes de travail susceptibles de laisser des traces durables identifiables (version LEGIARTI000023032092 ; rédaction courante différente : I.-Le document unique d'évaluation des risques professionnels répertorie…)",
+      "as_of": "2012-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:travail",
+      "notes": "version_at(2012-01-01)=LEGIARTI000023032092 ≠ tip LEGIARTI000043893919; debut=2012-01-01 fin=2015-01-01"
+    },
+    {
+      "id": "t30",
+      "question": "Au 2018-01-01, quelle était la rédaction applicable de l'article L. 2312-26 (du travail) ?",
+      "type": "temporal",
+      "expected_article_ids": [
+        "LEGIARTI000046276539"
+      ],
+      "expected_article_nums": [
+        "L. 2312-26"
+      ],
+      "reference_answer": "Au 2018-01-01, l'article L. 2312-26 disposait : I.-La consultation annuelle sur la politique sociale de l'entreprise, les conditions de travail et l'emploi porte sur l'évolution de l'emploi, les qualifications, le programme pluriannuel de formation, les actions de formation envisagées par l'employeur, l'apprentissage, les cond (version LEGIARTI000035609814 ; rédaction courante différente : I.-La consultation annuelle sur la politique sociale de l'entreprise, les…)",
+      "as_of": "2018-01-01",
+      "unanswerable": false,
+      "validated": false,
+      "topic": "temporal:travail",
+      "notes": "version_at(2018-01-01)=LEGIARTI000035609814 ≠ tip LEGIARTI000046276539; debut=2018-01-01 fin=2019-01-01"
     }
   ]
 }
