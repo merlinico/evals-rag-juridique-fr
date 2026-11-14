@@ -1,45 +1,8 @@
 {
-  "mode": "review_fixes_v031",
+  "mode": "quality_pass_v032",
   "corpus_snapshot": "codes-v0.2-2025-07-13",
   "n_articles": 16455,
   "n_crossrefs": 15686,
-  "multi_hop_filter": {
-    "candidates_in": 55,
-    "kept": 54,
-    "rejected_answerability": 0,
-    "rejected_dedup": 1,
-    "rejected_leakage": 0,
-    "rejected_schema": 0,
-    "rejected_by_type": {
-      "multi_hop": 1
-    },
-    "kept_by_type": {
-      "multi_hop": 54
-    },
-    "rejection_rate": 0.0182
-  },
-  "temporal_filter": {
-    "candidates_in": 55,
-    "kept": 33,
-    "rejected_answerability": 14,
-    "rejected_dedup": 8,
-    "rejected_leakage": 0,
-    "rejected_schema": 0,
-    "rejected_by_type": {
-      "temporal": 22
-    },
-    "kept_by_type": {
-      "temporal": 33
-    },
-    "rejection_rate": 0.4
-  },
-  "candidates_in": 110,
-  "kept": 87,
-  "rejected_answerability": 14,
-  "rejected_dedup": 9,
-  "rejected_leakage": 0,
-  "rejected_schema": 0,
-  "rejection_rate": 0.2091,
   "selected_total": 180,
   "selected_by_type": {
     "direct": 51,
@@ -126,7 +89,6 @@
     "t06": "temporal:consommation"
   },
   "changed_ids": [
-    "ac05",
     "mh01",
     "mh02",
     "mh03",
@@ -195,12 +157,66 @@
     "t27",
     "t28",
     "t29",
-    "t30",
-    "u02"
+    "t30"
   ],
-  "unanswerable_leak_scan": [],
+  "replaced_temporal": [
+    {
+      "id": "t02",
+      "action": "replace_temporal",
+      "from_article": "L. 771-2",
+      "to_article": "L. 111-4",
+      "as_of": "2015-06-01",
+      "after_q": "Que disait l'article L. 111-4 du Code de la consommation en vigueur au 2015-06-01 ?",
+      "after_a": "Au 2015-06-01, l'article L. 111-4 prévoyait que I.-En cas de litige relatif à l'application des articles L. 111-1 à L. 111-3, il appartient au professionnel de prouver qu'il a exécuté ses obligations. Par rapport à la version aujourd'hui en vigueur, là où le texte prévoyait que I.-En cas de litige relatif à l'application des articles L. 111-1 à L. 111-3, il appartient au professionnel de prouver qu'il a exécuté ses obligations, la version courante dispose que le fabricant ou l'importateur de biens meubles informe le vendeur professionnel de la disponibilité ou de la non-disponibilité des pièces détachées indispensables à l'utilisation des biens concernés et, le cas échéant."
+    },
+    {
+      "id": "t12",
+      "action": "replace_temporal",
+      "from_article": "2508",
+      "to_article": "57",
+      "as_of": "2012-01-01",
+      "after_q": "Selon le droit applicable le 2012-01-01, que prévoyait l'article 57 (Code civil) ?",
+      "after_a": "Au 2012-01-01, l'article 57 prévoyait que l'acte de naissance énoncera le jour, l'heure et le lieu de la naissance, le sexe de l'enfant, les prénoms qui lui seront donnés, le nom de famille, suivi le cas échéant de la mention de la déclaration conjointe de ses parents quant au choix effectué, ainsi que les prénoms, noms, âges. Par rapport à la version aujourd'hui en vigueur, la version courante ajoute notamment que en cas d'impossibilité médicalement constatée de déterminer le sexe de l'enfant au jour de l'établissement de l'acte, le procureur de la République peut autoriser l'officier de l'état civil à ne pas faire figurer immédiatement le sexe sur l'acte de naissance."
+    },
+    {
+      "id": "t23",
+      "action": "replace_temporal",
+      "from_article": "L. 321-4-2",
+      "to_article": "L. 6231-2",
+      "as_of": "2012-01-01",
+      "after_q": "Selon le droit applicable le 2012-01-01, que prévoyait l'article L. 6231-2 (Code du travail) ?",
+      "after_a": "Au 2012-01-01, l'article L. 6231-2 prévoyait qu'un centre de formation d'apprentis peut conclure avec une entreprise habilitée par l'inspection de l'apprentissage, dans des conditions déterminées par décret. Par rapport à la version aujourd'hui en vigueur, là où le texte prévoyait que un centre de formation d'apprentis peut conclure avec une entreprise habilitée par l'inspection de l'apprentissage, dans des conditions déterminées par décret, la version courante dispose que les centres de formation dispensant les actions mentionnées au 4° de l'article L. 6313-1 ont pour mission."
+    },
+    {
+      "id": "t26",
+      "action": "replace_temporal",
+      "from_article": "375",
+      "to_article": "1397",
+      "as_of": "2012-01-01",
+      "after_q": "Selon le droit applicable le 2012-01-01, que prévoyait l'article 1397 (Code civil) ?",
+      "after_a": "Au 2012-01-01, l'article 1397 prévoyait qu'après deux années d'application du régime matrimonial, les époux peuvent convenir, dans l'intérêt de la famille, de le modifier, ou même d'en changer entièrement, par un acte notarié. A peine de nullité, l'acte notarié contient la liquidation du régime matrimonial modifié si elle est nécessaire. Par rapport à la version aujourd'hui en vigueur, là où le texte prévoyait que après deux années d'application du régime matrimonial, les époux peuvent convenir, dans l'intérêt de la famille, de le modifier, la version courante dispose que les époux peuvent convenir, dans l'intérêt de la famille, de modifier leur régime matrimonial, ou même d'en changer entièrement, par un acte notarié."
+    },
+    {
+      "id": "t27",
+      "action": "replace_temporal",
+      "from_article": "75",
+      "to_article": "377",
+      "as_of": "2012-01-01",
+      "after_q": "Au 2012-01-01, quelle règle résultait de l'article 377 du Code civil ?",
+      "after_a": "Au 2012-01-01, l'article 377 prévoyait que les père et mère, ensemble ou séparément, peuvent, lorsque les circonstances l'exigent, saisir le juge en vue de voir déléguer tout ou partie de l'exercice de leur autorité parentale à un tiers, membre de la famille, proche digne de confiance. Par rapport à la version aujourd'hui en vigueur, là où le texte prévoyait que en cas de désintérêt manifeste ou si les parents sont dans l'impossibilité d'exercer tout ou partie de l'autorité parentale, le particulier, la version courante dispose que le particulier, l'établissement ou le service départemental de l'aide sociale à l'enfance qui a recueilli l'enfant ou un membre de la famille peut également saisir le juge aux fins de se faire déléguer totalement ou partiellement l'exercice de l'autorité."
+    },
+    {
+      "id": "t29",
+      "action": "replace_temporal",
+      "from_article": "1242",
+      "to_article": "2331",
+      "as_of": "2012-01-01",
+      "after_q": "Selon le droit applicable le 2012-01-01, que prévoyait l'article 2331 (Code civil) ?",
+      "after_a": "Au 2012-01-01, l'article 2331 prévoyait que les créances privilégiées sur la généralité des meubles sont celles ci-après exprimées, et s'exercent dans l'ordre suivant : 1° Les frais de justice 2° Les frais funéraires. Par rapport à la version aujourd'hui en vigueur, là où le texte prévoyait que les créances privilégiées sur la généralité des meubles sont celles ci-après exprimées, et s'exercent dans l'ordre suivant : 1° Les frais de justice, la version courante dispose que outre celles prévues par des lois spéciales, les créances privilégiées sur la généralité des meubles sont : 1° Les frais de justice, sous la condition qu'ils aient profité au créancier auquel le privilège est opposé."
+    }
+  ],
+  "hygiene_hits": [],
   "unanswerable_leaks_remaining": [],
-  "crossrefs_removed_false_cross_code": 1290,
-  "crossrefs_before": 16976,
-  "crossrefs_after": 15686
+  "crossrefs_removed_prior": 1290,
+  "quality_pass_notes": "mh01-mh39 rewritten (synthesized answers, domain actors); t01-t30 rewritten with concrete diffs; temporal replacements: [('t02', 'L. 771-2', 'L. 111-4'), ('t12', '2508', '57'), ('t23', 'L. 321-4-2', 'L. 6231-2'), ('t26', '375', '1397'), ('t27', '75', '377'), ('t29', '1242', '2331')]"
 }

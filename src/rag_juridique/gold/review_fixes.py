@@ -15,6 +15,9 @@ from rag_juridique.gold.filters import (
 )
 from rag_juridique.gold.loader import load_gold_set
 from rag_juridique.gold.regen_graph import (
+    _natural_multi_hop_qa,
+    _natural_temporal_qa,
+    _temporal_candidate_ok,
     generate_multi_hop_from_corpus,
     generate_temporal_from_versions,
 )
@@ -424,25 +427,317 @@ def run_fixes(*, dry_run: bool = False) -> dict:
     return stats
 
 
+def _mh_kind(topic: str | None) -> str:
+    if topic and topic.endswith(":renvoi"):
+        return "renvoi"
+    return "citation"
+
+
+def run_quality_pass(*, dry_run: bool = False) -> dict:
+    """Second-pass quality rewrite: keep IDs, fix answers/questions in place."""
+    corpus = load_corpus()
+    gold = load_gold_set(GOLD_PATH)
+    by_id = corpus.by_id()
+    questions = list(gold.questions)
+    changed: list[dict] = []
+    used_temporal_arts: set[str] = set()
+
+    for q in questions:
+        if q.type == QuestionType.TEMPORAL and q.expected_article_ids:
+            used_temporal_arts.add(q.expected_article_ids[0])
+
+    # Pool of fresh substantive temporal candidates by code.
+    t_pool = generate_temporal_from_versions(corpus, target=120)
+    pool_by_code: dict[str, list[Question]] = {}
+    for cand in t_pool:
+        code = (cand.topic or "").split(":")[-1]
+        pool_by_code.setdefault(code, []).append(cand)
+
+    out: list[Question] = []
+    for q in questions:
+        if q.type == QuestionType.MULTI_HOP and q.id != "q26":
+            if len(q.expected_article_ids) < 2:
+                out.append(q)
+                continue
+            src = by_id.get(q.expected_article_ids[0])
+            tgt = by_id.get(q.expected_article_ids[1])
+            if src is None or tgt is None:
+                out.append(q)
+                continue
+            question, answer = _natural_multi_hop_qa(
+                src, tgt, kind=_mh_kind(q.topic)
+            )
+            before = {
+                "question": q.question,
+                "answer": q.reference_answer,
+            }
+            new_q = q.model_copy(
+                update={
+                    "question": question,
+                    "reference_answer": answer,
+                    "validated": False,
+                    "notes": (q.notes or "") + " | quality-pass v0.3.2",
+                }
+            )
+            out.append(new_q)
+            changed.append(
+                {
+                    "id": q.id,
+                    "action": "rewrite_multi_hop",
+                    "before_q": before["question"],
+                    "after_q": question,
+                    "before_a": before["answer"],
+                    "after_a": answer,
+                }
+            )
+            continue
+
+        if q.type == QuestionType.TEMPORAL:
+            art = by_id.get(q.expected_article_ids[0]) if q.expected_article_ids else None
+            if art is None or q.as_of is None:
+                out.append(q)
+                continue
+            ver = corpus.version_at(art.id, q.as_of)
+            hist = ver.text if ver is not None else ""
+            tip = art.text
+            # Replace only non-substantive / territorial-table items.
+            # Vague « remaniée » answers are rewritten in place when the diff is real.
+            replace = ver is None or not _temporal_candidate_ok(art, hist, tip)
+            if not replace:
+                question, answer = _natural_temporal_qa(art, q.as_of, hist, tip)
+                if "…" in answer or "remaniée" in answer:
+                    replace = True
+                else:
+                    before = {"question": q.question, "answer": q.reference_answer}
+                    new_q = q.model_copy(
+                        update={
+                            "question": question,
+                            "reference_answer": answer,
+                            "validated": False,
+                            "notes": (q.notes or "") + " | quality-pass v0.3.2",
+                        }
+                    )
+                    out.append(new_q)
+                    changed.append(
+                        {
+                            "id": q.id,
+                            "action": "rewrite_temporal",
+                            "article": art.num,
+                            "before_q": before["question"],
+                            "after_q": question,
+                            "before_a": before["answer"],
+                            "after_a": answer,
+                        }
+                    )
+                    continue
+
+            code = art.code or "consommation"
+            replacement: Question | None = None
+            for cand in pool_by_code.get(code, []):
+                cid = cand.expected_article_ids[0]
+                if cid in used_temporal_arts:
+                    continue
+                cart = by_id[cid]
+                cver = corpus.version_at(cid, cand.as_of) if cand.as_of else None
+                if cver is None or cand.as_of is None:
+                    continue
+                if not _temporal_candidate_ok(cart, cver.text, cart.text):
+                    continue
+                used_temporal_arts.add(cid)
+                used_temporal_arts.discard(art.id)
+                question, answer = _natural_temporal_qa(
+                    cart, cand.as_of, cver.text, cart.text
+                )
+                replacement = q.model_copy(
+                    update={
+                        "question": question,
+                        "reference_answer": answer,
+                        "expected_article_ids": [cart.id],
+                        "expected_article_nums": [cart.num],
+                        "as_of": cand.as_of,
+                        "topic": f"temporal:{code}",
+                        "validated": False,
+                        "notes": (
+                            f"quality-pass v0.3.2 replace {art.num}→{cart.num}; "
+                            f"version_at({cand.as_of.isoformat()})={cver.version_id}"
+                        ),
+                    }
+                )
+                changed.append(
+                    {
+                        "id": q.id,
+                        "action": "replace_temporal",
+                        "from_article": art.num,
+                        "to_article": cart.num,
+                        "as_of": cand.as_of.isoformat(),
+                        "before_q": q.question,
+                        "after_q": question,
+                        "before_a": q.reference_answer,
+                        "after_a": answer,
+                    }
+                )
+                break
+            if replacement is None:
+                # Fallback: rewrite anyway with improved contrast.
+                if ver is not None and q.as_of is not None:
+                    question, answer = _natural_temporal_qa(art, q.as_of, hist, tip)
+                    out.append(
+                        q.model_copy(
+                            update={
+                                "question": question,
+                                "reference_answer": answer,
+                                "validated": False,
+                                "notes": (q.notes or "") + " | quality-pass v0.3.2 fallback",
+                            }
+                        )
+                    )
+                    changed.append(
+                        {
+                            "id": q.id,
+                            "action": "rewrite_temporal_fallback",
+                            "article": art.num,
+                            "after_a": answer,
+                        }
+                    )
+                else:
+                    out.append(q)
+            else:
+                out.append(replacement)
+            continue
+
+        out.append(q)
+
+    # Final hygiene: ban boilerplate / ellipsis / remaniée / bad actors on civil/travail.
+    hygiene_hits: list[str] = []
+    for q in out:
+        ans = q.reference_answer or ""
+        if q.type in (QuestionType.MULTI_HOP, QuestionType.TEMPORAL):
+            if "…" in ans or "Les deux textes se complètent" in ans:
+                hygiene_hits.append(q.id)
+            if "rédaction courante a été remaniée" in ans:
+                hygiene_hits.append(q.id)
+        if q.type == QuestionType.MULTI_HOP and q.id != "q26":
+            topic = q.topic or ""
+            if "civil" in topic or "travail" in topic:
+                if "Un professionnel se prévaut" in q.question:
+                    hygiene_hits.append(q.id)
+
+    leaks = scan_unanswerables_against_corpus(out, corpus)
+    gold_out = GoldSet(
+        version="0.3.2",
+        corpus_snapshot=corpus.snapshot_id,
+        language="fr",
+        validated=False,
+        notes=(
+            "Gold v0.3.2 — passe qualité : réponses mh synthétisées sans troncature, "
+            "gabarits d'acteur par domaine, temporal avec diff concret, coquilles "
+            "corrigées. validated=false."
+        ),
+        questions=out,
+    )
+    batch = select_review_batch(out, size=40, must_include=SAMPLE_TO_REVIEW_IDS)
+    stats = {
+        "mode": "quality_pass_v032",
+        "corpus_snapshot": corpus.snapshot_id,
+        "n_articles": len(corpus.articles),
+        "n_crossrefs": len(corpus.crossrefs),
+        "selected_total": len(out),
+        "selected_by_type": dict(Counter(q.type.value for q in out)),
+        "multi_hop_by_code": dict(
+            Counter(
+                (q.topic or "").split(":")[1]
+                for q in out
+                if q.type == QuestionType.MULTI_HOP
+                and q.topic
+                and q.topic.startswith("crossref:")
+            )
+        ),
+        "temporal_by_code": dict(
+            Counter(
+                (q.topic or "").split(":")[1]
+                for q in out
+                if q.type == QuestionType.TEMPORAL
+                and q.topic
+                and q.topic.startswith("temporal:")
+            )
+        ),
+        "review_batch_ids": [q.id for q in batch],
+        "review_batch_by_type": dict(Counter(q.type.value for q in batch)),
+        "review_batch_codes_mh_t": {
+            q.id: (q.topic or "")
+            for q in batch
+            if q.type in (QuestionType.MULTI_HOP, QuestionType.TEMPORAL)
+        },
+        "changed_ids": sorted({c["id"] for c in changed}),
+        "changed_detail": changed,
+        "replaced_temporal": [
+            c for c in changed if c["action"] == "replace_temporal"
+        ],
+        "hygiene_hits": sorted(set(hygiene_hits)),
+        "unanswerable_leaks_remaining": [
+            {"id": q.id, "article_id": aid, "score": round(s, 3)}
+            for q, aid, s in leaks
+        ],
+        "crossrefs_removed_prior": 1290,
+    }
+
+    if dry_run:
+        return stats
+
+    GOLD_PATH.write_text(
+        json.dumps(gold_out.model_dump(mode="json"), ensure_ascii=False, indent=2)
+        + "\n",
+        encoding="utf-8",
+    )
+    STATS_PATH.write_text(
+        json.dumps(stats, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    note = (
+        "> **Correctifs revue (v0.3.2)** : réponses mh synthétisées (sans « … » ni "
+        "passe-partout) ; gabarits d'acteur civil/travail/conso ; temporal avec "
+        "diff concret (remplacement des items cosmétiques / tableaux DOM) ; "
+        "coquilles corrigées."
+    )
+    write_review_batch(REVIEW_PATH, batch, corpus.articles, header_note=note)
+    return stats
+
+
 def main(argv: list[str] | None = None) -> int:
     import argparse
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--quality-pass",
+        action="store_true",
+        help="Second-pass quality rewrite (v0.3.2) keeping IDs stable",
+    )
     args = parser.parse_args(argv)
-    stats = run_fixes(dry_run=args.dry_run)
-    print("selected", stats["selected_total"], stats["selected_by_type"])
-    print("mh codes", stats["multi_hop_by_code"])
-    print("t codes", stats["temporal_by_code"])
-    print("filter", {k: stats[k] for k in (
-        "candidates_in", "kept", "rejected_answerability",
-        "rejected_dedup", "rejected_leakage", "rejection_rate",
-    )})
-    print("changed", len(stats["changed_ids"]), stats["changed_ids"][:20], "...")
-    print("leaks remaining", stats["unanswerable_leaks_remaining"])
-    print("batch mh/t topics", stats["review_batch_codes_mh_t"])
+    if args.quality_pass:
+        stats = run_quality_pass(dry_run=args.dry_run)
+    else:
+        stats = run_fixes(dry_run=args.dry_run)
+    print("selected", stats["selected_total"], stats.get("selected_by_type"))
+    print("mh codes", stats.get("multi_hop_by_code"))
+    print("t codes", stats.get("temporal_by_code"))
+    if "changed_ids" in stats:
+        print("changed", len(stats["changed_ids"]), stats["changed_ids"][:25], "...")
+    if "replaced_temporal" in stats:
+        print(
+            "replaced temporal",
+            [
+                (c["id"], c["from_article"], "→", c["to_article"])
+                for c in stats["replaced_temporal"]
+            ],
+        )
+    if "hygiene_hits" in stats:
+        print("hygiene_hits", stats["hygiene_hits"])
+    print("leaks remaining", stats.get("unanswerable_leaks_remaining"))
+    print("batch mh/t topics", stats.get("review_batch_codes_mh_t"))
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

@@ -4,13 +4,19 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from rag_juridique.contracts.corpus import Article, CrossRef, CrossRefKind
+from rag_juridique.contracts.corpus import Article
 from rag_juridique.contracts.gold import QuestionType
+from rag_juridique.corpus.loader import load_corpus
 from rag_juridique.corpus.refs import build_crossrefs, is_false_cross_code_ref
 from rag_juridique.gold.loader import load_gold_set
 from rag_juridique.gold.review_fixes import scan_unanswerables_against_corpus
-from rag_juridique.gold.textutil import first_sentence, split_sentences
-from rag_juridique.corpus.loader import load_corpus
+from rag_juridique.gold.textutil import (
+    contrast_versions,
+    first_sentence,
+    fix_proper_nouns,
+    is_territorial_renvoi_table,
+    split_sentences,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -24,8 +30,42 @@ def test_first_sentence_keeps_legal_abbreviations():
     assert "L. 112-5" in first
     assert "L. L." not in first
     assert "1°" in first
+    assert "…" not in first
     parts = split_sentences(text)
     assert len(parts) >= 2
+
+
+def test_contrast_versions_is_concrete():
+    old = (
+        "France compétences est une institution nationale publique. "
+        "Elle verse des fonds aux opérateurs de compétences."
+    )
+    new = (
+        "France compétences est une institution nationale publique. "
+        "Elle verse des fonds aux opérateurs de compétences dans la limite "
+        "d'un montant fixé par arrêté."
+    )
+    out = contrast_versions(old, new)
+    assert "remaniée" not in out
+    assert (
+        "limite" in out.lower()
+        or "ajoute" in out.lower()
+        or "dispose" in out.lower()
+        or "modifie" in out.lower()
+    )
+
+
+def test_territorial_table_detection():
+    text = (
+        "Sont applicables dans les îles Wallis et Futuna, sous réserve des "
+        "adaptations prévues à l'article L. 771-3, les dispositions des articles "
+        "mentionnés dans la colonne de gauche du tableau ci-après."
+    )
+    assert is_territorial_renvoi_table(text)
+
+
+def test_france_competences_casing():
+    assert "France compétences" in fix_proper_nouns("france compétences est une institution")
 
 
 def test_build_crossrefs_drops_foreign_code_qualifier():
@@ -79,6 +119,23 @@ def test_committed_gold_review_fixes():
             ans = q.reference_answer or ""
             assert "L. L." not in ans
             assert "Le renvoi (renvoi)" not in ans
+            assert "…" not in ans
+            assert "Les deux textes se complètent" not in ans
+            assert "rédaction courante a été remaniée" not in ans
+            assert ".." not in ans
+        if q.type == QuestionType.MULTI_HOP and q.id != "q26":
+            topic = q.topic or ""
+            if "civil" in topic or "travail" in topic:
+                assert "Un professionnel se prévaut" not in q.question
+
+    # Named items from the quality pass brief.
+    assert "France compétences" in (by_id["t15"].reference_answer or "")
+    assert "L. 6123-5" in by_id["t15"].expected_article_nums
+    assert "remaniée" not in (by_id["t15"].reference_answer or "")
+    assert "Wallis" not in by_id["t02"].question
+    assert "tableau ci-après" not in (by_id["t02"].reference_answer or "").lower()
+    assert by_id["mh15"].question.startswith("Un héritier")
+    assert by_id["mh28"].question.startswith("Un employeur")
 
     corpus = load_corpus()
     leaks = scan_unanswerables_against_corpus(list(gold.questions), corpus)
@@ -98,3 +155,4 @@ def test_committed_gold_review_fixes():
         )
     ]
     assert bad == []
+
