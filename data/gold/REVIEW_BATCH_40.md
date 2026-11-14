@@ -4,7 +4,7 @@ Toutes les questions du jeu d'or restent `validated: false` jusqu'à revue.
 Ce batch est **stratifié** sur les 5 `QuestionType` et **inclut** les items
 de `SAMPLE_TO_REVIEW.md`.
 
-> **Correctifs revue (v0.3.2)** : réponses mh synthétisées (sans « … » ni passe-partout) ; gabarits d'acteur civil/travail/conso ; temporal avec diff concret (remplacement des items cosmétiques / tableaux DOM) ; coquilles corrigées.
+> **Correctifs (v0.3.3)** : réponses `multi_hop` mh01–mh39 réécrites à la main (lien réel entre articles, sans troncature ni passe-partout) ; questions reformulées lorsque le gabarit ne collait pas au renvoi.
 
 Légende du verdict : **OK** / **À corriger** / **À reformuler**.
 
@@ -225,20 +225,20 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 11. `mh15` — `multi_hop`
 
-**Question :** Un héritier s'interroge sur l'article 1007 du Code civil : quelle règle pose-t-il, et que précise l'article 1006 auquel il renvoie ?
+**Question :** Avant d'exécuter un testament olographe ou mystique, quelles vérifications le notaire doit-il faire au regard de l'article 1006 du Code civil, selon l'article 1007 ?
 
 **Articles gold :** 1007, 1006
 
 **Ids LEGIARTI :** `LEGIARTI000039368517, LEGIARTI000006434591`
 
-**Réponse attendue :** L'article 1007 prévoit que tout testament olographe ou mystique sera, avant d'être mis à exécution, déposé entre les mains d'un notaire. Cet article renvoie à l'article 1006, qui dispose que lorsqu'au décès du testateur il n'y aura pas d'héritiers auxquels une quotité de ses biens soit réservée par la loi, le légataire universel sera saisi de plein droit par la mort du testateur, sans être tenu de demander la délivrance. Pour répondre à la question, il faut donc combiner ces deux dispositions.
+**Réponse attendue :** L'article 1007 impose, avant toute exécution, le dépôt du testament olographe ou mystique entre les mains d'un notaire, qui dresse procès-verbal d'ouverture et d'état du testament. Dans le cas prévu à l'article 1006 — absence d'héritiers réservataires, le légataire universel étant alors saisi de plein droit par la mort du testateur sans avoir à demander la délivrance — le notaire vérifie le caractère universel de la vocation et l'absence d'héritiers réservataires, porte ces vérifications sur le procès-verbal, et tout intéressé peut s'opposer dans le mois suivant la réception des pièces au greffe, auquel cas le légataire se fera envoyer en possession.
 
 **Extraits corpus :**
 
 - **1007** (`LEGIARTI000039368517`) — Tout testament olographe ou mystique sera, avant d'être mis à exécution, déposé entre les mains d'un notaire. Le testament sera ouvert s'il est cacheté. Le notaire dressera sur-le-champ procès-verbal de l'ouverture et de l'état du testament, en précisant les circonstances du dépôt. Dans le cas prévu à l'article 1006,…
 - **1006** (`LEGIARTI000006434591`) — Lorsqu'au décès du testateur il n'y aura pas d'héritiers auxquels une quotité de ses biens soit réservée par la loi, le légataire universel sera saisi de plein droit par la mort du testateur, sans être tenu de demander la délivrance.
 
-*Notes :* CrossRef réel renvoi LEGIARTI000039368517→LEGIARTI000006434591 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2
+*Notes :* CrossRef réel renvoi LEGIARTI000039368517→LEGIARTI000006434591 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -246,20 +246,20 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 12. `mh28` — `multi_hop`
 
-**Question :** Un employeur s'interroge sur l'article L. 1111-3 du Code du travail : quelle règle pose-t-il, et que précise l'article L. 5134-72 auquel il renvoie ?
+**Question :** Les titulaires d'un contrat initiative-emploi comptent-ils dans les effectifs de l'entreprise, et à quelle aide l'article L. 1111-3 du Code du travail renvoie-t-il (article L. 5134-72) ?
 
 **Articles gold :** L. 1111-3, L. 5134-72
 
 **Ids LEGIARTI :** `LEGIARTI000031565369, LEGIARTI000026549836`
 
-**Réponse attendue :** L'article L. 1111-3 prévoit que ne sont pas pris en compte dans le calcul des effectifs de l'entreprise : 1° Les apprentis. Cet article renvoie à l'article L. 5134-72, qui dispose que l'aide à l'insertion professionnelle attribuée au titre d'un contrat initiative-emploi peut être modulée en fonction : 1° De la catégorie et du secteur d'activité de l'employeur. Pour répondre à la question, il faut donc combiner ces deux dispositions.
+**Réponse attendue :** L'article L. 1111-3 exclut du calcul des effectifs, notamment, les titulaires d'un contrat initiative-emploi pendant la durée d'attribution de l'aide financière mentionnée à l'article L. 5134-72 (ainsi que d'autres catégories : apprentis, contrats d'accompagnement dans l'emploi, contrats de professionnalisation, sous les réserves du texte). L'article L. 5134-72 précise que cette aide à l'insertion professionnelle au titre d'un contrat initiative-emploi peut être modulée selon la catégorie et le secteur d'activité de l'employeur, les actions d'accompagnement et d'insertion durable, les conditions économiques locales et les difficultés d'accès à l'emploi antérieurement rencontrées par le salarié.
 
 **Extraits corpus :**
 
 - **L. 1111-3** (`LEGIARTI000031565369`) — Ne sont pas pris en compte dans le calcul des effectifs de l'entreprise : 1° Les apprentis ; 2° Les titulaires d'un contrat initiative-emploi, pendant la durée d'attribution de l'aide financière mentionnée à l'article L. 5134-72 ; 3° (Abrogé) ; 4° Les titulaires d'un contrat d'accompagnement dans l'emploi pendant la…
 - **L. 5134-72** (`LEGIARTI000026549836`) — L'aide à l'insertion professionnelle attribuée au titre d'un contrat initiative-emploi peut être modulée en fonction : 1° De la catégorie et du secteur d'activité de l'employeur ; 2° Des actions prévues en matière d'accompagnement professionnel et des actions visant à favoriser l'insertion durable du salarié ; 3° Des…
 
-*Notes :* CrossRef réel renvoi LEGIARTI000031565369→LEGIARTI000026549836 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2
+*Notes :* CrossRef réel renvoi LEGIARTI000031565369→LEGIARTI000026549836 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -267,20 +267,20 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 13. `mh01` — `multi_hop`
 
-**Question :** Pour appliquer l'article L. 112-6 du Code de la consommation, un consommateur doit-il aussi tenir compte de l'article L. 112-5 ? Que dit chacun ?
+**Question :** Un professionnel a obtenu une prise de position formelle de l'administration sur ses modalités d'information des prix (article L. 112-5 du Code de la consommation) : dans quels cas cette garantie prend-elle fin selon l'article L. 112-6 ?
 
 **Articles gold :** L. 112-6, L. 112-5
 
 **Ids LEGIARTI :** `LEGIARTI000032227321, LEGIARTI000032227323`
 
-**Réponse attendue :** L'article L. 112-6 prévoit que la garantie mentionnée à l'article L. 112-5 prend fin. Cet article renvoie à l'article L. 112-5, qui dispose que tout professionnel peut demander à l'autorité administrative chargée de la concurrence et de la consommation de prendre formellement position sur la conformité. Pour répondre à la question, il faut donc combiner ces deux dispositions.
+**Réponse attendue :** L'article L. 112-5 permet à tout professionnel de demander à l'autorité administrative chargée de la concurrence et de la consommation de prendre formellement position sur la conformité, aux articles L. 112-1 à L. 112-4 et à leurs mesures réglementaires, des modalités d'information sur les prix de vente au consommateur qu'il envisage ; cette prise de position vise à le prémunir d'un changement d'appréciation exposant aux sanctions des articles L. 131-5 et L. 131-6. L'article L. 112-6 fixe la fin de cette garantie : lorsque la situation du professionnel n'est plus identique à celle présentée dans la demande, lorsqu'une modification législative ou réglementaire affecte la validité de la garantie, ou à compter du jour où l'autorité notifie au professionnel la modification de son appréciation, après information préalable.
 
 **Extraits corpus :**
 
 - **L. 112-6** (`LEGIARTI000032227321`) — La garantie mentionnée à l'article L. 112-5 prend fin : 1° A la date à laquelle la situation du professionnel n'est plus identique à celle présentée dans la demande ; les modalités de constatation de cette situation et d'information du professionnel sont précisées par décret en Conseil d'Etat ; 2° A la date à laquelle…
 - **L. 112-5** (`LEGIARTI000032227323`) — Tout professionnel peut demander à l'autorité administrative chargée de la concurrence et de la consommation de prendre formellement position sur la conformité aux articles L. 112-1 à L. 112-4 et aux mesures réglementaires prises pour leur application, des modalités de l'information sur les prix de vente au…
 
-*Notes :* CrossRef réel renvoi LEGIARTI000032227321→LEGIARTI000032227323 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2
+*Notes :* CrossRef réel renvoi LEGIARTI000032227321→LEGIARTI000032227323 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -487,20 +487,20 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 24. `mh02` — `multi_hop`
 
-**Question :** L'article L. 131-2 du Code de la consommation cite l'article L. 111-4 : quelles obligations ou définitions en résultent concrètement pour un professionnel ?
+**Question :** Quelle sanction administrative frappe le manquement à l'obligation d'information sur les pièces détachées de l'article L. 111-4, et en quoi consiste cette obligation (articles L. 131-2 et L. 111-4 du Code de la consommation) ?
 
 **Articles gold :** L. 131-2, L. 111-4
 
 **Ids LEGIARTI :** `LEGIARTI000032227140, LEGIARTI000044330854`
 
-**Réponse attendue :** L'article L. 131-2 prévoit que tout manquement à l'obligation d'informer sur la durée de disponibilité des pièces détachées. Cet article renvoie à l'article L. 111-4, qui dispose que le fabricant ou l'importateur de biens meubles informe le vendeur professionnel de la disponibilité ou de la non-disponibilité des pièces détachées indispensables à l'utilisation des biens concernés et, le cas échéant. Pour répondre à la question, il faut donc combiner ces deux dispositions.
+**Réponse attendue :** L'article L. 111-4 oblige le fabricant ou l'importateur de biens meubles à informer le vendeur professionnel de la disponibilité ou de la non-disponibilité des pièces détachées indispensables à l'utilisation des biens et, le cas échéant, de la période ou de la date jusqu'à laquelle ces pièces sont disponibles ; ces informations sont ensuite délivrées au consommateur avant la conclusion du contrat. L'article L. 131-2 sanctionne tout manquement à cette obligation d'informer sur la durée de disponibilité des pièces détachées d'une amende administrative d'au plus 3 000 euros pour une personne physique et 15 000 euros pour une personne morale, prononcée dans les conditions du chapitre II du titre II du livre V.
 
 **Extraits corpus :**
 
 - **L. 131-2** (`LEGIARTI000032227140`) — Tout manquement à l'obligation d'informer sur la durée de disponibilité des pièces détachées mentionnée à l'article L. 111-4 est passible d'une amende administrative dont le montant ne peut excéder 3 000 euros pour une personne physique et 15 000 euros pour une personne morale. Cette amende est prononcée dans les…
 - **L. 111-4** (`LEGIARTI000044330854`) — Le fabricant ou l'importateur de biens meubles informe le vendeur professionnel de la disponibilité ou de la non-disponibilité des pièces détachées indispensables à l'utilisation des biens concernés et, le cas échéant, de la période pendant laquelle ou de la date jusqu'à laquelle ces pièces sont disponibles sur le…
 
-*Notes :* CrossRef réel renvoi LEGIARTI000032227140→LEGIARTI000044330854 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2
+*Notes :* CrossRef réel renvoi LEGIARTI000032227140→LEGIARTI000044330854 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -581,20 +581,20 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 29. `mh03` — `multi_hop`
 
-**Question :** L'article L. 131-3-1 du Code de la consommation cite l'article L. 111-6 : quelles obligations ou définitions en résultent concrètement pour un professionnel ?
+**Question :** Quelle est l'obligation d'information de l'article L. 111-6 du Code de la consommation sur les mises à jour logicielles, et quelle amende l'article L. 131-3-1 prévoit-il en cas de manquement ?
 
 **Articles gold :** L. 131-3-1, L. 111-6
 
 **Ids LEGIARTI :** `LEGIARTI000044526142, LEGIARTI000044564977`
 
-**Réponse attendue :** L'article L. 131-3-1 prévoit que tout manquement à l'obligation d'information mentionnée à l'article L. 111-6 est passible d'une amende administrative dont le montant ne peut excéder 3 000 euros pour une personne physique et 15 000 euros pour une personne morale. Cet article renvoie à l'article L. 111-6, qui dispose que le producteur de biens comportant des éléments numériques informe le vendeur professionnel de la durée au cours de laquelle les mises à jour logicielles, que le producteur fournit, restent compatibles avec les fonctionnalités du bien. Pour répondre à la question, il faut donc combiner ces deux dispositions.
+**Réponse attendue :** L'article L. 111-6 impose au producteur de biens comportant des éléments numériques d'informer le vendeur professionnel de la durée pendant laquelle les mises à jour logicielles qu'il fournit restent compatibles avec les fonctionnalités du bien ; le vendeur met ces informations à la disposition du consommateur, et le producteur informe aussi le consommateur des caractéristiques essentielles de chaque mise à jour. L'article L. 131-3-1 punit le manquement à cette obligation d'information d'une amende administrative plafonnée à 3 000 euros pour une personne physique et 15 000 euros pour une personne morale.
 
 **Extraits corpus :**
 
 - **L. 131-3-1** (`LEGIARTI000044526142`) — Tout manquement à l'obligation d'information mentionnée à l'article L. 111-6 est passible d'une amende administrative dont le montant ne peut excéder 3 000 euros pour une personne physique et 15 000 euros pour une personne morale. Cette amende est prononcée dans les conditions prévues au chapitre II du titre II du…
 - **L. 111-6** (`LEGIARTI000044564977`) — Le producteur de biens comportant des éléments numériques informe le vendeur professionnel de la durée au cours de laquelle les mises à jour logicielles, que le producteur fournit, restent compatibles avec les fonctionnalités du bien. Le vendeur met ces informations à la disposition du consommateur. Le producteur…
 
-*Notes :* CrossRef réel renvoi LEGIARTI000044526142→LEGIARTI000044564977 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2
+*Notes :* CrossRef réel renvoi LEGIARTI000044526142→LEGIARTI000044564977 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -677,20 +677,20 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 34. `mh04` — `multi_hop`
 
-**Question :** Un acheteur s'interroge sur l'article L. 132-11-1 du Code de la consommation : quelle règle pose-t-il, et que précise l'article L. 132-11 auquel il renvoie ?
+**Question :** En cas de pratique commerciale agressive suivie de la conclusion d'un contrat, comment l'article L. 132-11-1 du Code de la consommation aggrave-t-il la peine d'emprisonnement de l'article L. 132-11 ?
 
 **Articles gold :** L. 132-11-1, L. 132-11
 
 **Ids LEGIARTI :** `LEGIARTI000046190610, LEGIARTI000037556685`
 
-**Réponse attendue :** L'article L. 132-11-1 prévoit que lorsque les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 ont été suivies de la conclusion d'un ou de plusieurs contrats, la peine d'emprisonnement prévue à l'article L. 132-11 est portée à trois ans. Cet article renvoie à l'article L. 132-11, qui dispose que les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 sont punies d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Pour répondre à la question, il faut donc combiner ces deux dispositions.
+**Réponse attendue :** L'article L. 132-11 punit les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 d'un emprisonnement de deux ans et d'une amende de 300 000 euros (pouvant être portée à 10 % du chiffre d'affaires moyen annuel). Lorsque ces pratiques ont été suivies de la conclusion d'un ou de plusieurs contrats, l'article L. 132-11-1 porte la peine d'emprisonnement prévue à l'article L. 132-11 à trois ans.
 
 **Extraits corpus :**
 
 - **L. 132-11-1** (`LEGIARTI000046190610`) — Lorsque les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 ont été suivies de la conclusion d'un ou de plusieurs contrats, la peine d'emprisonnement prévue à l'article L. 132-11 est portée à trois ans.
 - **L. 132-11** (`LEGIARTI000037556685`) — Les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 sont punies d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Le montant de l'amende peut être porté, de manière proportionnée aux avantages tirés du délit, à 10 % du chiffre d'affaires moyen annuel, calculé sur les…
 
-*Notes :* CrossRef réel renvoi LEGIARTI000046190610→LEGIARTI000037556685 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2
+*Notes :* CrossRef réel renvoi LEGIARTI000046190610→LEGIARTI000037556685 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
@@ -773,20 +773,20 @@ Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 
 ### 39. `mh05` — `multi_hop`
 
-**Question :** Que doit-on retenir de l'article L. 132-11-2 et de l'article L. 132-11 du Code de la consommation lorsqu'ils sont lus ensemble ?
+**Question :** Comment l'article L. 132-11-2 du Code de la consommation aggrave-t-il la peine d'emprisonnement de l'article L. 132-11 lorsque la pratique commerciale agressive est commise en bande organisée ?
 
 **Articles gold :** L. 132-11-2, L. 132-11
 
 **Ids LEGIARTI :** `LEGIARTI000046190612, LEGIARTI000037556685`
 
-**Réponse attendue :** L'article L. 132-11-2 prévoit que lorsque les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 ont été commises en bande organisée, la peine d'emprisonnement prévue à l'article L. 132-11 est portée à sept ans. Cet article renvoie à l'article L. 132-11, qui dispose que les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 sont punies d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Pour répondre à la question, il faut donc combiner ces deux dispositions.
+**Réponse attendue :** L'article L. 132-11 fixe la peine de base des pratiques commerciales agressives des articles L. 121-6 et L. 121-7 à deux ans d'emprisonnement et 300 000 euros d'amende. L'article L. 132-11-2 dispose que, lorsque ces pratiques ont été commises en bande organisée, la peine d'emprisonnement prévue à l'article L. 132-11 est portée à sept ans.
 
 **Extraits corpus :**
 
 - **L. 132-11-2** (`LEGIARTI000046190612`) — Lorsque les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 ont été commises en bande organisée, la peine d'emprisonnement prévue à l'article L. 132-11 est portée à sept ans.
 - **L. 132-11** (`LEGIARTI000037556685`) — Les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 sont punies d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Le montant de l'amende peut être porté, de manière proportionnée aux avantages tirés du délit, à 10 % du chiffre d'affaires moyen annuel, calculé sur les…
 
-*Notes :* CrossRef réel renvoi LEGIARTI000046190612→LEGIARTI000037556685 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2
+*Notes :* CrossRef réel renvoi LEGIARTI000046190612→LEGIARTI000037556685 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3
 
 Verdict : ☐ OK ☐ À corriger ☐ À reformuler
 

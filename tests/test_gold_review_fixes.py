@@ -121,21 +121,31 @@ def test_committed_gold_review_fixes():
             assert "Le renvoi (renvoi)" not in ans
             assert "…" not in ans
             assert "Les deux textes se complètent" not in ans
+            assert "il faut donc combiner" not in ans.lower()
             assert "rédaction courante a été remaniée" not in ans
             assert ".." not in ans
         if q.type == QuestionType.MULTI_HOP and q.id != "q26":
             topic = q.topic or ""
             if "civil" in topic or "travail" in topic:
                 assert "Un professionnel se prévaut" not in q.question
+            # Handwritten answers: complete, cite both gold nums, no mid-cut.
+            if q.id.startswith("mh"):
+                ans = q.reference_answer or ""
+                assert len(ans) >= 180
+                for num in q.expected_article_nums:
+                    assert num in ans or num.replace("L. ", "L.") in ans or num in q.question
 
-    # Named items from the quality pass brief.
+    # Named items from the quality / handwrite passes.
     assert "France compétences" in (by_id["t15"].reference_answer or "")
     assert "L. 6123-5" in by_id["t15"].expected_article_nums
     assert "remaniée" not in (by_id["t15"].reference_answer or "")
     assert "Wallis" not in by_id["t02"].question
     assert "tableau ci-après" not in (by_id["t02"].reference_answer or "").lower()
-    assert by_id["mh15"].question.startswith("Un héritier")
-    assert by_id["mh28"].question.startswith("Un employeur")
+    assert "1006" in (by_id["mh15"].reference_answer or "")
+    assert "notaire" in (by_id["mh15"].reference_answer or "").lower()
+    assert "initiative-emploi" in (by_id["mh28"].reference_answer or "")
+    assert "L. 5134-72" in (by_id["mh28"].reference_answer or "")
+    assert "1° Les apprentis." not in (by_id["mh28"].reference_answer or "")
 
     corpus = load_corpus()
     leaks = scan_unanswerables_against_corpus(list(gold.questions), corpus)

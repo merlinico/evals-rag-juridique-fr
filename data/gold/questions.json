@@ -1,9 +1,9 @@
 {
-  "version": "0.3.2",
+  "version": "0.3.3",
   "corpus_snapshot": "codes-v0.2-2025-07-13",
   "language": "fr",
   "validated": false,
-  "notes": "Gold v0.3.2 — passe qualité : réponses mh synthétisées sans troncature, gabarits d'acteur par domaine, temporal avec diff concret, coquilles corrigées. validated=false.",
+  "notes": "Gold v0.3.3 — réponses multi_hop mh01–mh39 réécrites à la main (lien réel entre articles, sans troncature ni passe-partout). validated=false.",
   "questions": [
     {
       "id": "q01",
@@ -1840,7 +1840,7 @@
     },
     {
       "id": "mh01",
-      "question": "Pour appliquer l'article L. 112-6 du Code de la consommation, un consommateur doit-il aussi tenir compte de l'article L. 112-5 ? Que dit chacun ?",
+      "question": "Un professionnel a obtenu une prise de position formelle de l'administration sur ses modalités d'information des prix (article L. 112-5 du Code de la consommation) : dans quels cas cette garantie prend-elle fin selon l'article L. 112-6 ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032227321",
@@ -1850,16 +1850,16 @@
         "L. 112-6",
         "L. 112-5"
       ],
-      "reference_answer": "L'article L. 112-6 prévoit que la garantie mentionnée à l'article L. 112-5 prend fin. Cet article renvoie à l'article L. 112-5, qui dispose que tout professionnel peut demander à l'autorité administrative chargée de la concurrence et de la consommation de prendre formellement position sur la conformité. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 112-5 permet à tout professionnel de demander à l'autorité administrative chargée de la concurrence et de la consommation de prendre formellement position sur la conformité, aux articles L. 112-1 à L. 112-4 et à leurs mesures réglementaires, des modalités d'information sur les prix de vente au consommateur qu'il envisage ; cette prise de position vise à le prémunir d'un changement d'appréciation exposant aux sanctions des articles L. 131-5 et L. 131-6. L'article L. 112-6 fixe la fin de cette garantie : lorsque la situation du professionnel n'est plus identique à celle présentée dans la demande, lorsqu'une modification législative ou réglementaire affecte la validité de la garantie, ou à compter du jour où l'autorité notifie au professionnel la modification de son appréciation, après information préalable.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032227321→LEGIARTI000032227323 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032227321→LEGIARTI000032227323 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh02",
-      "question": "L'article L. 131-2 du Code de la consommation cite l'article L. 111-4 : quelles obligations ou définitions en résultent concrètement pour un professionnel ?",
+      "question": "Quelle sanction administrative frappe le manquement à l'obligation d'information sur les pièces détachées de l'article L. 111-4, et en quoi consiste cette obligation (articles L. 131-2 et L. 111-4 du Code de la consommation) ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032227140",
@@ -1869,16 +1869,16 @@
         "L. 131-2",
         "L. 111-4"
       ],
-      "reference_answer": "L'article L. 131-2 prévoit que tout manquement à l'obligation d'informer sur la durée de disponibilité des pièces détachées. Cet article renvoie à l'article L. 111-4, qui dispose que le fabricant ou l'importateur de biens meubles informe le vendeur professionnel de la disponibilité ou de la non-disponibilité des pièces détachées indispensables à l'utilisation des biens concernés et, le cas échéant. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 111-4 oblige le fabricant ou l'importateur de biens meubles à informer le vendeur professionnel de la disponibilité ou de la non-disponibilité des pièces détachées indispensables à l'utilisation des biens et, le cas échéant, de la période ou de la date jusqu'à laquelle ces pièces sont disponibles ; ces informations sont ensuite délivrées au consommateur avant la conclusion du contrat. L'article L. 131-2 sanctionne tout manquement à cette obligation d'informer sur la durée de disponibilité des pièces détachées d'une amende administrative d'au plus 3 000 euros pour une personne physique et 15 000 euros pour une personne morale, prononcée dans les conditions du chapitre II du titre II du livre V.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032227140→LEGIARTI000044330854 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032227140→LEGIARTI000044330854 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh03",
-      "question": "L'article L. 131-3-1 du Code de la consommation cite l'article L. 111-6 : quelles obligations ou définitions en résultent concrètement pour un professionnel ?",
+      "question": "Quelle est l'obligation d'information de l'article L. 111-6 du Code de la consommation sur les mises à jour logicielles, et quelle amende l'article L. 131-3-1 prévoit-il en cas de manquement ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000044526142",
@@ -1888,16 +1888,16 @@
         "L. 131-3-1",
         "L. 111-6"
       ],
-      "reference_answer": "L'article L. 131-3-1 prévoit que tout manquement à l'obligation d'information mentionnée à l'article L. 111-6 est passible d'une amende administrative dont le montant ne peut excéder 3 000 euros pour une personne physique et 15 000 euros pour une personne morale. Cet article renvoie à l'article L. 111-6, qui dispose que le producteur de biens comportant des éléments numériques informe le vendeur professionnel de la durée au cours de laquelle les mises à jour logicielles, que le producteur fournit, restent compatibles avec les fonctionnalités du bien. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 111-6 impose au producteur de biens comportant des éléments numériques d'informer le vendeur professionnel de la durée pendant laquelle les mises à jour logicielles qu'il fournit restent compatibles avec les fonctionnalités du bien ; le vendeur met ces informations à la disposition du consommateur, et le producteur informe aussi le consommateur des caractéristiques essentielles de chaque mise à jour. L'article L. 131-3-1 punit le manquement à cette obligation d'information d'une amende administrative plafonnée à 3 000 euros pour une personne physique et 15 000 euros pour une personne morale.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000044526142→LEGIARTI000044564977 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000044526142→LEGIARTI000044564977 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh04",
-      "question": "Un acheteur s'interroge sur l'article L. 132-11-1 du Code de la consommation : quelle règle pose-t-il, et que précise l'article L. 132-11 auquel il renvoie ?",
+      "question": "En cas de pratique commerciale agressive suivie de la conclusion d'un contrat, comment l'article L. 132-11-1 du Code de la consommation aggrave-t-il la peine d'emprisonnement de l'article L. 132-11 ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000046190610",
@@ -1907,16 +1907,16 @@
         "L. 132-11-1",
         "L. 132-11"
       ],
-      "reference_answer": "L'article L. 132-11-1 prévoit que lorsque les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 ont été suivies de la conclusion d'un ou de plusieurs contrats, la peine d'emprisonnement prévue à l'article L. 132-11 est portée à trois ans. Cet article renvoie à l'article L. 132-11, qui dispose que les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 sont punies d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 132-11 punit les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 d'un emprisonnement de deux ans et d'une amende de 300 000 euros (pouvant être portée à 10 % du chiffre d'affaires moyen annuel). Lorsque ces pratiques ont été suivies de la conclusion d'un ou de plusieurs contrats, l'article L. 132-11-1 porte la peine d'emprisonnement prévue à l'article L. 132-11 à trois ans.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000046190610→LEGIARTI000037556685 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000046190610→LEGIARTI000037556685 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh05",
-      "question": "Que doit-on retenir de l'article L. 132-11-2 et de l'article L. 132-11 du Code de la consommation lorsqu'ils sont lus ensemble ?",
+      "question": "Comment l'article L. 132-11-2 du Code de la consommation aggrave-t-il la peine d'emprisonnement de l'article L. 132-11 lorsque la pratique commerciale agressive est commise en bande organisée ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000046190612",
@@ -1926,16 +1926,16 @@
         "L. 132-11-2",
         "L. 132-11"
       ],
-      "reference_answer": "L'article L. 132-11-2 prévoit que lorsque les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 ont été commises en bande organisée, la peine d'emprisonnement prévue à l'article L. 132-11 est portée à sept ans. Cet article renvoie à l'article L. 132-11, qui dispose que les pratiques commerciales agressives mentionnées aux articles L. 121-6 et L. 121-7 sont punies d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 132-11 fixe la peine de base des pratiques commerciales agressives des articles L. 121-6 et L. 121-7 à deux ans d'emprisonnement et 300 000 euros d'amende. L'article L. 132-11-2 dispose que, lorsque ces pratiques ont été commises en bande organisée, la peine d'emprisonnement prévue à l'article L. 132-11 est portée à sept ans.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000046190612→LEGIARTI000037556685 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000046190612→LEGIARTI000037556685 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh06",
-      "question": "Pour appliquer l'article L. 132-16 du Code de la consommation, un consommateur doit-il aussi tenir compte de l'article L. 121-12 ? Que dit chacun ?",
+      "question": "Quelles sont les conséquences civiles d'une vente forcée sans commande préalable (article L. 121-12), selon l'article L. 132-16 du Code de la consommation ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032227075",
@@ -1945,16 +1945,16 @@
         "L. 132-16",
         "L. 121-12"
       ],
-      "reference_answer": "L'article L. 132-16 prévoit que tout contrat conclu à la suite d'une pratique commerciale illicite mentionnée à l'article L. 121-12 est nul et de nul effet. Cet article renvoie à l'article L. 121-12, qui dispose qu'est interdit le fait d'exiger le paiement immédiat ou différé de biens ou de services fournis par un professionnel ou, s'agissant de biens, d'exiger leur renvoi ou leur conservation. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 121-12 interdit d'exiger le paiement immédiat ou différé de biens ou services fournis par un professionnel, ou d'exiger le renvoi ou la conservation de biens, sans commande préalable du consommateur. L'article L. 132-16 en tire la nullité de tout contrat conclu à la suite de cette pratique illicite : le professionnel doit restituer les sommes indûment perçues sans engagement exprès et préalable du consommateur, productives d'intérêts au taux légal puis au taux légal majoré de moitié à compter de la demande de remboursement.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032227075→LEGIARTI000032227266 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032227075→LEGIARTI000032227266 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh07",
-      "question": "Que doit-on retenir de l'article L. 132-17 et de l'article L. 121-12 du Code de la consommation lorsqu'ils sont lus ensemble ?",
+      "question": "Quelle peine pénale l'article L. 132-17 du Code de la consommation attache-t-il à la violation de l'interdiction de vente forcée de l'article L. 121-12 ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032227071",
@@ -1964,16 +1964,16 @@
         "L. 132-17",
         "L. 121-12"
       ],
-      "reference_answer": "L'article L. 132-17 prévoit que la violation de l'interdiction mentionnée à l'article L. 121-12 est punie d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Cet article renvoie à l'article L. 121-12, qui dispose qu'est interdit le fait d'exiger le paiement immédiat ou différé de biens ou de services fournis par un professionnel ou, s'agissant de biens, d'exiger leur renvoi ou leur conservation. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 121-12 interdit d'exiger le paiement de biens ou services, ou le renvoi ou la conservation de biens, sans commande préalable du consommateur. L'article L. 132-17 punit la violation de cette interdiction d'un emprisonnement de deux ans et d'une amende de 300 000 euros, pouvant être portée à 10 % du chiffre d'affaires moyen annuel calculé sur les trois derniers exercices connus.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032227071→LEGIARTI000032227266 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032227071→LEGIARTI000032227266 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh08",
-      "question": "Pour appliquer l'article L. 132-2-1 du Code de la consommation, un acheteur doit-il aussi tenir compte de l'article L. 132-2 ? Que dit chacun ?",
+      "question": "Lorsque des pratiques commerciales trompeuses (L. 121-2 à L. 121-4) ont été suivies de la conclusion d'un contrat, comment l'article L. 132-2-1 aggrave-t-il la peine de l'article L. 132-2 du Code de la consommation ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000046190577",
@@ -1983,16 +1983,16 @@
         "L. 132-2-1",
         "L. 132-2"
       ],
-      "reference_answer": "L'article L. 132-2-1 prévoit que lorsque les pratiques commerciales trompeuses mentionnées aux articles L. 121-2 à L. 121-4 ont été suivies de la conclusion d'un ou de plusieurs contrats, la peine d'emprisonnement prévue à l'article L. 132-2 est portée à trois ans. Cet article renvoie à l'article L. 132-2, qui dispose que les pratiques commerciales trompeuses mentionnées aux articles L. 121-2 à L. 121-4 sont punies d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 132-2 punit les pratiques commerciales trompeuses des articles L. 121-2 à L. 121-4 de deux ans d'emprisonnement et de 300 000 euros d'amende (avec majorations possibles liées au chiffre d'affaires, aux dépenses publicitaires ou au support numérique). L'article L. 132-2-1 porte cette peine d'emprisonnement à trois ans lorsque les pratiques ont été suivies de la conclusion d'un ou de plusieurs contrats.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000046190577→LEGIARTI000049532070 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000046190577→LEGIARTI000049532070 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh09",
-      "question": "Pour appliquer l'article L. 132-2-2 du Code de la consommation, un acheteur doit-il aussi tenir compte de l'article L. 132-2 ? Que dit chacun ?",
+      "question": "Lorsque des pratiques commerciales trompeuses sont commises en bande organisée, comment l'article L. 132-2-2 aggrave-t-il la peine d'emprisonnement de l'article L. 132-2 du Code de la consommation ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000046190579",
@@ -2002,16 +2002,16 @@
         "L. 132-2-2",
         "L. 132-2"
       ],
-      "reference_answer": "L'article L. 132-2-2 prévoit que lorsque les pratiques commerciales trompeuses mentionnées aux articles L. 121-2 à L. 121-4 ont été commises en bande organisée, la peine d'emprisonnement prévue à l'article L. 132-2 est portée à sept ans. Cet article renvoie à l'article L. 132-2, qui dispose que les pratiques commerciales trompeuses mentionnées aux articles L. 121-2 à L. 121-4 sont punies d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 132-2 fixe à deux ans d'emprisonnement et 300 000 euros d'amende la peine de base des pratiques trompeuses des articles L. 121-2 à L. 121-4. L'article L. 132-2-2 dispose que, lorsque ces pratiques ont été commises en bande organisée, la peine d'emprisonnement prévue à l'article L. 132-2 est portée à sept ans.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000046190579→LEGIARTI000049532070 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000046190579→LEGIARTI000049532070 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh10",
-      "question": "Pour appliquer l'article L. 132-22 du Code de la consommation, un professionnel doit-il aussi tenir compte de l'article L. 121-17 ? Que dit chacun ?",
+      "question": "En quoi consiste l'obligation de consentement exprès de l'article L. 121-17 du Code de la consommation, et quelle amende l'article L. 132-22 prévoit-il en cas de manquement ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032227053",
@@ -2021,16 +2021,16 @@
         "L. 132-22",
         "L. 121-17"
       ],
-      "reference_answer": "L'article L. 132-22 prévoit que tout manquement à l'obligation de recueil du consentement exprès du consommateur dans les conditions prévues. Cet article renvoie à l'article L. 121-17, qui dispose que préalablement à la conclusion d'un contrat de vente ou de prestation de services. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 121-17 oblige le professionnel, avant la conclusion du contrat, à s'assurer du consentement exprès du consommateur pour tout paiement supplémentaire s'ajoutant au prix de l'objet principal ; un consentement par défaut (absence d'opposition à des options non sollicitées) ouvre droit au remboursement. L'article L. 132-22 sanctionne le manquement à cette obligation de recueil du consentement exprès d'une amende administrative d'au plus 3 000 euros pour une personne physique et 15 000 euros pour une personne morale.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032227053→LEGIARTI000032227250 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032227053→LEGIARTI000032227250 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh11",
-      "question": "Un consommateur s'interroge sur l'article L. 132-23 du Code de la consommation : quelle règle pose-t-il, et que précise l'article L. 121-21 auquel il renvoie ?",
+      "question": "Que sanctionne pénalement l'article L. 132-23 du Code de la consommation au titre de l'interdiction de frais de recouvrement de l'article L. 121-21 ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032227049",
@@ -2040,16 +2040,16 @@
         "L. 132-23",
         "L. 121-21"
       ],
-      "reference_answer": "L'article L. 132-23 prévoit que la violation de l'interdiction relative aux frais de recouvrement mentionnée à l'article L. 121-21 est punie d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Cet article renvoie à l'article L. 121-21, qui dispose qu'est interdit le fait pour un professionnel de solliciter ou de percevoir d'un consommateur des frais de recouvrement dans des conditions contraires au deuxième alinéa de l'article L. 111-8 du code des procédures civiles d'exécution. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 121-21 interdit à un professionnel de solliciter ou de percevoir d'un consommateur des frais de recouvrement dans des conditions contraires au deuxième alinéa de l'article L. 111-8 du code des procédures civiles d'exécution. L'article L. 132-23 punit la violation de cette interdiction d'un emprisonnement de deux ans et d'une amende de 300 000 euros, pouvant être portée à 10 % du chiffre d'affaires moyen annuel.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032227049→LEGIARTI000032227234 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032227049→LEGIARTI000032227234 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh12",
-      "question": "Pour appliquer l'article L. 132-24 du Code de la consommation, un professionnel doit-il aussi tenir compte de l'article L. 121-22 ? Que dit chacun ?",
+      "question": "Quelle publicité l'article L. 121-22 du Code de la consommation interdit-il, et quelle amende l'article L. 132-24 prévoit-il pour l'annonceur qui la diffuse ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032227045",
@@ -2059,16 +2059,16 @@
         "L. 132-24",
         "L. 121-22"
       ],
-      "reference_answer": "L'article L. 132-24 prévoit que le fait pour tout annonceur de diffuser ou faire diffuser une publicité interdite dans les conditions prévues. Cet article renvoie à l'article L. 121-22, qui dispose qu'est interdite toute publicité portant : 1° Sur une opération commerciale soumise à autorisation ou à déclaration au titre soit de l'article L. 122-24 du présent code, soit. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 121-22 interdit toute publicité portant sur certaines opérations commerciales non autorisées ou non déclarées (notamment au titre de l'article L. 122-24 du présent code ou de dispositions du code de commerce et du code du travail), ainsi que sur certaines manifestations commerciales non déclarées. L'article L. 132-24 rend passible l'annonceur qui diffuse ou fait diffuser une telle publicité interdite d'une amende administrative d'au plus 15 000 euros pour une personne physique et 75 000 euros pour une personne morale.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032227045→LEGIARTI000044224603 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032227045→LEGIARTI000044224603 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh13",
-      "question": "Un acheteur s'interroge sur l'article L. 132-7 du Code de la consommation : quelle règle pose-t-il, et que précise l'article L. 132-6 auquel il renvoie ?",
+      "question": "Quels pouvoirs d'instruction l'article L. 132-6 du Code de la consommation donne-t-il au tribunal en matière de pratiques trompeuses, et que sanctionne l'article L. 132-7 en cas de refus de communication ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032227110",
@@ -2078,16 +2078,16 @@
         "L. 132-7",
         "L. 132-6"
       ],
-      "reference_answer": "L'article L. 132-7 prévoit que le refus de communication des éléments de justification ou des publicités diffusées dans les conditions prévues à l'article L. 132-6 est puni d'un emprisonnement de deux ans et d'une amende de 300 000 euros. Cet article renvoie à l'article L. 132-6, qui dispose que pour l'application des articles L. 132-2 et L. 132-3 le tribunal peut demander tant aux parties qu'à l'annonceur la communication de tous documents utiles. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "Pour l'application des articles L. 132-2 et L. 132-3, l'article L. 132-6 permet au tribunal de demander aux parties et à l'annonceur la communication de tous documents utiles ; en cas de refus, il peut ordonner la saisie ou toute mesure d'instruction et prononcer une astreinte pouvant atteindre 4 500 euros par jour de retard. L'article L. 132-7 punit le refus de communication des éléments de justification ou des publicités diffusées dans ces conditions d'un emprisonnement de deux ans et d'une amende de 300 000 euros.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032227110→LEGIARTI000032227112 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032227110→LEGIARTI000032227112 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh14",
-      "question": "Pour appliquer l'article L. 216-6 du Code de la consommation, un consommateur doit-il aussi tenir compte de l'article L. 216-1 ? Que dit chacun ?",
+      "question": "Si le professionnel ne délivre pas le bien ou ne fournit pas le service à la date prévue par l'article L. 216-1, quels recours l'article L. 216-6 du Code de la consommation ouvre-t-il au consommateur ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000044142472",
@@ -2097,16 +2097,16 @@
         "L. 216-6",
         "L. 216-1"
       ],
-      "reference_answer": "L'article L. 216-6 prévoit que I.-En cas de manquement du professionnel à son obligation de délivrance du bien ou de fourniture du service dans les conditions prévues. Cet article renvoie à l'article L. 216-1, qui dispose que le professionnel délivre le bien ou fournit le service à la date ou dans le délai indiqué au consommateur, conformément au 3° de l'article L. 111-1, sauf si les parties en conviennent autrement. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 216-1 impose au professionnel de délivrer le bien ou de fournir le service à la date ou dans le délai indiqué au consommateur (ou, à défaut, sans retard injustifié et au plus tard trente jours après la conclusion du contrat) ; la délivrance s'entend du transfert de la possession physique ou du contrôle du bien. En cas de manquement à cette obligation, l'article L. 216-6 permet au consommateur de suspendre le paiement jusqu'à exécution, de résoudre le contrat après mise en demeure restée sans effet dans un délai supplémentaire raisonnable, ou de résoudre immédiatement le contrat lorsque le professionnel refuse d'exécuter, qu'il est manifeste qu'il ne s'exécutera pas, ou que la date ou le délai était une condition essentielle du contrat.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:consommation:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000044142472→LEGIARTI000044142498 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000044142472→LEGIARTI000044142498 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh15",
-      "question": "Un héritier s'interroge sur l'article 1007 du Code civil : quelle règle pose-t-il, et que précise l'article 1006 auquel il renvoie ?",
+      "question": "Avant d'exécuter un testament olographe ou mystique, quelles vérifications le notaire doit-il faire au regard de l'article 1006 du Code civil, selon l'article 1007 ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000039368517",
@@ -2116,16 +2116,16 @@
         "1007",
         "1006"
       ],
-      "reference_answer": "L'article 1007 prévoit que tout testament olographe ou mystique sera, avant d'être mis à exécution, déposé entre les mains d'un notaire. Cet article renvoie à l'article 1006, qui dispose que lorsqu'au décès du testateur il n'y aura pas d'héritiers auxquels une quotité de ses biens soit réservée par la loi, le légataire universel sera saisi de plein droit par la mort du testateur, sans être tenu de demander la délivrance. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article 1007 impose, avant toute exécution, le dépôt du testament olographe ou mystique entre les mains d'un notaire, qui dresse procès-verbal d'ouverture et d'état du testament. Dans le cas prévu à l'article 1006 — absence d'héritiers réservataires, le légataire universel étant alors saisi de plein droit par la mort du testateur sans avoir à demander la délivrance — le notaire vérifie le caractère universel de la vocation et l'absence d'héritiers réservataires, porte ces vérifications sur le procès-verbal, et tout intéressé peut s'opposer dans le mois suivant la réception des pièces au greffe, auquel cas le légataire se fera envoyer en possession.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:civil:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000039368517→LEGIARTI000006434591 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000039368517→LEGIARTI000006434591 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh16",
-      "question": "Que doit-on retenir de l'article 1051 et de l'article 1056 du Code civil lorsqu'ils sont lus ensemble ?",
+      "question": "Dans une libéralité graduelle, d'où le second gratifié et, le cas échéant, ses héritiers tiennent-ils leurs droits (articles 1051 et 1056 du Code civil) ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000006434912",
@@ -2135,16 +2135,16 @@
         "1051",
         "1056"
       ],
-      "reference_answer": "L'article 1051 prévoit que le second gratifié est réputé tenir ses droits de l'auteur de la libéralité. Cet article renvoie à l'article 1056, qui dispose que lorsque le second gratifié prédécède au grevé ou renonce au bénéfice de la libéralité graduelle, les biens ou droits qui en faisaient l'objet dépendent de la succession du grevé. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article 1051 dispose que le second gratifié est réputé tenir ses droits de l'auteur de la libéralité, et qu'il en va de même de ses héritiers lorsqu'ils recueillent la libéralité dans les conditions de l'article 1056. L'article 1056 précise que si le second gratifié prédécède au grevé ou renonce, les biens dépendent de la succession du grevé, sauf si l'acte prévoit expressément que les héritiers du second gratifié pourront la recueillir ou désigne un autre second gratifié.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:civil:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000006434912→LEGIARTI000006434955 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000006434912→LEGIARTI000006434955 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh17",
-      "question": "Que doit-on retenir de l'article 1054 et de l'article 930 du Code civil lorsqu'ils sont lus ensemble ?",
+      "question": "Un grevé héritier réservataire peut-il accepter que la charge d'une libéralité graduelle greve sa réserve, et sous quelle forme d'acte (articles 1054 et 930 du Code civil) ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000006434932",
@@ -2154,16 +2154,16 @@
         "1054",
         "930"
       ],
-      "reference_answer": "L'article 1054 prévoit que si le grevé est héritier réservataire du disposant, la charge ne peut être imposée que sur la quotité disponible. Cet article renvoie à l'article 930, qui dispose que la renonciation est établie par acte authentique spécifique reçu par deux notaires. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article 1054 pose que si le grevé est héritier réservataire, la charge ne peut en principe être imposée que sur la quotité disponible ; le donataire peut toutefois accepter, dans l'acte de donation ou postérieurement dans un acte établi dans les conditions de l'article 930, que la charge greve tout ou partie de sa réserve. L'article 930 exige pour cette renonciation un acte authentique spécifique reçu par deux notaires, signé séparément par chaque renonçant en leur seule présence, et mentionnant précisément ses conséquences juridiques futures, à peine de nullité.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:civil:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000006434932→LEGIARTI000006433774 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000006434932→LEGIARTI000006433774 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh18",
-      "question": "Que doit-on retenir de l'article 1096 et de l'article 953 du Code civil lorsqu'ils sont lus ensemble ?",
+      "question": "Une donation de biens présents entre époux pendant le mariage est-elle librement révocable, ou seulement pour les causes de l'article 953 (article 1096 du Code civil) ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000006435819",
@@ -2173,16 +2173,16 @@
         "1096",
         "953"
       ],
-      "reference_answer": "L'article 1096 prévoit que la donation de biens à venir faite entre époux pendant le mariage est toujours révocable. Cet article renvoie à l'article 953, qui dispose que la donation entre vifs ne pourra être révoquée que pour cause d'inexécution des conditions sous lesquelles elle aura été faite, pour cause d'ingratitude, et pour cause de survenance d'enfants. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article 1096 distingue : la donation de biens à venir entre époux pendant le mariage est toujours révocable, alors que la donation de biens présents prenant effet au cours du mariage n'est révocable que dans les conditions des articles 953 à 958. L'article 953 limite la révocation des donations entre vifs à trois causes : inexécution des conditions, ingratitude, et survenance d'enfants — cette dernière cause étant toutefois écartée pour les donations entre époux par l'article 1096 lui-même.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:civil:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000006435819→LEGIARTI000006433883 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000006435819→LEGIARTI000006433883 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh19",
-      "question": "Que doit-on retenir de l'article 1096 et de l'article 958 du Code civil lorsqu'ils sont lus ensemble ?",
+      "question": "En cas de révocation pour ingratitude d'une donation de biens présents entre époux, que prévoit l'article 958 du Code civil auxquels renvoie l'article 1096 ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000006435819",
@@ -2192,16 +2192,16 @@
         "1096",
         "958"
       ],
-      "reference_answer": "L'article 1096 prévoit que la donation de biens à venir faite entre époux pendant le mariage est toujours révocable. Cet article renvoie à l'article 958, qui dispose que la révocation pour cause d'ingratitude ne préjudiciera ni aux aliénations faites par le donataire, ni aux hypothèques et autres charges réelles qu'il aura pu imposer sur l'objet de la donation. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article 1096 soumet la révocation des donations de biens présents entre époux aux conditions des articles 953 à 958. L'article 958 précise que la révocation pour ingratitude ne préjudicie ni aux aliénations ni aux hypothèques et autres charges réelles antérieures à la publication de la demande au fichier immobilier ; le donataire doit alors restituer la valeur des objets aliénés au temps de la demande, ainsi que les fruits à compter de ce jour.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:civil:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000006435819→LEGIARTI000022336269 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000006435819→LEGIARTI000022336269 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh20",
-      "question": "Que doit-on retenir de l'article 1174 et de l'article 1366 du Code civil lorsqu'ils sont lus ensemble ?",
+      "question": "Lorsqu'un écrit est exigé pour la validité d'un contrat, quelles conditions l'article 1366 du Code civil pose-t-il pour qu'un écrit électronique vaille, selon le renvoi de l'article 1174 ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032041178",
@@ -2211,16 +2211,16 @@
         "1174",
         "1366"
       ],
-      "reference_answer": "L'article 1174 prévoit que lorsqu'un écrit est exigé pour la validité d'un contrat, il peut être établi et conservé sous forme électronique dans les conditions prévues aux articles 1366 et 1367 et, lorsqu'un acte authentique est requis. Cet article renvoie à l'article 1366, qui dispose que l'écrit électronique a la même force probante que l'écrit sur support papier, sous réserve que puisse être dûment identifiée la personne dont il émane et qu'il soit établi et conservé dans des conditions de nature à en garantir l'intégrité. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article 1174 permet d'établir et de conserver sous forme électronique l'écrit exigé pour la validité d'un contrat, dans les conditions des articles 1366 et 1367. L'article 1366 reconnaît à l'écrit électronique la même force probante que l'écrit papier, sous réserve que la personne dont il émane puisse être dûment identifiée et que l'écrit soit établi et conservé dans des conditions garantissant son intégrité.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:civil:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032041178→LEGIARTI000032042461 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032041178→LEGIARTI000032042461 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh21",
-      "question": "Que doit-on retenir de l'article 1174 et de l'article 1367 du Code civil lorsqu'ils sont lus ensemble ?",
+      "question": "Pour qu'un contrat dont la validité exige un écrit puisse être conclu électroniquement, que dit l'article 1367 du Code civil sur la signature électronique, au regard du renvoi de l'article 1174 ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032041178",
@@ -2230,16 +2230,16 @@
         "1174",
         "1367"
       ],
-      "reference_answer": "L'article 1174 prévoit que lorsqu'un écrit est exigé pour la validité d'un contrat, il peut être établi et conservé sous forme électronique dans les conditions prévues aux articles 1366 et 1367 et, lorsqu'un acte authentique est requis. Cet article renvoie à l'article 1367, qui dispose que la signature nécessaire à la perfection d'un acte juridique identifie son auteur. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article 1174 autorise l'écrit électronique de validité dans les conditions des articles 1366 et 1367, et précise qu'une mention manuscrite exigée peut aussi être apposée électroniquement si elle ne peut être effectuée que par l'obligé. L'article 1367 définit la signature comme identifiant l'auteur et manifestant son consentement ; lorsqu'elle est électronique, elle repose sur un procédé fiable d'identification garantissant son lien avec l'acte, dont la fiabilité est présumée dans les conditions fixées par décret en Conseil d'État.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:civil:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032041178→LEGIARTI000032042456 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032041178→LEGIARTI000032042456 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh22",
-      "question": "Que doit-on retenir de l'article 1178 et de l'article 1352 du Code civil lorsqu'ils sont lus ensemble ?",
+      "question": "Après annulation d'un contrat au sens de l'article 1178 du Code civil, comment s'opère la restitution d'une chose autre qu'une somme d'argent selon l'article 1352 ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032041243",
@@ -2249,16 +2249,16 @@
         "1178",
         "1352"
       ],
-      "reference_answer": "L'article 1178 prévoit qu'un contrat qui ne remplit pas les conditions requises pour sa validité est nul. Cet article renvoie à l'article 1352, qui dispose que la restitution d'une chose autre que d'une somme d'argent a lieu en nature ou, lorsque cela est impossible, en valeur, estimée au jour de la restitution. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article 1178 dispose que le contrat qui ne remplit pas les conditions de validité est nul, qu'il est censé n'avoir jamais existé, et que les prestations exécutées donnent lieu à restitution dans les conditions des articles 1352 à 1352-9. L'article 1352 précise que la restitution d'une chose autre qu'une somme d'argent a lieu en nature ou, si cela est impossible, en valeur estimée au jour de la restitution.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:civil:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032041243→LEGIARTI000032042250 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032041243→LEGIARTI000032042250 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh23",
-      "question": "Pour appliquer l'article 1178 du Code civil, un justiciable doit-il aussi tenir compte de l'article 1352-9 ? Que dit chacun ?",
+      "question": "En cas de nullité du contrat (article 1178 du Code civil), que deviennent les sûretés selon l'article 1352-9 auquel renvoie le régime des restitutions ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032041243",
@@ -2268,16 +2268,16 @@
         "1178",
         "1352-9"
       ],
-      "reference_answer": "L'article 1178 prévoit qu'un contrat qui ne remplit pas les conditions requises pour sa validité est nul. Cet article renvoie à l'article 1352-9, qui dispose que les sûretés constituées pour le paiement de l'obligation sont reportées de plein droit sur l'obligation de restituer sans toutefois que la caution soit privée du bénéfice du terme. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article 1178 renvoie, pour les restitutions consécutives à l'annulation, aux articles 1352 à 1352-9. L'article 1352-9 dispose que les sûretés constituées pour le paiement de l'obligation sont reportées de plein droit sur l'obligation de restituer, sans toutefois que la caution soit privée du bénéfice du terme.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:civil:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032041243→LEGIARTI000032035830 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032041243→LEGIARTI000032035830 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh24",
-      "question": "Pour appliquer l'article 1187 du Code civil, un justiciable doit-il aussi tenir compte de l'article 1352 ? Que dit chacun ?",
+      "question": "La caducité d'un contrat peut-elle donner lieu à restitution, et selon quelles modalités pour une chose autre qu'une somme d'argent (articles 1187 et 1352 du Code civil) ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032041195",
@@ -2287,16 +2287,16 @@
         "1187",
         "1352"
       ],
-      "reference_answer": "L'article 1187 prévoit que la caducité met fin au contrat. Cet article renvoie à l'article 1352, qui dispose que la restitution d'une chose autre que d'une somme d'argent a lieu en nature ou, lorsque cela est impossible, en valeur, estimée au jour de la restitution. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article 1187 dispose que la caducité met fin au contrat et qu'elle peut donner lieu à restitution dans les conditions des articles 1352 à 1352-9. L'article 1352 prévoit alors que la restitution d'une chose autre qu'une somme d'argent a lieu en nature ou, à défaut, en valeur estimée au jour de la restitution.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:civil:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032041195→LEGIARTI000032042250 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032041195→LEGIARTI000032042250 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh25",
-      "question": "Pour appliquer l'article 1187 du Code civil, un justiciable doit-il aussi tenir compte de l'article 1352-9 ? Que dit chacun ?",
+      "question": "En cas de caducité du contrat (article 1187 du Code civil), que prévoit l'article 1352-9 pour les sûretés liées à l'obligation de restituer ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032041195",
@@ -2306,16 +2306,16 @@
         "1187",
         "1352-9"
       ],
-      "reference_answer": "L'article 1187 prévoit que la caducité met fin au contrat. Cet article renvoie à l'article 1352-9, qui dispose que les sûretés constituées pour le paiement de l'obligation sont reportées de plein droit sur l'obligation de restituer sans toutefois que la caution soit privée du bénéfice du terme. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article 1187 ouvre la possibilité de restitutions après caducité selon les articles 1352 à 1352-9. L'article 1352-9 reporte de plein droit les sûretés constituées pour le paiement de l'obligation sur l'obligation de restituer, sans priver la caution du bénéfice du terme.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:civil:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032041195→LEGIARTI000032035830 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032041195→LEGIARTI000032035830 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh26",
-      "question": "L'article 1218 du Code civil cite l'article 1351 : quelles obligations ou définitions en résultent concrètement pour un justiciable ?",
+      "question": "En cas de force majeure définitive empêchant l'exécution (article 1218 du Code civil), dans quelle mesure le débiteur est-il libéré selon l'article 1351 ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032041431",
@@ -2325,16 +2325,16 @@
         "1218",
         "1351"
       ],
-      "reference_answer": "L'article 1218 prévoit qu'il y a force majeure en matière contractuelle lorsqu'un événement échappant au contrôle du débiteur. Cet article renvoie à l'article 1351, qui dispose que l'impossibilité d'exécuter la prestation libère le débiteur à due concurrence lorsqu'elle procède d'un cas de force majeure et qu'elle est définitive. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article 1218 définit la force majeure contractuelle et prévoit que si l'empêchement est définitif, le contrat est résolu de plein droit et les parties sont libérées dans les conditions des articles 1351 et 1351-1. L'article 1351 précise que l'impossibilité d'exécuter libère le débiteur à due concurrence lorsqu'elle procède d'un cas de force majeure définitive, sauf s'il a convenu de s'en charger ou s'il a été préalablement mis en demeure.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:civil:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032041431→LEGIARTI000032042212 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032041431→LEGIARTI000032042212 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh27",
-      "question": "Que doit-on retenir de l'article 1218 et de l'article 1351-1 du Code civil lorsqu'ils sont lus ensemble ?",
+      "question": "Si la force majeure définitive tient à la perte de la chose due (articles 1218 et 1351-1 du Code civil), le débiteur mis en demeure est-il encore libéré ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000032041431",
@@ -2344,16 +2344,16 @@
         "1218",
         "1351-1"
       ],
-      "reference_answer": "L'article 1218 prévoit qu'il y a force majeure en matière contractuelle lorsqu'un événement échappant au contrôle du débiteur. Cet article renvoie à l'article 1351-1, qui dispose que lorsque l'impossibilité d'exécuter résulte de la perte de la chose due, le débiteur mis en demeure est néanmoins libéré s'il prouve que la perte se serait pareillement produite si l'obligation avait été exécutée. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article 1218 renvoie, pour la libération des parties en cas d'empêchement définitif par force majeure, aux articles 1351 et 1351-1. L'article 1351-1 dispose que lorsque l'impossibilité résulte de la perte de la chose due, le débiteur mis en demeure est néanmoins libéré s'il prouve que la perte se serait pareillement produite si l'obligation avait été exécutée ; il doit alors céder au créancier les droits et actions attachés à la chose.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:civil:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000032041431→LEGIARTI000032035679 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000032041431→LEGIARTI000032035679 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh28",
-      "question": "Un employeur s'interroge sur l'article L. 1111-3 du Code du travail : quelle règle pose-t-il, et que précise l'article L. 5134-72 auquel il renvoie ?",
+      "question": "Les titulaires d'un contrat initiative-emploi comptent-ils dans les effectifs de l'entreprise, et à quelle aide l'article L. 1111-3 du Code du travail renvoie-t-il (article L. 5134-72) ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000031565369",
@@ -2363,16 +2363,16 @@
         "L. 1111-3",
         "L. 5134-72"
       ],
-      "reference_answer": "L'article L. 1111-3 prévoit que ne sont pas pris en compte dans le calcul des effectifs de l'entreprise : 1° Les apprentis. Cet article renvoie à l'article L. 5134-72, qui dispose que l'aide à l'insertion professionnelle attribuée au titre d'un contrat initiative-emploi peut être modulée en fonction : 1° De la catégorie et du secteur d'activité de l'employeur. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 1111-3 exclut du calcul des effectifs, notamment, les titulaires d'un contrat initiative-emploi pendant la durée d'attribution de l'aide financière mentionnée à l'article L. 5134-72 (ainsi que d'autres catégories : apprentis, contrats d'accompagnement dans l'emploi, contrats de professionnalisation, sous les réserves du texte). L'article L. 5134-72 précise que cette aide à l'insertion professionnelle au titre d'un contrat initiative-emploi peut être modulée selon la catégorie et le secteur d'activité de l'employeur, les actions d'accompagnement et d'insertion durable, les conditions économiques locales et les difficultés d'accès à l'emploi antérieurement rencontrées par le salarié.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:travail:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000031565369→LEGIARTI000026549836 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000031565369→LEGIARTI000026549836 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh29",
-      "question": "Pour appliquer l'article L. 1132-2 du Code du travail, un salarié doit-il aussi tenir compte de l'article L. 1132-1 ? Que dit chacun ?",
+      "question": "Un salarié peut-il être sanctionné ou licencié pour avoir exercé normalement son droit de grève, au regard des articles L. 1132-2 et L. 1132-1 du Code du travail ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000006900789",
@@ -2382,16 +2382,16 @@
         "L. 1132-2",
         "L. 1132-1"
       ],
-      "reference_answer": "L'article L. 1132-2 prévoit qu'aucun salarié ne peut être sanctionné, licencié ou faire l'objet d'une mesure discriminatoire mentionnée à l'article L. 1132-1 en raison de l'exercice normal du droit de grève. Cet article renvoie à l'article L. 1132-1, qui dispose qu'aucune personne ne peut être écartée d'une procédure de recrutement ou de nomination ou de l'accès à un stage ou à une période de formation en entreprise, aucun salarié ne peut être sanctionné. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 1132-1 interdit toute mesure discriminatoire (sanction, licenciement, etc.) fondée sur les motifs qu'il énumère. L'article L. 1132-2 étend cette protection en prohibant toute sanction, licenciement ou mesure discriminatoire mentionnée à l'article L. 1132-1 en raison de l'exercice normal du droit de grève.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:travail:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000006900789→LEGIARTI000045391841 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000006900789→LEGIARTI000045391841 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh30",
-      "question": "Un salarié s'interroge sur l'article L. 1132-3-1 du Code du travail : quelle règle pose-t-il, et que précise l'article L. 1132-1 auquel il renvoie ?",
+      "question": "Un salarié peut-il être sanctionné ou licencié pour avoir exercé les fonctions de juré ou de citoyen assesseur (articles L. 1132-3-1 et L. 1132-1 du Code du travail) ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000024459527",
@@ -2401,16 +2401,16 @@
         "L. 1132-3-1",
         "L. 1132-1"
       ],
-      "reference_answer": "L'article L. 1132-3-1 prévoit qu'aucun salarié ne peut être sanctionné, licencié ou faire l'objet d'une mesure discriminatoire mentionnée à l'article L. 1132-1 en raison de l'exercice des fonctions de juré ou de citoyen assesseur. Cet article renvoie à l'article L. 1132-1, qui dispose qu'aucune personne ne peut être écartée d'une procédure de recrutement ou de nomination ou de l'accès à un stage ou à une période de formation en entreprise, aucun salarié ne peut être sanctionné. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 1132-3-1 interdit de sanctionner, de licencier ou de faire l'objet d'une mesure discriminatoire mentionnée à l'article L. 1132-1 un salarié en raison de l'exercice des fonctions de juré ou de citoyen assesseur. L'article L. 1132-1 définit le champ des mesures discriminatoires prohibées (recrutement, sanction, licenciement, rémunération, promotion, etc.) auxquelles ce renvoi se rattache.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:travail:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000024459527→LEGIARTI000045391841 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000024459527→LEGIARTI000045391841 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh31",
-      "question": "Que doit-on retenir de l'article L. 1132-3-2 et de l'article L. 1132-1 du Code du travail lorsqu'ils sont lus ensemble ?",
+      "question": "Un salarié peut-il être sanctionné pour avoir refusé, en raison de son orientation sexuelle, une mutation dans un État incriminant l'homosexualité (articles L. 1132-3-2 et L. 1132-1 du Code du travail) ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000027417669",
@@ -2420,16 +2420,16 @@
         "L. 1132-3-2",
         "L. 1132-1"
       ],
-      "reference_answer": "L'article L. 1132-3-2 prévoit qu'aucun salarié ne peut être sanctionné, licencié ou faire l'objet d'une mesure discriminatoire. Cet article renvoie à l'article L. 1132-1, qui dispose qu'aucune personne ne peut être écartée d'une procédure de recrutement ou de nomination ou de l'accès à un stage ou à une période de formation en entreprise, aucun salarié ne peut être sanctionné. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 1132-3-2 interdit de sanctionner, de licencier ou de faire l'objet d'une mesure discriminatoire mentionnée à l'article L. 1132-1 un salarié qui a refusé, en raison de son orientation sexuelle, une mutation géographique dans un État incriminant l'homosexualité. Le renvoi à l'article L. 1132-1 fixe le type de mesures discriminatoires ainsi prohibées.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:travail:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000027417669→LEGIARTI000045391841 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000027417669→LEGIARTI000045391841 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh32",
-      "question": "Un salarié s'interroge sur l'article L. 1134-2 du Code du travail : quelle règle pose-t-il, et que précise l'article L. 1134-1 auquel il renvoie ?",
+      "question": "Dans quelles conditions un syndicat peut-il agir en justice pour discrimination au profit d'un salarié, et quel est le régime de preuve de l'article L. 1134-1 auquel renvoie l'article L. 1134-2 du Code du travail ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000035902388",
@@ -2439,16 +2439,16 @@
         "L. 1134-2",
         "L. 1134-1"
       ],
-      "reference_answer": "L'article L. 1134-2 prévoit que les organisations syndicales représentatives au niveau national, au niveau départemental ou de la collectivité en Guadeloupe, en Guyane, en Martinique, à Mayotte, à La Réunion, à Saint-Barthélemy et à Saint-Martin. Cet article renvoie à l'article L. 1134-1, qui dispose que lorsque survient un litige en raison d'une méconnaissance des dispositions du chapitre II, le candidat à un emploi. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 1134-2 permet aux organisations syndicales représentatives d'exercer les actions issues du chapitre II relatif aux discriminations, y compris en faveur d'un candidat ou d'un salarié dans les conditions de l'article L. 1134-1, sans mandat dès lors que l'intéressé a été averti par écrit et ne s'y est pas opposé dans les quinze jours. L'article L. 1134-1 organise la charge de la preuve : le salarié présente des faits laissant supposer une discrimination ; il incombe alors au défendeur de prouver que sa décision repose sur des éléments objectifs étrangers à toute discrimination.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:travail:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000035902388→LEGIARTI000033461510 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000035902388→LEGIARTI000033461510 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh33",
-      "question": "L'article L. 1134-3 du Code du travail cite l'article L. 1134-1 : quelles obligations ou définitions en résultent concrètement pour un salarié ?",
+      "question": "Une association de lutte contre les discriminations peut-elle agir pour le compte d'un salarié, et selon quel régime de preuve (articles L. 1134-3 et L. 1134-1 du Code du travail) ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000033461502",
@@ -2458,16 +2458,16 @@
         "L. 1134-3",
         "L. 1134-1"
       ],
-      "reference_answer": "L'article L. 1134-3 prévoit que les associations régulièrement constituées depuis cinq ans au moins pour la lutte contre les discriminations ou oeuvrant dans le domaine du handicap peuvent exercer en justice toutes actions résultant de l'application des dispositions. Cet article renvoie à l'article L. 1134-1, qui dispose que lorsque survient un litige en raison d'une méconnaissance des dispositions du chapitre II, le candidat à un emploi. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 1134-3 autorise les associations constituées depuis au moins cinq ans pour lutter contre les discriminations ou œuvrant dans le domaine du handicap à exercer les actions du chapitre II, y compris en faveur d'un candidat ou d'un salarié dans les conditions de l'article L. 1134-1, sous réserve d'un accord écrit de l'intéressé. L'article L. 1134-1 fixe le régime probatoire applicable à ces actions : présomption à partir d'éléments de fait présentés par l'intéressé, puis preuve contraire à la charge du défendeur.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:travail:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000033461502→LEGIARTI000033461510 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000033461502→LEGIARTI000033461510 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh34",
-      "question": "Pour appliquer l'article L. 1142-9 du Code du travail, un employeur doit-il aussi tenir compte de l'article L. 1142-8 ? Que dit chacun ?",
+      "question": "Lorsque l'index d'égalité professionnelle de l'article L. 1142-8 est en deçà du seuil réglementaire, quelles obligations de négociation et de correction l'article L. 1142-9 du Code du travail impose-t-il ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000044605442",
@@ -2477,16 +2477,16 @@
         "L. 1142-9",
         "L. 1142-8"
       ],
-      "reference_answer": "L'article L. 1142-9 prévoit que dans les entreprises d'au moins cinquante salariés, lorsque les résultats obtenus par l'entreprise au regard des indicateurs mentionnés. Cet article renvoie à l'article L. 1142-8, qui dispose que dans les entreprises d'au moins cinquante salariés, l'employeur publie chaque année l'ensemble des indicateurs relatifs aux écarts de rémunération entre les femmes et les hommes et aux actions mises en œuvre pour les supprimer. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 1142-8 impose aux entreprises d'au moins cinquante salariés de publier chaque année les indicateurs relatifs aux écarts de rémunération entre les femmes et les hommes et aux actions mises en œuvre pour les supprimer. Lorsque ces résultats sont en deçà d'un niveau fixé par décret, l'article L. 1142-9 étend la négociation sur l'égalité professionnelle aux mesures de correction et, le cas échéant, à une programmation de rattrapage salarial ; à défaut d'accord, l'employeur fixe ces mesures après consultation du CSE et les publie.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:travail:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000044605442→LEGIARTI000044605453 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000044605442→LEGIARTI000044605453 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh35",
-      "question": "L'article L. 1142-9 du Code du travail cite l'article L. 2242-3 : quelles obligations ou définitions en résultent concrètement pour un employeur ?",
+      "question": "En l'absence d'accord sur les mesures de correction prévues par l'article L. 1142-9 du Code du travail, dans quelles conditions la décision de l'employeur est-elle déposée au regard de l'article L. 2242-3 ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000044605442",
@@ -2496,16 +2496,16 @@
         "L. 1142-9",
         "L. 2242-3"
       ],
-      "reference_answer": "L'article L. 1142-9 prévoit que dans les entreprises d'au moins cinquante salariés, lorsque les résultats obtenus par l'entreprise au regard des indicateurs mentionnés. Cet article renvoie à l'article L. 2242-3, qui dispose qu'en l'absence d'accord relatif à l'égalité professionnelle entre les femmes et les hommes à l'issue de la négociation mentionnée au 2°. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 1142-9 prévoit qu'à défaut d'accord sur les mesures de correction liées à un index insuffisant, celles-ci sont déterminées par décision de l'employeur après consultation du CSE, et que cette décision est déposée auprès de l'autorité administrative dans les mêmes conditions que le plan d'action mentionné à l'article L. 2242-3. L'article L. 2242-3 impose, en l'absence d'accord relatif à l'égalité professionnelle, l'établissement d'un plan d'action annuel évaluant les objectifs passés, fixant les objectifs de progression et les actions associées, puis déposé auprès de l'autorité administrative.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:travail:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000044605442→LEGIARTI000037389684 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000044605442→LEGIARTI000037389684 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh36",
-      "question": "Un employeur s'interroge sur l'article L. 1142-9-1 du Code du travail : quelle règle pose-t-il, et que précise l'article L. 1142-8 auquel il renvoie ?",
+      "question": "Lorsque les indicateurs d'égalité professionnelle de l'article L. 1142-8 sont insuffisants, que doit publier l'employeur selon l'article L. 1142-9-1 du Code du travail ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000044566243",
@@ -2515,16 +2515,16 @@
         "L. 1142-9-1",
         "L. 1142-8"
       ],
-      "reference_answer": "L'article L. 1142-9-1 prévoit que lorsque les résultats obtenus par l'entreprise au regard des indicateurs mentionnés. Cet article renvoie à l'article L. 1142-8, qui dispose que dans les entreprises d'au moins cinquante salariés, l'employeur publie chaque année l'ensemble des indicateurs relatifs aux écarts de rémunération entre les femmes et les hommes et aux actions mises en œuvre pour les supprimer. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 1142-8 organise la publication annuelle des indicateurs d'écarts de rémunération femmes-hommes dans les entreprises d'au moins cinquante salariés. L'article L. 1142-9-1 ajoute que, lorsque ces résultats sont en deçà d'un niveau défini par décret, l'employeur fixe et publie les objectifs de progression de chacun de ces indicateurs, selon les modalités des articles L. 2242-1 et L. 2242-3 et dans les conditions du même décret.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:travail:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000044566243→LEGIARTI000044605453 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000044566243→LEGIARTI000044605453 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh37",
-      "question": "Un salarié s'interroge sur l'article L. 1154-2 du Code du travail : quelle règle pose-t-il, et que précise l'article L. 1154-1 auquel il renvoie ?",
+      "question": "Un syndicat peut-il agir en justice pour harcèlement au profit d'un salarié, et selon quel régime de preuve (articles L. 1154-2 et L. 1154-1 du Code du travail) ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000006900832",
@@ -2534,16 +2534,16 @@
         "L. 1154-2",
         "L. 1154-1"
       ],
-      "reference_answer": "L'article L. 1154-2 prévoit que les organisations syndicales représentatives dans l'entreprise peuvent exercer en justice toutes les actions résultant des articles L. 1152-1 à L. 1152-3 et L. 1153-1 à L. 1153-4. Cet article renvoie à l'article L. 1154-1, qui dispose que lorsque survient un litige relatif à l'application des articles L. 1152-1 à L. 1152-3 et L. 1153-1. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 1154-2 permet aux organisations syndicales représentatives dans l'entreprise d'exercer les actions issues des articles relatifs au harcèlement moral et sexuel, y compris en faveur d'un salarié dans les conditions de l'article L. 1154-1, sous réserve d'un accord écrit de l'intéressé. L'article L. 1154-1 fixe le régime probatoire : le salarié présente des faits laissant supposer un harcèlement ; il appartient au défendeur de prouver que les agissements ne sont pas constitutifs d'un harcèlement et que sa décision repose sur des éléments objectifs étrangers à tout harcèlement.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:travail:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000006900832→LEGIARTI000033019902 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000006900832→LEGIARTI000033019902 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh38",
-      "question": "Un salarié s'interroge sur l'article L. 1155-1 du Code du travail : quelle règle pose-t-il, et que précise l'article L. 1152-6 auquel il renvoie ?",
+      "question": "Que sanctionne l'article L. 1155-1 du Code du travail s'agissant de la médiation en matière de harcèlement moral prévue à l'article L. 1152-6 ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000006900833",
@@ -2553,16 +2553,16 @@
         "L. 1155-1",
         "L. 1152-6"
       ],
-      "reference_answer": "L'article L. 1155-1 prévoit que le fait de porter ou de tenter de porter atteinte à l'exercice régulier des fonctions de médiateur, prévu à l'article L. 1152-6, est puni d'un emprisonnement d'un an et d'une amende de 3 750 Euros. Cet article renvoie à l'article L. 1152-6, qui dispose qu'une procédure de médiation peut être mise en oeuvre par toute personne de l'entreprise s'estimant victime de harcèlement moral ou par la personne mise en cause. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 1152-6 organise une médiation pouvant être mise en œuvre par toute personne de l'entreprise s'estimant victime de harcèlement moral ou par la personne mise en cause, le médiateur étant choisi d'un commun accord et tentant de concilier les parties. L'article L. 1155-1 punit d'un an d'emprisonnement et de 3 750 euros d'amende le fait de porter ou de tenter de porter atteinte à l'exercice régulier des fonctions de ce médiateur.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:travail:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000006900833→LEGIARTI000006900823 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000006900833→LEGIARTI000006900823 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3 | handwrite-mh-answers v0.3.3"
     },
     {
       "id": "mh39",
-      "question": "Que doit-on retenir de l'article L. 1221-11 et de l'article L. 8271-7 du Code du travail lorsqu'ils sont lus ensemble ?",
+      "question": "Quelle pénalité l'article L. 1221-11 du Code du travail attache-t-il au non-respect de la déclaration préalable à l'embauche, et quels agents peuvent le constater selon le renvoi à l'article L. 8271-7 ?",
       "type": "multi_hop",
       "expected_article_ids": [
         "LEGIARTI000006900850",
@@ -2572,12 +2572,12 @@
         "L. 1221-11",
         "L. 8271-7"
       ],
-      "reference_answer": "L'article L. 1221-11 prévoit que le non-respect de l'obligation de déclaration préalable à l'embauche, constaté par les agents mentionnés. Cet article renvoie à l'article L. 8271-7, qui dispose que les infractions aux interdictions du travail dissimulé prévues à l'article L. 8221-1 sont recherchées par les agents mentionnés à l'article L. 8271-1-2. Pour répondre à la question, il faut donc combiner ces deux dispositions.",
+      "reference_answer": "L'article L. 1221-11 prévoit que le non-respect de l'obligation de déclaration préalable à l'embauche, constaté par les agents mentionnés à l'article L. 8271-7, entraîne une pénalité égale à trois cents fois le taux horaire du minimum garanti de l'article L. 3231-12. L'article L. 8271-7, dans la rédaction du snapshot, se borne à indiquer que les infractions aux interdictions du travail dissimulé de l'article L. 8221-1 sont recherchées par les agents mentionnés à l'article L. 8271-1-2 : le renvoi est donc purement organique et n'expose pas, à lui seul, le régime de contrôle de la déclaration préalable.",
       "as_of": null,
       "unanswerable": false,
       "validated": false,
       "topic": "crossref:travail:renvoi",
-      "notes": "CrossRef réel renvoi LEGIARTI000006900850→LEGIARTI000024496433 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2"
+      "notes": "CrossRef réel renvoi LEGIARTI000006900850→LEGIARTI000024496433 (corpus codes-v0.2-2025-07-13) | quality-pass v0.3.2 | quality-pass v0.3.2 | handwrite-mh-answers v0.3.3 | weak-renvoi | handwrite-mh-answers v0.3.3 | weak-renvoi | handwrite-mh-answers v0.3.3 | weak-renvoi"
     },
     {
       "id": "t01",
