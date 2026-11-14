@@ -110,12 +110,29 @@ def render_review_markdown(
     *,
     title: str = "Batch de revue humaine (40 questions)",
     header_note: str | None = None,
+    validator_note: str | None = None,
 ) -> str:
     by_id = {a.id: a for a in articles}
+    n_ok = sum(1 for q in batch if q.validated)
+    if n_ok == len(batch) and batch:
+        status_line = (
+            f"Ce batch ({len(batch)} questions) est **`validated: true`**"
+            + (f" — {validator_note}" if validator_note else "")
+            + ". Les autres questions du jeu d'or restent `validated: false`."
+        )
+    elif n_ok:
+        status_line = (
+            f"{n_ok}/{len(batch)} questions de ce batch sont `validated: true` ; "
+            "le reste du jeu d'or reste `validated: false` jusqu'à revue."
+        )
+    else:
+        status_line = (
+            "Toutes les questions du jeu d'or restent `validated: false` jusqu'à revue."
+        )
     lines: list[str] = [
         f"# {title}",
         "",
-        "Toutes les questions du jeu d'or restent `validated: false` jusqu'à revue.",
+        status_line,
         "Ce batch est **stratifié** sur les 5 `QuestionType` et **inclut** les items",
         "de `SAMPLE_TO_REVIEW.md`.",
         "",
@@ -134,7 +151,8 @@ def render_review_markdown(
     )
     for q in batch:
         topic = q.topic or "—"
-        lines.append(f"| {q.id} | `{q.type.value}` | {topic} | |")
+        verdict = "OK" if q.validated else ""
+        lines.append(f"| {q.id} | `{q.type.value}` | {topic} | {verdict} |")
 
     lines.extend(["", "## Détail pour validation rapide", ""])
 
@@ -170,7 +188,15 @@ def render_review_markdown(
         if q.notes:
             lines.append("")
             lines.append(f"*Notes :* {q.notes}")
-        lines.extend(["", "Verdict : ☐ OK ☐ À corriger ☐ À reformuler", "", "---", ""])
+        if q.validated:
+            mention = validator_note or "validé"
+            lines.extend(
+                ["", f"Verdict : ☑ OK — {mention}", "", "---", ""]
+            )
+        else:
+            lines.extend(
+                ["", "Verdict : ☐ OK ☐ À corriger ☐ À reformuler", "", "---", ""]
+            )
 
     lines.extend(
         [
@@ -195,10 +221,16 @@ def write_review_batch(
     articles: list[Article],
     *,
     header_note: str | None = None,
+    validator_note: str | None = None,
 ) -> Path:
     out = Path(path)
     out.write_text(
-        render_review_markdown(batch, articles, header_note=header_note),
+        render_review_markdown(
+            batch,
+            articles,
+            header_note=header_note,
+            validator_note=validator_note,
+        ),
         encoding="utf-8",
     )
     return out
