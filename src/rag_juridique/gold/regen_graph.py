@@ -14,7 +14,13 @@ from typing import TYPE_CHECKING
 
 from rag_juridique.contracts.corpus import Article
 from rag_juridique.contracts.gold import Question, QuestionType
-from rag_juridique.gold.textutil import first_sentence, normalize_ws, snippet
+from rag_juridique.corpus.refs import is_false_cross_code_ref
+from rag_juridique.gold.textutil import (
+    contrast_versions,
+    embed_clause,
+    normalize_ws,
+    summarize_article,
+)
 
 if TYPE_CHECKING:
     from rag_juridique.corpus.loader import Corpus
@@ -22,7 +28,6 @@ if TYPE_CHECKING:
 _NUM_OK = re.compile(r"^(L\.\s*|R\.\s*|D\.\s*)?\d", re.IGNORECASE)
 _L_NUM = re.compile(r"^L\.\s*\d", re.IGNORECASE)
 
-# Probe dates for finding a differing historical version.
 _PROBE_DATES = [
     date(2012, 1, 1),
     date(2015, 6, 1),
@@ -34,25 +39,6 @@ _PROBE_DATES = [
     date(2022, 1, 1),
     date(2023, 1, 1),
     date(2024, 1, 1),
-]
-
-_MH_PATTERNS = [
-    (
-        "L'article {src} du Code {code} renvoie à l'article {tgt} : "
-        "que dispose {src}, et que précise {tgt} ?"
-    ),
-    (
-        "En combinant les articles {src} et {tgt} ({code}), quelles règles "
-        "s'appliquent au renvoi mentionné ?"
-    ),
-    (
-        "Quel est le contenu du renvoi de l'article {src} vers l'article {tgt} "
-        "dans le Code {code} ?"
-    ),
-    (
-        "Pour appliquer l'article {src}, faut-il aussi lire l'article {tgt} "
-        "({code}) ? Que disent-ils ensemble ?"
-    ),
 ]
 
 _CODE_LABEL = {
@@ -83,23 +69,71 @@ def _prefer_legislative(art: Article) -> bool:
     )
 
 
+def _natural_multi_hop_qa(
+    src: Article,
+    tgt: Article,
+    *,
+    kind: str,
+) -> tuple[str, str]:
+    label = _CODE_LABEL.get(src.code or "", src.code or "")
+    src_sum = summarize_article(
+        src.text, max_chars=280, max_sentences=2, lowercase_start=True
+    )
+    tgt_sum = summarize_article(
+        tgt.text, max_chars=280, max_sentences=2, lowercase_start=True
+    )
+    variants = [
+        (
+            f"Un professionnel se prévaut de l'article {src.num} du Code {label} : "
+            f"quelle règle trouve-t-on dans cet article, et que précise l'article "
+            f"{tgt.num} auquel il renvoie ?"
+        ),
+        (
+            f"Que doit-on retenir de l'article {src.num} et de l'article {tgt.num} "
+            f"du Code {label} lorsqu'ils sont lus ensemble ?"
+        ),
+        (
+            f"L'article {src.num} du Code {label} cite l'article {tgt.num} : "
+            f"quelles obligations ou définitions en résultent concrètement ?"
+        ),
+        (
+            f"Pour savoir ce que prévoit l'article {src.num} du Code {label}, "
+            f"faut-il aussi appliquer l'article {tgt.num} ? Que dit chacun ?"
+        ),
+    ]
+    question = variants[_stable_int(src.id + tgt.id) % len(variants)]
+    link = (
+        "renvoie expressément"
+        if kind == "renvoi"
+        else "cite"
+    )
+    lead_src = f"L'article {src.num} dispose que"
+    answer = (
+        f"{embed_clause(lead_src, src_sum)} "
+        f"Il {link} à l'article {tgt.num}, qui "
+        f"{embed_clause('prévoit que', tgt_sum)} "
+        f"Les deux textes se complètent : le second précise le régime auquel "
+        f"le premier renvoie."
+    )
+    return normalize_ws(question), normalize_ws(answer)
+
+
 def generate_multi_hop_from_corpus(
     corpus: Corpus,
     *,
     target: int = 40,
     per_code: dict[str, int] | None = None,
 ) -> list[Question]:
-    """Build multi_hop candidates from real CrossRef edges (all three codes)."""
+    """Build multi_hop candidates from real same-code CrossRef edges."""
     goals = per_code or {
-        "consommation": 16,
-        "civil": 12,
-        "travail": 12,
+        "consommation": 14,
+        "civil": 13,
+        "travail": 13,
     }
     by_id = corpus.by_id()
     buckets: dict[str, list[Question]] = defaultdict(list)
     seen_pairs: set[tuple[str, str]] = set()
 
-    # Prefer renvoi, then explicit_citation; legislative nums first.
     def _ref_rank(r) -> tuple[int, int]:
         src = by_id.get(r.source_article_id)
         return (
@@ -114,37 +148,37 @@ def generate_multi_hop_from_corpus(
         tgt = by_id.get(ref.target_article_id)
         if src is None or tgt is None:
             continue
-        if src.id == tgt.id:
+        if src.id == tgt.id or src.code != tgt.code:
+            continue
+        if is_false_cross_code_ref(
+            ref,
+            source_text=src.text,
+            source_code=src.code,
+            target_code=tgt.code,
+        ):
             continue
         if not _is_usable_article(src) or not _is_usable_article(tgt):
             continue
         code = src.code or "unknown"
         if code not in goals:
             continue
-        if len(buckets[code]) >= goals[code] + 20:  # headroom for filters
+        if len(buckets[code]) >= goals[code] + 25:
             continue
         pair = (src.id, tgt.id)
         if pair in seen_pairs:
             continue
         seen_pairs.add(pair)
 
-        label = _CODE_LABEL.get(code, code)
-        tmpl = _MH_PATTERNS[_stable_int(src.id + tgt.id) % len(_MH_PATTERNS)]
-        question = tmpl.format(src=src.num, tgt=tgt.num, code=label)
-        answer = (
-            f"{src.num} ({code}) : {first_sentence(src.text, 180)} "
-            f"{tgt.num} : {first_sentence(tgt.text, 180)} "
-            f"Le renvoi ({ref.kind.value}) articule les deux dispositions."
-        )
+        question, answer = _natural_multi_hop_qa(src, tgt, kind=ref.kind.value)
         qid = f"mh{_stable_int(src.id + '|' + tgt.id) % 100000:05d}"
         buckets[code].append(
             Question(
                 id=qid,
-                question=normalize_ws(question),
+                question=question,
                 type=QuestionType.MULTI_HOP,
                 expected_article_ids=[src.id, tgt.id],
                 expected_article_nums=[src.num, tgt.num],
-                reference_answer=normalize_ws(answer),
+                reference_answer=answer,
                 unanswerable=False,
                 validated=False,
                 topic=f"crossref:{code}:{ref.kind.value}",
@@ -155,11 +189,9 @@ def generate_multi_hop_from_corpus(
             )
         )
 
-    # Flatten with balanced take
     out: list[Question] = []
     for code, goal in goals.items():
         out.extend(buckets.get(code, [])[:goal])
-    # Fill up to target from leftovers
     if len(out) < target:
         leftovers = []
         for code, items in buckets.items():
@@ -169,7 +201,6 @@ def generate_multi_hop_from_corpus(
                 break
             if q.id not in {x.id for x in out}:
                 out.append(q)
-    # Re-id sequentially mh01.. for readability
     renumbered: list[Question] = []
     for i, q in enumerate(out[: max(target, len(out))], start=1):
         renumbered.append(q.model_copy(update={"id": f"mh{i:02d}"}))
@@ -192,18 +223,13 @@ def _pick_as_of_with_diff(
             continue
         if ver.text.strip() == tip_norm:
             continue
-        # Prefer dates strictly inside the version interval when possible
         if ver.debut and as_of < ver.debut:
             continue
         if ver.fin and as_of >= ver.fin:
             continue
-        # Require meaningful textual difference
-        if abs(len(ver.text) - len(tip_norm)) < 20 and ver.text.strip()[:80] == tip_norm[:80]:
-            # still different somewhere — accept if jaccard-ish length ok
-            if ver.text.strip() == tip_norm:
-                continue
+        if ver.text.strip() == tip_norm:
+            continue
         return as_of, ver
-    # Fallback: mid-point of an older closed version interval.
     closed = [v for v in vers if v.fin is not None and v.debut is not None]
     closed.sort(key=lambda v: v.debut or date.min)
     for ver in closed:
@@ -221,6 +247,40 @@ def _pick_as_of_with_diff(
     return None
 
 
+def _natural_temporal_qa(
+    art: Article,
+    as_of: date,
+    hist_text: str,
+    tip_text: str,
+) -> tuple[str, str]:
+    label = _CODE_LABEL.get(art.code or "", art.code or "")
+    hist = summarize_article(
+        hist_text, max_chars=360, max_sentences=2, lowercase_start=True
+    )
+    change = contrast_versions(hist_text, tip_text, max_chars=240)
+    variants = [
+        (
+            f"Au {as_of.isoformat()}, quelle règle résultait de l'article "
+            f"{art.num} du Code {label} ?"
+        ),
+        (
+            f"Selon le droit applicable le {as_of.isoformat()}, que prévoyait "
+            f"l'article {art.num} (Code {label}) ?"
+        ),
+        (
+            f"Que disait l'article {art.num} du Code {label} en vigueur au "
+            f"{as_of.isoformat()} ?"
+        ),
+    ]
+    question = variants[_stable_int(art.id + as_of.isoformat()) % len(variants)]
+    lead = f"Au {as_of.isoformat()}, l'article {art.num} prévoyait que"
+    answer = (
+        f"{embed_clause(lead, hist)} "
+        f"Par rapport à la version aujourd'hui en vigueur, {change}."
+    )
+    return normalize_ws(question), normalize_ws(answer)
+
+
 def generate_temporal_from_versions(
     corpus: Corpus,
     *,
@@ -229,15 +289,13 @@ def generate_temporal_from_versions(
 ) -> list[Question]:
     """Temporal questions where ``version_at(as_of)`` text ≠ tip article text."""
     goals = per_code or {
-        "consommation": 14,
-        "civil": 14,
-        "travail": 14,
+        "consommation": 10,
+        "civil": 10,
+        "travail": 10,
     }
-    # Extra candidates for filters (civil diffs are scarcer).
     headroom = {"consommation": 50, "civil": 80, "travail": 50}
     buckets: dict[str, list[Question]] = defaultdict(list)
 
-    # Prefer legislative / civil numeric articles; shuffle by code affinity.
     articles = [
         a for a in corpus.articles if _is_usable_article(a) and _prefer_legislative(a)
     ]
@@ -259,46 +317,19 @@ def generate_temporal_from_versions(
         if picked is None:
             continue
         as_of, ver = picked
-        # Require a clear textual gap vs tip (not a trivial whitespace change).
         if ver.text.strip()[:120] == art.text.strip()[:120] and abs(
             len(ver.text) - len(art.text)
         ) < 40:
             continue
-        label = _CODE_LABEL.get(code, code)
-        hist = first_sentence(ver.text, 280)
-        tip_snip = first_sentence(art.text, 120)
-        variants = [
-            (
-                f"Selon le droit en vigueur au {as_of.isoformat()}, que disposait "
-                f"l'article {art.num} du Code {label} ?"
-            ),
-            (
-                f"Au {as_of.isoformat()}, quelle était la rédaction applicable de "
-                f"l'article {art.num} ({label}) ?"
-            ),
-            (
-                f"En date du {as_of.isoformat()}, que prévoyait l'article {art.num} "
-                f"du Code {label} ?"
-            ),
-            (
-                f"Quelle règle résultait de l'article {art.num} (Code {label}) "
-                f"tel qu'en vigueur le {as_of.isoformat()} ?"
-            ),
-        ]
-        question = variants[_stable_int(art.id + as_of.isoformat()) % len(variants)]
-        answer = (
-            f"Au {as_of.isoformat()}, l'article {art.num} disposait : {hist} "
-            f"(version {ver.version_id} ; rédaction courante différente : "
-            f"{snippet(tip_snip, 80)})"
-        )
+        question, answer = _natural_temporal_qa(art, as_of, ver.text, art.text)
         buckets[code].append(
             Question(
                 id=f"t{_stable_int(art.id + as_of.isoformat()) % 100000:05d}",
-                question=normalize_ws(question),
+                question=question,
                 type=QuestionType.TEMPORAL,
                 expected_article_ids=[art.id],
                 expected_article_nums=[art.num],
-                reference_answer=normalize_ws(answer),
+                reference_answer=answer,
                 as_of=as_of,
                 unanswerable=False,
                 validated=False,

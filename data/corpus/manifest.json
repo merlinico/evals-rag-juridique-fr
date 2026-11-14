@@ -9,7 +9,7 @@
   },
   "n_articles": 16455,
   "n_versions": 29226,
-  "n_crossrefs": 16976,
+  "n_crossrefs": 15686,
   "articles_by_code": {
     "civil": 2883,
     "consommation": 2139,
@@ -21,14 +21,15 @@
     "consommation": 3697
   },
   "crossrefs_by_code": {
-    "civil": 1083,
-    "consommation": 2606,
-    "travail": 13287
+    "civil": 1047,
+    "consommation": 2200,
+    "travail": 12439
   },
   "limits": {
     "max_versions_per_article": 8,
     "min_history_date": "2000-01-01",
     "section_field": "stored in Article.contexte (frozen schema has livre/titre/chapitre only)",
     "ci_corpus_path": "data/corpus/eval_subset.json.gz"
-  }
+  },
+  "crossrefs_filtered_false_cross_code": 1290
 }
