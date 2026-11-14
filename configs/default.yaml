@@ -13,16 +13,56 @@ corpus:
     - travail
 
 retrieval:
+  # MVP CI baselines (chunk_500 / chunk_1000) keep e5 via eval CLI injection.
   embedding_model: intfloat/multilingual-e5-small
+  # Phase-2 dense / hybrid configs (agent c); heavy path: RAG_HEAVY=1
+  dense_model: BAAI/bge-m3
+  reranker_model: BAAI/bge-reranker-v2-m3
   top_k: 5
   rrf_k: 60
   overlap: 100
+  # Comparable config ids: {retriever}__{chunker} (+ MVP aliases chunk_500/1000)
+  # Retrievers: bm25 | dense_bge_m3 | hybrid_bge_m3 | hybrid_bge_m3_rerank |
+  #             hybrid_bge_m3_graph | hybrid_e5
+  # Chunkers: fixed_500 | fixed_1000 | per_article | structural
+  configs:
+    - chunk_500
+    - chunk_1000
+    - bm25__fixed_500
+    - bm25__fixed_1000
+    - bm25__per_article
+    - bm25__structural
+    - dense_bge_m3__fixed_500
+    - dense_bge_m3__fixed_1000
+    - dense_bge_m3__per_article
+    - dense_bge_m3__structural
+    - hybrid_bge_m3__fixed_500
+    - hybrid_bge_m3__fixed_1000
+    - hybrid_bge_m3__per_article
+    - hybrid_bge_m3__structural
+    - hybrid_bge_m3_rerank__fixed_500
+    - hybrid_bge_m3_rerank__fixed_1000
+    - hybrid_bge_m3_rerank__per_article
+    - hybrid_bge_m3_rerank__structural
+    - hybrid_bge_m3_graph__fixed_500
+    - hybrid_bge_m3_graph__fixed_1000
+    - hybrid_bge_m3_graph__per_article
+    - hybrid_bge_m3_graph__structural
+    - hybrid_e5__fixed_500
+    - hybrid_e5__fixed_1000
+    - hybrid_e5__per_article
+    - hybrid_e5__structural
 
 chunking:
-  # Deux tailles comparées dans le rapport de régression
+  # Deux tailles comparées dans le rapport de régression (MVP)
   sizes:
     - 500
     - 1000
+  # Phase-2 chunker ids (agent c)
+  strategies:
+    - fixed_size
+    - per_article
+    - structural
 
 generation:
   model: qwen2.5:3b-instruct

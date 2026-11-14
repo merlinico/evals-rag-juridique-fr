@@ -1,14 +1,17 @@
+"""Hybrid BM25 + dense retrieval with Reciprocal Rank Fusion."""
+
 from __future__ import annotations
 
 from datetime import date
-from typing import Any
+from pathlib import Path
+from typing import Any, Sequence
 
-from rag_juridique.contracts.chunking import Chunk
-from rag_juridique.contracts.corpus import Article
+from rag_juridique.contracts.chunking import Chunk, Chunker
+from rag_juridique.contracts.corpus import Article, ArticleVersion, CrossRef
 from rag_juridique.contracts.retrieval import RetrievedChunk
 from rag_juridique.corpus.chunking import FixedSizeChunker, chunk_articles
 from rag_juridique.retrieval.bm25 import BM25Index
-from rag_juridique.retrieval.dense import DenseIndex
+from rag_juridique.retrieval.dense import MVP_DENSE_MODEL, DenseIndex
 
 # Back-compat alias: MVP code and tests imported RetrievalResult.
 RetrievalResult = RetrievedChunk
@@ -58,23 +61,62 @@ class HybridRetriever:
         articles: list[Article],
         chunk_size: int = 800,
         overlap: int = 100,
-        embedding_model: str = "intfloat/multilingual-e5-small",
+        embedding_model: str = MVP_DENSE_MODEL,
         rrf_k: int = 60,
         dense_model: Any | None = None,
-        chunker: FixedSizeChunker | None = None,
+        chunker: Chunker | None = None,
+        versions: list[ArticleVersion] | None = None,
+        cross_refs: Sequence[CrossRef] | None = None,
+        cache_dir: Path | None = None,
+        use_cache: bool = True,
     ) -> None:
+        del cross_refs
+        self.articles = articles
         self.chunk_size = chunk_size
         self.overlap = overlap
         self.embedding_model = embedding_model
         self.rrf_k = rrf_k
+        self.versions = versions
+        self._injected_model = dense_model
+        self.cache_dir = cache_dir
+        self.use_cache = use_cache
         self.chunker = chunker or FixedSizeChunker(
-            chunk_size=chunk_size, overlap=overlap
+            chunk_size=chunk_size, overlap=overlap, versions=versions
         )
-        self.chunks = self.chunker.chunk(articles)
-        self.bm25 = BM25Index.build(self.chunks)
-        self.dense = DenseIndex.build(
-            self.chunks, model_name=embedding_model, model=dense_model
+        self._state_by_as_of: dict[
+            date | None, tuple[list[Chunk], BM25Index, DenseIndex]
+        ] = {}
+        self._ensure_state(None)
+
+    def _ensure_state(
+        self, as_of: date | None
+    ) -> tuple[list[Chunk], BM25Index, DenseIndex]:
+        if as_of in self._state_by_as_of:
+            return self._state_by_as_of[as_of]
+        chunks = self.chunker.chunk(self.articles, as_of=as_of)
+        bm25 = BM25Index.build(chunks)
+        dense = DenseIndex.build(
+            chunks,
+            model_name=self.embedding_model,
+            model=self._injected_model,
+            cache_dir=self.cache_dir,
+            use_cache=self.use_cache and self._injected_model is None,
         )
+        state = (chunks, bm25, dense)
+        self._state_by_as_of[as_of] = state
+        return state
+
+    @property
+    def chunks(self) -> list[Chunk]:
+        return self._state_by_as_of[None][0]
+
+    @property
+    def bm25(self) -> BM25Index:
+        return self._state_by_as_of[None][1]
+
+    @property
+    def dense(self) -> DenseIndex:
+        return self._state_by_as_of[None][2]
 
     def retrieve(
         self,
@@ -87,13 +129,14 @@ class HybridRetriever:
         """Retrieve top-k chunks.
 
         `k` is the frozen protocol parameter; `top_k` remains as MVP alias.
-        `as_of` is accepted for protocol compatibility (unused until temporal corpus).
+        `as_of` selects a temporal index when versions were provided at build.
         """
-        del as_of
         limit = k if k is not None else (top_k if top_k is not None else 5)
+        key = as_of if self.versions else None
+        _chunks, bm25, dense = self._ensure_state(key)
         pool = max(limit * 4, 20)
-        bm25_hits = self.bm25.search(query, top_k=pool)
-        dense_hits = self.dense.search(query, top_k=pool)
+        bm25_hits = bm25.search(query, top_k=pool)
+        dense_hits = dense.search(query, top_k=pool)
         fused = rrf_fuse(bm25_hits, dense_hits, k=self.rrf_k)
         return fused[:limit]
 
@@ -107,7 +150,6 @@ class HybridRetriever:
         return seen
 
 
-# Keep chunk_articles import path usable for tests that build indexes manually.
 __all__ = [
     "HybridRetriever",
     "RetrievalResult",
