@@ -10,6 +10,7 @@ from datetime import date
 
 from rag_juridique.contracts.chunking import Chunk, Chunker
 from rag_juridique.contracts.corpus import Article, ArticleVersion
+from rag_juridique.corpus.versions import version_in_force as pick_version_in_force
 
 
 def _split_windows(text: str, chunk_size: int, overlap: int) -> list[tuple[int, int, str]]:
@@ -38,13 +39,13 @@ def _split_windows(text: str, chunk_size: int, overlap: int) -> list[tuple[int, 
     return windows
 
 
-def version_in_force(version: ArticleVersion, as_of: date) -> bool:
+def is_version_in_force(version: ArticleVersion, as_of: date) -> bool:
     """Return True if ``version`` is in force on ``as_of`` (debut inclusive, fin exclusive)."""
-    if version.debut is not None and as_of < version.debut:
-        return False
-    if version.fin is not None and as_of >= version.fin:
-        return False
-    return True
+    return pick_version_in_force([version], as_of) is not None
+
+
+# Back-compat alias used by earlier phase-2 retrieval tests / callers.
+version_in_force = is_version_in_force
 
 
 def resolve_article_as_of(
@@ -56,18 +57,16 @@ def resolve_article_as_of(
 
     Matching versions are those with ``article_id == article.id`` (or tip
     ``version_id == article.id``). If none are in force, the original article
-    is returned unchanged.
+    is returned unchanged. Delegates interval logic to ``corpus.versions``.
     """
     candidates = [
         v
         for v in versions
         if v.article_id == article.id or v.version_id == article.id
     ]
-    in_force = [v for v in candidates if version_in_force(v, as_of)]
-    if not in_force:
+    chosen = pick_version_in_force(candidates, as_of)
+    if chosen is None:
         return article
-    # Prefer the version whose interval starts latest (most specific).
-    chosen = max(in_force, key=lambda v: v.debut or date.min)
     return article.model_copy(
         update={
             "text": chosen.text,
@@ -115,12 +114,11 @@ def _version_meta(
     candidates = [
         v
         for v in versions
-        if (v.article_id == article.id or v.version_id == article.id)
-        and version_in_force(v, as_of)
+        if v.article_id == article.id or v.version_id == article.id
     ]
-    if not candidates:
+    chosen = pick_version_in_force(candidates, as_of)
+    if chosen is None:
         return None, as_of
-    chosen = max(candidates, key=lambda v: v.debut or date.min)
     return chosen.version_id, as_of
 
 
@@ -303,6 +301,7 @@ __all__ = [
     "chunk_articles",
     "get_chunker",
     "hierarchy_parent_context",
+    "is_version_in_force",
     "resolve_article_as_of",
     "version_in_force",
 ]

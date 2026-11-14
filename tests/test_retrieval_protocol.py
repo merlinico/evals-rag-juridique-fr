@@ -104,7 +104,9 @@ def test_registry_builds_all_configs_light():
             ],
         )
         assert isinstance(ret, Retriever)
-        assert ret.retrieve("prix", k=2)
+        # Query must match the tiny sample (full snapshot starts with Code civil).
+        hits = ret.retrieve("testament lois justice", k=2)
+        assert hits
 
 
 class _PredictStub:

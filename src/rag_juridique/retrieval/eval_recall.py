@@ -2,13 +2,18 @@
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
 from typing import Any, Sequence
 
 from rag_juridique.contracts.corpus import Article, ArticleVersion, CrossRef, CrossRefKind
 from rag_juridique.contracts.gold import Question
-from rag_juridique.corpus.loader import load_corpus
+from rag_juridique.corpus.loader import (
+    default_crossrefs_path,
+    default_versions_path,
+    load_corpus,
+    load_crossrefs,
+    load_versions,
+)
 from rag_juridique.gold.loader import load_gold
 from rag_juridique.metrics.retrieval import mean_recall_at_k, passage_recall_at_k
 from rag_juridique.retrieval.light import is_heavy_enabled
@@ -21,23 +26,19 @@ from rag_juridique.retrieval.registry import (
 
 
 def load_optional_versions(path: Path | str | None = None) -> list[ArticleVersion]:
-    """Load ArticleVersion rows if agent (a) has published them; else []."""
-    candidate = Path(path) if path else Path("data/corpus/versions.json")
+    """Load ArticleVersion rows via corpus loader when the snapshot file exists."""
+    candidate = Path(path) if path else default_versions_path()
     if not candidate.is_file():
         return []
-    raw = json.loads(candidate.read_text(encoding="utf-8"))
-    items = raw if isinstance(raw, list) else raw.get("versions") or raw.get("article_versions") or []
-    return [ArticleVersion.model_validate(item) for item in items]
+    return load_versions(candidate)
 
 
 def load_optional_cross_refs(path: Path | str | None = None) -> list[CrossRef]:
-    """Load CrossRef edges if present; else []."""
-    candidate = Path(path) if path else Path("data/corpus/cross_refs.json")
+    """Load CrossRef edges via corpus loader when the snapshot file exists."""
+    candidate = Path(path) if path else default_crossrefs_path()
     if not candidate.is_file():
         return []
-    raw = json.loads(candidate.read_text(encoding="utf-8"))
-    items = raw if isinstance(raw, list) else raw.get("cross_refs") or raw.get("refs") or []
-    return [CrossRef.model_validate(item) for item in items]
+    return load_crossrefs(candidate)
 
 
 def recall_for_config(
