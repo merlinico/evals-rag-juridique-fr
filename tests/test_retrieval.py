@@ -19,4 +19,5 @@ def test_bm25_finds_retractation_article():
 def test_corpus_has_expected_size():
     corpus = load_corpus()
     assert len(corpus) >= 50
-    assert corpus.snapshot_id.startswith("cdc-")
+    # Phase-2 multi-code snapshot (legacy MVP ids were cdc-v0.1-…)
+    assert "2025-07-13" in corpus.snapshot_id
