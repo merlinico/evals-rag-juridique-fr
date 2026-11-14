@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 """Offline 7–8B generation → GenerationRecord fixtures (GPU machine, not CI).
 
+Uses the harness corpus from ``configs/default.yaml`` (CI default:
+``data/corpus/eval_subset.json.gz``). For a full three-code index, pass
+``--corpus-path data/corpus/articles.json.gz``.
+
+MVP fixture names stay ``generations_chunk_{500,1000}.json`` (hybrid e5),
+matching CI. Heavy retrieval configs (bge-m3 / rerank / graph) are evaluated
+separately with ``RAG_HEAVY=1`` on Talos — see ``RUN_ON_GPU.md``.
+
 Example (WSL + Ollama, ~16 GB VRAM):
 
     ollama pull qwen2.5:7b-instruct
@@ -8,8 +16,6 @@ Example (WSL + Ollama, ~16 GB VRAM):
         --model qwen2.5:7b-instruct \\
         --config configs/default.yaml \\
         --write-baseline
-
-See RUN_ON_GPU.md for the full Windows + WSL procedure.
 """
 
 from __future__ import annotations
@@ -54,6 +60,15 @@ def main(argv: list[str] | None = None) -> int:
         help="Ollama base URL (default: from config or http://127.0.0.1:11434)",
     )
     parser.add_argument(
+        "--corpus-path",
+        default=None,
+        help=(
+            "Override corpus JSON/JSON.GZ (default: config corpus_path = "
+            "eval_subset.json.gz). Use data/corpus/articles.json.gz for the "
+            "full civil+consommation+travail snapshot."
+        ),
+    )
+    parser.add_argument(
         "--chunk-sizes",
         default=None,
         help="Comma-separated chunk sizes (default: config chunking.sizes)",
@@ -77,6 +92,8 @@ def main(argv: list[str] | None = None) -> int:
 
     config = load_config(args.config)
     config = dict(config)
+    if args.corpus_path:
+        config["corpus_path"] = args.corpus_path
     gen_cfg = dict(config.get("generation") or {})
     gen_cfg["model"] = args.model
     if args.base_url:
@@ -94,7 +111,15 @@ def main(argv: list[str] | None = None) -> int:
 
     from sentence_transformers import SentenceTransformer
 
+    # CI / MVP hybrid path injects multilingual-e5-small (not gated on RAG_HEAVY).
     dense_model = SentenceTransformer(config["retrieval"]["embedding_model"])
+
+    print(f"Corpus: {config['corpus_path']}")
+    print(
+        "Note: this script writes MVP hybrid-e5 fixtures (chunk_500 / chunk_1000). "
+        "For bge-m3 / rerank / graph recall on Talos, use RAG_HEAVY=1 with "
+        "`python -m rag_juridique.retrieval.eval_recall --all` (see RUN_ON_GPU.md)."
+    )
 
     all_metrics = []
     for size in sizes:
@@ -131,6 +156,7 @@ def main(argv: list[str] | None = None) -> int:
             "config": name,
             "chunk_size": size,
             "model": args.model,
+            "corpus_path": config["corpus_path"],
             "generations": enriched,
         }
         out_path.write_text(
