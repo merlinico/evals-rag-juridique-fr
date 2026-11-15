@@ -42,28 +42,39 @@ Source : run Talos / PC local, commit fixtures [`935c197`](https://github.com/me
 
 ### Jeu complet (180 Q)
 
-| Config | chunk_size | recall@5 | faithfulness | abst. correcte | fausse abst. |
-|---|---:|---:|---:|---:|---:|
-| chunk_500 | 500 | 0.483 | 0.972 | 1.000 | 0.609 |
-| chunk_1000 | 1000 | 0.483 | 0.967 | 1.000 | 0.609 |
+| Config | chunk_size | recall@5 | faithfulness | faith. hors abst. | abst. correcte | fausse abst. |
+|---|---:|---:|---:|---:|---:|---:|
+| chunk_500 | 500 | 0.483 | 0.972 | 0.915 (n=59) | 1.000 | 0.609 |
+| chunk_1000 | 1000 | 0.483 | 0.967 | 0.898 (n=59) | 1.000 | 0.609 |
 
 ### Sous-ensemble validé (40 Q, `validated: true`)
 
 Métriques recalculées sur les 40 questions du batch (34 answerable + 6 unanswerable),
 mêmes fixtures / même retrieval que ci-dessus.
 
-| Config | chunk_size | recall@5 | faithfulness | abst. correcte | fausse abst. |
-|---|---:|---:|---:|---:|---:|
-| chunk_500 | 500 | 0.603 | 0.975 | 1.000 | 0.471 |
-| chunk_1000 | 1000 | 0.632 | 0.950 | 1.000 | 0.441 |
+| Config | chunk_size | recall@5 | faithfulness | faith. hors abst. | abst. correcte | fausse abst. |
+|---|---:|---:|---:|---:|---:|---:|
+| chunk_500 | 500 | 0.603 | 0.975 | 0.944 (n=18) | 1.000 | 0.471 |
+| chunk_1000 | 1000 | 0.632 | 0.950 | 0.895 (n=19) | 1.000 | 0.441 |
+
+**Note (faithfulness vs abstention).** Une abstention compte comme fidèle (score 1.0 :
+rien n’est affirmé — comportement du harness, pas une invention de reporting). Les
+0,972 / 0,967 du jeu complet sont donc **gonflés** par les abstentions. La colonne
+*faith. hors abst.* est la moyenne de faithfulness **uniquement sur les réponses
+non abstenues**, dérivée des mêmes cas d’évaluation (fixtures 7B + retrieval e5) ;
+ce n’est pas une métrique de contrat / baseline CI.
+
+**Limite principale du générateur 7B :** la **fausse abstention** (0,609 sur les
+151 answerables) — notamment **37/40** en `multi_hop` et **29/30** en `temporal`
+(`chunk_500`, cf. `reports/regression.md`). Le modèle refuse trop souvent au lieu
+de répondre quand la question est answerable.
 
 Détail (nDCG, MRR, CIs, erreurs par type, tests de significance) :
 [`reports/regression.md`](reports/regression.md).
 
-Sur le jeu complet, les deux chunk sizes sont proches en rappel ; `chunk_500` reste
-légèrement plus fidèle. Le rappel chute surtout sur `multi_hop` et `temporal`
-(fausse abstention élevée). Sur le batch validé, le rappel est plus haut (~0.60–0.63)
-car le batch est plus riche en questions `direct`.
+Sur le jeu complet, les deux chunk sizes sont proches en rappel. Sur le batch
+validé, le rappel est plus haut (~0.60–0.63) car le batch est plus riche en
+questions `direct`.
 
 ### Configs retrieval lourdes — non calculées
 
@@ -112,8 +123,9 @@ Détails : [`data/corpus/SOURCE.md`](data/corpus/SOURCE.md).
 
 - Corpus partiel (pas tout le code)
 - Seules 40 / 180 questions validées humainement
-- Faithfulness heuristique (pas de juge LLM) en CI ; NLI local optionnel hors CI
-- Générateur local 7B : réponses figées en fixtures pour la CI
+- Faithfulness heuristique (pas de juge LLM) en CI ; NLI local optionnel hors CI ;
+  une abstention score 1.0, d’où des agrégats gonflés si fausse abstention élevée
+- Générateur 7B : forte fausse abstention (surtout `multi_hop` / `temporal`) ; fixtures CI
 - Retrieval lourd (bge-m3 / rerank / graph) non mesuré (crash run 2026-11-15)
 - Ne constitue **pas** un conseil juridique
 
