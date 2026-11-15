@@ -51,18 +51,27 @@ def test_filter_rejects_unanswerable_with_ids():
     assert stats.rejected_schema == 1
 
 
-def test_filter_rejects_validated_true():
+def test_filter_candidates_forces_validated_false():
     q = Question(
         id="x",
-        question="Quelle est la durée de rétractation ?",
+        question="Quelle est la durée de rétractation pour un contrat à distance ?",
         type=QuestionType.DIRECT,
         expected_article_ids=["LEGIARTI000032226842"],
         expected_article_nums=["L. 221-18"],
-        reference_answer="quatorze jours",
+        reference_answer="Le délai de rétractation est de quatorze jours.",
         validated=True,
     )
-    # validate_schema_rules sees validated true
-    assert validate_schema_rules(q) == "must_remain_validated_false"
+    # Committed gold may be validated=true; schema allows it.
+    assert validate_schema_rules(q) is None
+    # Generation filter still normalizes candidates to validated=false.
+    arts = [
+        a
+        for a in load_corpus().articles
+        if a.id == "LEGIARTI000032226842"
+    ]
+    kept, _stats = filter_candidates([q], arts)
+    assert len(kept) == 1
+    assert kept[0].validated is False
 
 
 def test_migrate_mvp_infers_types():

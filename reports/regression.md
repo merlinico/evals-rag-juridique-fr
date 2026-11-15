@@ -101,7 +101,7 @@ présente une **régression statistiquement significative** vs `baseline_metrics
 
 ## Limites
 
-- Jeu d'or non encore validé humainement (`validated: false`).
+- Jeu d'or partiellement validé humainement (batch 40 `validated: true` ; reste `false`).
 - Fidélité CI = heuristique overlap ; NLI FR local optionnel (`metrics.nli_enabled`).
 - Générateur local : fixtures CI figent ses sorties ; regen 7B hors CI (voir `RUN_ON_GPU.md`).
 - Bootstrap sur N≈30 : les IC sont larges ; le gate exige une régression significative.

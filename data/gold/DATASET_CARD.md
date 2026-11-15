@@ -27,13 +27,13 @@ des codes civil, de la consommation et du travail (dump LEGI / DILA, Licence Ouv
 
 > Ce fichier est prêt pour un upload Hugging Face ultérieur. **Aucun upload n'a été effectué.**
 
-## Contenu (phase 2, v0.3.3)
+## Contenu (phase 2, v0.3.4)
 
-- **~180 questions** en français (`data/gold/questions.json`), toutes `validated: false`.
+- **~180 questions** en français (`data/gold/questions.json`), dont **40** (`REVIEW_BATCH_40`) `validated: true` ; le reste `validated: false`.
 - Snapshot corpus : `codes-v0.2-2025-07-13` (`articles.json.gz` + `versions.json.gz` + `crossrefs.json.gz`).
 - Correctifs revue : découpage robuste aux abréviations `L./R./D./1°`, CrossRef hors-code filtrés,
   `u02` requalifié (congés payés / L. 3141-3), `ac05` corrigé, batch civil/travail ;
-  passe qualité v0.3.3 (réponses mh synthétisées, acteurs par domaine, diffs temporels concrets).
+  passe qualité v0.3.4 (réponses mh synthétisées, acteurs par domaine, diffs temporels concrets).
 - Cinq types (`QuestionType`) :
   - `direct` — une question, un (ou quelques) article(s) gold ;
   - `multi_hop` — **CrossRef réels** entre articles (≥ 2), codes civil / consommation / travail ;
@@ -62,6 +62,6 @@ uv run python -m rag_juridique.gold.regen_cli
 
 ## Limitations
 
-- Questions générées pour l'évaluation RAG, **non validées juridiquement** (`validated: false`).
+- Questions générées pour l'évaluation RAG, **40 validées** (validé par Nicolas Merli, 2026-11-14) ; le reste `validated: false`.
 - Ne constitue pas un conseil juridique.
 - Les `unanswerable` restent à re-vérifier si le périmètre du snapshot change.
