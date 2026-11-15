@@ -4,8 +4,9 @@ Harness d'évaluation **RAG** sur un sous-ensemble figé du **Code de la consomm
 (données ouvertes LEGI / DILA).
 
 > **English** — Portfolio-grade offline RAG evaluation harness: frozen French consumer-code
-> corpus, 30+5 gold questions, hybrid BM25+embeddings retrieval, local Qwen generator,
-> deterministic metrics, chunk-size regression report, and CI over committed generation fixtures.
+> corpus, 180 gold questions (151 answerable + 29 unanswerable; 40 hand-validated),
+> hybrid BM25+embeddings retrieval, local Qwen 7B generator fixtures, deterministic
+> metrics, chunk-size regression report, and CI over committed generation fixtures.
 > No paid APIs.
 
 ## Pourquoi
@@ -13,27 +14,74 @@ Harness d'évaluation **RAG** sur un sous-ensemble figé du **Code de la consomm
 Évaluer un agent RAG juridique de façon **reproductible** et **sans API payante** :
 corpus versionné, questions d'or, métriques déterministes, et garde-fous CI.
 
-## Contenu MVP
+## Contenu
 
 1. Loader + snapshot d'articles (`data/corpus/`)
-2. Gold set FR : 30 questions + 5 non répondables (`data/gold/`)
+2. Gold set FR : **180** questions (151 answerable + 29 non répondables) — 40 `validated: true`
 3. Retrieval hybride BM25 + `multilingual-e5-small` (RRF), chunking configurable
-4. Générateur local `qwen2.5:3b-instruct` (Ollama) — citations obligatoires / « je ne sais pas »
-5. Métriques : recall@k, abstention, faithfulness (citation + overlap)
+4. Générateur local `qwen2.5:7b-instruct` (Ollama) — fixtures commités ; citations / « je ne sais pas »
+5. Métriques : recall@k, nDCG, MRR, abstention, faithfulness (citation + overlap), CIs bootstrap
 6. Comparaison de **deux tailles de chunks** → `reports/regression.md`
-7. CI : fixtures de génération commités ; échec si recall/fidélité chutent
-8. Contrats gelés inter-modules (`src/rag_juridique/contracts/`, `schemas/`) — ownership phase 2 dans `AGENTS.md`
+7. CI : fixtures de génération commités ; échec si régression statistiquement significative
+8. Contrats gelés inter-modules (`src/rag_juridique/contracts/`, `schemas/`) — ownership dans `AGENTS.md`
 
-## Résultats (baseline)
+## Résultats (15 nov 2026)
 
-| Config | chunk_size | recall@5 | faithfulness | abst. correcte | fausse abst. |
-|---|---:|---:|---:|---:|---:|
-| chunk_500 | 500 | 0.950 | 0.886 | 1.000 | 0.200 |
-| chunk_1000 | 1000 | 0.967 | 0.771 | 1.000 | 0.067 |
+Source : run Talos / PC local, commit fixtures [`935c197`](https://github.com/merlinico/evals-rag-juridique-fr/commit/935c197)
+(`data/talos-run-2026-11-15`), régénéré côté harness avec
+`uv run rag-eval --use-fixtures --write-baseline`.
 
-Détail et commentaire : [`reports/regression.md`](reports/regression.md).
-Sur ce petit corpus, `chunk_1000` gagne légèrement en rappel ; `chunk_500` est plus fidèle
-(citations + overlap) mais abstient trop souvent sur des questions answerable.
+| | |
+|---|---|
+| **Date** | 2026-11-15 |
+| **Modèle** | `qwen2.5:7b-instruct` (Ollama) |
+| **Corpus** | `data/corpus/eval_subset.json.gz` (LEGI DILA 2025-07-13, Licence Ouverte 2.0) |
+| **Gold** | 180 questions = 151 answerable + 29 unanswerable (`data/gold/questions.json`) |
+| **Validation humaine** | **40 / 180** marquées `validated: true` (batch `REVIEW_BATCH_40`, 2026-11-14) |
+| **Retrieval CI** | hybrid BM25 + `multilingual-e5-small`, configs `chunk_500` / `chunk_1000` |
+
+### Jeu complet (180 Q)
+
+| Config | chunk_size | recall@5 | faithfulness | faith. hors abst. | abst. correcte | fausse abst. |
+|---|---:|---:|---:|---:|---:|---:|
+| chunk_500 | 500 | 0.483 | 0.972 | 0.915 (n=59) | 1.000 | 0.609 |
+| chunk_1000 | 1000 | 0.483 | 0.967 | 0.898 (n=59) | 1.000 | 0.609 |
+
+### Sous-ensemble validé (40 Q, `validated: true`)
+
+Métriques recalculées sur les 40 questions du batch (34 answerable + 6 unanswerable),
+mêmes fixtures / même retrieval que ci-dessus.
+
+| Config | chunk_size | recall@5 | faithfulness | faith. hors abst. | abst. correcte | fausse abst. |
+|---|---:|---:|---:|---:|---:|---:|
+| chunk_500 | 500 | 0.603 | 0.975 | 0.944 (n=18) | 1.000 | 0.471 |
+| chunk_1000 | 1000 | 0.632 | 0.950 | 0.895 (n=19) | 1.000 | 0.441 |
+
+**Note (faithfulness vs abstention).** Une abstention compte comme fidèle (score 1.0 :
+rien n’est affirmé — comportement du harness, pas une invention de reporting). Les
+0,972 / 0,967 du jeu complet sont donc **gonflés** par les abstentions. La colonne
+*faith. hors abst.* est la moyenne de faithfulness **uniquement sur les réponses
+non abstenues**, dérivée des mêmes cas d’évaluation (fixtures 7B + retrieval e5) ;
+ce n’est pas une métrique de contrat / baseline CI.
+
+**Limite principale du générateur 7B :** la **fausse abstention** (0,609 sur les
+151 answerables) — notamment **37/40** en `multi_hop` et **29/30** en `temporal`
+(`chunk_500`, cf. `reports/regression.md`). Le modèle refuse trop souvent au lieu
+de répondre quand la question est answerable.
+
+Détail (nDCG, MRR, CIs, erreurs par type, tests de significance) :
+[`reports/regression.md`](reports/regression.md).
+
+Sur le jeu complet, les deux chunk sizes sont proches en rappel. Sur le batch
+validé, le rappel est plus haut (~0.60–0.63) car le batch est plus riche en
+questions `direct`.
+
+### Configs retrieval lourdes — non calculées
+
+Les configs `RAG_HEAVY=1` (bge-m3, rerank, graph, etc. — voir `RUN_ON_GPU.md` §2)
+**n'ont pas produit de résultats** : le run Talos du 15 nov 2026 a crashé
+(exit `-1073741819`, aucun artefact). Aucun chiffre inventé ici ; à relancer
+hors CI quand le GPU / encodeurs lourds sont stables.
 
 ## Installation
 
@@ -42,7 +90,7 @@ Prérequis : Python ≥ 3.11, [uv](https://github.com/astral-sh/uv), [Ollama](ht
 
 ```bash
 uv sync --extra dev
-ollama pull qwen2.5:3b-instruct   # optionnel si --generate
+ollama pull qwen2.5:7b-instruct   # optionnel si regen GPU — voir RUN_ON_GPU.md
 ```
 
 ## Lancer
@@ -54,8 +102,8 @@ uv run pytest -q
 # évaluation CI (retrieval + métriques, fixtures générateur)
 uv run rag-eval --use-fixtures --check-baseline
 
-# régénérer les réponses avec Ollama + mettre à jour la baseline
-uv run rag-eval --generate --write-baseline
+# régénérer les réponses avec Ollama + mettre à jour la baseline (hors CI / GPU)
+uv run python scripts/generate_offline.py --model qwen2.5:7b-instruct --write-baseline
 ```
 
 ## Corpus
@@ -66,17 +114,19 @@ Détails : [`data/corpus/SOURCE.md`](data/corpus/SOURCE.md).
 
 ## Gold set
 
-- 30 questions answerable + 5 unanswerable
-- Toutes marquées `validated: false`
-- Échantillon à revoir : [`data/gold/SAMPLE_TO_REVIEW.md`](data/gold/SAMPLE_TO_REVIEW.md)
+- **180** questions : 151 answerable + 29 unanswerable
+- **40** marquées `validated: true` (`REVIEW_BATCH_40`, validé 2026-11-14) ; le reste `validated: false`
+- Batch de revue : [`data/gold/REVIEW_BATCH_40.md`](data/gold/REVIEW_BATCH_40.md)
 - Dataset card (HF, non publiée) : [`data/gold/DATASET_CARD.md`](data/gold/DATASET_CARD.md)
 
 ## Limites
 
 - Corpus partiel (pas tout le code)
-- Questions non encore validées humainement
-- Faithfulness heuristique (pas de juge LLM)
-- Petit modèle local : réponses parfois approximatives (d'où les fixtures CI)
+- Seules 40 / 180 questions validées humainement
+- Faithfulness heuristique (pas de juge LLM) en CI ; NLI local optionnel hors CI ;
+  une abstention score 1.0, d’où des agrégats gonflés si fausse abstention élevée
+- Générateur 7B : forte fausse abstention (surtout `multi_hop` / `temporal`) ; fixtures CI
+- Retrieval lourd (bge-m3 / rerank / graph) non mesuré (crash run 2026-11-15)
 - Ne constitue **pas** un conseil juridique
 
 ## Licence
