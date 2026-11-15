@@ -12,8 +12,8 @@ Abstention : taux correct / fausse abstention + courbe **risk-coverage**.
 
 | Config | chunk | recall@k | nDCG | MRR | citation | faithfulness | abst. OK | fausse abst. | RC-AUC |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| chunk_500 | 500 | 0.483 | 0.432 | 0.446 | 0.562 | 0.556 | 1.000 | 0.046 | 0.315 |
-| chunk_1000 | 1000 | 0.483 | 0.441 | 0.454 | 0.544 | 0.533 | 1.000 | 0.020 | 0.313 |
+| chunk_500 | 500 | 0.483 | 0.432 | 0.446 | 0.988 | 0.972 | 1.000 | 0.609 | 0.244 |
+| chunk_1000 | 1000 | 0.483 | 0.441 | 0.454 | 0.984 | 0.967 | 1.000 | 0.609 | 0.249 |
 
 ## Intervalles de confiance (bootstrap)
 
@@ -24,11 +24,11 @@ Abstention : taux correct / fausse abstention + courbe **risk-coverage**.
 | recall_at_k | 0.483 | [0.411, 0.556] | 151 |
 | ndcg | 0.432 | [0.362, 0.498] | 151 |
 | mrr | 0.446 | [0.374, 0.521] | 151 |
-| citation_accuracy | 0.562 | [0.483, 0.635] | 180 |
-| faithfulness | 0.556 | [0.483, 0.633] | 180 |
+| citation_accuracy | 0.988 | [0.976, 0.997] | 180 |
+| faithfulness | 0.972 | [0.944, 0.994] | 180 |
 | correct_abstention_rate | 1.000 | [1.000, 1.000] | 29 |
-| false_abstention_rate | 0.046 | [0.013, 0.086] | 151 |
-| risk_coverage | 0.315 | — | 180 |
+| false_abstention_rate | 0.609 | [0.530, 0.682] | 151 |
+| risk_coverage | 0.244 | — | 180 |
 
 ### chunk_1000
 
@@ -37,11 +37,11 @@ Abstention : taux correct / fausse abstention + courbe **risk-coverage**.
 | recall_at_k | 0.483 | [0.411, 0.560] | 151 |
 | ndcg | 0.441 | [0.370, 0.509] | 151 |
 | mrr | 0.454 | [0.379, 0.528] | 151 |
-| citation_accuracy | 0.544 | [0.471, 0.615] | 180 |
-| faithfulness | 0.533 | [0.461, 0.611] | 180 |
+| citation_accuracy | 0.984 | [0.967, 0.995] | 180 |
+| faithfulness | 0.967 | [0.939, 0.989] | 180 |
 | correct_abstention_rate | 1.000 | [1.000, 1.000] | 29 |
-| false_abstention_rate | 0.020 | [0.000, 0.046] | 151 |
-| risk_coverage | 0.313 | — | 180 |
+| false_abstention_rate | 0.609 | [0.530, 0.682] | 151 |
+| risk_coverage | 0.249 | — | 180 |
 
 
 ## Erreurs par type de question
@@ -50,20 +50,20 @@ Abstention : taux correct / fausse abstention + courbe **risk-coverage**.
 
 | type | n | error_rate | recall | faith | citation | miss retr. | fausse abst. | cite KO |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| apparent_contradiction | 30 | 0.367 | 0.75 | 0.8333 | 0.8333 | 11 | 0 | 5 |
-| direct | 51 | 0.314 | 0.8627 | 0.8235 | 0.848 | 7 | 6 | 9 |
-| multi_hop | 40 | 0.950 | 0.1375 | 0.075 | 0.075 | 38 | 1 | 37 |
-| temporal | 30 | 0.967 | 0.0333 | 0.0333 | 0.0333 | 29 | 0 | 29 |
+| apparent_contradiction | 30 | 0.667 | 0.75 | 0.9 | 0.9639 | 11 | 17 | 3 |
+| direct | 51 | 0.275 | 0.8627 | 0.9608 | 0.9804 | 7 | 9 | 2 |
+| multi_hop | 40 | 0.950 | 0.1375 | 1.0 | 1.0 | 38 | 37 | 0 |
+| temporal | 30 | 0.967 | 0.0333 | 1.0 | 1.0 | 29 | 29 | 0 |
 | unanswerable | 29 | 0.000 | — | 1.0 | 1.0 | 0 | 0 | 0 |
 
 ### chunk_1000
 
 | type | n | error_rate | recall | faith | citation | miss retr. | fausse abst. | cite KO |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| apparent_contradiction | 30 | 0.367 | 0.7833 | 0.8667 | 0.8667 | 11 | 0 | 4 |
-| direct | 51 | 0.333 | 0.8235 | 0.7059 | 0.7418 | 9 | 2 | 15 |
-| multi_hop | 40 | 0.950 | 0.1375 | 0.075 | 0.075 | 37 | 1 | 37 |
-| temporal | 30 | 0.933 | 0.0667 | 0.0667 | 0.0667 | 28 | 0 | 28 |
+| apparent_contradiction | 30 | 0.667 | 0.7833 | 0.9 | 0.95 | 11 | 17 | 3 |
+| direct | 51 | 0.294 | 0.8235 | 0.9412 | 0.9725 | 9 | 9 | 3 |
+| multi_hop | 40 | 0.925 | 0.1375 | 1.0 | 1.0 | 37 | 37 | 0 |
+| temporal | 30 | 0.967 | 0.0667 | 1.0 | 1.0 | 28 | 29 | 0 |
 | unanswerable | 29 | 0.000 | — | 1.0 | 1.0 | 0 | 0 | 0 |
 
 
@@ -74,7 +74,7 @@ Test apparié bootstrap unilatéral : H1 = la config B régresse vs A (mean Δ <
 | A | B | métrique | mean A | mean B | Δ (B−A) | p | significatif | n |
 |---|---|---|---:|---:|---:|---:|---|---:|
 | chunk_500 | chunk_1000 | recall_at_k | 0.483 | 0.483 | +0.000 | 0.492 | non | 151 |
-| chunk_500 | chunk_1000 | faithfulness | 0.556 | 0.533 | -0.022 | 0.145 | non | 180 |
+| chunk_500 | chunk_1000 | faithfulness | 0.972 | 0.967 | -0.006 | 0.353 | non | 180 |
 | chunk_500 | chunk_1000 | ndcg | 0.432 | 0.441 | +0.009 | 0.702 | non | 151 |
 | chunk_500 | chunk_1000 | mrr | 0.446 | 0.454 | +0.008 | 0.655 | non | 151 |
 
@@ -82,7 +82,7 @@ Test apparié bootstrap unilatéral : H1 = la config B régresse vs A (mean Δ <
 ## Commentaire
 
 - Meilleur rappel : **chunk_500** (0.483).
-- Meilleure fidélité : **chunk_500** (0.556).
+- Meilleure fidélité : **chunk_500** (0.972).
 - Écart de recall@5 (chunk_1000 − chunk_500) : +0.000.
 - Les deux chunk sizes sont proches sur ce petit corpus gelé ; des écarts plus nets sont attendus avec un corpus plus large ou un reranker.
 
